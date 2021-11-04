@@ -1,0 +1,35 @@
+{
+    "code": 200,
+    "name": "独家放送",
+    "result": [{
+            "id": 14435737,
+            "url": "",
+            "picUrl": "https://p2.music.126.net/MtyRaC7ienzjj4GDDTyNyQ==/109951166554126229.jpg",
+            "sPicUrl": "https://p2.music.126.net/dUCvxaYIqyDlMiolbYuYGQ==/109951166554128214.jpg",
+            "type": 5,
+            "copywriter": "《今日营业中》EP51点播版：唱作人ODD陈思键 用音乐创造艺术",
+            "name": "《今日营业中》EP51点播版：唱作人ODD陈思键 用音乐创造艺术",
+            "alg": "featured"
+        },
+        {
+            "id": 14415181,
+            "url": "",
+            "picUrl": "https://p2.music.126.net/zhJhzCQlA5UoqKAQjygulQ==/109951166540215669.jpg",
+            "sPicUrl": "https://p2.music.126.net/XLRa9rmWT6SFJdGH_mJKkw==/109951166540211273.jpg",
+            "type": 5,
+            "copywriter": "《惊喜座驾》EP01：二手玫瑰现代摇滚show，用音乐回归乡村",
+            "name": "《惊喜座驾》EP01：二手玫瑰现代摇滚show，用音乐回归乡村",
+            "alg": "featured"
+        },
+        {
+            "id": 14412076,
+            "url": "",
+            "picUrl": "https://p2.music.126.net/M9ABgeTERVss_rTwSXJ5fQ==/109951166534009913.jpg",
+            "sPicUrl": "https://p2.music.126.net/94Af8LjYetg9IT0DB2UnVA==/109951166533948128.jpg",
+            "type": 5,
+            "copywriter": "《超级面对面》第246期 假如蔡健雅不再唱情歌",
+            "name": "《超级面对面》第246期 假如蔡健雅不再唱情歌",
+            "alg": "featured"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  Assistant
+
+  Created by cyd on 2021/11/4.
+  
+*/
+//Mark: -- tab
+"Tabbar.Widget" = "小组件";
+"Tabbar.Icons" = "图标";
+"Tabbar.Wallpaper" = "壁纸";
+"Tabbar.More" = "更多";
+//Mark: -- Empty
+"Empty.Data.Title" = "数据为空";
+"Empty.Data.Detail" = "请稍后重试";
+"Empty.Json.Title" = "服务端返回错误";
+"Empty.Json.Detail" = "Json 解析异常";
+"Empty.UnConnected.Title" = "无法连接到网络";
+"Empty.UnConnected.Detail" = "请检查您的网络";
+"Empty.Authorization.Title" = "当前您未登录";
+"Empty.Authorization.Detail" = "请您先登录";
+"Empty.404.Title" = "404";
+"Empty.404.Detail" = "数据找不到了";
+//Mark: -- Prompt
+"Prompt.PrivacyPolicy.Toast" = "邮箱地址已经复制";
+

@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Assistant
+
+  Created by cyd on 2021/11/4.
+  
+*/
+//Mark: -- tab
+"Tabbar.Widget" = "Widgets";
+"Tabbar.Icons" = "Icons";
+"Tabbar.Wallpaper" = "Wallpapers";
+"Tabbar.More" = "More";
+//Mark: -- empty
+"Empty.Data.Title" = "data is empty";
+"Empty.Data.Detail" = "please try again";
+"Empty.UnConnected.Title" = "unable to connect to network";
+"Empty.UnConnected.Detail" = "please check your network";
+"Empty.Data.Title" = "data is empty";
+"Empty.Data.Detail" = "please try again";
+"Empty.Json.Title" = "The server returned an error";
+"Empty.Json.Detail" = "Json Parsing exceptions";
+"Empty.UnConnected.Title" = "Unable to connect to network";
+"Empty.UnConnected.Detail" = "Please check your network";
+"Empty.Authorization.Title" = "not log in";
+"Empty.Authorization.Detail" = "Please log in first";
+"Empty.404.Title" = "404";
+"Empty.404.Detail" = "The data can't be found";
+//Mark: -- Prompt
+"Prompt.PrivacyPolicy.Toast" = "The email address has been copied";
+
