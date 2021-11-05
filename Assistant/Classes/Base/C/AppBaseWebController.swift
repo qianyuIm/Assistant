@@ -72,13 +72,13 @@ class AppBaseWebController: AppBaseController {
         
     }
     
-    override func _prepare() {
-        super._prepare()
+    override func prepare() {
+        super.prepare()
         setupWebView()
     }
     
-    override func _setupConstraints() {
-        super._setupConstraints()
+    override func setupConstraints() {
+        super.setupConstraints()
         progressView.snp.makeConstraints { make in
             make.top.left.right.equalToSuperview()
             make.height.equalTo(3)

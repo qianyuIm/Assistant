@@ -23,4 +23,16 @@
 "Empty.404.Detail" = "数据找不到了";
 //Mark: -- Prompt
 "Prompt.PrivacyPolicy.Toast" = "邮箱地址已经复制";
-
+//Mark: -- Bar
+"Bar.Widget.Left.Title" = "发现";
+"Bar.Widget.Right.Title" = "我的组件";
+//Mark: -- Bar
+"Segment.Small" = "小号";
+"Segment.Medium" = "中号号";
+"Segment.Large" = "大号";
+//Mark: -- Setting
+"Setting.Language" = "语言设置";
+"Setting.Theme" = "主题设置";
+"Setting.Permissions" = "权限管理";
+"Setting.About" = "关于";
+"Setting.Question" = "常见问题";

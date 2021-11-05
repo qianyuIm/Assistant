@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2913752 */
-  src: url('iconfont.woff2?t=1636011602507') format('woff2'),
-       url('iconfont.woff?t=1636011602507') format('woff'),
-       url('iconfont.ttf?t=1636011602507') format('truetype');
+  src: url('iconfont.woff2?t=1636106300422') format('woff2'),
+       url('iconfont.woff?t=1636106300422') format('woff'),
+       url('iconfont.ttf?t=1636106300422') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,66 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon_icon_radio_normal:before {
+  content: "\e691";
+}
+
+.icon_icon_radio_selected:before {
+  content: "\e607";
+}
+
+.icon_icon_arrow_left:before {
+  content: "\e60d";
+}
+
+.icon_icon_arrow_right:before {
+  content: "\e868";
+}
+
+.icon_icon_setting_question:before {
+  content: "\e617";
+}
+
+.icon_icon_setting_about:before {
+  content: "\e633";
+}
+
+.icon_icon_setting_language:before {
+  content: "\e62c";
+}
+
+.icon_icon_setting_permission:before {
+  content: "\e644";
+}
+
+.icon_icon_setting_theme:before {
+  content: "\e7af";
+}
+
+.icon_icon_cloud_upload:before {
+  content: "\e7d9";
+}
+
+.icon_icon_cloud:before {
+  content: "\e7da";
+}
+
+.icon_icon_cloud_download:before {
+  content: "\e7db";
+}
+
+.icon_icon_cloud_sync:before {
+  content: "\e7dc";
+}
+
+.icon_icon_settings:before {
+  content: "\e699";
+}
+
+.icon_icon_user_fill:before {
+  content: "\e609";
 }
 
 .icon_icon_tab_more:before {

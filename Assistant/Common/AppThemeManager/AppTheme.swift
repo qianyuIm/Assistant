@@ -31,6 +31,7 @@ class NavigationBarTheme {
     let barTintColor: UIColor
     let tintColor: UIColor
     let foregroundColor: UIColor
+    /// 导航栏目前不需要设置
     let barStyle: UIBarStyle
     init(barTintColor: UIColor,
          tintColor: UIColor,

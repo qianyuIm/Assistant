@@ -1,5 +1,5 @@
 /// @author:  qy
-/// @date: 2021-11-04 15:40:40
+/// @date: 2021-11-05 17:59:07
 /// @description  代码由程序自动生成。请不要对此文件做任何修改。
 
 import EFIconFont
@@ -24,7 +24,22 @@ extension AppIconFontIcons: EFIconFontCaseIterableProtocol {
 
 
 enum AppIconFontIcons: String {
-        case icon_tab_more = "\u{e867}"
+        case icon_radio_normal = "\u{e691}"
+case icon_radio_selected = "\u{e607}"
+case icon_arrow_left = "\u{e60d}"
+case icon_arrow_right = "\u{e868}"
+case icon_setting_question = "\u{e617}"
+case icon_setting_about = "\u{e633}"
+case icon_setting_language = "\u{e62c}"
+case icon_setting_permission = "\u{e644}"
+case icon_setting_theme = "\u{e7af}"
+case icon_cloud_upload = "\u{e7d9}"
+case icon_cloud = "\u{e7da}"
+case icon_cloud_download = "\u{e7db}"
+case icon_cloud_sync = "\u{e7dc}"
+case icon_settings = "\u{e699}"
+case icon_user_fill = "\u{e609}"
+case icon_tab_more = "\u{e867}"
 case icon_placeholder_404 = "\u{e638}"
 case icon_placeholder_empty = "\u{e6b2}"
 case icon_placeholder_unconnected = "\u{e6b3}"

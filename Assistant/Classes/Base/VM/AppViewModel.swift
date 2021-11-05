@@ -1,5 +1,5 @@
 //
-//  QYViewModel.swift
+//  AppViewModel.swift
 //  ios_app
 //
 //  Created by cyd on 2021/10/11.
@@ -18,7 +18,7 @@ protocol QYViewModelable {
     func transform(input: Input) -> Output
 }
 
-class QYViewModel {
+class AppViewModel {
     let loading = ActivityIndicator()
     let error = ErrorTracker()
     /// 全部自定义的error
@@ -35,5 +35,5 @@ class QYViewModel {
         
     }
 }
-extension QYViewModel: HasDisposeBag, ReactiveCompatible {}
+extension AppViewModel: HasDisposeBag, ReactiveCompatible {}
 

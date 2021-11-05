@@ -40,7 +40,11 @@ private extension QYAlert {
         var attributes: EKAttributes = .centerFloat
         attributes.displayMode = .inferred
         attributes.windowLevel = .alerts
-        attributes.statusBar = .ignored
+        if AppUtility.topMostStatusBarStyle == .darkContent {
+            attributes.statusBar = .dark
+        } else {
+            attributes.statusBar = .light
+        }
         attributes.displayDuration = .infinity
         attributes.hapticFeedbackType = .success
         attributes.screenInteraction = .dismiss
@@ -80,10 +84,13 @@ private extension QYAlert {
             width: .offset(value: QYInch.value(50)),
             height: .intrinsic
         )
-//        attributes.lifecycleEvents = .init(willAppear: nil, didAppear: nil, willDisappear: nil, didDisappear: {
-//            let aa = AppUtility.topMost
-//            aa?.hbd_setNeedsUpdateNavigationBar()
-//        })
+        /// TODO: fix 2.0.0 SwiftEntryKit 状态栏没有适配好
+        /// 在这做个修复  等待吧
+        attributes.lifecycleEvents = .init(willAppear: nil, didAppear: nil, willDisappear: nil, didDisappear: {
+            DispatchQueue.main.async {
+                AppUtility.topMost?.setNeedsStatusBarAppearanceUpdate()
+            }
+        })
         
         return attributes
     }

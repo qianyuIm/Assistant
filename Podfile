@@ -45,7 +45,7 @@ def swift_pods
   # UserDefaults
   pod 'SwiftyUserDefaults', '~> 5.3.0'
   # alert
-  pod 'SwiftEntryKit', '~> 1.2.7'
+  pod 'SwiftEntryKit', '~> 2.0.0'
   pod 'Toaster', '~> 2.3.0'
   pod 'HandyJSON', '~> 5.0.2'
   pod 'EmptyDataSet-Swift', '~> 5.0.0'

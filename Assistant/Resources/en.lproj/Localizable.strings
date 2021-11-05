@@ -28,3 +28,16 @@
 //Mark: -- Prompt
 "Prompt.PrivacyPolicy.Toast" = "The email address has been copied";
 
+//Mark: -- Bar
+"Bar.Widget.Left.Title" = "Discover";
+"Bar.Widget.Right.Title" = "My Widgets";
+//Mark: -- Bar
+"Segment.Small" = "Small";
+"Segment.Medium" = "Medium";
+"Segment.Large" = "Large";
+//Mark: -- Setting
+"Setting.Language" = "Language Setting";
+"Setting.Theme" = "Theme Setting";
+"Setting.Permissions" = "App Permissions";
+"Setting.About" = "About";
+"Setting.Question" = "FAQ";

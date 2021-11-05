@@ -52,7 +52,8 @@ extension AppRouterType: AppRouterTypeable {
     }
     func controller(url: URLConvertible, values: [String : Any], context: AppRouterContext?) -> AppRouterable? {
         switch self {
-        
+        case .setting:
+            return AppSettingController(viewModel: AppSettingViewModel())
         default:
             return nil
         }

@@ -1,5 +1,5 @@
 //
-//  QYRefreshViewModel.swift
+//  AppRefreshViewModel.swift
 //  Qianyu
 //
 //  Created by cyd on 2021/1/6.
@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class QYRefreshViewModel: QYViewModel {
+class AppRefreshViewModel: AppViewModel {
     let refreshInput: RefreshInput
     let refreshOutput: RefreshOutput
     

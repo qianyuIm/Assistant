@@ -19,5 +19,7 @@ extension DefaultsKeys {
     var themeDarkKey: DefaultsKey<Bool> { .init("kThemeDarkKey", defaultValue: false) }
     /// 主题
     var themeIndexKey: DefaultsKey<Int> { .init("kThemeIndexKey", defaultValue: 0) }
-
+    ///  主题跟随系统
+    var themeAutoSystem: DefaultsKey<Bool> { .init("kThemeAutoSystemKey", defaultValue: false) }
+    
 }

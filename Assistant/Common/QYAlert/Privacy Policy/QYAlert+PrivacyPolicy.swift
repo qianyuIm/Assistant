@@ -17,10 +17,9 @@ extension QYAlert {
     /// 启动隐私协议
     class func alertPrivacyPolicy() {
         // 判断
-//        let launchPrivacyPolicy = Defaults[\.launchPrivacyPolicyKey]
-//        if (launchPrivacyPolicy == QYConfig.appVersion) {return}
+        let launchPrivacyPolicy = Defaults.launchPrivacyPolicyKey
+        if (launchPrivacyPolicy == QYConfig.appVersion) {return}
         showPrivacyPolicy()
-        
     }
 }
 
@@ -30,7 +29,11 @@ private extension QYAlert {
         attributes = .centerFloat
         attributes.displayMode = .inferred
         attributes.displayDuration = .infinity
-        attributes.statusBar = .hidden
+        if AppUtility.topMostStatusBarStyle == .darkContent {
+            attributes.statusBar = .dark
+        } else {
+            attributes.statusBar = .light
+        }
         attributes.screenBackground = .clear
          attributes.screenInteraction = .absorbTouches
          attributes.entryInteraction = .absorbTouches
@@ -72,7 +75,13 @@ private extension QYAlert {
          )
          attributes.positionConstraints.verticalOffset = 0
          attributes.positionConstraints.safeArea = .overridden
-         
+        /// TODO: fix 2.0.0 SwiftEntryKit 状态栏没有适配好
+        /// 在这做个修复  等待吧
+        attributes.lifecycleEvents = .init(willAppear: nil, didAppear: nil, willDisappear: nil, didDisappear: {
+            DispatchQueue.main.async {
+                AppUtility.topMost?.setNeedsStatusBarAppearanceUpdate()
+            }
+        })
         return attributes
     }
     class func showPrivacyPolicy() {
@@ -182,7 +191,7 @@ private class QYPrivacyPolicyView: UIView {
     }
     
     @objc func acceptButtonDidClick() {
-        Defaults[\.launchPrivacyPolicyKey] = QYConfig.appVersion
+        Defaults.launchPrivacyPolicyKey = QYConfig.appVersion
         QYAlert.dismiss()
     }
     @objc func noAcceptButtonDidClick() {

@@ -15,9 +15,12 @@ import Localize_Swift
 
 class AppBaseVMController: AppBaseController {
     
-    var viewModel: QYViewModel?
-    init(viewModel: QYViewModel?) {
+    var viewModel: AppViewModel?
+    var context: AppRouterContext?
+    init(viewModel: AppViewModel?,
+         context: AppRouterContext? = nil ) {
         self.viewModel = viewModel
+        self.context = nil
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -66,19 +69,18 @@ class AppBaseVMController: AppBaseController {
         $0.font = QYFont.fontRegular(12)
         $0.color = UIColor.app.color(hexString: "#B9C3C9")
     }
-    lazy var baseEmptyView: QYBaseEmptyView = {
+    lazy var baseEmptyView: AppBaseEmptyView = {
         // 防止约束冲突的 高度给个大高度
-        let emptyView = QYBaseEmptyView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth - QYInch.value(40), height: QYInch.value(400)))
+        let emptyView = AppBaseEmptyView(frame: CGRect(x: 0, y: 0, width: QYInch.screenWidth - QYInch.value(40), height: QYInch.value(400)))
         return emptyView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        _bindViewModel()
+        bindViewModel()
     }
     
-    override func _prepare() {
-        super._prepare()
+    override func prepare() {
+        super.prepare()
         emptyUnConnectionImage = appIconFontIcons.icon_placeholder_unconnected.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
         emptyUnConnectionTitle = R.string.localizable.emptyUnConnectedTitle.key.localized().set(style: emptyTitleStyle)
         emptyUnConnectionDetail = R.string.localizable.emptyUnConnectedDetail.key.localized().set(style: emptyDetailStyle)
@@ -88,7 +90,7 @@ class AppBaseVMController: AppBaseController {
         emptyDetail = R.string.localizable.emptyDataDetail.key.localized().set(style: emptyDetailStyle)
     }
     
-    func _bindViewModel() {
+    func bindViewModel() {
         guard viewModel != nil else {
             return
         }

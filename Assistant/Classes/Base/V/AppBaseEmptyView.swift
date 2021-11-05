@@ -1,5 +1,5 @@
 //
-//  QYBaseEmptyView.swift
+//  AppBaseEmptyView.swift
 //  ios_app
 //
 //  Created by cyd on 2021/10/12.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QYBaseEmptyView: UIView {
+class AppBaseEmptyView: UIView {
 
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()

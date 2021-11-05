@@ -40,7 +40,7 @@ class AppLaunchAd: NSObject {
         XHLaunchAd.setLaunch(.launchScreen)
         XHLaunchAd.setWaitDataDuration(1)
         
-            self.launchImageAdConfig(url: self.scale3Url,scale: 3)
+        self.launchImageAdConfig(url: self.scale3Url,scale: 3)
         
     }
     fileprivate func launchImageAdConfig(url: String?,scale: Int) {
@@ -48,12 +48,12 @@ class AppLaunchAd: NSObject {
         
         adConfig.duration = 2
         /*if scale == 2 {
-            adConfig.frame = UIScreen.main.bounds
-        } else {
-            let width: CGFloat = 375
-            let height: CGFloat = 528
-            adConfig.frame = CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: ceil(QYInch.screenWidth * height / width))
-        }*/
+         adConfig.frame = UIScreen.main.bounds
+         } else {
+         let width: CGFloat = 375
+         let height: CGFloat = 528
+         adConfig.frame = CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: ceil(QYInch.screenWidth * height / width))
+         }*/
         
         adConfig.imageNameOrURLString = url
         adConfig.imageOption = .cacheInBackground

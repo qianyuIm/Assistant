@@ -14,6 +14,10 @@ extension AppUtility {
         }
         return tabbarController
     }
+    /// 顶层视图的状态栏
+    class var topMostStatusBarStyle: UIStatusBarStyle? {
+        return topMost?.preferredStatusBarStyle
+    }
     /// 顶层视图
     class var topMost: UIViewController? {
         return topMost(of: tabbarController())

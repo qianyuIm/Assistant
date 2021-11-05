@@ -14,7 +14,7 @@ import RxSwift
 class AppBaseCollectionVMController: AppBaseVMController {
     
     lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self._setupLayout())
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
         if #available(iOS 11.0, *) {
             collectionView.contentInsetAdjustmentBehavior = .never
         }
@@ -30,27 +30,27 @@ class AppBaseCollectionVMController: AppBaseVMController {
         // Do any additional setup after loading the view.
     }
     
-    func _setupLayout() -> UICollectionViewLayout {
+    func createLayout() -> UICollectionViewLayout {
         return UICollectionViewFlowLayout()
     }
-    override func _setupUI() {
-        super._setupUI()
+    override func setupUI() {
+        super.setupUI()
         view.addSubview(collectionView)
     }
-    override func _setupConstraints() {
-        super._setupConstraints()
+    override func setupConstraints() {
+        super.setupConstraints()
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
     }
     
-    override func _setupTheme() {
-        super._setupTheme()
+    override func setupTheme() {
+        super.setupTheme()
         collectionView.theme.backgroundColor = appThemeProvider.attribute { $0.backgroundColor }
     }
     
-    override func _bindViewModel() {
-        super._bindViewModel()
+    override func bindViewModel() {
+        super.bindViewModel()
         guard viewModel != nil else {
             return
         }
@@ -80,7 +80,7 @@ private extension AppBaseCollectionVMController {
     // MARK: - 绑定头部刷新回调和头部刷新状态
     private func bindHeader() {
         guard let refreshHeader = collectionView.mj_header,
-              let viewModel = viewModel as? QYRefreshViewModel else { return }
+              let viewModel = viewModel as? AppRefreshViewModel else { return }
         // 将刷新事件传递给 refreshVM
         refreshHeader.rx.refreshing
             .bind(to: viewModel.refreshInput.beginHeaderRefresh)
@@ -103,7 +103,7 @@ private extension AppBaseCollectionVMController {
     // MARK: - 绑定尾部刷新回调和尾部刷新状态
     private func bindFooter() {
         guard let refreshFooter = collectionView.mj_footer,
-              let viewModel = viewModel as? QYRefreshViewModel else { return }
+              let viewModel = viewModel as? AppRefreshViewModel else { return }
         // 将刷新事件传递给 refreshVM
         refreshFooter.rx.refreshing
             .bind(to: viewModel.refreshInput.beginFooterRefresh)

@@ -8,22 +8,23 @@
 import UIKit
 
 class AppMoreController: AppBaseVMController {
-
+    lazy var settingItem: UIBarButtonItem = {
+        let image = appIconFontIcons.icon_settings.image(size: 24)
+        let item = UIBarButtonItem(image: image,style: .plain, target: self, action: #selector(handleSettingAction(_:event:)))
+        return item
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func setupUI() {
+        super.setupUI()
+        self.navigationItem.rightBarButtonItem = settingItem
     }
-    */
-
+    
+    @objc func handleSettingAction(_ sender: AnyObject, event: UIEvent) {
+        AppRouter.shared.open(AppRouterType.setting.pattern, context: nil)
+    }
 }

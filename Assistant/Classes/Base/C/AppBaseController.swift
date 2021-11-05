@@ -15,36 +15,33 @@ class AppBaseController: UIViewController, AppRouterable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        _prepare()
-        _registerNotification()
-        _setupUI()
-        _setupConstraints()
-        _setupTheme()
+        prepare()
+        registerNotification()
+        setupUI()
+        setupConstraints()
+        setupTheme()
     }
     
     /// 1. 常量设置
-    func _prepare() {
-        
-    }
+    func prepare() {}
     /// 2. 通知
-    func _registerNotification() {}
+    func registerNotification() {}
     /// 3. UI设置
-    func _setupUI() { }
+    func setupUI() { }
     /// 4. 约束设置
-    func _setupConstraints() {}
+    func setupConstraints() {}
     /// 5. 皮肤设置
-    func _setupTheme() {
+    func setupTheme() {
         view.theme.backgroundColor = appThemeProvider.attribute { $0.backgroundColor }
 
         UIApplication.shared.theme.statusBarStyle = appThemeProvider.attribute { $0.statusBarStyle }
         
         appThemeProvider.typeStream.subscribe(onNext: { [weak self](theme) in
             guard let strongSelf = self else { return }
+            
             /// 需要异步执行
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.0, execute: {
-//                strongSelf.hbd_setNeedsUpdateNavigationBar()
-//            })
             DispatchQueue.main.async {
+                strongSelf.setNeedsStatusBarAppearanceUpdate()
                 strongSelf.hbd_setNeedsUpdateNavigationBar()
             }
         }).disposed(by: rx.disposeBag)

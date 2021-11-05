@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 struct QYConfig {
     /// 启动页面展示 前后台时间间隔  默认: 60 * 3 s
@@ -68,4 +69,16 @@ struct QYConfig {
         }()
     }
     
+    struct Theme {
+        static var themeAutoSystem: Bool {
+            set {
+                Defaults.themeAutoSystem = newValue
+//                Defaults[\.themeAutoSystem] = newValue
+            }
+            get {
+                return Defaults.themeAutoSystem
+            }
+        }
+        
+    }
 }

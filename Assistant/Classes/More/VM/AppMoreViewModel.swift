@@ -8,6 +8,6 @@
 import RxSwift
 import RxCocoa
 
-class AppMoreViewModel: QYViewModel {
+class AppMoreViewModel: AppViewModel {
 
 }

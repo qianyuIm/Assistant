@@ -8,6 +8,6 @@
 import RxSwift
 import RxCocoa
 
-class AppWallpaperViewModel: QYViewModel {
+class AppWallpaperViewModel: AppViewModel {
 
 }

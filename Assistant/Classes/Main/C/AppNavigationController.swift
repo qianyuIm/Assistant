@@ -20,6 +20,10 @@ class AppNavigationController: HBDNavigationController {
         return topViewController
     }
     
+    override var childForStatusBarHidden: UIViewController? {
+        return topViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
