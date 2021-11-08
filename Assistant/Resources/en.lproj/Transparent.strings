@@ -5,6 +5,7 @@
   Created by cyd on 2021/11/6.
   
 */
+"Transparent.Navigation.Title" = "Transparent Widget";
 "Done" = "OK";
 "Course1.Title" = "What's transparent background?";
 "Course1.Subtitle" = "Difference between basic-widgets and transparent-widgets.";
@@ -16,4 +17,12 @@
 "Course4.Subtitle" = "Long press widgets into edit mode,Choose a transparent position";
 "Course5.Title" = "Set successfully";
 "Course5.Subtitle" = "Uploading both light and dark mode backgrounds will keep your widgets be transparent when you change the appearance mode";
+
+"Switch.Title" = "Two screenshorts in iOS dark and light mode";
+"Switch.Subtitle" = "Upload screenshorts in dark and light mode at the same time";
+"Question.Title" = "FAQ";
+"Question.Subtitle1" = "1.Dislocation of the home-screen-background and widgets.";
+"Question.Describe1" = "To solve this problem,you need to go to the Setting --> Home Screen --> Turn off the Perspective Zoom --> reset the home screen background";
+"Question.Subtitle2" = "2.Why my screenshort size is wrong?";
+"Question.Describe2" = "To solve this problem,you need to go to the Setting --> Display & Brightness --> Scroll to the bottom and enter the View --> Change the display mode into Standard mode.";
 

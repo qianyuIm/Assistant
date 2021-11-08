@@ -5,6 +5,7 @@
   Created by cyd on 2021/11/6.
   
 */
+"Transparent.Navigation.Title" = "透明组件";
 "Done" = "我知道了";
 "Course1.Title" = "透明组件效果对比";
 "Course1.Subtitle" = "想让小组件拥有透明的效果吗?一起来学习吧!";
@@ -16,4 +17,12 @@
 "Course4.Subtitle" = "回到桌面,选择透明背景位置";
 "Course5.Title" = "设置成功";
 "Course5.Subtitle" = "如果手机桌面壁纸随iOS深浅模式变化,就要同时上传深浅空白截图,以保证透明效果";
+
+"Switch.Title" = "iOS深浅外观2种截图";
+"Switch.Subtitle" = "同时上传深浅外观下的截图，以保证组件透明效果";
+"Question.Title" = "常见问题";
+"Question.Subtitle1" = "1、 透明背景错位怎么办？";
+"Question.Describe1" = "截屏之前，进入设置->墙纸->选择主屏幕预览图->关闭视角缩放->点击设定，然后重新截图上传";
+"Question.Subtitle2" = "2、提示截图尺寸错误，怎么办？";
+"Question.Describe2" = "进入设置->显示与亮度->视图->设定为标准，然后再重新截图上传";
 

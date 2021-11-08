@@ -1,0 +1,282 @@
+PODS:
+  - Alamofire (5.4.4)
+  - AMapFoundation (1.6.8)
+  - AMapLocation (2.7.0):
+    - AMapFoundation (~> 1.6.8)
+  - AMapSearch (7.9.0):
+    - AMapFoundation (~> 1.6.6)
+  - AttributedString (2.2.0)
+  - AutoInch (2.4.0)
+  - BetterSegmentedControl (2.0.1)
+  - CHIPageControl (0.2):
+    - CHIPageControl/Aji (= 0.2)
+    - CHIPageControl/Aleppo (= 0.2)
+    - CHIPageControl/Chimayo (= 0.2)
+    - CHIPageControl/Fresno (= 0.2)
+    - CHIPageControl/Jalapeno (= 0.2)
+    - CHIPageControl/Jaloro (= 0.2)
+    - CHIPageControl/Paprika (= 0.2)
+    - CHIPageControl/Puya (= 0.2)
+  - CHIPageControl/Aji (0.2)
+  - CHIPageControl/Aleppo (0.2)
+  - CHIPageControl/Chimayo (0.2)
+  - CHIPageControl/Fresno (0.2)
+  - CHIPageControl/Jalapeno (0.2)
+  - CHIPageControl/Jaloro (0.2)
+  - CHIPageControl/Paprika (0.2)
+  - CHIPageControl/Puya (0.2)
+  - Differentiator (5.0.0)
+  - EFIconFont (1.2.0):
+    - EFIconFont/Core (= 1.2.0)
+  - EFIconFont/Core (1.2.0)
+  - EmptyDataSet-Swift (5.0.0)
+  - ESTabBarController-swift (2.8.0)
+  - FLAnimatedImage (1.0.16)
+  - FLEX (4.2.2)
+  - HandyJSON (5.0.2)
+  - HBDNavigationBar (1.8.3)
+  - Hero (1.6.1)
+  - JCore (2.7.1)
+  - JMLink (2.1.5):
+    - JCore (>= 2.0.0)
+  - JPush (4.3.6):
+    - JCore (>= 2.0.0)
+  - JXPagingView/Paging (2.1.1)
+  - JXSegmentedView (1.2.7)
+  - libwebp (1.2.1):
+    - libwebp/demux (= 1.2.1)
+    - libwebp/mux (= 1.2.1)
+    - libwebp/webp (= 1.2.1)
+  - libwebp/demux (1.2.1):
+    - libwebp/webp
+  - libwebp/mux (1.2.1):
+    - libwebp/demux
+  - libwebp/webp (1.2.1)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.4.3)
+  - MLeaksFinder (1.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (15.0.0):
+    - Moya/Core
+    - RxSwift (~> 6.0)
+  - "NSObject+Rx (5.2.2)":
+    - RxSwift (~> 6.2)
+  - PanModal (1.2.7)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - ReachabilitySwift (5.0.0)
+  - RxActivityIndicator (2.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxDataSources (5.0.0):
+    - Differentiator (~> 5.0)
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - RxReachability (1.2.1):
+    - ReachabilitySwift (< 6.0, >= 5.0)
+    - RxCocoa (~> 6)
+    - RxSwift (~> 6)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxTheme (6.0.0):
+    - RxCocoa (~> 6.0)
+    - RxSwift (~> 6.0)
+  - SDWebImage/Core (5.12.1)
+  - SDWebImageFLPlugin (0.5.0):
+    - FLAnimatedImage (>= 1.0.11)
+    - SDWebImage/Core (~> 5.10)
+  - SDWebImageWebPCoder (0.8.4):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.10)
+  - SnapKit (5.0.1)
+  - SPPermissions (6.7.1):
+    - SPPermissions/Core (= 6.7.1)
+  - SPPermissions/Core (6.7.1)
+  - SwiftDate (6.3.1)
+  - SwiftEntryKit (2.0.0)
+  - SwiftRichString (3.7.2)
+  - SwiftyBeaver (1.9.5)
+  - SwiftyUserDefaults (5.3.0)
+  - Toaster (2.3.0)
+  - URLNavigator (2.3.0)
+  - XHLaunchAd (3.9.12):
+    - FLAnimatedImage (~> 1.0.12)
+
+DEPENDENCIES:
+  - AMapLocation (~> 2.7.0)
+  - AMapSearch (~> 7.9.0)
+  - AttributedString (~> 2.2.0)
+  - AutoInch (~> 2.4.0)
+  - BetterSegmentedControl (~> 2.0.1)
+  - CHIPageControl (~> 0.2)
+  - EFIconFont (~> 1.2.0)
+  - EmptyDataSet-Swift (~> 5.0.0)
+  - ESTabBarController-swift (~> 2.8.0)
+  - FLEX (~> 4.2.2)
+  - HandyJSON (~> 5.0.2)
+  - HBDNavigationBar (~> 1.8.1)
+  - Hero (~> 1.6.1)
+  - JCore (~> 2.7.1)
+  - JMLink (~> 2.1.5)
+  - JPush (~> 4.3.6)
+  - JXPagingView/Paging (~> 2.1.1)
+  - JXSegmentedView (~> 1.2.7)
+  - Localize-Swift (~> 3.2.0)
+  - MBProgressHUD (~> 1.2.0)
+  - MJRefresh (~> 3.4.3)
+  - MLeaksFinder (from `https://github.com/Tencent/MLeaksFinder.git`)
+  - Moya/RxSwift (~> 15.0.0)
+  - "NSObject+Rx (~> 5.2.2)"
+  - PanModal (~> 1.2.7)
+  - R.swift (~> 5.4.0)
+  - RxActivityIndicator (~> 2.0.0)
+  - RxDataSources (~> 5.0.0)
+  - RxReachability (~> 1.2.1)
+  - RxTheme (~> 6.0.0)
+  - SDWebImageFLPlugin (~> 0.5.0)
+  - SDWebImageWebPCoder (~> 0.8.4)
+  - SnapKit (~> 5.0.1)
+  - SPPermissions (~> 6.7.1)
+  - SwiftDate (~> 6.3.1)
+  - SwiftEntryKit (~> 2.0.0)
+  - SwiftRichString (~> 3.7.2)
+  - SwiftyBeaver (~> 1.9.5)
+  - SwiftyUserDefaults (~> 5.3.0)
+  - Toaster (~> 2.3.0)
+  - URLNavigator (~> 2.3.0)
+  - XHLaunchAd (~> 3.9.12)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
+    - AttributedString
+    - AutoInch
+    - BetterSegmentedControl
+    - CHIPageControl
+    - Differentiator
+    - EFIconFont
+    - EmptyDataSet-Swift
+    - ESTabBarController-swift
+    - FLAnimatedImage
+    - FLEX
+    - HandyJSON
+    - HBDNavigationBar
+    - Hero
+    - JCore
+    - JMLink
+    - JPush
+    - JXPagingView
+    - JXSegmentedView
+    - libwebp
+    - Localize-Swift
+    - MBProgressHUD
+    - MJRefresh
+    - Moya
+    - "NSObject+Rx"
+    - PanModal
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
+    - RxActivityIndicator
+    - RxCocoa
+    - RxDataSources
+    - RxReachability
+    - RxRelay
+    - RxSwift
+    - RxTheme
+    - SDWebImage
+    - SDWebImageFLPlugin
+    - SDWebImageWebPCoder
+    - SnapKit
+    - SPPermissions
+    - SwiftDate
+    - SwiftEntryKit
+    - SwiftRichString
+    - SwiftyBeaver
+    - SwiftyUserDefaults
+    - Toaster
+    - URLNavigator
+    - XHLaunchAd
+
+EXTERNAL SOURCES:
+  MLeaksFinder:
+    :git: https://github.com/Tencent/MLeaksFinder.git
+
+CHECKOUT OPTIONS:
+  MLeaksFinder:
+    :commit: dda7088f1bbe9d1d07e730d37a16413dffa4747a
+    :git: https://github.com/Tencent/MLeaksFinder.git
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  AMapFoundation: 32e9a0264ee62f5aa2aaf82bdafdda7985ce09c7
+  AMapLocation: 720eb034995c6198d480f8f7bbd714bb08bb9ef7
+  AMapSearch: 94cff5f6ab7233c1639111e486861ac2acea6d4b
+  AttributedString: 386c1af029cc3186288d9feb84fbbb097928843f
+  AutoInch: f4169e245152be4e5cdcb91ac5afd29fc98536d6
+  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
+  CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
+  Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
+  EFIconFont: 2c2fec7b83f60304235957650841a0815c1c1611
+  EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
+  FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  HBDNavigationBar: c0fe3627a8f618961caed3dc1ce145d59b404e6e
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
+  JCore: 9d5bda3a172c65bbe14f2806ab0f6246f8a06065
+  JMLink: 98be9006a7f7b3f9cc1543df7661bec74afe108c
+  JPush: 33807f0f612ffb21a84621f5429b21c17808a6ce
+  JXPagingView: 99140c6f7f64abec35bc2dfc87c17ca049cafe76
+  JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
+  libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  MLeaksFinder: 89eb3142bf1bbd0a3d1849543b629399c5da74c5
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  "NSObject+Rx": 61cf1f7306a73dcef8b36649198af0813ec18dfd
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  RxActivityIndicator: 2cc25088cfb3fda3c89848ad7a6f79017bb94a5b
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
+  RxReachability: bfd13548bf1dac7a877082d13918a9f39bdb5c18
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxTheme: be60cb14e0544b3cbd574cc37fed35ba9d61aa1f
+  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
+  SDWebImageFLPlugin: 245c7ce1e77028b6ef415240847b3f8aa4b106b7
+  SDWebImageWebPCoder: f93010f3f6c031e2f8fb3081ca4ee6966c539815
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SPPermissions: c23b7937272b53243707040f092b0fdeacb9ca91
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
+  XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
+
+PODFILE CHECKSUM: 75f700084abf692d0905a49ae6cfdd2d4aaa0e4d
+
+COCOAPODS: 1.11.2
