@@ -8,7 +8,6 @@
 import UIKit
 import ESTabBarController_swift
 import RxTheme
-import Localize_Swift
 
 enum AppTabBarSelectedType {
     case widget
@@ -56,28 +55,28 @@ class AppTabBarController: ESTabBarController {
         let widgetsModel = AppWidgetsViewModel()
         let widget = _setController(
             controller: AppWidgetsController(viewModel: widgetsModel),
-            title: R.string.localizable.tabbarWidget.key.localized(),
+            title: R.string.localizable.tabbarWidget.key.app.localized(),
             normalImage: appIconFontIcons.icon_tab_widget.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_widget.image(size: 24))
         
         let iconsViewModel = AppIconsViewModel()
         let icons = _setController(
             controller: AppIconsController(viewModel: iconsViewModel),
-            title: R.string.localizable.tabbarIcons.key.localized(),
+            title: R.string.localizable.tabbarIcons.key.app.localized(),
             normalImage: appIconFontIcons.icon_tab_icons.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_icons.image(size: 24))
         
         let wallpaperViewModel = AppWallpaperViewModel()
         let wallpaper = _setController(
             controller: AppWallpaperController(viewModel: wallpaperViewModel),
-            title: R.string.localizable.tabbarWallpaper.key.localized(),
+            title: R.string.localizable.tabbarWallpaper.key.app.localized(),
             normalImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24))
         
         let moreViewModel = AppMoreViewModel()
         let more = _setController(
             controller: AppMoreController(viewModel: moreViewModel),
-            title: R.string.localizable.tabbarMore.key.localized(),
+            title: R.string.localizable.tabbarMore.key.app.localized(),
             normalImage: appIconFontIcons.icon_tab_more.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_more.image(size: 24))
         

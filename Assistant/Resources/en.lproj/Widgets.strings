@@ -1,0 +1,102 @@
+/*
+ Widgets.strings
+ Assistant
+ 
+ Created by cyd on 2021/11/6.
+ 
+ */
+//Mark: --  Recommend Section
+"Section.Recommend" = "Recommend";
+//Mark: --  GeneralTools Section
+"Section.GeneralTools" = "General Tools";
+"Item.Photo_1" = "Photo#1";
+"Item.Weather_1" = "Weather#1";
+"Item.Weather_2" = "Weather#2";
+"Item.Setps_1" = "Setps#1";
+"Item.Setps_2" = "Setps#2";
+"Item.Setps_3" = "Setps#3";
+"Item.Setps_4" = "Setps#4";
+"Item.Setps_5" = "Setps#5";
+"Item.Setps_6" = "Setps#6";
+"Item.Bill_1" = "Bill#1";
+"Item.Bill_2" = "Bill#2";
+"Item.Note_1" = "Note#1";
+"Item.Note_2" = "Note#2";
+
+//Mark: --  XPanel Section
+"Section.XPanel" = "X-Panel";
+"Item.XPanel_1" = "X-Panel#1";
+"Item.XPanel_2" = "X-Panel#2";
+"Item.XPanel_3" = "X-Panel#3";
+"Item.XPanel_4" = "X-Panel#4";
+"Item.XPanel_5" = "X-Panel#5";
+
+//Mark: --  Dashboard Section
+"Section.Dashboard" = "Dashboard";
+"Item.Dashboard_1" = "Dashboard#1";
+"Item.Dashboard_2" = "Dashboard#2";
+"Item.Dashboard_3" = "Dashboard#3";
+"Item.Dashboard_4" = "Dashboard#4";
+"Item.Dashboard_5" = "Dashboard#5";
+"Item.Dashboard_6" = "Dashboard#6";
+
+//Mark: --  Clock Section
+"Section.Clock" = "Clock";
+"Item.AnalogClock_1" = "AnalogClock#1";
+"Item.AnalogClock_2" = "AnalogClock#2";
+"Item.AnalogClock_3" = "AnalogClock#3";
+"Item.AnalogClock_4" = "AnalogClock#4";
+"Item.AnalogClock_5" = "AnalogClock#5";
+"Item.Clock_1" = "Clock#1";
+"Item.Clock_2" = "Clock#2";
+"Item.Clock_3" = "Clock#3";
+"Item.Clock_4" = "Clock#4";
+"Item.SimpleClock_1" = "SimpleClock#1";
+"Item.ArtClock_1" = "ArtClock#1";
+"Item.ArtClock_2" = "ArtClock#2";
+"Item.TextClock_1" = "TextClock#1";
+
+//Mark: --  QuickLauncher Section
+"Section.QuickLauncher" = "Quick Launcher";
+"Item.Shortcut2_1" = "Shortcut2.0#1";
+"Item.Shortcut2_1" = "Shortcut2.0#1";
+"Item.Shortcut2_2" = "Shortcut2.0#2";
+"Item.Shortcut2_3" = "Shortcut2.0#3";
+"Item.Shortcut2_4" = "Shortcut2.0#4";
+"Item.Shortcut2_5" = "Shortcut2.0#5";
+"Item.Shortcut2_6" = "Shortcut2.0#6";
+"Item.Shortcut2_7" = "Shortcut2.0#7";
+"Item.Shortcut2_8" = "Shortcut2.0#8";
+"Item.Shortcut2_9" = "Shortcut2.0#9";
+
+//Mark: --  Calendar Section
+"Section.Calendar" = "Calendar";
+"Item.Calendar_1" = "Calendar#1";
+"Item.Calendar_2" = "Calendar#2";
+"Item.Calendar_3" = "Calendar#3";
+"Item.Calendar_4" = "Calendar#4";
+"Item.Calendar_5" = "Calendar#5";
+
+//Mark: --  DaysMatter Section
+"Section.DaysMatter" = "Days Matter";
+"Item.Event_1" = "Event#1";
+"Item.Event_2" = "Event#2";
+"Item.Event_3" = "Event#3";
+"Item.Event_4" = "Event#4";
+"Item.Event_5" = "Event#5";
+"Item.Event_6" = "Event#6";
+"Item.Event_7" = "Event#7";
+"Item.Holiday_1" = "Holiday#8";
+"Item.Birthday_1" = "Birthday#1";
+"Item.Birthday_2" = "Birthday#2";
+"Item.Birthday_3" = "Birthday#3";
+
+//Mark: --  SystemInfo Section
+"Section.SystemInfo" = "System Info";
+"Item.Flow_1" = "Flow#1";
+"Item.Disk_1" = "Disk#1";
+//Mark: --  Progress Section
+"Section.Progress" = "Progress";
+"Item.Progress_1" = "Progress#1";
+"Item.Progress_2" = "Progress#2";
+"Item.365Dots_1" = "365Dots#1";

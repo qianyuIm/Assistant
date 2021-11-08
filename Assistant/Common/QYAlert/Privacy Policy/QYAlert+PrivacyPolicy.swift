@@ -9,7 +9,6 @@ import UIKit
 import SwiftEntryKit
 import SwiftyUserDefaults
 import AttributedString
-import Localize_Swift
 import SnapKit
 
 

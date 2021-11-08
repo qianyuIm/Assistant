@@ -32,12 +32,22 @@
 "Bar.Widget.Left.Title" = "Discover";
 "Bar.Widget.Right.Title" = "My Widgets";
 //Mark: -- Bar
-"Segment.Small" = "Small";
-"Segment.Medium" = "Medium";
-"Segment.Large" = "Large";
+"Widget.Segment.Small" = "Small";
+"Widget.Segment.Medium" = "Medium";
+"Widget.Segment.Large" = "Large";
 //Mark: -- Setting
+"Setting" = "Setting";
 "Setting.Language" = "Language Setting";
 "Setting.Theme" = "Theme Setting";
 "Setting.Permissions" = "App Permissions";
 "Setting.About" = "About";
 "Setting.Question" = "FAQ";
+/* Language */
+"Language.Navigation.Title" = "Language";
+/* Theme */
+"Theme.Navigation.Title" = "Color Theme";
+//Mark: -- More
+"More.Menu.Weather" = "Weather";
+"More.Menu.Bills" = "Bills";
+"More.Menu.ScreenPack" = "Screen Pack";
+"More.Menu.Clock" = "Full-screen Clock";

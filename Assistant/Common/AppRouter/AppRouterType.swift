@@ -31,10 +31,24 @@ enum AppRouterType {
     case wifiUploader
     /// 设置页面
     case setting
+    /// 透明
+    case transparent
+    /// 常见问题
+    case question
+    /// 主题设置
+    case themeSetting
+    /// 语言设置
+    case languageSetting
+    /// 权限
+    case permission
+    /// 关于我们
+    case about
+    
+    
+       
 }
 
-//extension QYBaseController: AppRouterable {}
-
+private let kConfigPath = "config/"
 extension AppRouterType: AppRouterTypeable {
     var pattern: String {
         switch self {
@@ -48,12 +62,33 @@ extension AppRouterType: AppRouterTypeable {
             return QYConfig.scheme + "wifiUploader"
         case .setting:
             return QYConfig.scheme + "user/setting"
+        case .transparent:
+            return QYConfig.scheme + kConfigPath + "transparent"
+        case .question:
+            return QYConfig.scheme + kConfigPath + "question"
+        case .themeSetting:
+            return QYConfig.scheme + kConfigPath + "theme"
+        case .languageSetting:
+            return QYConfig.scheme + kConfigPath + "language"
+        case .permission:
+            return QYConfig.scheme + kConfigPath + "permission"
+        case .about:
+            return QYConfig.scheme + kConfigPath + "about"
         }
     }
     func controller(url: URLConvertible, values: [String : Any], context: AppRouterContext?) -> AppRouterable? {
         switch self {
         case .setting:
-            return AppSettingController(viewModel: AppSettingViewModel())
+            return AppSettingController(viewModel: AppSettingViewModel(),
+                                        context: context)
+        case .transparent:
+            return AppTransparentController(viewModel: AppTransparentViewModel(),
+                                            context: context)
+        case .themeSetting:
+            return AppThemeController(viewModel: AppThemeViewModel(), context: context)
+        case .languageSetting:
+            
+            return AppThemeController(viewModel: AppThemeViewModel(), context: context)
         default:
             return nil
         }

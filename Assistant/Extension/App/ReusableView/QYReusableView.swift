@@ -7,19 +7,19 @@
 
 import UIKit
 
-protocol QYReusableView {
+protocol AppReusableView {
     static var defaultReuseIdentifier: String { get }
 }
 
-extension QYReusableView where Self: UIView {
+extension AppReusableView where Self: UIView {
   static var defaultReuseIdentifier: String {
     return String(describing: self)
   }
 }
-protocol QYNibLoadableView {
+protocol AppNibLoadableView {
    static var defaultReuseNibName: String { get }
 }
-extension QYNibLoadableView where Self: UIView{
+extension AppNibLoadableView where Self: UIView{
     static var defaultReuseNibName: String {
         return String(describing: self)
     }
@@ -37,6 +37,6 @@ extension QYNibLoadableView where Self: UIView{
         return view
     }
 }
-extension UITableViewCell: QYReusableView { }
-extension UICollectionReusableView: QYReusableView { }
-extension UITableViewHeaderFooterView: QYReusableView { }
+extension UITableViewCell: AppReusableView {}
+extension UICollectionReusableView: AppReusableView { }
+extension UITableViewHeaderFooterView: AppReusableView { }

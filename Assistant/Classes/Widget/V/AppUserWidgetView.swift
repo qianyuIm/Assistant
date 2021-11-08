@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import Localize_Swift
 
-class AppUserWidgetView: UIView {
+
+class AppUserWidgetView: UIView,AppNibLoadableView {
 
     @IBOutlet weak var iconContentView: UIView!
     @IBOutlet weak var icon: UIImageView!
@@ -21,7 +21,7 @@ class AppUserWidgetView: UIView {
         app.addRoundCorners(.allCorners, radius: 14)
         let image = appIconFontIcons.icon_user_fill.image(size: 14)
         icon.image = image
-        titleLabel.text = R.string.localizable.barWidgetRightTitle.key.localized()
+        titleLabel.text = R.string.localizable.barWidgetRightTitle.key.app.localized()
         iconContentView.app.addRoundCorners(.allCorners, radius: 10)
         bindTheme()
     }

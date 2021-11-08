@@ -7,7 +7,6 @@
 
 import Foundation
 import Moya
-import Localize_Swift
 
 
 extension MoyaError {
@@ -44,24 +43,24 @@ struct MoyaErrorWrap: Error {
     
     /// 数据
     static var data = MoyaErrorWrap(code: -10001,
-                                    title: R.string.localizable.emptyDataTitle.key.localized(),
-                                    detail: R.string.localizable.emptyDataDetail.key.localized())
+                                    title: R.string.localizable.emptyDataTitle.key.app.localized(),
+                                    detail: R.string.localizable.emptyDataDetail.key.app.localized())
     /// 无网络
     static var unNetwork = MoyaErrorWrap(code: -10002,
-                                         title: R.string.localizable.emptyUnConnectedTitle.key.localized(),
-                                         detail: R.string.localizable.emptyUnConnectedDetail.key.localized())
+                                         title: R.string.localizable.emptyUnConnectedTitle.key.app.localized(),
+                                         detail: R.string.localizable.emptyUnConnectedDetail.key.app.localized())
     /// json错误
     static var json = MoyaErrorWrap(code: -10003,
-                                    title: R.string.localizable.emptyJsonTitle.key.localized(),
-                                    detail: R.string.localizable.emptyJsonDetail.key.localized())
+                                    title: R.string.localizable.emptyJsonTitle.key.app.localized(),
+                                    detail: R.string.localizable.emptyJsonDetail.key.app.localized())
     /// 未授权需要登录
     static var unauthorized = MoyaErrorWrap(code: 301,
-                                            title: R.string.localizable.emptyAuthorizationTitle.key.localized(),
-                                            detail: R.string.localizable.emptyAuthorizationDetail.key.localized())
+                                            title: R.string.localizable.emptyAuthorizationTitle.key.app.localized(),
+                                            detail: R.string.localizable.emptyAuthorizationDetail.key.app.localized())
     /// 404
     static var error404 = MoyaErrorWrap(code: 404,
-                                        title: R.string.localizable.empty404Title.key.localized(),
-                                        detail: R.string.localizable.empty404Detail.key.localized())
+                                        title: R.string.localizable.empty404Title.key.app.localized(),
+                                        detail: R.string.localizable.empty404Detail.key.app.localized())
     
     
 }

@@ -45,13 +45,20 @@ class NavigationBarTheme {
 }
 /// 字体设置
 class TextTheme {
-    
     let titleColor: UIColor
     let subtitleColor: UIColor
-    
     init(titleColor: UIColor,
          subtitleColor: UIColor) {
         self.titleColor = titleColor
         self.subtitleColor = subtitleColor
     }
+}
+
+/// 分段主题
+struct SegmentedTheme {
+    var titleNormalColor: UIColor
+    var titleSelectedColor: UIColor
+    var indicatorColor: UIColor
+    var titleNormalFont: UIFont
+    var titleSelectedFont: UIFont
 }

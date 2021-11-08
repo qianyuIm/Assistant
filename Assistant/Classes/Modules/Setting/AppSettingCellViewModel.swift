@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
-class AppSettingCellViewModel {
-    
+struct AppSettingCellViewModel {
+    var title: String
+    var iconImage: UIImage?
+    var arrowImage: UIImage? = nil
+    var pattern: String
+    var link: String? = nil
 }

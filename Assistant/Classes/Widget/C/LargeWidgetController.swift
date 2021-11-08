@@ -1,13 +1,13 @@
 //
-//  LaunchScreenController.swift
+//  LargeWidgetController.swift
 //  Assistant
 //
-//  Created by cyd on 2021/11/5.
+//  Created by cyd on 2021/11/8.
 //
 
 import UIKit
 
-class LaunchScreenController: UIViewController {
+class LargeWidgetController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

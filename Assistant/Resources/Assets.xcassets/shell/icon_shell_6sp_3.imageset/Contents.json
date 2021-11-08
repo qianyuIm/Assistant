@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "icon_shell_6sp_3.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

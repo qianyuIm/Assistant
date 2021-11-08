@@ -1,0 +1,19 @@
+/*
+  Transparent.strings
+  Assistant
+
+  Created by cyd on 2021/11/6.
+  
+*/
+"Done" = "OK";
+"Course1.Title" = "What's transparent background?";
+"Course1.Subtitle" = "Difference between basic-widgets and transparent-widgets.";
+"Course2.Title" = "Take screenshot";
+"Course2.Subtitle" = "Scroll to the empty page at the far right and take a screenshot.";
+"Course3.Title" = "Set screenshot";
+"Course3.Subtitle" = "Depends on different appearance mode you use,you need to upload screenshot correspondingly.";
+"Course4.Title" = "Set position";
+"Course4.Subtitle" = "Long press widgets into edit mode,Choose a transparent position";
+"Course5.Title" = "Set successfully";
+"Course5.Subtitle" = "Uploading both light and dark mode backgrounds will keep your widgets be transparent when you change the appearance mode";
+

@@ -1,0 +1,97 @@
+/*
+  Widgets.strings
+  Assistant
+
+  Created by cyd on 2021/11/6.
+  
+*/
+//Mark: --  推荐 Section
+"Section.Recommend" = "推荐";
+//Mark: --  生活工具 Section
+"Section.GeneralTools" = "生活工具";
+"Item.Photo_1" = "照片#1";
+"Item.Weather_1" = "天气#1";
+"Item.Weather_2" = "天气#2";
+"Item.Setps_1" = "步数#1";
+"Item.Setps_2" = "步数#2";
+"Item.Setps_3" = "步数#3";
+"Item.Setps_4" = "步数#4";
+"Item.Setps_5" = "步数#5";
+"Item.Setps_6" = "步数#6";
+"Item.Bill_1" = "账本#1";
+"Item.Bill_2" = "账本#2";
+"Item.Note_1" = "便签#1";
+"Item.Note_2" = "便签#2";
+//Mark: --  X-面板 Section
+"Section.XPanel" = "X-面板";
+"Item.XPanel_1" = "X-面板#1";
+"Item.XPanel_2" = "X-面板#2";
+"Item.XPanel_3" = "X-面板#3";
+"Item.XPanel_4" = "X-面板#4";
+"Item.XPanel_5" = "X-面板#5";
+//Mark: --  仪表盘 Section
+"Section.Dashboard" = "仪表盘";
+"Item.Dashboard_1" = "仪表盘#1";
+"Item.Dashboard_2" = "仪表盘#2";
+"Item.Dashboard_3" = "仪表盘#3";
+"Item.Dashboard_4" = "仪表盘#4";
+"Item.Dashboard_5" = "仪表盘#5";
+"Item.Dashboard_6" = "仪表盘#6";
+//Mark: --  时钟 Section
+"Section.Clock" = "时钟";
+"Item.AnalogClock_1" = "圆形时钟#1";
+"Item.AnalogClock_2" = "圆形时钟#2";
+"Item.AnalogClock_3" = "圆形时钟#3";
+"Item.AnalogClock_4" = "圆形时钟#4";
+"Item.AnalogClock_5" = "圆形时钟#5";
+"Item.Clock_1" = "时钟#1";
+"Item.Clock_2" = "时钟#2";
+"Item.Clock_3" = "时钟#3";
+"Item.Clock_4" = "时钟#4";
+"Item.SimpleClock_1" = "简时钟#1";
+"Item.ArtClock_1" = "艺术时钟#1";
+"Item.ArtClock_2" = "艺术时钟#2";
+"Item.SimpleClock_1" = "简时钟#1";
+"Item.TextClock_1" = "文字时钟#1";
+//Mark: --  捷径 Section
+"Section.QuickLauncher" = "捷径";
+"Item.Shortcut2_1" = "快捷启动2.0#1";
+"Item.Shortcut2_1" = "快捷启动2.0#1";
+"Item.Shortcut2_2" = "快捷启动2.0#2";
+"Item.Shortcut2_3" = "快捷启动2.0#3";
+"Item.Shortcut2_4" = "快捷启动2.0#4";
+"Item.Shortcut2_5" = "快捷启动2.0#5";
+"Item.Shortcut2_6" = "快捷启动2.0#6";
+"Item.Shortcut2_7" = "快捷启动2.0#7";
+"Item.Shortcut2_8" = "快捷启动2.0#8";
+"Item.Shortcut2_9" = "快捷启动2.0#9";
+//Mark: --  日历 Section
+"Section.Calendar" = "日历";
+"Item.Calendar_1" = "日历#1";
+"Item.Calendar_2" = "日历#2";
+"Item.Calendar_3" = "日历#3";
+"Item.Calendar_4" = "日历#4";
+"Item.Calendar_5" = "日历#5";
+//Mark: --  倒数日 Section
+"Section.DaysMatter" = "倒数日";
+"Item.Event_1" = "倒数日#1";
+"Item.Event_2" = "倒数日#2";
+"Item.Event_3" = "倒数日#3";
+"Item.Event_4" = "倒数日#4";
+"Item.Event_5" = "倒数日#5";
+"Item.Event_6" = "倒数日#6";
+"Item.Event_7" = "倒数日#7";
+"Item.Holiday_1" = "节假日#8";
+"Item.Birthday_1" = "生辰#1";
+"Item.Birthday_2" = "生辰#2";
+"Item.Birthday_3" = "生辰#3";
+//Mark: --  系统信息 Section
+"Section.SystemInfo" = "系统信息";
+"Item.Flow_1" = "数据流量#1";
+"Item.Disk_1" = "存储空间#1";
+//Mark: --  进度 Section
+"Section.Progress" = "进度";
+"Item.Progress_1" = "进度#1";
+"Item.Progress_2" = "进度#2";
+"Item.365Dots_1" = "365Dots#1";
+

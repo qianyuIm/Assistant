@@ -44,6 +44,8 @@ protocol AppThemeProtocol {
     var statusBarStyle: UIStatusBarStyle { get }
     /// 文字颜色主题
     var textTheme: TextTheme { get }
+    /// 分段控制器主题
+    var segmentedTheme: SegmentedTheme { get }
     
     init(colorSwatch: AppColorSwatch)
 }
@@ -57,7 +59,7 @@ struct AppLightTheme: AppThemeProtocol {
     var statusBarStyle: UIStatusBarStyle
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#3D444B"),
                               subtitleColor: UIColor.app.color(hexString: "#626262"))
-    
+    var segmentedTheme: SegmentedTheme
     init(colorSwatch: AppColorSwatch) {
         primaryColor = colorSwatch.color
         if #available(iOS 13.0, *) {
@@ -76,6 +78,13 @@ struct AppLightTheme: AppThemeProtocol {
             tintColor: QYColor.black54,
             foregroundColor: QYColor.black54,
             barStyle: UIBarStyle.default)
+        segmentedTheme = SegmentedTheme(
+            titleNormalColor: QYColor.black54,
+            titleSelectedColor: primaryColor,
+            indicatorColor: primaryColor,
+            titleNormalFont: QYFont.fontMedium(13),
+            titleSelectedFont: QYFont.fontSemibold(15)
+        )
     }
 }
 
@@ -88,6 +97,7 @@ struct AppDarkTheme: AppThemeProtocol {
     let statusBarStyle: UIStatusBarStyle = .lightContent
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#FFFFFF"),
                               subtitleColor: UIColor.app.color(hexString: "#E6E6E6"))
+    var segmentedTheme: SegmentedTheme
     
     init(colorSwatch: AppColorSwatch) {
         primaryColor = colorSwatch.colorDark
@@ -102,6 +112,13 @@ struct AppDarkTheme: AppThemeProtocol {
             tintColor: QYColor.white70,
             foregroundColor: QYColor.white70,
             barStyle: UIBarStyle.black
+        )
+        segmentedTheme = SegmentedTheme(
+            titleNormalColor: QYColor.white70,
+            titleSelectedColor: primaryColor,
+            indicatorColor: primaryColor,
+            titleNormalFont: QYFont.fontMedium(13),
+            titleSelectedFont: QYFont.fontSemibold(15)
         )
     }
 }

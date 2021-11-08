@@ -12,7 +12,7 @@ import NSObject_Rx
 import RxSwift
 import RxCocoa
 
-protocol QYViewModelable {
+protocol AppViewModelable {
     associatedtype Input
     associatedtype Output
     func transform(input: Input) -> Output

@@ -13,5 +13,27 @@
 			</array>
 		</dict>
 	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>如果不允许，将无法展示本地网络中可用存储设备信息</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>如果不允许，将无法展示日历日程安排和节假日信息</string>
+	<key>NSMotionUsageDescription</key>
+	<string>如果不允许，将无法使用【步数组件】，我们将无法得到您的步数信息</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>如果不允许，将无法在【设备信息组件】中看到蓝牙的状态</string>
+	<key>PHPhotoLibraryPreventAutomaticLimitedAccessAlert</key>
+	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>如果不允许，将无法使用【相机】相关功能</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>如果不允许，将无法在【设备信息组件】中看到蓝牙的状态</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>如果不允许，将无法使用系统相册里的照片用于设置【照片组件】或其他组件的【背景图】</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>授权访问唯一标示（idfa）将可以可以给您推荐个性化内容</string>
 </dict>
 </plist>

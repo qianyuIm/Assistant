@@ -11,7 +11,6 @@ import SwiftRichString
 import EmptyDataSet_Swift
 import RxSwift
 import RxCocoa
-import Localize_Swift
 
 class AppBaseVMController: AppBaseController {
     
@@ -82,12 +81,12 @@ class AppBaseVMController: AppBaseController {
     override func prepare() {
         super.prepare()
         emptyUnConnectionImage = appIconFontIcons.icon_placeholder_unconnected.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
-        emptyUnConnectionTitle = R.string.localizable.emptyUnConnectedTitle.key.localized().set(style: emptyTitleStyle)
-        emptyUnConnectionDetail = R.string.localizable.emptyUnConnectedDetail.key.localized().set(style: emptyDetailStyle)
+        emptyUnConnectionTitle = R.string.localizable.emptyUnConnectedTitle.key.app.localized().set(style: emptyTitleStyle)
+        emptyUnConnectionDetail = R.string.localizable.emptyUnConnectedDetail.key.app.localized().set(style: emptyDetailStyle)
         
         emptyImage = appIconFontIcons.icon_placeholder_empty.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
-        emptyTitle = R.string.localizable.emptyDataTitle.key.localized().set(style: emptyTitleStyle)
-        emptyDetail = R.string.localizable.emptyDataDetail.key.localized().set(style: emptyDetailStyle)
+        emptyTitle = R.string.localizable.emptyDataTitle.key.app.localized().set(style: emptyTitleStyle)
+        emptyDetail = R.string.localizable.emptyDataDetail.key.app.localized().set(style: emptyDetailStyle)
     }
     
     func bindViewModel() {

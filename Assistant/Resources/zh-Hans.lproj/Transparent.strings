@@ -1,0 +1,19 @@
+/*
+  Transparent.strings
+  Assistant
+
+  Created by cyd on 2021/11/6.
+  
+*/
+"Done" = "我知道了";
+"Course1.Title" = "透明组件效果对比";
+"Course1.Subtitle" = "想让小组件拥有透明的效果吗?一起来学习吧!";
+"Course2.Title" = "截取空白桌面";
+"Course2.Subtitle" = "截取没有任何图标的手机空白桌面一定要截屏,壁纸不行喔~";
+"Course3.Title" = "选择截屏";
+"Course3.Subtitle" = "若手机是浅色模式,则上传浅色截屏。若手机是深色模式,则上传深色截屏";
+"Course4.Title" = "选择位置";
+"Course4.Subtitle" = "回到桌面,选择透明背景位置";
+"Course5.Title" = "设置成功";
+"Course5.Subtitle" = "如果手机桌面壁纸随iOS深浅模式变化,就要同时上传深浅空白截图,以保证透明效果";
+

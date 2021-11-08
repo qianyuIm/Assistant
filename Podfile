@@ -54,6 +54,14 @@ def swift_pods
   pod 'AttributedString', '~> 2.2.0'
   # Router
   pod 'URLNavigator', '~> 2.3.0'
+  pod 'Hero', '~> 1.6.1'
+  pod 'PanModal', '~> 1.2.7'
+  pod 'CHIPageControl', '~> 0.2'
+  pod 'JXSegmentedView', '~> 1.2.7'
+  pod 'JXPagingView/Paging', '~> 2.1.1'
+  pod 'BetterSegmentedControl', '~> 2.0.1'
+  pod 'SwiftDate', '~> 6.3.1'
+  pod 'SPPermissions', '~> 6.7.1'
 end
 
 

@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Localize_Swift
 
 extension String: AppExtensionCompatible {}
 
-// MARK: image
+// MARK:
 extension AppExtensionWrapper where Base == String {
     
     /// 返回处理之后的图片链接 根据屏幕调整比例
@@ -49,5 +50,20 @@ extension AppExtensionWrapper where Base == String {
     /// 文件扩展名
     var pathExtension: String {
         return (base as NSString).pathExtension
+    }
+}
+// MARK: 国际化
+extension AppExtensionWrapper where Base == String {
+    func localized() -> String {
+        return base.localized()
+    }
+    func imageLocalized() -> String {
+        return base.localized(using: "Image")
+    }
+    func transparentLocalized() -> String {
+        return base.localized(using: "Transparent")
+    }
+    func widgetsLocalized() -> String {
+        return base.localized(using: "Widgets")
     }
 }

@@ -6,7 +6,70 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class AppSettingViewModel: AppViewModel {
     
+    let itemSelected = PublishSubject<AppSettingCellViewModel>()
+
+    struct Input {
+        /// 初始化
+        let trigger: Observable<Void>
+        let selection: Driver<AppSettingSectionItem>
+
+    }
+    struct Output {
+        let dataSource: BehaviorRelay<[AppSettingSection]>
+    }
 }
+extension AppSettingViewModel: AppViewModelable {
+    func transform(input: Input) -> Output {
+        let dataSource = BehaviorRelay<[AppSettingSection]>(value: [])
+        input.trigger.flatMapLatest { [weak self] () -> Observable<[AppSettingSection]> in
+            guard let strongSelf = self else {
+                return .empty()
+            }
+            return strongSelf.config()
+        }.bind(to: dataSource).disposed(by: rx.disposeBag)
+        
+        input.selection.asObservable().map { $0.viewModel}.bind(to: itemSelected).disposed(by: rx.disposeBag)
+        
+        return Output(dataSource: dataSource)
+    }
+}
+extension AppSettingViewModel {
+    func config() -> Observable<[AppSettingSection]> {
+        var sections: [AppSettingSection] = []
+        let profileSection = AppSettingSection
+            .profileSection(title: "用户设置",
+                            items: [
+                                .profileItem(viewMode: .init(title: "用户", iconImage: AppIconFontIcons.icon_settings.image(size: 24), arrowImage: nil,pattern: ""))
+                            ])
+        let configSection = AppSettingSection
+            .configSection(title: "设置",
+                           items: [
+                            .languageItem(viewMode: .init(title: "语言设置",
+                                                          iconImage: AppIconFontIcons.icon_setting_language.image(size: 24),
+                                                          pattern: AppRouterType.languageSetting.pattern)),
+                            .themeItem(viewMode: .init(title: "皮肤设置",
+                                                       iconImage: AppIconFontIcons.icon_setting_theme.image(size: 24),
+                                                       pattern:AppRouterType.themeSetting.pattern)),
+                            .permissionItem(viewMode: .init(title: "权限管理",
+                                                            iconImage: AppIconFontIcons.icon_setting_permission.image(size: 24),
+                                                            pattern:AppRouterType.permission.pattern)),
+                            .aboutItem(viewMode: .init(title: "关于我们",
+                                                       iconImage: AppIconFontIcons.icon_setting_about.image(size: 24),
+                                                       pattern:AppRouterType.about.pattern)),
+                            .questionItem(viewMode: .init(title: "常见问题",
+                                                          iconImage: AppIconFontIcons.icon_setting_question.image(size: 24),
+                                                          pattern:AppRouterType.question.pattern))
+                           ])
+    
+        sections.append(profileSection)
+        sections.append(configSection)
+
+        return Observable.just(sections)
+    }
+}
+ 
