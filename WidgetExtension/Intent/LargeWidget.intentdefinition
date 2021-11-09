@@ -26,7 +26,7 @@
 			<key>INIntentIneligibleForSuggestions</key>
 			<true/>
 			<key>INIntentLastParameterTag</key>
-			<integer>5</integer>
+			<integer>6</integer>
 			<key>INIntentName</key>
 			<string>LargeWidgetConfiguration</string>
 			<key>INIntentParameters</key>
@@ -42,10 +42,6 @@
 					<integer>1</integer>
 					<key>INIntentParameterName</key>
 					<string>currentWidgetType</string>
-					<key>INIntentParameterObjectType</key>
-					<string>DynamicWidgetType</string>
-					<key>INIntentParameterObjectTypeNamespace</key>
-					<string>IUQyGD</string>
 					<key>INIntentParameterPromptDialogs</key>
 					<array>
 						<dict>
@@ -88,7 +84,7 @@
 					<key>INIntentParameterSupportsDynamicEnumeration</key>
 					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>5</integer>
+					<integer>6</integer>
 					<key>INIntentParameterType</key>
 					<string>Object</string>
 				</dict>
