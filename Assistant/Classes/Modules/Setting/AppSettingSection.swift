@@ -19,7 +19,7 @@ enum AppSettingSectionItem {
     case permissionItem(viewMode: AppSettingCellViewModel)
     case aboutItem(viewMode: AppSettingCellViewModel)
     case questionItem(viewMode: AppSettingCellViewModel)
-       
+    case limitItem(viewMode: AppSettingCellViewModel)
     var viewModel: AppSettingCellViewModel {
         switch self {
         case .profileItem(let viewMode):
@@ -33,6 +33,8 @@ enum AppSettingSectionItem {
         case .aboutItem(let viewMode):
             return viewMode
         case .questionItem(let viewMode):
+            return viewMode
+        case .limitItem(let viewMode):
             return viewMode
         }
     }

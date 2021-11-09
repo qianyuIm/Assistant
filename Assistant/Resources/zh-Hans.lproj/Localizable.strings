@@ -33,6 +33,7 @@
 //Mark: -- Setting
 "Setting" = "设置";
 "Setting.Language" = "语言设置";
+"Setting.Limit" = "小组件限制说明";
 "Setting.Theme" = "主题设置";
 "Setting.Permissions" = "权限管理";
 "Setting.About" = "关于";

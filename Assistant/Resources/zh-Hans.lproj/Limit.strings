@@ -1,0 +1,27 @@
+/* 
+  Limit.strings
+  Assistant
+
+  Created by cyd on 2021/11/9.
+  
+*/
+"Navigation.Title" = "小组件限制说明";
+"Data.Content.Title" = "组件数据和状态刷新不是实时的";
+"Data.Content.Subtitle" = "iOS优化保护电池寿命机制导致";
+"Data.Describe" = "主屏幕小组件由iOS系统自动刷新，添加到桌面的小 组件（除时钟小组件外），刷新状态可能存在延迟，且 小组件的每日刷新存在上限。所以桌面小组件会有时 看起来停止工作，或与系统更新不一致。受影响的功 能包括蓝牙、WiFi、蜂窝数据及步数统计等。\n当再次进入APP后，桌面小组件会强制刷新。所以， 当小组件状态长时间未刷新时，请再次进入「万能小 组件」状态将会刷新。";
+
+"Gesture.Content.Title" = "点击组件将打开APP的限制";
+"Gesture.Content.Subtitle" = "桌面小组件仅支持轻点打开APP操作";
+"Gesture.Describe" = "根据iOS14系统要求，添加到桌面的小组件仅支持「点击并打开提供功能的APP」操作，故而每次轻触
+桌面小组件后，将会打开「万能小组件」。";
+
+"Name.Content.Title" = "小组件下方APP名称不可去除";
+"Name.Content.Subtitle" = "该名称不可更改或去掉";
+"Name.Describe" = "在iOS14系统中，使用APP名称来区分各小组件功能。苹果官方要求第三方组件必须显示软件名称，故而APP名称在原则上是不可去除或更改的。";
+
+
+
+
+
+
+

@@ -38,6 +38,7 @@
 //Mark: -- Setting
 "Setting" = "Setting";
 "Setting.Language" = "Language Setting";
+"Setting.Limit" = "Widgets Limit";
 "Setting.Theme" = "Theme Setting";
 "Setting.Permissions" = "App Permissions";
 "Setting.About" = "About";

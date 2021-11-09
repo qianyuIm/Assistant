@@ -47,21 +47,24 @@ extension AppSettingViewModel {
                                 .profileItem(viewMode: .init(title: "用户", iconImage: AppIconFontIcons.icon_settings.image(size: 24), arrowImage: nil,pattern: ""))
                             ])
         let configSection = AppSettingSection
-            .configSection(title: "设置",
+            .configSection(title: R.string.localizable.setting.key.app.localized(),
                            items: [
-                            .languageItem(viewMode: .init(title: "语言设置",
+                            .limitItem(viewMode: .init(title: R.string.localizable.settingLimit.key.app.localized(),
+                                                          iconImage: AppIconFontIcons.icon_setting_limit.image(size: 24),
+                                                          pattern: AppRouterType.limit.pattern)),
+                            .languageItem(viewMode: .init(title: R.string.localizable.settingLanguage.key.app.localized(),
                                                           iconImage: AppIconFontIcons.icon_setting_language.image(size: 24),
                                                           pattern: AppRouterType.languageSetting.pattern)),
-                            .themeItem(viewMode: .init(title: "皮肤设置",
+                            .themeItem(viewMode: .init(title: R.string.localizable.settingTheme.key.app.localized(),
                                                        iconImage: AppIconFontIcons.icon_setting_theme.image(size: 24),
                                                        pattern:AppRouterType.themeSetting.pattern)),
-                            .permissionItem(viewMode: .init(title: "权限管理",
+                            .permissionItem(viewMode: .init(title: R.string.localizable.settingPermissions.key.app.localized(),
                                                             iconImage: AppIconFontIcons.icon_setting_permission.image(size: 24),
                                                             pattern:AppRouterType.permission.pattern)),
-                            .aboutItem(viewMode: .init(title: "关于我们",
+                            .aboutItem(viewMode: .init(title: R.string.localizable.settingAbout.key.app.localized(),
                                                        iconImage: AppIconFontIcons.icon_setting_about.image(size: 24),
                                                        pattern:AppRouterType.about.pattern)),
-                            .questionItem(viewMode: .init(title: "常见问题",
+                            .questionItem(viewMode: .init(title: R.string.localizable.settingQuestion.key.app.localized(),
                                                           iconImage: AppIconFontIcons.icon_setting_question.image(size: 24),
                                                           pattern:AppRouterType.question.pattern))
                            ])

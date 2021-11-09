@@ -1,0 +1,30 @@
+/* 
+  Limit.strings
+  Assistant
+
+  Created by cyd on 2021/11/9.
+  
+*/
+"Navigation.Title" = "Widgets Limit";
+
+"Data.Content.Title" = "Data and status aren't real-time update";
+"Data.Content.Subtitle" = "iOS optimized to protect battery life";
+"Data.Describe" = "Home screen widgets are automatically refreshed by the iOS system. For widgets added to the desktop (except clock widgets), the refresh status may be delayed, and there is an upper limit for the daily refresh of widgets. So desktop widgets sometimes seem to stop working, or are inconsistent with system updates. Affected functions include Bluetooth, WiFi, cellular data and step count statistics.\n When you enter the APP again, the desktop widget will be forced to refresh. Therefore, when the widget status has not been refreshed for a long time, please enter the Ftop widgets」 state again and it will be refreshed.";
+
+"Gesture.Content.Title" = "Touching widget will enter Top Widgets";
+"Gesture.Content.Subtitle" = "Desktop widget Tap to open the APP";
+"Gesture.Describe" = "When on home screen, widgets only support click movement and click will open Top Widgets.";
+
+"Name.Content.Title" = "The name under the widget";
+"Name.Content.Subtitle" = "Appname is not allwed to be removed.";
+"Name.Describe" = "Appname is a way to distinguish widgets functions. Therefore Top Widgets can't remove appname.";
+
+
+
+
+
+
+
+
+
+

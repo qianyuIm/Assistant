@@ -16,8 +16,6 @@
 		EF6A21332735285A00691B3A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A21182735238100691B3A /* WidgetKit.framework */; };
 		EF6A21342735285A00691B3A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A211A2735238100691B3A /* SwiftUI.framework */; };
 		EF6A213A2735285B00691B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21392735285B00691B3A /* Assets.xcassets */; };
-		EF6A213C2735285B00691B3A /* WidgetExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21382735285A00691B3A /* WidgetExtension.intentdefinition */; };
-		EF6A213D2735285B00691B3A /* WidgetExtension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21382735285A00691B3A /* WidgetExtension.intentdefinition */; };
 		EF6A21402735285B00691B3A /* WidgetExtensionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF6A21322735285A00691B3A /* WidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF6A21452735290C00691B3A /* WidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21442735290C00691B3A /* WidgetExtension.swift */; };
 		EF6A214827352A9A00691B3A /* AppSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A214727352A9A00691B3A /* AppSettingController.swift */; };
@@ -26,8 +24,6 @@
 		EF6A21562735306000691B3A /* AppSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21542735306000691B3A /* AppSettingCell.xib */; };
 		EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21572735318200691B3A /* AppSettingSection.swift */; };
 		EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */; };
-		EF6A215D273537D900691B3A /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF6A215B273537D900691B3A /* iconfont.ttf */; };
-		EF6A215E273537D900691B3A /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = EF6A215C273537D900691B3A /* iconfont.css */; };
 		EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A0B2738B41B00E28F27 /* Widgets.strings */; };
 		EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A112738B47400E28F27 /* Transparent.strings */; };
 		EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A222738B7EC00E28F27 /* simpleTeachVideo.mp4 */; };
@@ -164,6 +160,17 @@
 		EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD0F2733AD9F000B2350 /* AppWallpaperViewModel.swift */; };
 		EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD112733AD9F000B2350 /* AppWallpaperController.swift */; };
 		EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD162733B455000B2350 /* UIApplicationExtensions.swift */; };
+		EFF296362739FFE000ACB35E /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF296342739FFE000ACB35E /* iconfont.ttf */; };
+		EFF296372739FFE000ACB35E /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = EFF296352739FFE000ACB35E /* iconfont.css */; };
+		EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF29639273A007C00ACB35E /* AppLimitController.swift */; };
+		EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFF29641273A00BD00ACB35E /* Limit.strings */; };
+		EFF296AA273A0C4C00ACB35E /* AppLimitController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFF296A9273A0C4B00ACB35E /* AppLimitController.xib */; };
+		EFF296B5273A4C6D00ACB35E /* SmallWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFF296B4273A4C6D00ACB35E /* SmallWidget.intentdefinition */; };
+		EFF296B7273A4DC800ACB35E /* SmallWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF296B6273A4DC800ACB35E /* SmallWidget.swift */; };
+		EFF296B9273A539F00ACB35E /* MediumWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF296B8273A539F00ACB35E /* MediumWidget.swift */; };
+		EFF296BB273A53C700ACB35E /* MediumWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFF296BA273A53C700ACB35E /* MediumWidget.intentdefinition */; };
+		EFF296BD273A553B00ACB35E /* LargeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF296BC273A553B00ACB35E /* LargeWidget.swift */; };
+		EFF296BF273A55A200ACB35E /* LargeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFF296BE273A55A200ACB35E /* LargeWidget.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,7 +225,6 @@
 		EF6A211A2735238100691B3A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EF6A212C273526DD00691B3A /* WidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 		EF6A21322735285A00691B3A /* WidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF6A21382735285A00691B3A /* WidgetExtension.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetExtension.intentdefinition; sourceTree = "<group>"; };
 		EF6A21392735285B00691B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6A213B2735285B00691B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6A21442735290C00691B3A /* WidgetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WidgetExtension.swift; sourceTree = "<group>"; };
@@ -228,8 +234,6 @@
 		EF6A21542735306000691B3A /* AppSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingCell.xib; sourceTree = "<group>"; };
 		EF6A21572735318200691B3A /* AppSettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingSection.swift; sourceTree = "<group>"; };
 		EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingCellViewModel.swift; sourceTree = "<group>"; };
-		EF6A215B273537D900691B3A /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		EF6A215C273537D900691B3A /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
 		EFD03A0A2738B41B00E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Widgets.strings; sourceTree = "<group>"; };
 		EFD03A0C2738B41D00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Widgets.strings"; sourceTree = "<group>"; };
 		EFD03A102738B47400E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Transparent.strings; sourceTree = "<group>"; };
@@ -385,6 +389,18 @@
 		EFD4AD112733AD9F000B2350 /* AppWallpaperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWallpaperController.swift; sourceTree = "<group>"; };
 		EFD4AD162733B455000B2350 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		EFD4AD1C2733E745000B2350 /* Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assistant.entitlements; sourceTree = "<group>"; };
+		EFF296342739FFE000ACB35E /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		EFF296352739FFE000ACB35E /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
+		EFF29639273A007C00ACB35E /* AppLimitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLimitController.swift; sourceTree = "<group>"; };
+		EFF29640273A00BD00ACB35E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Limit.strings; sourceTree = "<group>"; };
+		EFF29642273A00BF00ACB35E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Limit.strings"; sourceTree = "<group>"; };
+		EFF296A9273A0C4B00ACB35E /* AppLimitController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppLimitController.xib; sourceTree = "<group>"; };
+		EFF296B4273A4C6D00ACB35E /* SmallWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = SmallWidget.intentdefinition; path = WidgetExtension/Intent/SmallWidget.intentdefinition; sourceTree = SOURCE_ROOT; };
+		EFF296B6273A4DC800ACB35E /* SmallWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidget.swift; sourceTree = "<group>"; };
+		EFF296B8273A539F00ACB35E /* MediumWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidget.swift; sourceTree = "<group>"; };
+		EFF296BA273A53C700ACB35E /* MediumWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MediumWidget.intentdefinition; sourceTree = "<group>"; };
+		EFF296BC273A553B00ACB35E /* LargeWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidget.swift; sourceTree = "<group>"; };
+		EFF296BE273A55A200ACB35E /* LargeWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = LargeWidget.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,8 +474,9 @@
 		EF6A21352735285A00691B3A /* WidgetExtension */ = {
 			isa = PBXGroup;
 			children = (
+				EFF296B3273A4B2500ACB35E /* Widget */,
+				EFF296B2273A4B2000ACB35E /* Intent */,
 				EF6A21442735290C00691B3A /* WidgetExtension.swift */,
-				EF6A21382735285A00691B3A /* WidgetExtension.intentdefinition */,
 				EF6A21392735285B00691B3A /* Assets.xcassets */,
 				EF6A213B2735285B00691B3A /* Info.plist */,
 			);
@@ -583,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD4AD1C2733E745000B2350 /* Assistant.entitlements */,
+				EFF296AF273A3EE300ACB35E /* Shared */,
 				EFD4ABDB27336BBE000B2350 /* Configs */,
 				EFD4ABD427336B43000B2350 /* AppDelegate */,
 				EFD4ABDA27336BB2000B2350 /* Classes */,
@@ -630,6 +648,7 @@
 				EFD4AC0927337E41000B2350 /* IconFont */,
 				EFD4AC05273370D8000B2350 /* R.generated.swift */,
 				EFD4ABB22733674E000B2350 /* Info.plist */,
+				EFF29641273A00BD00ACB35E /* Limit.strings */,
 				EFD03A672738BF2900E28F27 /* Image.strings */,
 				EFD03A112738B47400E28F27 /* Transparent.strings */,
 				EFD03A0B2738B41B00E28F27 /* Widgets.strings */,
@@ -746,6 +765,7 @@
 		EFD4ABDE27336C06000B2350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFF29638273A005200ACB35E /* Limit */,
 				EFD03A882739164600E28F27 /* Language */,
 				EFD03A832739158C00E28F27 /* Theme */,
 				EFD03A762738D3D600E28F27 /* Transparent */,
@@ -798,8 +818,8 @@
 		EFD4AC0927337E41000B2350 /* IconFont */ = {
 			isa = PBXGroup;
 			children = (
-				EF6A215C273537D900691B3A /* iconfont.css */,
-				EF6A215B273537D900691B3A /* iconfont.ttf */,
+				EFF296352739FFE000ACB35E /* iconfont.css */,
+				EFF296342739FFE000ACB35E /* iconfont.ttf */,
 			);
 			path = IconFont;
 			sourceTree = "<group>";
@@ -1251,6 +1271,42 @@
 			path = C;
 			sourceTree = "<group>";
 		};
+		EFF29638273A005200ACB35E /* Limit */ = {
+			isa = PBXGroup;
+			children = (
+				EFF29639273A007C00ACB35E /* AppLimitController.swift */,
+				EFF296A9273A0C4B00ACB35E /* AppLimitController.xib */,
+			);
+			path = Limit;
+			sourceTree = "<group>";
+		};
+		EFF296AF273A3EE300ACB35E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EFF296B2273A4B2000ACB35E /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				EFF296B4273A4C6D00ACB35E /* SmallWidget.intentdefinition */,
+				EFF296BA273A53C700ACB35E /* MediumWidget.intentdefinition */,
+				EFF296BE273A55A200ACB35E /* LargeWidget.intentdefinition */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		EFF296B3273A4B2500ACB35E /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				EFF296B6273A4DC800ACB35E /* SmallWidget.swift */,
+				EFF296B8273A539F00ACB35E /* MediumWidget.swift */,
+				EFF296BC273A553B00ACB35E /* LargeWidget.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1394,15 +1450,15 @@
 				EFD4AC8D27338A25000B2350 /* music_home_banner.json in Resources */,
 				EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */,
 				EFD4ACEE2733A996000B2350 /* AppRouter.plist in Resources */,
+				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
-				EF6A215E273537D900691B3A /* iconfont.css in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
 				EFD4ACA627338B32000B2350 /* InfoPlist.strings in Resources */,
 				EF0AAA7F27350713006CEED0 /* AppUserWidgetView.xib in Resources */,
 				EFD4AC8E27338A25000B2350 /* music_home_recommend_resource.json in Resources */,
 				EFD4AC1227337EA5000B2350 /* iconfont_translate.py in Resources */,
-				EF6A215D273537D900691B3A /* iconfont.ttf in Resources */,
 				EFD4AC8B27338A25000B2350 /* music_home_private.json in Resources */,
+				EFF296AA273A0C4C00ACB35E /* AppLimitController.xib in Resources */,
 				EF0AAA742734D626006CEED0 /* startup.sh in Resources */,
 				EFD03A5F2738BB1A00E28F27 /* widget_create_guide_small.mp4 in Resources */,
 				EFD03A4F2738BA9100E28F27 /* trasparentStep1.mp4 in Resources */,
@@ -1421,6 +1477,8 @@
 				EF0AAA762734D632006CEED0 /* README.md in Resources */,
 				EFD03A532738BAF000E28F27 /* widget_create_guide_large.mp4 in Resources */,
 				EFD4ABAE2733674E000B2350 /* Assets.xcassets in Resources */,
+				EFF296362739FFE000ACB35E /* iconfont.ttf in Resources */,
+				EFF296372739FFE000ACB35E /* iconfont.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,8 +1565,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF6A213C2735285B00691B3A /* WidgetExtension.intentdefinition in Sources */,
+				EFF296B9273A539F00ACB35E /* MediumWidget.swift in Sources */,
+				EFF296BD273A553B00ACB35E /* LargeWidget.swift in Sources */,
+				EFF296B7273A4DC800ACB35E /* SmallWidget.swift in Sources */,
+				EFF296BF273A55A200ACB35E /* LargeWidget.intentdefinition in Sources */,
 				EF6A21452735290C00691B3A /* WidgetExtension.swift in Sources */,
+				EFF296B5273A4C6D00ACB35E /* SmallWidget.intentdefinition in Sources */,
+				EFF296BB273A53C700ACB35E /* MediumWidget.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,7 +1673,6 @@
 				EFD4ACF72733AA65000B2350 /* AppNotification.swift in Sources */,
 				EFD4ACAC27338E72000B2350 /* Observable+Operators.swift in Sources */,
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
-				EF6A213D2735285B00691B3A /* WidgetExtension.intentdefinition in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
@@ -1618,6 +1680,7 @@
 				EFD4ACEB2733A996000B2350 /* AppRouterAccountPlugin.swift in Sources */,
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
 				EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */,
+				EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */,
 				EFD4AC642733888F000B2350 /* MusicCreator.swift in Sources */,
 				EFD03A8C2739166A00E28F27 /* AppLanguageController.swift in Sources */,
 				EFD4ABA52733674C000B2350 /* AppDelegate.swift in Sources */,
@@ -1791,6 +1854,15 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		EFF29641273A00BD00ACB35E /* Limit.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFF29640273A00BD00ACB35E /* en */,
+				EFF29642273A00BF00ACB35E /* zh-Hans */,
+			);
+			name = Limit.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1809,6 +1881,7 @@
 				INFOPLIST_FILE = WidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INTENTS_CODEGEN_LANGUAGE = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1841,6 +1914,7 @@
 				INFOPLIST_FILE = WidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INTENTS_CODEGEN_LANGUAGE = Automatic;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1991,6 +2065,16 @@
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Assistant/Resources/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "如果不允许，将无法在【设备信息组件】中看到蓝牙的状态";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "如果不允许，将无法在【设备信息组件】中看到蓝牙的状态";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "如果不允许，将无法展示日历日程安排和节假日信息";
+				INFOPLIST_KEY_NSCameraUsageDescription = "如果不允许，将无法使用【相机】相关功能";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "如果不允许，将无法展示本地网络中可用存储设备信息";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息";
+				INFOPLIST_KEY_NSMotionUsageDescription = "如果不允许，将无法使用【步数组件】，我们将无法得到您的步数信息";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "如果不允许，将无法使用系统相册里的照片用于设置【照片组件】或其他组件的【背景图】";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "授权访问唯一标示（idfa）将可以可以给您推荐个性化内容";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
@@ -2028,6 +2112,16 @@
 				DEVELOPMENT_TEAM = 9W33GSKZVH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Assistant/Resources/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "如果不允许，将无法在【设备信息组件】中看到蓝牙的状态";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "如果不允许，将无法在【设备信息组件】中看到蓝牙的状态";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "如果不允许，将无法展示日历日程安排和节假日信息";
+				INFOPLIST_KEY_NSCameraUsageDescription = "如果不允许，将无法使用【相机】相关功能";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "如果不允许，将无法展示本地网络中可用存储设备信息";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "如果不允许，将无法获得您的当前位置，您需要手动输入您的位置信息";
+				INFOPLIST_KEY_NSMotionUsageDescription = "如果不允许，将无法使用【步数组件】，我们将无法得到您的步数信息";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "如果不允许，将无法使用系统相册里的照片用于设置【照片组件】或其他组件的【背景图】";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "授权访问唯一标示（idfa）将可以可以给您推荐个性化内容";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;

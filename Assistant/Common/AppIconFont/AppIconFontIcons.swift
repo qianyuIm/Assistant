@@ -1,5 +1,5 @@
 /// @author:  qy
-/// @date: 2021-11-08 19:11:01
+/// @date: 2021-11-09 09:01:41
 /// @description  代码由程序自动生成。请不要对此文件做任何修改。
 
 import EFIconFont
@@ -24,7 +24,8 @@ extension AppIconFontIcons: EFIconFontCaseIterableProtocol {
 
 
 enum AppIconFontIcons: String {
-        case icon_radio_normal = "\u{e691}"
+        case icon_setting_limit = "\u{e600}"
+case icon_radio_normal = "\u{e691}"
 case icon_radio_selected = "\u{e607}"
 case icon_arrow_left = "\u{e60d}"
 case icon_arrow_right = "\u{e868}"

@@ -46,6 +46,8 @@ protocol AppThemeProtocol {
     var textTheme: TextTheme { get }
     /// 分段控制器主题
     var segmentedTheme: SegmentedTheme { get }
+    /// card 主题
+    var cardTheme: CardTheme { get }
     
     init(colorSwatch: AppColorSwatch)
 }
@@ -59,7 +61,9 @@ struct AppLightTheme: AppThemeProtocol {
     var statusBarStyle: UIStatusBarStyle
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#3D444B"),
                               subtitleColor: UIColor.app.color(hexString: "#626262"))
+    
     var segmentedTheme: SegmentedTheme
+    let cardTheme = CardTheme(color: UIColor.white, radius: 6)
     init(colorSwatch: AppColorSwatch) {
         primaryColor = colorSwatch.color
         if #available(iOS 13.0, *) {
@@ -98,7 +102,8 @@ struct AppDarkTheme: AppThemeProtocol {
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#FFFFFF"),
                               subtitleColor: UIColor.app.color(hexString: "#E6E6E6"))
     var segmentedTheme: SegmentedTheme
-    
+    let cardTheme = CardTheme(color: UIColor.app.color(hexString: "#5A5A5A"), radius: 6)
+
     init(colorSwatch: AppColorSwatch) {
         primaryColor = colorSwatch.colorDark
         tabbarTheme = TabbarTheme(

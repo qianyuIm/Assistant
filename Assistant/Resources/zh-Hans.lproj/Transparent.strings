@@ -5,7 +5,7 @@
   Created by cyd on 2021/11/6.
   
 */
-"Transparent.Navigation.Title" = "透明组件";
+"Navigation.Title" = "透明组件";
 "Done" = "我知道了";
 "Course1.Title" = "透明组件效果对比";
 "Course1.Subtitle" = "想让小组件拥有透明的效果吗?一起来学习吧!";

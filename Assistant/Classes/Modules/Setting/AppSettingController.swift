@@ -25,7 +25,8 @@ class AppSettingController: AppBaseCollectionVMController {
                     .themeItem(let viewMode),
                     .permissionItem(let viewMode),
                     .aboutItem(let viewMode),
-                    .questionItem(let viewMode):
+                    .questionItem(let viewMode),
+                    .limitItem(let viewMode):
                 let cell = collectionView.app.dequeueReusableCell(cellClass: AppSettingCell.self, for: indexPath)
                 cell.config(viewMode)
                 return cell

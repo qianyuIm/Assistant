@@ -5,7 +5,7 @@
   Created by cyd on 2021/11/6.
   
 */
-"Transparent.Navigation.Title" = "Transparent Widget";
+"Navigation.Title" = "Transparent Widget";
 "Done" = "OK";
 "Course1.Title" = "What's transparent background?";
 "Course1.Subtitle" = "Difference between basic-widgets and transparent-widgets.";

@@ -54,6 +54,12 @@ class TextTheme {
     }
 }
 
+/// card 主题
+struct CardTheme {
+    var color: UIColor
+    var radius: CGFloat
+}
+
 /// 分段主题
 struct SegmentedTheme {
     var titleNormalColor: UIColor

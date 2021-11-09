@@ -43,9 +43,9 @@ enum AppRouterType {
     case permission
     /// 关于我们
     case about
+    /// 小组件限制
+    case limit
     
-    
-       
 }
 
 private let kConfigPath = "config/"
@@ -74,6 +74,8 @@ extension AppRouterType: AppRouterTypeable {
             return QYConfig.scheme + kConfigPath + "permission"
         case .about:
             return QYConfig.scheme + kConfigPath + "about"
+        case .limit:
+            return QYConfig.scheme + kConfigPath + "limit"
         }
     }
     func controller(url: URLConvertible, values: [String : Any], context: AppRouterContext?) -> AppRouterable? {
@@ -87,8 +89,9 @@ extension AppRouterType: AppRouterTypeable {
         case .themeSetting:
             return AppThemeController(viewModel: AppThemeViewModel(), context: context)
         case .languageSetting:
-            
             return AppThemeController(viewModel: AppThemeViewModel(), context: context)
+        case .limit:
+            return AppLimitController()
         default:
             return nil
         }

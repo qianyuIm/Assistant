@@ -66,4 +66,7 @@ extension AppExtensionWrapper where Base == String {
     func widgetsLocalized() -> String {
         return base.localized(using: "Widgets")
     }
+    func limitLocalized() -> String {
+        return base.localized(using: "Limit")
+    }
 }
