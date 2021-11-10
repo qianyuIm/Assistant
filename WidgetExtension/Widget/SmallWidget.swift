@@ -18,12 +18,12 @@ struct SmallWidgetProvider: IntentTimelineProvider {
         SmallEntry(date: Date())
     }
 
-    func getSnapshot(for configuration: SmallWidgetConfigurationIntent, in context: Context, completion: @escaping (SmallEntry) -> ()) {
+    func getSnapshot(for configuration: SmallWidgetIntent, in context: Context, completion: @escaping (SmallEntry) -> ()) {
         let entry = SmallEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(for configuration: SmallWidgetConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: SmallWidgetIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SmallEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -49,13 +49,13 @@ struct SmallWidgetEntryView : View {
 }
 
 struct SmallWidget: Widget {
-    let kind: String = "SmallWidget"
+    let kind: String = WidgetSharedKind.small
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: SmallWidgetConfigurationIntent.self, provider: SmallWidgetProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: SmallWidgetIntent.self, provider: SmallWidgetProvider()) { entry in
             SmallWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("小号")
-        .description("这是小号")
+        .description("设置透明位置后可让小组件模拟出透明效果")
         .supportedFamilies([.systemSmall])
     }
 }

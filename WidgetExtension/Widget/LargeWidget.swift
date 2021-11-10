@@ -18,12 +18,12 @@ struct LargeWidgetProvider: IntentTimelineProvider {
         LargeEntry(date: Date())
     }
 
-    func getSnapshot(for configuration: LargeWidgetConfigurationIntent, in context: Context, completion: @escaping (LargeEntry) -> ()) {
+    func getSnapshot(for configuration: LargeWidgetIntent, in context: Context, completion: @escaping (LargeEntry) -> ()) {
         let entry = LargeEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(for configuration: LargeWidgetConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: LargeWidgetIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [LargeEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -49,9 +49,9 @@ struct LargeWidgetEntryView : View {
 }
 
 struct LargeWidget: Widget {
-    let kind: String = "LargeWidget"
+    let kind: String = WidgetSharedKind.large
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: LargeWidgetConfigurationIntent.self, provider: LargeWidgetProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: LargeWidgetIntent.self, provider: LargeWidgetProvider()) { entry in
             LargeWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("大号")

@@ -10,7 +10,7 @@ import SwiftUI
 
 /// 入口函数
 @main
-struct WidgetExtension: WidgetBundle {
+struct AppWidgets: WidgetBundle {
     var body: some Widget {
         SmallWidget()
         MediumWidget()

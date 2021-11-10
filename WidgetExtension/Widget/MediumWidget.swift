@@ -18,12 +18,12 @@ struct MediumWidgetProvider: IntentTimelineProvider {
         MediumEntry(date: Date())
     }
 
-    func getSnapshot(for configuration: MediumWidgetConfigurationIntent, in context: Context, completion: @escaping (MediumEntry) -> ()) {
+    func getSnapshot(for configuration: MediumWidgetIntent, in context: Context, completion: @escaping (MediumEntry) -> ()) {
         let entry = MediumEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(for configuration: MediumWidgetConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: MediumWidgetIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [MediumEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
@@ -49,9 +49,9 @@ struct MediumWidgetEntryView : View {
 }
 
 struct MediumWidget: Widget {
-    let kind: String = "MediumWidget"
+    let kind: String = WidgetSharedKind.medium
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: MediumWidgetConfigurationIntent.self, provider: MediumWidgetProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: MediumWidgetIntent.self, provider: MediumWidgetProvider()) { entry in
             MediumWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("中号")
