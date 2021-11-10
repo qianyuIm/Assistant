@@ -605,6 +605,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EFD11B60273BC4F400C68AF9 /* AppCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppCheckbox;
+			sourceTree = "<group>";
+		};
 		EFD4AB982733674C000B2350 = {
 			isa = PBXGroup;
 			children = (
@@ -696,6 +703,7 @@
 		EFD4ABD827336B9B000B2350 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EFD11B60273BC4F400C68AF9 /* AppCheckbox */,
 				EFD4ACF42733AA65000B2350 /* AppNotification */,
 				EFD4ACE02733A995000B2350 /* AppRouter */,
 				EFD4ACAD27338EE6000B2350 /* QYRefresh */,

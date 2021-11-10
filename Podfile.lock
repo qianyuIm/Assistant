@@ -7,6 +7,7 @@ PODS:
     - AMapFoundation (~> 1.6.6)
   - AttributedString (2.2.0)
   - AutoInch (2.4.0)
+  - BEMCheckBox (1.4.1)
   - BetterSegmentedControl (2.0.1)
   - CHIPageControl (0.2):
     - CHIPageControl/Aji (= 0.2)
@@ -119,6 +120,7 @@ DEPENDENCIES:
   - AMapSearch (~> 7.9.0)
   - AttributedString (~> 2.2.0)
   - AutoInch (~> 2.4.0)
+  - BEMCheckBox
   - BetterSegmentedControl (~> 2.0.1)
   - CHIPageControl (~> 0.2)
   - EFIconFont (~> 1.2.0)
@@ -166,6 +168,7 @@ SPEC REPOS:
     - AMapSearch
     - AttributedString
     - AutoInch
+    - BEMCheckBox
     - BetterSegmentedControl
     - CHIPageControl
     - Differentiator
@@ -229,6 +232,7 @@ SPEC CHECKSUMS:
   AMapSearch: 94cff5f6ab7233c1639111e486861ac2acea6d4b
   AttributedString: 386c1af029cc3186288d9feb84fbbb097928843f
   AutoInch: f4169e245152be4e5cdcb91ac5afd29fc98536d6
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
@@ -277,6 +281,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: 75f700084abf692d0905a49ae6cfdd2d4aaa0e4d
+PODFILE CHECKSUM: 18518127de7e549592ee555ab0ce9118aa48f6a5
 
 COCOAPODS: 1.10.0

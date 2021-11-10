@@ -39,35 +39,6 @@ struct QYConfig {
         /// H5目标路径 与 targetPage 互斥
         static let targetUrl = "targetUrl"
     }
-    /// web 传输
-    struct Uploader {
-        static let bookSupport = ["txt"]
-        static let musicSupport = ["mp3"]
-        /// 上传位置
-        static let uploadDirectory: String = {
-            let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask,true).last! + "/QianyuImUploadDirectory")
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: path) { return path }
-            do{
-                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            }catch{ }
-            return path
-        }()
-    }
-    struct Reader {
-        /// 数据库地址
-        static let readerPath = (NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask,true).last! + "/QianyuImReader")
-        /// 本地小说存储位置
-        static let localBooksPath: String = {
-            let path = readerPath + "/QianyuImReaderLocalBooks"
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: path) { return path }
-            do{
-                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            }catch{ }
-            return path
-        }()
-    }
     
     struct Theme {
         static var themeAutoSystem: Bool {

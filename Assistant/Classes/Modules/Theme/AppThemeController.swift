@@ -14,6 +14,7 @@ class AppThemeController: AppBaseVMController {
 
         // Do any additional setup after loading the view.
     }
+    
     override func setupUI() {
         super.setupUI()
         navigationItem.title = R.string.localizable.themeNavigationTitle.key.app.localized()
