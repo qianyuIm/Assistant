@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Assistant
+
+  Created by cyd on 2021/11/10.
+  
+*/
+"Placeholder.Title" = "Widget Assistant";
+"Placeholder.Line1" = "1.Long press to enter edit mode";
+"Placeholder.Line2" = "2.Click to edit widget";
+"Placeholder.Line3" = "3.Select the widget type";
+
+"Small.Configuration.DisplayName" = "Small";
+"Small.Configuration.Description" = "set transparent mode to simulate transparent effect";
+
+"Medium.Configuration.DisplayName" = "Medium";
+"Medium.Configuration.Description" = "set transparent mode to simulate transparent effect";
+
+"Large.Configuration.DisplayName" = "Large";
+"Large.Configuration.Description" = "set transparent mode to simulate transparent effect";
+

@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Assistant
+
+  Created by cyd on 2021/11/10.
+  
+*/
+"Placeholder.Title" = "小组件助手";
+"Placeholder.Line1" = "1.长按进入编辑模式";
+"Placeholder.Line2" = "2.点击编辑小组件";
+"Placeholder.Line3" = "3.选择所需小组件类型";
+
+"Small.Configuration.DisplayName" = "小号";
+"Small.Configuration.Description" = "设置透明位置后可让小组件模拟出透明效果";
+
+"Medium.Configuration.DisplayName" = "中号";
+"Medium.Configuration.Description" = "设置透明位置后可让小组件模拟出透明效果";
+
+"Large.Configuration.DisplayName" = "大号";
+"Large.Configuration.Description" = "设置透明位置后可让小组件模拟出透明效果";

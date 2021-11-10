@@ -17,14 +17,14 @@ class MediumWidgetIntentHandler: NSObject, MediumWidgetIntentHandling {
     
     func providePositionTypeOptionsCollection(for intent: MediumWidgetIntent, with completion: @escaping (INObjectCollection<PositionType>?, Error?) -> Void) {
         
-        let followSystem = PositionType(identifier: "medium_follow_system", display: "跟随app内设置",subtitle: nil,image: INImage(named: "icon_relevance"))
+        let followSystem = PositionType(identifier: "medium_follow_system", display: NSLocalizedString("Position.System", comment: ""),subtitle: nil,image: INImage(named: "icon_relevance"))
         
-        let up = PositionType(identifier: "medium_up", display: "上",subtitle: nil,image: INImage(named: "icon_medium_up"))
+        let up = PositionType(identifier: "medium_up", display: NSLocalizedString("Position.Top", comment: ""),subtitle: nil,image: INImage(named: "icon_medium_up"))
         
-        let center = PositionType(identifier: "medium_center", display: "中",subtitle: nil,image: INImage(named: "icon_medium_center"))
+        let center = PositionType(identifier: "medium_center", display: NSLocalizedString("Position.Center", comment: ""),subtitle: nil,image: INImage(named: "icon_medium_center"))
         
         
-        let down = PositionType(identifier: "medium_down", display: "下",subtitle: nil,image: INImage(named: "icon_medium_down"))
+        let down = PositionType(identifier: "medium_down", display: NSLocalizedString("Position.Down", comment: ""),subtitle: nil,image: INImage(named: "icon_medium_down"))
 
         let allPosition = [followSystem, up, center, down]
         completion(INObjectCollection(items: allPosition),nil)

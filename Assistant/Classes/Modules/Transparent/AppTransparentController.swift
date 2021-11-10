@@ -12,6 +12,10 @@ class AppTransparentController: AppBaseVMController {
         let item = UIBarButtonItem(image: R.image.icon_transparent_guide(),style: .plain, target: self, action: #selector(handleGuideAction(_:event:)))
         return item
     }()
+    lazy var transparentView: UIView = {
+        let view = UIView()
+        return view
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +24,8 @@ class AppTransparentController: AppBaseVMController {
     
     override func setupUI() {
          super.setupUI()
-        self.navigationItem.rightBarButtonItem = guideItem
+        navigationItem.rightBarButtonItem = guideItem
+        navigationItem.title = R.string.transparent.navigationTitle.key.app.transparentLocalized()
     }
     
     @objc func handleGuideAction(_ sender: AnyObject, event: UIEvent) {

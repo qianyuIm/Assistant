@@ -54,10 +54,11 @@ struct MediumWidget: Widget {
         IntentConfiguration(kind: kind, intent: MediumWidgetIntent.self, provider: MediumWidgetProvider()) { entry in
             MediumWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("中号")
-        .description("这是中号")
+        .configurationDisplayName("Medium.Configuration.DisplayName")
+        .description("Medium.Configuration.Description")
         .supportedFamilies([.systemMedium])
     }
+    
 }
 
 //struct WidgetExtension_Previews: PreviewProvider {

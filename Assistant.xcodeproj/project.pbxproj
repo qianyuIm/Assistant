@@ -58,11 +58,14 @@
 		EFD11B37273B5AC700C68AF9 /* FileManager+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */; };
 		EFD11B38273B5ACB00C68AF9 /* Widget+Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */; };
 		EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */; };
-		EFD11B44273B65D600C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B43273B65D500C68AF9 /* AppWidgetsConfiguration.intentdefinition */; };
-		EFD11B45273B65D600C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B43273B65D500C68AF9 /* AppWidgetsConfiguration.intentdefinition */; };
 		EFD11B46273B79F200C68AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21392735285B00691B3A /* Assets.xcassets */; };
 		EFD11B48273BA1FB00C68AF9 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */; };
 		EFD11B49273BA1FB00C68AF9 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */; };
+		EFD11B4C273BA4E100C68AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD11B4E273BA4E100C68AF9 /* Localizable.strings */; };
+		EFD11B52273BAA9700C68AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD11B54273BAA9700C68AF9 /* Localizable.strings */; };
+		EFD11B56273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B59273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition */; };
+		EFD11B57273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B59273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition */; };
+		EFD11B5F273BB27000C68AF9 /* AppTransparentGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B5E273BB27000C68AF9 /* AppTransparentGuideController.swift */; };
 		EFD4ABA52733674C000B2350 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ABA42733674C000B2350 /* AppDelegate.swift */; };
 		EFD4ABAE2733674E000B2350 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD4ABAD2733674E000B2350 /* Assets.xcassets */; };
 		EFD4ABB12733674E000B2350 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD4ABAF2733674E000B2350 /* LaunchScreen.storyboard */; };
@@ -280,8 +283,15 @@
 		EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Shared.swift"; sourceTree = "<group>"; };
 		EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widget+Kind.swift"; sourceTree = "<group>"; };
-		EFD11B43273B65D500C68AF9 /* AppWidgetsConfiguration.intentdefinition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.intentdefinition; path = AppWidgetsConfiguration.intentdefinition; sourceTree = "<group>"; };
 		EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetShared.swift; sourceTree = "<group>"; };
+		EFD11B4D273BA4E100C68AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EFD11B4F273BA4E300C68AF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EFD11B53273BAA9700C68AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EFD11B55273BAA9900C68AF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EFD11B58273BAAA200C68AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/AppWidgetsConfiguration.intentdefinition; sourceTree = "<group>"; };
+		EFD11B5B273BAAA500C68AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AppWidgetsConfiguration.strings; sourceTree = "<group>"; };
+		EFD11B5D273BAAAC00C68AF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppWidgetsConfiguration.strings"; sourceTree = "<group>"; };
+		EFD11B5E273BB27000C68AF9 /* AppTransparentGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTransparentGuideController.swift; sourceTree = "<group>"; };
 		EFD4ABA12733674C000B2350 /* Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD4ABA42733674C000B2350 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD4ABAD2733674E000B2350 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -483,6 +493,7 @@
 				EF6A21442735290C00691B3A /* AppWidgets.swift */,
 				EF6A21392735285B00691B3A /* Assets.xcassets */,
 				EF6A213B2735285B00691B3A /* Info.plist */,
+				EFD11B54273BAA9700C68AF9 /* Localizable.strings */,
 			);
 			path = WidgetExtension;
 			sourceTree = "<group>";
@@ -553,6 +564,7 @@
 			children = (
 				EFD03A772738D40E00E28F27 /* AppTransparentController.swift */,
 				EFD03A792738D43300E28F27 /* AppTransparentViewModel.swift */,
+				EFD11B5E273BB27000C68AF9 /* AppTransparentGuideController.swift */,
 			);
 			path = Transparent;
 			sourceTree = "<group>";
@@ -1286,7 +1298,7 @@
 		EFF296B2273A4B2000ACB35E /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				EFD11B43273B65D500C68AF9 /* AppWidgetsConfiguration.intentdefinition */,
+				EFD11B59273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -1309,6 +1321,7 @@
 				EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */,
 				EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */,
 				EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */,
+				EFD11B4E273BA4E100C68AF9 /* Localizable.strings */,
 				EFF296EF273A72D900ACB35E /* Info.plist */,
 			);
 			path = IntentHandler;
@@ -1423,6 +1436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6A213A2735285B00691B3A /* Assets.xcassets in Resources */,
+				EFD11B52273BAA9700C68AF9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1470,6 +1484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD11B46273B79F200C68AF9 /* Assets.xcassets in Resources */,
+				EFD11B4C273BA4E100C68AF9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1545,7 +1560,7 @@
 				EFD11B49273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
 				EFD11B36273B5AC600C68AF9 /* FileManager+Shared.swift in Sources */,
 				EFF296B9273A539F00ACB35E /* MediumWidget.swift in Sources */,
-				EFD11B44273B65D600C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */,
+				EFD11B56273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */,
 				EFF296BD273A553B00ACB35E /* LargeWidget.swift in Sources */,
 				EFF296B7273A4DC800ACB35E /* SmallWidget.swift in Sources */,
 				EFD11B38273B5ACB00C68AF9 /* Widget+Kind.swift in Sources */,
@@ -1600,6 +1615,7 @@
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
 				EFD4ACFE2733ACFA000B2350 /* AppWidgetsViewModel.swift in Sources */,
 				EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */,
+				EFD11B5F273BB27000C68AF9 /* AppTransparentGuideController.swift in Sources */,
 				EFD4ACDF2733A96D000B2350 /* ErrorTracker.swift in Sources */,
 				EFD4AC3627338228000B2350 /* QYHUD.swift in Sources */,
 				EFD4AD072733AD66000B2350 /* AppIconsViewModel.swift in Sources */,
@@ -1684,7 +1700,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFD11B2F273B56E500C68AF9 /* LargeWidgetIntentHandler.swift in Sources */,
-				EFD11B45273B65D600C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */,
+				EFD11B57273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */,
 				EFF296EE273A72D900ACB35E /* IntentHandler.swift in Sources */,
 				EFD11B2D273B56D100C68AF9 /* SmallWidgetIntentHandler.swift in Sources */,
 				EFD11B2B273B569600C68AF9 /* MediumWidgetIntentHandler.swift in Sources */,
@@ -1795,6 +1811,34 @@
 				EFD03A682738BF2B00E28F27 /* zh-Hans */,
 			);
 			name = Image.strings;
+			sourceTree = "<group>";
+		};
+		EFD11B4E273BA4E100C68AF9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD11B4D273BA4E100C68AF9 /* en */,
+				EFD11B4F273BA4E300C68AF9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EFD11B54273BAA9700C68AF9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD11B53273BAA9700C68AF9 /* en */,
+				EFD11B55273BAA9900C68AF9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EFD11B59273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFD11B58273BAAA200C68AF9 /* Base */,
+				EFD11B5B273BAAA500C68AF9 /* en */,
+				EFD11B5D273BAAAC00C68AF9 /* zh-Hans */,
+			);
+			name = AppWidgetsConfiguration.intentdefinition;
 			sourceTree = "<group>";
 		};
 		EFD4ABAF2733674E000B2350 /* LaunchScreen.storyboard */ = {

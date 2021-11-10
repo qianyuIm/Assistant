@@ -54,8 +54,8 @@ struct LargeWidget: Widget {
         IntentConfiguration(kind: kind, intent: LargeWidgetIntent.self, provider: LargeWidgetProvider()) { entry in
             LargeWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("大号")
-        .description("这是大号")
+        .configurationDisplayName("Large.Configuration.DisplayName")
+        .description("Medium.Configuration.Description")
         .supportedFamilies([.systemLarge])
     }
 }

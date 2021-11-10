@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Assistant
+
+  Created by cyd on 2021/11/10.
+  
+*/
+"Position.System" = "跟随app内设置";
+"Position.Top" = "上";
+"Position.Top.Left" = "左上";
+"Position.Top.Right" = "右上";
+"Position.Center" = "中";
+"Position.Center.Left" = "左中";
+"Position.Center.Right" = "右中";
+"Position.Bottom" = "下";
+"Position.Bottom.Left" = "左下";
+"Position.Bottom.Right" = "右下";

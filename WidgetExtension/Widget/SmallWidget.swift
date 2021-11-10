@@ -54,8 +54,8 @@ struct SmallWidget: Widget {
         IntentConfiguration(kind: kind, intent: SmallWidgetIntent.self, provider: SmallWidgetProvider()) { entry in
             SmallWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("小号")
-        .description("设置透明位置后可让小组件模拟出透明效果")
+        .configurationDisplayName("Small.Configuration.DisplayName")
+        .description("Small.Configuration.Description")
         .supportedFamilies([.systemSmall])
     }
 }

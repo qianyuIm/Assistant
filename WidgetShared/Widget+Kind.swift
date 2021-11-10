@@ -8,7 +8,7 @@
 import Foundation
 
 enum WidgetSharedKind {
-    static var small: String { "SmallWidget" }
-    static var medium: String { "MediumWidget" }
-    static var large: String { "LargeWidget" }
+    static var small: String { "SmallWidget_Kind" }
+    static var medium: String { "MediumWidget_Kind" }
+    static var large: String { "LargeWidget_Kind" }
 }

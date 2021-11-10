@@ -89,7 +89,7 @@ extension AppRouterType: AppRouterTypeable {
         case .themeSetting:
             return AppThemeController(viewModel: AppThemeViewModel(), context: context)
         case .languageSetting:
-            return AppThemeController(viewModel: AppThemeViewModel(), context: context)
+            return AppLanguageController(viewModel: AppLanguageViewModel(), context: context)
         case .limit:
             return AppLimitController()
         default:

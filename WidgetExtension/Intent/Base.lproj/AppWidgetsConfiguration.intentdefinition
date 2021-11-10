@@ -503,7 +503,7 @@
 					<key>INIntentParameterConfigurable</key>
 					<true/>
 					<key>INIntentParameterDisplayName</key>
-					<string>large当前组件1</string>
+					<string>large当前组件</string>
 					<key>INIntentParameterDisplayNameID</key>
 					<string>xCyKKE</string>
 					<key>INIntentParameterDisplayPriority</key>
