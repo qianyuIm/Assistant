@@ -28,6 +28,9 @@ class AppBaseVMController: AppBaseController {
     }
     /// 是否在加载
     let isLoading = BehaviorRelay(value: false)
+    /// 语言设置
+    let languageChanged = BehaviorRelay<Void>(value: ())
+
     /// 网络重试
     let requestRetry = PublishSubject<Void>()
     /// 数据为空点击事件
@@ -88,7 +91,10 @@ class AppBaseVMController: AppBaseController {
         emptyTitle = R.string.localizable.emptyDataTitle.key.app.localized().set(style: emptyTitleStyle)
         emptyDetail = R.string.localizable.emptyDataDetail.key.app.localized().set(style: emptyDetailStyle)
     }
-    
+    override func setupLanguage() {
+        super.setupLanguage()
+        self.languageChanged.accept(())
+    }
     func bindViewModel() {
         guard viewModel != nil else {
             return

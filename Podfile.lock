@@ -7,7 +7,6 @@ PODS:
     - AMapFoundation (~> 1.6.6)
   - AttributedString (2.2.0)
   - AutoInch (2.4.0)
-  - BEMCheckBox (1.4.1)
   - BetterSegmentedControl (2.0.1)
   - CHIPageControl (0.2):
     - CHIPageControl/Aji (= 0.2)
@@ -59,6 +58,7 @@ PODS:
   - Localize-Swift/LocalizeSwiftCore (3.2.0)
   - Localize-Swift/UIKit (3.2.0):
     - Localize-Swift/LocalizeSwiftCore
+  - M13Checkbox (3.4.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.4.3)
   - MLeaksFinder (1.0.0)
@@ -120,7 +120,6 @@ DEPENDENCIES:
   - AMapSearch (~> 7.9.0)
   - AttributedString (~> 2.2.0)
   - AutoInch (~> 2.4.0)
-  - BEMCheckBox
   - BetterSegmentedControl (~> 2.0.1)
   - CHIPageControl (~> 0.2)
   - EFIconFont (~> 1.2.0)
@@ -136,6 +135,7 @@ DEPENDENCIES:
   - JXPagingView/Paging (~> 2.1.1)
   - JXSegmentedView (~> 1.2.7)
   - Localize-Swift (~> 3.2.0)
+  - M13Checkbox
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.4.3)
   - MLeaksFinder (from `https://github.com/Tencent/MLeaksFinder.git`)
@@ -168,7 +168,6 @@ SPEC REPOS:
     - AMapSearch
     - AttributedString
     - AutoInch
-    - BEMCheckBox
     - BetterSegmentedControl
     - CHIPageControl
     - Differentiator
@@ -187,6 +186,7 @@ SPEC REPOS:
     - JXSegmentedView
     - libwebp
     - Localize-Swift
+    - M13Checkbox
     - MBProgressHUD
     - MJRefresh
     - Moya
@@ -232,7 +232,6 @@ SPEC CHECKSUMS:
   AMapSearch: 94cff5f6ab7233c1639111e486861ac2acea6d4b
   AttributedString: 386c1af029cc3186288d9feb84fbbb097928843f
   AutoInch: f4169e245152be4e5cdcb91ac5afd29fc98536d6
-  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
   CHIPageControl: a787bf7205c9b7e7fbfc412be36c5e8636b68f86
   Differentiator: e8497ceab83c1b10ca233716d547b9af21b9344d
@@ -251,6 +250,7 @@ SPEC CHECKSUMS:
   JXSegmentedView: eb1cad21f57c2543c00c3e08b8fd3c7ca54f5acd
   libwebp: 98a37e597e40bfdb4c911fc98f2c53d0b12d05fc
   Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  M13Checkbox: 6f59404540ac98ba83a3d1afac335895a40c6a5d
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   MLeaksFinder: 89eb3142bf1bbd0a3d1849543b629399c5da74c5
@@ -281,6 +281,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: 18518127de7e549592ee555ab0ce9118aa48f6a5
+PODFILE CHECKSUM: e7c810646b71867174611f2b63de70520c886f2d
 
 COCOAPODS: 1.10.0

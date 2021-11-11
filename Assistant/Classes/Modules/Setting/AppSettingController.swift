@@ -57,12 +57,17 @@ class AppSettingController: AppBaseCollectionVMController {
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(nibWithCellClass: AppSettingCell.self)
-        navigationItem.title = R.string.localizable.setting.key.app.localized()
+    }
+    override func setupLanguage() {
+        super.setupLanguage()
+        navigationItem.title = R.string.navigation.settingTitle.key.app.navigationLocalized()
     }
     override func bindViewModel() {
         super.bindViewModel()
         guard let viewModel = viewModel as? AppSettingViewModel else { return  }
-        let input = AppSettingViewModel.Input(trigger: Observable.just(()),
+        let trigger = Observable.of(Observable.just(()),
+                                    languageChanged.asObservable()).merge()
+        let input = AppSettingViewModel.Input(trigger: trigger,
                                               selection: collectionView.rx.modelSelected(AppSettingSectionItem.self).asDriver())
         let output = viewModel.transform(input: input)
         output.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)

@@ -24,6 +24,9 @@
 		EF6A21562735306000691B3A /* AppSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21542735306000691B3A /* AppSettingCell.xib */; };
 		EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21572735318200691B3A /* AppSettingSection.swift */; };
 		EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */; };
+		EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */; };
+		EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */; };
+		EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA564E5273D01EA00B4F9DE /* Navigation.strings */; };
 		EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A0B2738B41B00E28F27 /* Widgets.strings */; };
 		EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A112738B47400E28F27 /* Transparent.strings */; };
 		EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A222738B7EC00E28F27 /* simpleTeachVideo.mp4 */; };
@@ -241,6 +244,10 @@
 		EF6A21542735306000691B3A /* AppSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingCell.xib; sourceTree = "<group>"; };
 		EF6A21572735318200691B3A /* AppSettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingSection.swift; sourceTree = "<group>"; };
 		EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingCellViewModel.swift; sourceTree = "<group>"; };
+		EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageCell.swift; sourceTree = "<group>"; };
+		EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLanguageCell.xib; sourceTree = "<group>"; };
+		EFA564E4273D01EA00B4F9DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Navigation.strings; sourceTree = "<group>"; };
+		EFA564E6273D01EB00B4F9DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Navigation.strings"; sourceTree = "<group>"; };
 		EFD03A0A2738B41B00E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Widgets.strings; sourceTree = "<group>"; };
 		EFD03A0C2738B41D00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Widgets.strings"; sourceTree = "<group>"; };
 		EFD03A102738B47400E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Transparent.strings; sourceTree = "<group>"; };
@@ -582,6 +589,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD03A892739165B00E28F27 /* AppLanguageViewModel.swift */,
+				EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */,
+				EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */,
 				EFD03A8B2739166A00E28F27 /* AppLanguageController.swift */,
 			);
 			path = Language;
@@ -675,6 +684,7 @@
 				EFD03A112738B47400E28F27 /* Transparent.strings */,
 				EFD03A0B2738B41B00E28F27 /* Widgets.strings */,
 				EFD4ABAD2733674E000B2350 /* Assets.xcassets */,
+				EFA564E5273D01EA00B4F9DE /* Navigation.strings */,
 				EFD4ACA827338B32000B2350 /* InfoPlist.strings */,
 				EFD4ACA227338B0A000B2350 /* Localizable.strings */,
 				EFD4ABAF2733674E000B2350 /* LaunchScreen.storyboard */,
@@ -1478,11 +1488,13 @@
 				EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */,
 				EFD03A3C2738B7F500E28F27 /* PhoneShell.plist in Resources */,
 				EFD03A7E2738D61900E28F27 /* WidgetHeaderViewCell.xib in Resources */,
+				EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */,
 				EFD03A652738BF2900E28F27 /* Image.strings in Resources */,
 				EF0AAA762734D632006CEED0 /* README.md in Resources */,
 				EFD03A532738BAF000E28F27 /* widget_create_guide_large.mp4 in Resources */,
 				EFD4ABAE2733674E000B2350 /* Assets.xcassets in Resources */,
 				EFF296362739FFE000ACB35E /* iconfont.ttf in Resources */,
+				EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */,
 				EFF296372739FFE000ACB35E /* iconfont.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1592,6 +1604,7 @@
 				EFD4AC262733820C000B2350 /* QYToast.swift in Sources */,
 				EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */,
 				EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */,
+				EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */,
 				EFD4AC2227338202000B2350 /* QYButton.swift in Sources */,
 				EFD4AC412733824C000B2350 /* QYConfig.swift in Sources */,
 				EFD4AC2E2733821B000B2350 /* QYMapError.swift in Sources */,
@@ -1731,6 +1744,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EFA564E5273D01EA00B4F9DE /* Navigation.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFA564E4273D01EA00B4F9DE /* en */,
+				EFA564E6273D01EB00B4F9DE /* zh-Hans */,
+			);
+			name = Navigation.strings;
+			sourceTree = "<group>";
+		};
 		EFD03A0B2738B41B00E28F27 /* Widgets.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

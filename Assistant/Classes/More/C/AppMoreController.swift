@@ -23,7 +23,9 @@ class AppMoreController: AppBaseVMController {
         super.setupUI()
         self.navigationItem.rightBarButtonItem = settingItem
     }
-    
+    override func setupLanguage() {
+        super.setupLanguage()
+    }
     @objc func handleSettingAction(_ sender: AnyObject, event: UIEvent) {
         AppRouter.shared.open(AppRouterType.setting.pattern, context: nil)
     }

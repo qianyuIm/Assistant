@@ -1,0 +1,14 @@
+/* 
+  Navigation.strings
+  Assistant
+
+  Created by cyd on 2021/11/11.
+  
+*/
+/* 设置 */
+"Setting.Title" = "设置";
+
+/* 语言 */
+"Language.Title" = "语言设置";
+/* 主题 */
+"Theme.Title" = "主题设置";

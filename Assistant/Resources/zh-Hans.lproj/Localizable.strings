@@ -5,6 +5,9 @@
   Created by cyd on 2021/11/4.
   
 */
+"Common.Save" = "保存";
+"Common.Auto" = "跟随系统";
+
 //Mark: -- tab
 "Tabbar.Widget" = "小组件";
 "Tabbar.Icons" = "图标";
@@ -31,17 +34,13 @@
 "Widget.Segment.Medium" = "中号";
 "Widget.Segment.Large" = "大号";
 //Mark: -- Setting
-"Setting" = "设置";
 "Setting.Language" = "语言设置";
 "Setting.Limit" = "小组件限制说明";
 "Setting.Theme" = "主题设置";
 "Setting.Permissions" = "权限管理";
 "Setting.About" = "关于";
 "Setting.Question" = "常见问题";
-/* 语言 */
-"Language.Navigation.Title" = "语言设置";
-/* 主题 */
-"Theme.Navigation.Title" = "颜色主题";
+
 //Mark: -- More
 "More.Menu.Weather" = "天气";
 "More.Menu.Bills" = "我的账本";

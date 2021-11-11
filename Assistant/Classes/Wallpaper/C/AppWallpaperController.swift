@@ -15,7 +15,9 @@ class AppWallpaperController: AppBaseVMController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func setupLanguage() {
+        super.setupLanguage()
+    }
     /*
     // MARK: - Navigation
 

@@ -43,7 +43,12 @@ enum AppTabBarSelectedType {
 }
 
 class AppTabBarController: ESTabBarController {
-    
+    private func tabBarItemTitles() -> [String] {
+        return [R.string.localizable.tabbarWidget.key.app.localized(),
+                R.string.localizable.tabbarIcons.key.app.localized(),
+                R.string.localizable.tabbarWallpaper.key.app.localized(),
+                R.string.localizable.tabbarMore.key.app.localized()]
+    }
     var selectedType: AppTabBarSelectedType  {
         get { return AppTabBarSelectedType(rawValue: selectedIndex)! }
         set(newValue) { selectedIndex = newValue.rawValue }
@@ -55,28 +60,28 @@ class AppTabBarController: ESTabBarController {
         let widgetsModel = AppWidgetsViewModel()
         let widget = _setController(
             controller: AppWidgetsController(viewModel: widgetsModel),
-            title: R.string.localizable.tabbarWidget.key.app.localized(),
+            title: tabBarItemTitles()[0],
             normalImage: appIconFontIcons.icon_tab_widget.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_widget.image(size: 24))
         
         let iconsViewModel = AppIconsViewModel()
         let icons = _setController(
             controller: AppIconsController(viewModel: iconsViewModel),
-            title: R.string.localizable.tabbarIcons.key.app.localized(),
+            title: tabBarItemTitles()[1],
             normalImage: appIconFontIcons.icon_tab_icons.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_icons.image(size: 24))
         
         let wallpaperViewModel = AppWallpaperViewModel()
         let wallpaper = _setController(
             controller: AppWallpaperController(viewModel: wallpaperViewModel),
-            title: R.string.localizable.tabbarWallpaper.key.app.localized(),
+            title: tabBarItemTitles()[2],
             normalImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24))
         
         let moreViewModel = AppMoreViewModel()
         let more = _setController(
             controller: AppMoreController(viewModel: moreViewModel),
-            title: R.string.localizable.tabbarMore.key.app.localized(),
+            title: tabBarItemTitles()[3],
             normalImage: appIconFontIcons.icon_tab_more.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_more.image(size: 24))
         
@@ -84,9 +89,15 @@ class AppTabBarController: ESTabBarController {
         self.viewControllers = [widget, icons, wallpaper, more]
         bindTheme()
         selectedType = .widget
-        
+        NotificationCenter.Languageau.add(.LCLLanguageChangeNotification, observer: self, selector: #selector(setupLanguage), object: nil)
     }
-    
+    /// 切换语言的时候不想更换根控制器在跳转到设置页面
+    @objc func setupLanguage() {
+        guard let viewControllers = self.viewControllers else { return  }
+        for (index,child) in viewControllers.enumerated() {
+            child.tabBarItem.title = tabBarItemTitles()[index]
+        }
+    }
     
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

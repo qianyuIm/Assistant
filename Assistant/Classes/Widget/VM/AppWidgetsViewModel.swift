@@ -26,7 +26,7 @@ enum AppWidgetSection {
 
 class AppWidgetsViewModel: AppViewModel {
     struct Input {
-        let retry: Observable<Void>
+        let trigger: Observable<Void>
     }
     struct Output {
         let headerDataSource: BehaviorRelay<[WidgetHeaderSection]>
@@ -37,7 +37,7 @@ extension AppWidgetsViewModel: AppViewModelable {
     func transform(input: Input) -> Output {
         let headerDataSource = BehaviorRelay<[WidgetHeaderSection]>(value: [])
         let dataSource = BehaviorRelay<[AppWidgetSection]>(value: [])
-        input.retry.flatMapLatest { [weak self]() -> Observable<([WidgetHeaderSection],[AppWidgetSection])> in
+        input.trigger.flatMapLatest { [weak self]() -> Observable<([WidgetHeaderSection],[AppWidgetSection])> in
             guard let strongSelf = self else {
                 return .empty()
             }

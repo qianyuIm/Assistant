@@ -62,7 +62,7 @@ def swift_pods
   pod 'BetterSegmentedControl', '~> 2.0.1'
   pod 'SwiftDate', '~> 6.3.1'
   pod 'SPPermissions', '~> 6.7.1'
-  pod 'BEMCheckBox', '~> 1.4.1'
+  pod 'M13Checkbox', '~> 3.4.0'
 end
 
 

@@ -5,6 +5,10 @@
   Created by cyd on 2021/11/4.
   
 */
+
+"Common.Save" = "Save";
+"Common.Auto" = "Follow System";
+
 //Mark: -- tab
 "Tabbar.Widget" = "Widgets";
 "Tabbar.Icons" = "Icons";
@@ -36,17 +40,13 @@
 "Widget.Segment.Medium" = "Medium";
 "Widget.Segment.Large" = "Large";
 //Mark: -- Setting
-"Setting" = "Setting";
 "Setting.Language" = "Language Setting";
 "Setting.Limit" = "Widgets Limit";
 "Setting.Theme" = "Theme Setting";
 "Setting.Permissions" = "App Permissions";
 "Setting.About" = "About";
 "Setting.Question" = "FAQ";
-/* Language */
-"Language.Navigation.Title" = "Language";
-/* Theme */
-"Theme.Navigation.Title" = "Color Theme";
+
 //Mark: -- More
 "More.Menu.Weather" = "Weather";
 "More.Menu.Bills" = "Bills";

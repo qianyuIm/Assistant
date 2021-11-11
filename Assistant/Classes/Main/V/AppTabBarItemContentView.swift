@@ -24,10 +24,16 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
         }).disposed(by: rx.disposeBag)
     }
     
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    override var title: String? {
+        didSet {
+            self.titleLabel.text = title
+            self.updateLayout()
+        }
+    }
     override func selectAnimation(animated: Bool, completion: (() -> ())?) {
         self.bounceAnimation()
         completion?()

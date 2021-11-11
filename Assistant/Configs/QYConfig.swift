@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import Localize_Swift
 
 struct QYConfig {
     /// 启动页面展示 前后台时间间隔  默认: 60 * 3 s
@@ -51,5 +52,28 @@ struct QYConfig {
             }
         }
         
+    }
+    struct Language {
+        static let auto = "auto"
+        static var autoSystem: Bool {
+            set {
+                Defaults.languageAutoSystem = newValue
+            }
+            get {
+                return Defaults.languageAutoSystem
+            }
+        }
+        static func support() -> [String] {
+            return Localize.availableLanguages(true)
+        }
+        static func current() -> String {
+            return autoSystem ? auto : Localize.currentLanguage()
+        }
+        static func displayNameForLanguage(_ language: String) -> String {
+            return Localize.displayNameForLanguage(language)
+        }
+        static func setCurrentLanguage(_ language: String) {
+            Localize.setCurrentLanguage(language)
+        }
     }
 }

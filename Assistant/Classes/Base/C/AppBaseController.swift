@@ -7,6 +7,7 @@
 
 import UIKit
 import RxTheme
+import Localize_Swift
 
 class AppBaseController: UIViewController, AppRouterable {
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -20,12 +21,15 @@ class AppBaseController: UIViewController, AppRouterable {
         setupUI()
         setupConstraints()
         setupTheme()
+        setupLanguage()
     }
     
     /// 1. 常量设置
     func prepare() {}
     /// 2. 通知
-    func registerNotification() {}
+    func registerNotification() {
+        NotificationCenter.Languageau.add(.LCLLanguageChangeNotification, observer: self, selector: #selector(setupLanguage), object: nil)
+    }
     /// 3. UI设置
     func setupUI() { }
     /// 4. 约束设置
@@ -46,6 +50,10 @@ class AppBaseController: UIViewController, AppRouterable {
             }
         }).disposed(by: rx.disposeBag)
        
+    }
+    /// 6. 语言设置
+    @objc func setupLanguage() {
+        QYLogger.debug("改变")
     }
     //MARK: -- AppRouterable
     func routerOpen(with completion: (() -> Void)?) {

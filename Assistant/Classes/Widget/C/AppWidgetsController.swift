@@ -61,7 +61,9 @@ class AppWidgetsController: AppBaseVMController {
     var dataSections: [AppWidgetSection]?
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
+        
     }
     override func setupUI() {
         super.setupUI()
@@ -73,7 +75,7 @@ class AppWidgetsController: AppBaseVMController {
         segmentedView.listContainer = pagingView.listContainerView
         
     }
-    override func  setupConstraints() {
+    override func setupConstraints() {
         super.setupConstraints()
         pagingView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -95,12 +97,18 @@ class AppWidgetsController: AppBaseVMController {
         }).disposed(by: rx.disposeBag)
     }
     
+    override func setupLanguage() {
+        super.setupLanguage()
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         guard let viewModel = viewModel as? AppWidgetsViewModel else {
             return
         }
-        let input = AppWidgetsViewModel.Input(retry: Observable.of(()))
+        let trigger = Observable.of(Observable.just(()),
+                                    languageChanged.asObservable()).merge()
+        let input = AppWidgetsViewModel.Input(trigger: trigger)
         let output = viewModel.transform(input: input)
         
         output.headerDataSource.subscribe (onNext: {[weak self] headerSections in

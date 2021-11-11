@@ -21,5 +21,7 @@ extension DefaultsKeys {
     var themeIndexKey: DefaultsKey<Int> { .init("kThemeIndexKey", defaultValue: 0) }
     ///  主题跟随系统
     var themeAutoSystem: DefaultsKey<Bool> { .init("kThemeAutoSystemKey", defaultValue: false) }
+    ///  语言跟随系统
+    var languageAutoSystem: DefaultsKey<Bool> { .init("kLanguageAutoSystemey", defaultValue: true) }
     
 }

@@ -12,9 +12,15 @@ protocol AppNotificationable {
 }
 
 extension NotificationCenter {
+    
     enum AppDelegate: AppNotificationable {
         enum defaultKeys: String {
             case launched
+        }
+    }
+    enum Languageau: AppNotificationable {
+        enum defaultKeys: String {
+            case LCLLanguageChangeNotification
         }
     }
 }
@@ -59,7 +65,7 @@ extension AppNotificationable where defaultKeys.RawValue == String {
     }
     
     static private func conversion(_ key: defaultKeys) -> NSNotification.Name {
-        return NSNotification.Name("\(self).\(key.rawValue)")
+        return NSNotification.Name(key.rawValue)
     }
 }
 

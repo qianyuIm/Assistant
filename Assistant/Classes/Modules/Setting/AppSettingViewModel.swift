@@ -33,7 +33,7 @@ extension AppSettingViewModel: AppViewModelable {
             return strongSelf.config()
         }.bind(to: dataSource).disposed(by: rx.disposeBag)
         
-        input.selection.asObservable().map { $0.viewModel}.bind(to: itemSelected).disposed(by: rx.disposeBag)
+        input.selection.asObservable().map { $0.viewModel }.bind(to: itemSelected).disposed(by: rx.disposeBag)
         
         return Output(dataSource: dataSource)
     }
@@ -47,7 +47,7 @@ extension AppSettingViewModel {
                                 .profileItem(viewMode: .init(title: "用户", iconImage: AppIconFontIcons.icon_settings.image(size: 24), arrowImage: nil,pattern: ""))
                             ])
         let configSection = AppSettingSection
-            .configSection(title: R.string.localizable.setting.key.app.localized(),
+            .configSection(title: "123",
                            items: [
                             .limitItem(viewMode: .init(title: R.string.localizable.settingLimit.key.app.localized(),
                                                           iconImage: AppIconFontIcons.icon_setting_limit.image(size: 24),
