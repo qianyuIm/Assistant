@@ -16,11 +16,12 @@ extension DefaultsKeys {
     /// 启动隐私协议
     var launchPrivacyPolicyKey: DefaultsKey<String> { .init("KLaunchPrivacyPolicyKey", defaultValue: "")  }
     /// 是否为夜间模式
-    var themeDarkKey: DefaultsKey<Bool> { .init("kThemeDarkKey", defaultValue: false) }
-    /// 主题
-    var themeIndexKey: DefaultsKey<Int> { .init("kThemeIndexKey", defaultValue: 0) }
+    var themeDarkModeKey: DefaultsKey<Bool> { .init("kThemeDarkModeKey", defaultValue: false) }
+    var themeDisplayModeKey: DefaultsKey<QYConfig.Theme.DisplayMode> { .init("kThemeDisplayModeKey", defaultValue: QYConfig.Theme.DisplayMode.inferred) }
+    /// 主题位置
+    var themeSwatchIndexKey: DefaultsKey<Int> { .init("kThemeSwatchIndexKey", defaultValue: 0) }
     ///  主题跟随系统
-    var themeAutoSystem: DefaultsKey<Bool> { .init("kThemeAutoSystemKey", defaultValue: false) }
+    var themeAutoSystem: DefaultsKey<Bool> { .init("kThemeAutoSystemKey", defaultValue: true) }
     ///  语言跟随系统
     var languageAutoSystem: DefaultsKey<Bool> { .init("kLanguageAutoSystemey", defaultValue: true) }
     

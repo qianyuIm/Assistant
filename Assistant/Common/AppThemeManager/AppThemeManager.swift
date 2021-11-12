@@ -15,16 +15,7 @@ import SwiftyUserDefaults
 let appThemeProvider = AppThemeProvider.service(initial: AppThemeProvider.currentTheme())
 
 private func _value() -> UIStatusBarStyle {
-    var value: UIStatusBarStyle
-    if #available(iOS 13.0, *) {
-        value = .darkContent
-    } else {
-        value = .default
-    }
-    let isDark = Defaults[\.themeDarkKey]
-    if (isDark) {
-        value = .lightContent
-    }
+    let value: UIStatusBarStyle = QYConfig.Theme.isDark() ? .lightContent : .darkContent
     return value
 }
 let globalStatusBarStyle = BehaviorRelay<UIStatusBarStyle>(value: _value())
@@ -190,6 +181,17 @@ enum AppThemeProvider: ThemeProvider {
         }
         
     }
+    func switchTheme(for mode: String) {
+        if (mode == QYConfig.Theme.auto) {
+            
+        } else if (mode == QYConfig.Theme.light) {
+            
+        } else if (mode == QYConfig.Theme.dark) {
+            
+        } else {
+            fatalError("参数错误")
+        }
+    }
     func switchDark() {
         switch self {
         case .light(let colorSwatch):
@@ -223,14 +225,13 @@ enum AppThemeProvider: ThemeProvider {
 }
 extension AppThemeProvider {
     static func currentTheme() -> AppThemeProvider {
-        var isSystemDark = false
-        if #available(iOS 12.0, *) {
-            if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
-                isSystemDark = userInterfaceStyle == .dark
-            }
+        var isDark = false
+        /// 当前系统主题
+        if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
+            isDark = userInterfaceStyle == .dark
         }
-        let isDark = Defaults[\.themeDarkKey] || isSystemDark
-        let themeKey = Defaults[\.themeIndexKey]
+        isDark = QYConfig.Theme.themeAutoSystem ? isDark : QYConfig.Theme.themeDarkMode
+        let themeKey = QYConfig.Theme.themeSwatchIndex
         let colorSwatch = AppColorSwatch(rawValue: themeKey) ?? AppColorSwatch.netease
         let theme = isDark ? AppThemeProvider.dark(colorSwatch: colorSwatch) : AppThemeProvider.light(colorSwatch: colorSwatch)
         theme.save()
@@ -238,10 +239,10 @@ extension AppThemeProvider {
     }
 
     func save() {
-        Defaults[\.themeDarkKey] = self.isDark
+        QYConfig.Theme.themeDarkMode = self.isDark
         switch self {
-        case .light(let colorSwatch): Defaults[\.themeIndexKey] = colorSwatch.rawValue
-        case .dark(let colorSwatch): Defaults[\.themeIndexKey] = colorSwatch.rawValue
+        case .light(let colorSwatch): QYConfig.Theme.themeSwatchIndex = colorSwatch.rawValue
+        case .dark(let colorSwatch): QYConfig.Theme.themeSwatchIndex = colorSwatch.rawValue
         }
     }
 }

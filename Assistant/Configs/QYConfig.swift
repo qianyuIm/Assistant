@@ -42,14 +42,61 @@ struct QYConfig {
     }
     
     struct Theme {
+        enum DisplayMode: Int, DefaultsSerializable {
+            case inferred
+            case light
+            case dark
+        }
         static var themeAutoSystem: Bool {
             set {
                 Defaults.themeAutoSystem = newValue
-//                Defaults[\.themeAutoSystem] = newValue
             }
             get {
                 return Defaults.themeAutoSystem
             }
+        }
+        static var themeSwatchIndex: Int {
+            set {
+                Defaults.themeSwatchIndexKey = newValue
+            }
+            get {
+                return Defaults.themeSwatchIndexKey
+            }
+        }
+        static var themeDarkMode: Bool {
+            set {
+                Defaults.themeDarkModeKey = newValue
+            }
+            get {
+                return Defaults.themeDarkModeKey
+            }
+        }
+        static var displayMode: DisplayMode {
+            set {
+                Defaults.themeDisplayModeKey = newValue
+            }
+            get {
+                return Defaults.themeDisplayModeKey
+            }
+        }
+        /// key
+        static let auto = "auto"
+        /// key
+        static let dark = "dark"
+        /// key
+        static let light = "light"
+        static let support = AppColorSwatch.allValues
+        static func currentModelKey() -> String {
+            return themeAutoSystem ? auto : (themeDarkMode ? dark : light)
+        }
+        /// 当前处于什么模式
+        static func isDark() -> Bool {
+            var isDark = false
+            /// 当前系统主题
+            if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
+                isDark = userInterfaceStyle == .dark
+            }
+            return themeAutoSystem ? isDark : themeDarkMode
         }
         
     }

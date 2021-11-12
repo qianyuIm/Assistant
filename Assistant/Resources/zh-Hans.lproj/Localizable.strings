@@ -7,6 +7,8 @@
 */
 "Common.Save" = "保存";
 "Common.Auto" = "跟随系统";
+"Common.Dark.Mode" = "深色模式";
+"Common.Light.Mode" = "浅色模式";
 
 //Mark: -- tab
 "Tabbar.Widget" = "小组件";

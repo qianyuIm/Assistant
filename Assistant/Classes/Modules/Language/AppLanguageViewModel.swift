@@ -28,7 +28,6 @@ extension AppLanguageSection: SectionModelType {
 }
 
 class AppLanguageViewModel: AppViewModel {
-    let itemSelected = PublishSubject<Bool>()
     
     struct Input {
         let trigger: Observable<Void>

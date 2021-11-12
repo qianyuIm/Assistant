@@ -83,9 +83,4 @@ class AppLanguageController: AppBaseCollectionVMController {
    
     
 }
-extension AppLanguageController {
-    @objc func handleSettingAction(_ sender: AnyObject, event: UIEvent) {
-        
-        
-    }
-}
+

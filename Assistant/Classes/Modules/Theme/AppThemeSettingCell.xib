@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="AppThemeSettingCell" customModule="Assistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-N9-31N">
+                        <rect key="frame" x="10" y="41.5" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W4-EO-VsL" customClass="M13Checkbox" customModule="M13Checkbox">
+                        <rect key="frame" x="268" y="39" width="22" height="22"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="b10-uq-x3J"/>
+                            <constraint firstAttribute="height" constant="22" id="mmY-rn-ilC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="k5b-N9-31N" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="CgO-pn-66R"/>
+                <constraint firstItem="k5b-N9-31N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="UNl-WN-woj"/>
+                <constraint firstAttribute="trailing" secondItem="1W4-EO-VsL" secondAttribute="trailing" constant="10" id="V9E-4u-P0W"/>
+                <constraint firstItem="1W4-EO-VsL" firstAttribute="centerY" secondItem="k5b-N9-31N" secondAttribute="centerY" id="a7T-EO-zW5"/>
+            </constraints>
+            <connections>
+                <outlet property="checkBoxView" destination="1W4-EO-VsL" id="OLk-fe-gqJ"/>
+                <outlet property="themeModelTitleLabel" destination="k5b-N9-31N" id="9o8-jx-sWt"/>
+            </connections>
+            <point key="canvasLocation" x="55" y="-52"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -175,6 +175,11 @@
 		EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD0F2733AD9F000B2350 /* AppWallpaperViewModel.swift */; };
 		EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD112733AD9F000B2350 /* AppWallpaperController.swift */; };
 		EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD162733B455000B2350 /* UIApplicationExtensions.swift */; };
+		EFD80955273DFA0A0065F048 /* AppThemeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD80954273DFA0A0065F048 /* AppThemeSection.swift */; };
+		EFE198AC273DF6A500C44943 /* AppThemeSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE198AA273DF6A500C44943 /* AppThemeSettingCell.swift */; };
+		EFE198AD273DF6A500C44943 /* AppThemeSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE198AB273DF6A500C44943 /* AppThemeSettingCell.xib */; };
+		EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE198AE273DF6B600C44943 /* AppThemeCell.swift */; };
+		EFE198B1273DF6B600C44943 /* AppThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE198AF273DF6B600C44943 /* AppThemeCell.xib */; };
 		EFF296362739FFE000ACB35E /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFF296342739FFE000ACB35E /* iconfont.ttf */; };
 		EFF296372739FFE000ACB35E /* iconfont.css in Resources */ = {isa = PBXBuildFile; fileRef = EFF296352739FFE000ACB35E /* iconfont.css */; };
 		EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF29639273A007C00ACB35E /* AppLimitController.swift */; };
@@ -412,6 +417,11 @@
 		EFD4AD112733AD9F000B2350 /* AppWallpaperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppWallpaperController.swift; sourceTree = "<group>"; };
 		EFD4AD162733B455000B2350 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
 		EFD4AD1C2733E745000B2350 /* Assistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assistant.entitlements; sourceTree = "<group>"; };
+		EFD80954273DFA0A0065F048 /* AppThemeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSection.swift; sourceTree = "<group>"; };
+		EFE198AA273DF6A500C44943 /* AppThemeSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSettingCell.swift; sourceTree = "<group>"; };
+		EFE198AB273DF6A500C44943 /* AppThemeSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppThemeSettingCell.xib; sourceTree = "<group>"; };
+		EFE198AE273DF6B600C44943 /* AppThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeCell.swift; sourceTree = "<group>"; };
+		EFE198AF273DF6B600C44943 /* AppThemeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppThemeCell.xib; sourceTree = "<group>"; };
 		EFF296342739FFE000ACB35E /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EFF296352739FFE000ACB35E /* iconfont.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = iconfont.css; sourceTree = "<group>"; };
 		EFF29639273A007C00ACB35E /* AppLimitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLimitController.swift; sourceTree = "<group>"; };
@@ -580,7 +590,12 @@
 			isa = PBXGroup;
 			children = (
 				EFD03A84273915A800E28F27 /* AppThemeController.swift */,
+				EFE198AE273DF6B600C44943 /* AppThemeCell.swift */,
+				EFE198AF273DF6B600C44943 /* AppThemeCell.xib */,
+				EFE198AA273DF6A500C44943 /* AppThemeSettingCell.swift */,
+				EFE198AB273DF6A500C44943 /* AppThemeSettingCell.xib */,
 				EFD03A86273915C400E28F27 /* AppThemeViewModel.swift */,
+				EFD80954273DFA0A0065F048 /* AppThemeSection.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1465,6 +1480,7 @@
 				EFD4AC8D27338A25000B2350 /* music_home_banner.json in Resources */,
 				EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */,
 				EFD4ACEE2733A996000B2350 /* AppRouter.plist in Resources */,
+				EFE198AD273DF6A500C44943 /* AppThemeSettingCell.xib in Resources */,
 				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
@@ -1474,6 +1490,7 @@
 				EFD4AC1227337EA5000B2350 /* iconfont_translate.py in Resources */,
 				EFD4AC8B27338A25000B2350 /* music_home_private.json in Resources */,
 				EFF296AA273A0C4C00ACB35E /* AppLimitController.xib in Resources */,
+				EFE198B1273DF6B600C44943 /* AppThemeCell.xib in Resources */,
 				EF0AAA742734D626006CEED0 /* startup.sh in Resources */,
 				EFD03A5F2738BB1A00E28F27 /* widget_create_guide_small.mp4 in Resources */,
 				EFD03A4F2738BA9100E28F27 /* trasparentStep1.mp4 in Resources */,
@@ -1600,6 +1617,7 @@
 				EFD4ABF727336DF4000B2350 /* UIEdgeInsetsExtensions.swift in Sources */,
 				EFD4ACBF273390DE000B2350 /* MJRefreshComponent+Rx.swift in Sources */,
 				EFD4ABF627336DF4000B2350 /* CALayerExtensions.swift in Sources */,
+				EFE198AC273DF6A500C44943 /* AppThemeSettingCell.swift in Sources */,
 				EFD03A85273915A800E28F27 /* AppThemeController.swift in Sources */,
 				EFD4AC262733820C000B2350 /* QYToast.swift in Sources */,
 				EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */,
@@ -1636,6 +1654,7 @@
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
 				EFD4ACFE2733ACFA000B2350 /* AppWidgetsViewModel.swift in Sources */,
 				EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */,
+				EFD80955273DFA0A0065F048 /* AppThemeSection.swift in Sources */,
 				EFD11B5F273BB27000C68AF9 /* AppTransparentGuideController.swift in Sources */,
 				EFD4ACDF2733A96D000B2350 /* ErrorTracker.swift in Sources */,
 				EFD4AC3627338228000B2350 /* QYHUD.swift in Sources */,
@@ -1675,6 +1694,7 @@
 				EFD4AC662733888F000B2350 /* AppBaseCollectionVMController.swift in Sources */,
 				EFD03A6E2738C34800E28F27 /* SmallWidgetViewModel.swift in Sources */,
 				EFD4AC3327338221000B2350 /* QYLogger.swift in Sources */,
+				EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */,
 				EFD4ABFA27336DF4000B2350 /* StringExtensions.swift in Sources */,
 				EFD4ACED2733A996000B2350 /* AppRouterPlugin.swift in Sources */,
 				EFD4AC6C2733888F000B2350 /* AppViewModel.swift in Sources */,

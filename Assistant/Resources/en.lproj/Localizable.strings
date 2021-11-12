@@ -8,6 +8,8 @@
 
 "Common.Save" = "Save";
 "Common.Auto" = "Follow System";
+"Common.Dark.Mode" = "Dark Mode";
+"Common.Light.Mode" = "Light Mode";
 
 //Mark: -- tab
 "Tabbar.Widget" = "Widgets";
