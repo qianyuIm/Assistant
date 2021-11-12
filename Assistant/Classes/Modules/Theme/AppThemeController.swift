@@ -14,7 +14,6 @@ class AppThemeController: AppBaseCollectionVMController {
     
     lazy var dataSource: RxCollectionViewSectionedReloadDataSource<AppThemeSection> = {
         return RxCollectionViewSectionedReloadDataSource<AppThemeSection> { dataSource, collectionView, indexPath, item in
-            
             switch item {
             case .settingSectionItem(let item):
                 let cell = collectionView.app.dequeueReusableCell(cellClass: AppThemeSettingCell.self, for: indexPath)
@@ -36,8 +35,9 @@ class AppThemeController: AppBaseCollectionVMController {
     override func createLayout() -> UICollectionViewLayout {
         
         
-        let sectionProvider = { (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-            let sourceSection = self.dataSource[sectionIndex]
+        let sectionProvider = { [weak self] (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+            guard let strongSelf = self else { return nil }
+            let sourceSection = strongSelf.dataSource[sectionIndex]
             let rows = sourceSection.rowCount
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                   heightDimension: .fractionalHeight(1.0))
@@ -56,7 +56,7 @@ class AppThemeController: AppBaseCollectionVMController {
             
         }
         let config = UICollectionViewCompositionalLayoutConfiguration()
-        config.interSectionSpacing = 10
+//        config.interSectionSpacing = 10
         let layout = UICollectionViewCompositionalLayout(sectionProvider: sectionProvider, configuration: config)
         return layout
     }

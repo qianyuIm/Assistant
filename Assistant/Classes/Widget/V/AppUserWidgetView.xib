@@ -39,24 +39,37 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQm-JP-GRj">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="28"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="tapAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="SsO-cF-zXo"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="dAe-8K-oGF" secondAttribute="bottom" constant="4" id="3Wd-D0-YjM"/>
                 <constraint firstItem="ET0-DJ-Tip" firstAttribute="centerY" secondItem="dAe-8K-oGF" secondAttribute="centerY" id="3rK-1G-nOQ"/>
+                <constraint firstAttribute="bottom" secondItem="bQm-JP-GRj" secondAttribute="bottom" id="8A9-yj-vWT"/>
                 <constraint firstItem="dAe-8K-oGF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="Bbc-ff-yDF"/>
+                <constraint firstItem="bQm-JP-GRj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CNX-9E-hYN"/>
                 <constraint firstAttribute="trailing" secondItem="ET0-DJ-Tip" secondAttribute="trailing" constant="8" id="CyU-dU-jJe"/>
                 <constraint firstItem="dAe-8K-oGF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="DKQ-lf-tYN"/>
                 <constraint firstItem="dAe-8K-oGF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S8Q-Vi-hCk"/>
+                <constraint firstAttribute="trailing" secondItem="bQm-JP-GRj" secondAttribute="trailing" id="SeN-uk-iTL"/>
+                <constraint firstItem="bQm-JP-GRj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lX2-Fp-0Hf"/>
                 <constraint firstItem="ET0-DJ-Tip" firstAttribute="leading" secondItem="dAe-8K-oGF" secondAttribute="trailing" constant="6" id="ulk-TM-FxW"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="actionSender" destination="bQm-JP-GRj" id="Aze-5j-lKv"/>
                 <outlet property="icon" destination="nmH-b8-MKQ" id="MVO-Bb-ow7"/>
                 <outlet property="iconContentView" destination="dAe-8K-oGF" id="aQg-Id-44B"/>
                 <outlet property="titleLabel" destination="ET0-DJ-Tip" id="zW5-zt-hx3"/>
             </connections>
-            <point key="canvasLocation" x="258" y="36"/>
+            <point key="canvasLocation" x="71" y="4"/>
         </view>
     </objects>
     <resources>

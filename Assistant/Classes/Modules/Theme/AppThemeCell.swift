@@ -27,12 +27,16 @@ class AppThemeCell: UICollectionViewCell,AppNibLoadableView {
         themView.app.addRoundCorners(.allCorners, radius: 4)
     }
     func config(_ item: AppThemeItem) {
-        themView.backgroundColor = item.colorSwatch.color
+        if (QYConfig.Theme.isDark()) {
+            themView.backgroundColor = item.colorSwatch.colorDark
+        } else {
+            themView.backgroundColor = item.colorSwatch.color
+        }
         themeTitleLabel.text = item.colorSwatch.title
         if (item.isSelected) {
             checkBoxView.setCheckState(.checked, animated: true)
         } else {
-            checkBoxView.setCheckState(.unchecked, animated: true)
+            checkBoxView.setCheckState(.unchecked, animated: false)
         }
     }
 }

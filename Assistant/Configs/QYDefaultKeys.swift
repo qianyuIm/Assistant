@@ -15,13 +15,11 @@ extension DefaultsKeys {
     var enterForegroundTimeKey: DefaultsKey<Double> { .init("kEnterForegroundKey", defaultValue: 0) }
     /// 启动隐私协议
     var launchPrivacyPolicyKey: DefaultsKey<String> { .init("KLaunchPrivacyPolicyKey", defaultValue: "")  }
-    /// 是否为夜间模式
-    var themeDarkModeKey: DefaultsKey<Bool> { .init("kThemeDarkModeKey", defaultValue: false) }
+    /// 主题模式
     var themeDisplayModeKey: DefaultsKey<QYConfig.Theme.DisplayMode> { .init("kThemeDisplayModeKey", defaultValue: QYConfig.Theme.DisplayMode.inferred) }
     /// 主题位置
     var themeSwatchIndexKey: DefaultsKey<Int> { .init("kThemeSwatchIndexKey", defaultValue: 0) }
-    ///  主题跟随系统
-    var themeAutoSystem: DefaultsKey<Bool> { .init("kThemeAutoSystemKey", defaultValue: true) }
+    
     ///  语言跟随系统
     var languageAutoSystem: DefaultsKey<Bool> { .init("kLanguageAutoSystemey", defaultValue: true) }
     

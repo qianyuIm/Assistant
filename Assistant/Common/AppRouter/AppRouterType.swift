@@ -29,6 +29,8 @@ enum AppRouterType {
     case login
     /// wifi 传书
     case wifiUploader
+    /// 我的组件
+    case myWidgets
     /// 设置页面
     case setting
     /// 透明
@@ -60,6 +62,8 @@ extension AppRouterType: AppRouterTypeable {
             return QYConfig.scheme + "login"
         case .wifiUploader:
             return QYConfig.scheme + "wifiUploader"
+        case .myWidgets:
+            return QYConfig.scheme + "myWidgets"
         case .setting:
             return QYConfig.scheme + "user/setting"
         case .transparent:
@@ -80,6 +84,9 @@ extension AppRouterType: AppRouterTypeable {
     }
     func controller(url: URLConvertible, values: [String : Any], context: AppRouterContext?) -> AppRouterable? {
         switch self {
+        case .myWidgets:
+            return MyWidgetsController(viewModel: MyWidgetsViewModel(),
+                                        context: context)
         case .setting:
             return AppSettingController(viewModel: AppSettingViewModel(),
                                         context: context)

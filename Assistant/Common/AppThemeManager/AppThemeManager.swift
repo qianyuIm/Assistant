@@ -171,75 +171,84 @@ enum AppThemeProvider: ThemeProvider {
         }
     }
     
-    func switchLight() {
+    private func switchInferred() {
+        QYConfig.Theme.displayMode = .inferred
+        /// 当前系统主题
+        var systemMode = false
+        if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
+            systemMode = userInterfaceStyle == .dark
+        }
+        if (systemMode != isDark) {
+            var themeProvider: AppThemeProvider
+            switch self {
+            case .light(let colorSwatch):
+                themeProvider = AppThemeProvider.dark(colorSwatch: colorSwatch)
+            case .dark(let colorSwatch):
+                themeProvider = AppThemeProvider.light(colorSwatch: colorSwatch)
+            }
+            themeProvider.save()
+            appThemeProvider.switch(themeProvider)
+        } else {
+            QYLogger.debug("不做任何操作")
+        }
+    }
+    private func switchLight() {
         switch self {
         case .dark(let colorSwatch):
-            let theme = AppThemeProvider.light(colorSwatch: colorSwatch)
-            theme.save()
-            appThemeProvider.switch(theme)
+            let themeProvider = AppThemeProvider.light(colorSwatch: colorSwatch)
+            themeProvider.save()
+            QYConfig.Theme.displayMode = .light
+            appThemeProvider.switch(themeProvider)
         default: break
         }
         
     }
-    func switchTheme(for mode: String) {
-        if (mode == QYConfig.Theme.auto) {
-            
-        } else if (mode == QYConfig.Theme.light) {
-            
-        } else if (mode == QYConfig.Theme.dark) {
-            
-        } else {
-            fatalError("参数错误")
-        }
-    }
-    func switchDark() {
+    private func switchDark() {
         switch self {
         case .light(let colorSwatch):
-            let theme = AppThemeProvider.dark(colorSwatch: colorSwatch)
-            theme.save()
-            appThemeProvider.switch(theme)
+            let themeProvider = AppThemeProvider.dark(colorSwatch: colorSwatch)
+            themeProvider.save()
+            QYConfig.Theme.displayMode = .dark
+            appThemeProvider.switch(themeProvider)
         default: break
         }
     }
     
-    func toggled() {
-        var theme: AppThemeProvider
-        switch self {
-        case .light(let colorSwatch): theme = AppThemeProvider.dark(colorSwatch: colorSwatch)
-        case .dark(let colorSwatch): theme = AppThemeProvider.light(colorSwatch: colorSwatch)
-        }
-        theme.save()
-        appThemeProvider.switch(theme)
-    }
-    
-    func withColor(colorSwatch: AppColorSwatch) -> AppThemeProvider {
+    func switchWithColor(_ colorSwatch: AppColorSwatch) {
         var themeProvider: AppThemeProvider
         switch self {
         case .light: themeProvider = AppThemeProvider.light(colorSwatch: colorSwatch)
         case .dark: themeProvider = AppThemeProvider.dark(colorSwatch: colorSwatch)
         }
         themeProvider.save()
-        return themeProvider
+        appThemeProvider.switch(themeProvider)
     }
+    func switchWithDisplayMode(_ displayMode: QYConfig.Theme.DisplayMode) {
+        switch displayMode {
+        case .inferred:
+            switchInferred()
+            break
+        case .light:
+            switchLight()
+            break
+        case .dark:
+            switchDark()
+            break
+        }
+    }
+    
     
 }
 extension AppThemeProvider {
     static func currentTheme() -> AppThemeProvider {
-        var isDark = false
-        /// 当前系统主题
-        if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
-            isDark = userInterfaceStyle == .dark
-        }
-        isDark = QYConfig.Theme.themeAutoSystem ? isDark : QYConfig.Theme.themeDarkMode
         let themeKey = QYConfig.Theme.themeSwatchIndex
         let colorSwatch = AppColorSwatch(rawValue: themeKey) ?? AppColorSwatch.netease
-        let theme = isDark ? AppThemeProvider.dark(colorSwatch: colorSwatch) : AppThemeProvider.light(colorSwatch: colorSwatch)
+        let theme = QYConfig.Theme.isDark() ? AppThemeProvider.dark(colorSwatch: colorSwatch) : AppThemeProvider.light(colorSwatch: colorSwatch)
         theme.save()
         return theme
     }
 
     func save() {
-        QYConfig.Theme.themeDarkMode = self.isDark
         switch self {
         case .light(let colorSwatch): QYConfig.Theme.themeSwatchIndex = colorSwatch.rawValue
         case .dark(let colorSwatch): QYConfig.Theme.themeSwatchIndex = colorSwatch.rawValue

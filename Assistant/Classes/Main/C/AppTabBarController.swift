@@ -125,10 +125,9 @@ private extension AppTabBarController {
         switch traitCollection.userInterfaceStyle {
         case .light:
             QYLogger.debug("切换到明亮模式")
-            appThemeProvider.type.switchLight()
+            appThemeProvider.type.switchWithDisplayMode(QYConfig.Theme.displayMode)
         case .dark:
-            QYLogger.debug("切换到暗黑模式")
-            appThemeProvider.type.switchDark()
+            appThemeProvider.type.switchWithDisplayMode(QYConfig.Theme.displayMode)
         case .unspecified:
             break
         @unknown default:

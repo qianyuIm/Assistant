@@ -44,7 +44,8 @@ struct QYInch {
     static let left = value(16)
     /// 比例
     static let right = value(16)
-    
+    /// 单一线段高度
+    static let singleLineHeight = 1 / scale
     
     /// 适配
     static func value(_ value: CGFloat) -> CGFloat {

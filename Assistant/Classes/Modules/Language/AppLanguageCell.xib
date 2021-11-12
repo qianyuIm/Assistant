@@ -29,6 +29,14 @@
                             <constraint firstAttribute="width" constant="22" id="g4U-ne-58D"/>
                             <constraint firstAttribute="height" constant="22" id="gyI-Dr-lQb"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="checkmarkLineWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="boxLineWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>

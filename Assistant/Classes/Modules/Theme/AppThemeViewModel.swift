@@ -16,11 +16,11 @@ class AppThemeViewModel: AppViewModel {
     struct Output {
         let dataSource: BehaviorRelay<[AppThemeSection]>
     }
-    var currentThemeModel: BehaviorRelay<String>
+    var currentThemeModel: BehaviorRelay<QYConfig.Theme.DisplayMode>
     var currentThemeSwatch: BehaviorRelay<AppColorSwatch?>
 
     required init() {
-        currentThemeModel = BehaviorRelay(value: QYConfig.Theme.currentModelKey())
+        currentThemeModel = BehaviorRelay(value: QYConfig.Theme.displayMode)
         currentThemeSwatch = BehaviorRelay(value: AppColorSwatch(rawValue: QYConfig.Theme.themeSwatchIndex))
         super.init()
     }
@@ -31,18 +31,16 @@ extension AppThemeViewModel: AppViewModelable {
         
         let dataSource = BehaviorRelay<[AppThemeSection]>(value: [])
         
-        input.selection.drive(onNext: { (themeSectionItem) in
+        input.selection.drive(onNext: { [weak self] (themeSectionItem) in
             switch themeSectionItem {
             case .settingSectionItem(let item):
-                self.currentThemeModel.accept(item.mode)
-                appThemeProvider.type.switchLight()
-                
+                self?.currentThemeModel.accept(item.displayMode)
+                appThemeProvider.type.switchWithDisplayMode(item.displayMode)
                 break
             case .themeSectionItem(let item):
-                self.currentThemeSwatch.accept(item.colorSwatch)
-                
+                self?.currentThemeSwatch.accept(item.colorSwatch)
+                appThemeProvider.type.switchWithColor(item.colorSwatch)
                 break
-            
             }
         }).disposed(by: rx.disposeBag)
         
@@ -56,21 +54,19 @@ extension AppThemeViewModel: AppViewModelable {
             return strongSelf.config()
         }.bind(to: dataSource).disposed(by: rx.disposeBag)
         
-        
-        
-        
         return Output(dataSource: dataSource)
     }
 }
 extension AppThemeViewModel {
     func config() -> Observable<[AppThemeSection]> {
         let currentThemeModel = self.currentThemeModel.value
-        let autoMode = AppThemeSectionItem.settingSectionItem(item: .init(mode: QYConfig.Theme.auto, disPlayName: R.string.localizable.commonAuto.key.app.localized(), isSelected: currentThemeModel == QYConfig.Theme.auto))
+        let inferredMode = AppThemeSectionItem.settingSectionItem(item: .init(displayMode: .inferred, disPlayName: R.string.localizable.commonAuto.key.app.localized(), isSelected: currentThemeModel == .inferred))
         
-        let lightMode = AppThemeSectionItem.settingSectionItem(item: .init(mode: QYConfig.Theme.light, disPlayName: R.string.localizable.commonLightMode.key.app.localized(), isSelected: currentThemeModel == QYConfig.Theme.light))
-        let darkMode = AppThemeSectionItem.settingSectionItem(item: .init(mode: QYConfig.Theme.dark, disPlayName: R.string.localizable.commonDarkMode.key.app.localized(), isSelected: currentThemeModel == QYConfig.Theme.dark))
-        let settingSection = AppThemeSection.settingSection(items: [autoMode,lightMode,darkMode])
-        let themeItems = QYConfig.Theme.support.map { swatch in
+        let lightMode = AppThemeSectionItem.settingSectionItem(item: .init(displayMode: .light, disPlayName: R.string.localizable.commonLightMode.key.app.localized(), isSelected: currentThemeModel == .light))
+        let darkMode = AppThemeSectionItem.settingSectionItem(item: .init(displayMode: .dark, disPlayName: R.string.localizable.commonDarkMode.key.app.localized(), isSelected: currentThemeModel == .dark))
+        let settingSection = AppThemeSection.settingSection(items: [inferredMode,lightMode,darkMode])
+        
+        let themeItems = QYConfig.Theme.supportSwatchs.map { swatch in
             return AppThemeSectionItem.themeSectionItem(item: .init(colorSwatch: swatch, isSelected: currentThemeSwatch.value == swatch))
         }
         let themeSection = AppThemeSection.themeSection(items: themeItems)

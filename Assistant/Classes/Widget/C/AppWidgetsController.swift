@@ -15,11 +15,13 @@ import RxCocoa
 extension JXPagingListContainerView: JXSegmentedViewListContainer {}
 
 class AppWidgetsController: AppBaseVMController {
+    lazy var leftItemTitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = QYFont.fontMedium(26)
+        return label
+    }()
     lazy var leftItem: UIBarButtonItem = {
-        let titleLabel = UILabel()
-        titleLabel.text = R.string.localizable.barWidgetLeftTitle.key.app.localized()
-        titleLabel.font = QYFont.fontMedium(26)
-        let item = UIBarButtonItem(customView: titleLabel)
+        let item = UIBarButtonItem(customView: leftItemTitleLabel)
         return item
     }()
     lazy var rightItem: UIBarButtonItem = {
@@ -84,6 +86,8 @@ class AppWidgetsController: AppBaseVMController {
     
     override func setupTheme() {
         super.setupTheme()
+        leftItemTitleLabel.theme.textColor = appThemeProvider.attribute({ $0.primaryColor
+        })
         segmentedView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
         })
         appThemeProvider.typeStream.subscribe (onNext: { [weak self] themeProvider in
@@ -99,6 +103,8 @@ class AppWidgetsController: AppBaseVMController {
     
     override func setupLanguage() {
         super.setupLanguage()
+        leftItemTitleLabel.text = R.string.localizable.barWidgetLeftTitle.key.app.localized()
+
     }
     
     override func bindViewModel() {
@@ -118,6 +124,8 @@ class AppWidgetsController: AppBaseVMController {
         output.dataSource.subscribe (onNext: { [weak self] widgetSection in
             self?.reloadPageView(widgetSection)
         }).disposed(by: rx.disposeBag)
+        
+        
     }
     
 }

@@ -68,6 +68,11 @@ extension AppExtensionWrapper where Base: UIView {
         base.layer.maskedCorners = CACornerMask(rawValue: corners.rawValue)
         base.layer.cornerRadius = radius
     }
+    func addBorder(_ borderColor: UIColor, borderWidth: CGFloat) {
+        base.layer.borderColor = borderColor.cgColor
+        base.layer.borderWidth = borderWidth
+    }
+    
     /// 获取视图的导航控制器
     var navigationController: UINavigationController? {
         var nextResponder: UIResponder? = base

@@ -31,7 +31,7 @@ class AppLanguageCell: UICollectionViewCell ,AppNibLoadableView{
         if (item.isSelected) {
             checkBoxView.setCheckState(.checked, animated: true)
         } else {
-            checkBoxView.setCheckState(.unchecked, animated: true)
+            checkBoxView.setCheckState(.unchecked, animated: false)
         }
     }
 

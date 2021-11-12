@@ -42,19 +42,13 @@ struct QYConfig {
     }
     
     struct Theme {
-        enum DisplayMode: Int, DefaultsSerializable {
-            case inferred
-            case light
-            case dark
+        enum DisplayMode: String, DefaultsSerializable {
+            case inferred = "inferred"
+            case light = "light"
+            case dark = "dark"
         }
-        static var themeAutoSystem: Bool {
-            set {
-                Defaults.themeAutoSystem = newValue
-            }
-            get {
-                return Defaults.themeAutoSystem
-            }
-        }
+        static let supportSwatchs = AppColorSwatch.allValues
+        
         static var themeSwatchIndex: Int {
             set {
                 Defaults.themeSwatchIndexKey = newValue
@@ -63,14 +57,7 @@ struct QYConfig {
                 return Defaults.themeSwatchIndexKey
             }
         }
-        static var themeDarkMode: Bool {
-            set {
-                Defaults.themeDarkModeKey = newValue
-            }
-            get {
-                return Defaults.themeDarkModeKey
-            }
-        }
+        
         static var displayMode: DisplayMode {
             set {
                 Defaults.themeDisplayModeKey = newValue
@@ -79,24 +66,15 @@ struct QYConfig {
                 return Defaults.themeDisplayModeKey
             }
         }
-        /// key
-        static let auto = "auto"
-        /// key
-        static let dark = "dark"
-        /// key
-        static let light = "light"
-        static let support = AppColorSwatch.allValues
-        static func currentModelKey() -> String {
-            return themeAutoSystem ? auto : (themeDarkMode ? dark : light)
-        }
-        /// 当前处于什么模式
+        /// 是否为暗色 单存
         static func isDark() -> Bool {
             var isDark = false
             /// 当前系统主题
             if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
                 isDark = userInterfaceStyle == .dark
             }
-            return themeAutoSystem ? isDark : themeDarkMode
+            isDark = (QYConfig.Theme.displayMode == .inferred) ? isDark : (QYConfig.Theme.displayMode == .dark)
+            return isDark
         }
         
     }
