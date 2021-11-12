@@ -11,7 +11,8 @@ import RxCocoa
 import RxSwift
 class MyWidgetsController: AppBaseVMController {
     lazy var segmentedView: JXSegmentedView = {
-        let segmentedView = JXSegmentedView(frame: CGRect(x: 0, y: 0, width: 180, height: 34))
+        let segmentedView = JXSegmentedView(frame: CGRect(x: 0, y: 0, width: 200, height: 34))
+        segmentedView.delegate = self
         segmentedView.isContentScrollViewClickTransitionAnimationEnabled = false
         segmentedView.app.addRoundCorners(.allCorners, radius: 17)
         segmentedView.layer.borderWidth = QYInch.singleLineHeight
@@ -21,7 +22,6 @@ class MyWidgetsController: AppBaseVMController {
         let dataSource = JXSegmentedTitleDataSource()
         dataSource.titles = []
         dataSource.itemSpacing = QYInch.value(20)
-//        dataSource.isItemSpacingAverageEnabled = false
         dataSource.isTitleColorGradientEnabled = true
         dataSource.isTitleZoomEnabled = true
         return dataSource
@@ -42,8 +42,14 @@ class MyWidgetsController: AppBaseVMController {
 
         // Do any additional setup after loading the view.
     }
+    override func prepare() {
+        super.prepare()
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
     override func setupUI() {
         super.setupUI()
+        self.hbd_barAlpha = 0
+        self.hbd_backInteractive = false
         segmentedView.indicators = [indicator]
         segmentedView.dataSource = dataSource
         navigationItem.titleView = segmentedView
@@ -90,6 +96,11 @@ class MyWidgetsController: AppBaseVMController {
     }
 
 }
+extension MyWidgetsController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
 
 extension MyWidgetsController {
     func reloadSegmentedView(_ sections: [AppWidgetSection]) {
@@ -99,7 +110,11 @@ extension MyWidgetsController {
         segmentedView.reloadData()
     }
 }
-
+extension MyWidgetsController: JXSegmentedViewDelegate {
+    func segmentedView(_ segmentedView: JXSegmentedView, didSelectedItemAt index: Int) {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = (segmentedView.selectedIndex == 0)
+    }
+}
 extension MyWidgetsController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
         return self.dataSource.dataSource.count
