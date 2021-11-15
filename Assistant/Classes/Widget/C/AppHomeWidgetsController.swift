@@ -1,5 +1,5 @@
 //
-//  AppWidgetsController.swift
+//  AppHomeWidgetsController.swift
 //  Assistant
 //
 //  Created by cyd on 2021/11/4.
@@ -14,7 +14,7 @@ import RxCocoa
 
 extension JXPagingListContainerView: JXSegmentedViewListContainer {}
 
-class AppWidgetsController: AppBaseVMController {
+class AppHomeWidgetsController: AppBaseVMController {
     lazy var leftItemTitleLabel: UILabel = {
         let label = UILabel()
         label.font = QYFont.fontMedium(26)
@@ -60,12 +60,9 @@ class AppWidgetsController: AppBaseVMController {
         indicator.lineStyle = .lengthenOffset
         return indicator
     }()
-    var dataSections: [AppWidgetSection]?
+    var dataSections: [AppHomeWidgetSection]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
     }
     override func setupUI() {
         super.setupUI()
@@ -80,7 +77,8 @@ class AppWidgetsController: AppBaseVMController {
     override func setupConstraints() {
         super.setupConstraints()
         pagingView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.left.top.right.equalToSuperview()
+            make.bottom.equalTo(-QYInch.tabbarHeight)
         }
     }
     
@@ -89,6 +87,10 @@ class AppWidgetsController: AppBaseVMController {
         leftItemTitleLabel.theme.textColor = appThemeProvider.attribute({ $0.primaryColor
         })
         segmentedView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
+        })
+        pagingView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
+        })
+        pagingView.mainTableView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
         })
         appThemeProvider.typeStream.subscribe (onNext: { [weak self] themeProvider in
             let segmentedTheme = themeProvider.associatedObject.segmentedTheme
@@ -109,12 +111,12 @@ class AppWidgetsController: AppBaseVMController {
     
     override func bindViewModel() {
         super.bindViewModel()
-        guard let viewModel = viewModel as? AppWidgetsViewModel else {
+        guard let viewModel = viewModel as? AppHomeWidgetsViewModel else {
             return
         }
         let trigger = Observable.of(Observable.just(()),
                                     languageChanged.asObservable()).merge()
-        let input = AppWidgetsViewModel.Input(trigger: trigger)
+        let input = AppHomeWidgetsViewModel.Input(trigger: trigger)
         let output = viewModel.transform(input: input)
         
         output.headerDataSource.subscribe (onNext: {[weak self] headerSections in
@@ -129,11 +131,11 @@ class AppWidgetsController: AppBaseVMController {
     }
     
 }
-extension AppWidgetsController {
+extension AppHomeWidgetsController {
     func reloadHeaderView(_ headerSource: [WidgetHeaderSection]) {
         headerView.dataSource.accept(headerSource)
     }
-    func reloadPageView(_ sections: [AppWidgetSection]) {
+    func reloadPageView(_ sections: [AppHomeWidgetSection]) {
         self.dataSections = sections
         let titles = sections.compactMap { $0.title }
         dataSource.titles = titles
@@ -144,7 +146,7 @@ extension AppWidgetsController {
     }
 }
 
-extension AppWidgetsController: JXPagingViewDelegate {
+extension AppHomeWidgetsController: JXPagingViewDelegate {
     func tableHeaderViewHeight(in pagingView: JXPagingView) -> Int {
         return headerView.viewHeight()
     }
@@ -167,12 +169,11 @@ extension AppWidgetsController: JXPagingViewDelegate {
             let smallViewModel = SmallWidgetViewModel()
             return SmallWidgetController(viewModel: smallViewModel)
         case .medium:
-            let smallViewModel = SmallWidgetViewModel()
-            return SmallWidgetController(viewModel: smallViewModel)
+            let mediumViewModel = MediumWidgetViewModel()
+            return MediumWidgetController(viewModel: mediumViewModel)
         case .large:
-            let smallViewModel = SmallWidgetViewModel()
-            return SmallWidgetController(viewModel: smallViewModel)
-
+            let largeiewModel = LargeWidgetViewModel()
+            return LargeWidgetController(viewModel: largeiewModel)
         }
     }
 }

@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyUserDefaults
 import Localize_Swift
+import SnapKit
 
 struct QYConfig {
     /// 启动页面展示 前后台时间间隔  默认: 60 * 3 s

@@ -63,4 +63,69 @@ struct QYInch {
     
     /// 占位图大小
     static let placeholder = value(150)
+    
+    struct Widget {
+        static var smallSize: CGSize {
+            var size: CGSize = CGSize.zero
+            if (Screen.Width.current == ._320 && Screen.Height.current == ._568) {
+                size = CGSize(width: 140, height: 140)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._667) {
+                size = CGSize(width: 148, height: 148)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._812) {
+                size = CGSize(width: 155, height: 155)
+            } else if (Screen.Width.current == ._390 && Screen.Height.current == ._844) {
+                size = CGSize(width: 158, height: 158)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._736) {
+                size = CGSize(width: 157, height: 157)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._896) {
+                size = CGSize(width: 169, height: 169)
+            } else {
+                /// 428 x 926
+                size = CGSize(width: 170, height: 170)
+            }
+            return size
+        }
+        static var mediumSize: CGSize {
+            var size: CGSize = CGSize.zero
+            if (Screen.Width.current == ._320 && Screen.Height.current == ._568) {
+                size = CGSize(width: 291, height: 140)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._667) {
+                size = CGSize(width: 321, height: 148)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._812) {
+                size = CGSize(width: 329, height: 155)
+            } else if (Screen.Width.current == ._390 && Screen.Height.current == ._844) {
+                size = CGSize(width: 338, height: 158)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._736) {
+                size = CGSize(width: 348, height: 157)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._896) {
+                size = CGSize(width: 360, height: 169)
+            } else {
+                /// 428 x 926
+                size = CGSize(width: 364, height: 170)
+            }
+            return size
+        }
+        static var largeSize: CGSize {
+            var size: CGSize = CGSize.zero
+            if (Screen.Width.current == ._320 && Screen.Height.current == ._568) {
+                size = CGSize(width: 291, height: 310)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._667) {
+                size = CGSize(width: 321, height: 324)
+            } else if (Screen.Width.current == ._375 && Screen.Height.current == ._812) {
+                size = CGSize(width: 329, height: 345)
+            } else if (Screen.Width.current == ._390 && Screen.Height.current == ._844) {
+                size = CGSize(width: 338, height: 354)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._736) {
+                size = CGSize(width: 348, height: 351)
+            } else if (Screen.Width.current == ._414 && Screen.Height.current == ._896) {
+                size = CGSize(width: 369, height: 379)
+            } else {
+                /// 428 x 926
+                size = CGSize(width: 364, height: 382)
+            }
+            return size
+        }
+    }
 }
+
+

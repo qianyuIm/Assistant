@@ -94,6 +94,7 @@ PODS:
   - RxTheme (6.0.0):
     - RxCocoa (~> 6.0)
     - RxSwift (~> 6.0)
+  - Schedule (2.1.0)
   - SDWebImage/Core (5.12.1)
   - SDWebImageFLPlugin (0.5.0):
     - FLAnimatedImage (>= 1.0.11)
@@ -135,7 +136,7 @@ DEPENDENCIES:
   - JXPagingView/Paging (~> 2.1.1)
   - JXSegmentedView (~> 1.2.7)
   - Localize-Swift (~> 3.2.0)
-  - M13Checkbox
+  - M13Checkbox (~> 3.4.0)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.4.3)
   - MLeaksFinder (from `https://github.com/Tencent/MLeaksFinder.git`)
@@ -147,6 +148,7 @@ DEPENDENCIES:
   - RxDataSources (~> 5.0.0)
   - RxReachability (~> 1.2.1)
   - RxTheme (~> 6.0.0)
+  - Schedule
   - SDWebImageFLPlugin (~> 0.5.0)
   - SDWebImageWebPCoder (~> 0.8.4)
   - SnapKit (~> 5.0.1)
@@ -202,6 +204,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTheme
+    - Schedule
     - SDWebImage
     - SDWebImageFLPlugin
     - SDWebImageWebPCoder
@@ -267,6 +270,7 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTheme: be60cb14e0544b3cbd574cc37fed35ba9d61aa1f
+  Schedule: 00e6d7bbdbdb000fd1f51a7d10e9f88a8c451fda
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SDWebImageFLPlugin: 245c7ce1e77028b6ef415240847b3f8aa4b106b7
   SDWebImageWebPCoder: f93010f3f6c031e2f8fb3081ca4ee6966c539815
@@ -281,6 +285,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: e7c810646b71867174611f2b63de70520c886f2d
+PODFILE CHECKSUM: fd00567ac3a335f2038bcaede191d7527fdeaf80
 
 COCOAPODS: 1.10.0

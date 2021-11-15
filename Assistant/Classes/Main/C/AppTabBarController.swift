@@ -57,9 +57,9 @@ class AppTabBarController: ESTabBarController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let widgetsModel = AppWidgetsViewModel()
+        let widgetsModel = AppHomeWidgetsViewModel()
         let widget = _setController(
-            controller: AppWidgetsController(viewModel: widgetsModel),
+            controller: AppHomeWidgetsController(viewModel: widgetsModel),
             title: tabBarItemTitles()[0],
             normalImage: appIconFontIcons.icon_tab_widget.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_widget.image(size: 24))

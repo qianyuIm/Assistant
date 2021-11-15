@@ -13,13 +13,13 @@ class MyWidgetsViewModel: AppViewModel {
         let trigger: Observable<Void>
     }
     struct Output {
-        let dataSource: BehaviorRelay<[AppWidgetSection]>
+        let dataSource: BehaviorRelay<[AppHomeWidgetSection]>
     }
 }
 extension MyWidgetsViewModel: AppViewModelable {
     func transform(input: Input) -> Output {
-        let dataSource = BehaviorRelay<[AppWidgetSection]>(value: [])
-        input.trigger.flatMapLatest { [weak self]() -> Observable<[AppWidgetSection]> in
+        let dataSource = BehaviorRelay<[AppHomeWidgetSection]>(value: [])
+        input.trigger.flatMapLatest { [weak self]() -> Observable<[AppHomeWidgetSection]> in
             guard let strongSelf = self else {
                 return .empty()
             }
@@ -28,13 +28,13 @@ extension MyWidgetsViewModel: AppViewModelable {
         
         return Output(dataSource: dataSource)
     }
-    func configDataSource() -> Observable<[AppWidgetSection]> {
+    func configDataSource() -> Observable<[AppHomeWidgetSection]> {
         let small = R.string.localizable.widgetSegmentSmall.key.app.localized()
-        let smallSection = AppWidgetSection.small(title: small)
+        let smallSection = AppHomeWidgetSection.small(title: small)
         let medium = R.string.localizable.widgetSegmentMedium.key.app.localized()
-        let mediumSection = AppWidgetSection.small(title: medium)
+        let mediumSection = AppHomeWidgetSection.small(title: medium)
         let large = R.string.localizable.widgetSegmentLarge.key.app.localized()
-        let largeSection = AppWidgetSection.small(title: large)
+        let largeSection = AppHomeWidgetSection.small(title: large)
         return Observable.just([smallSection,mediumSection,largeSection])
     }
 }

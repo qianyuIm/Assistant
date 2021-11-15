@@ -63,6 +63,8 @@ def swift_pods
   pod 'SwiftDate', '~> 6.3.1'
   pod 'SPPermissions', '~> 6.7.1'
   pod 'M13Checkbox', '~> 3.4.0'
+  # 定时器
+  pod 'Schedule', '~> 2.1.0'
 end
 
 

@@ -13,6 +13,23 @@
 		EF0AAA7D27350706006CEED0 /* AppUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppUserWidgetView.swift */; };
 		EF0AAA7F27350713006CEED0 /* AppUserWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA7E27350713006CEED0 /* AppUserWidgetView.xib */; };
 		EF0AAA8527351DAF006CEED0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0AAA8427351DAF006CEED0 /* CloudKit.framework */; };
+		EF2FFCF02741F55F00786A80 /* AppFlipClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */; };
+		EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */; };
+		EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */; };
+		EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */; };
+		EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */; };
+		EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
+		EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
+		EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD012742076300786A80 /* AppFlipClockItem.swift */; };
+		EF2FFD0427422D9900786A80 /* WidgetSupplementaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */; };
+		EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0527422E2100786A80 /* SmallWidgetSection.swift */; };
+		EF2FFD092742326000786A80 /* WidgetHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */; };
+		EF2FFD0A2742326000786A80 /* WidgetHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */; };
+		EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */; };
+		EF2FFD122742616700786A80 /* MediumWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */; };
+		EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */; };
+		EF2FFD162742651700786A80 /* LargeWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD152742651700786A80 /* LargeWidgetViewModel.swift */; };
+		EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD172742653600786A80 /* LargeWidgetSection.swift */; };
 		EF6A21332735285A00691B3A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A21182735238100691B3A /* WidgetKit.framework */; };
 		EF6A21342735285A00691B3A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A211A2735238100691B3A /* SwiftUI.framework */; };
 		EF6A213A2735285B00691B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21392735285B00691B3A /* Assets.xcassets */; };
@@ -148,7 +165,7 @@
 		EFD4ACAC27338E72000B2350 /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACAB27338E72000B2350 /* Observable+Operators.swift */; };
 		EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACAE27338EE6000B2350 /* QYRefreshHeader.swift */; };
 		EFD4ACB127338EE6000B2350 /* QYRefreshFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACAF27338EE6000B2350 /* QYRefreshFooter.swift */; };
-		EFD4ACBA27339043000B2350 /* AppWidgetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACB927339043000B2350 /* AppWidgetsController.swift */; };
+		EFD4ACBA27339043000B2350 /* AppHomeWidgetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACB927339043000B2350 /* AppHomeWidgetsController.swift */; };
 		EFD4ACBF273390DE000B2350 /* MJRefreshComponent+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACBC273390DE000B2350 /* MJRefreshComponent+Rx.swift */; };
 		EFD4ACC0273390DE000B2350 /* MJRefreshHeader+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACBD273390DE000B2350 /* MJRefreshHeader+Rx.swift */; };
 		EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACBE273390DE000B2350 /* MJRefreshFooter+Rx.swift */; };
@@ -167,7 +184,7 @@
 		EFD4ACF72733AA65000B2350 /* AppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACF52733AA65000B2350 /* AppNotification.swift */; };
 		EFD4ACFA2733AACE000B2350 /* AppUtility+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */; };
 		EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACFB2733AB68000B2350 /* URLExtensions.swift */; };
-		EFD4ACFE2733ACFA000B2350 /* AppWidgetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACFD2733ACFA000B2350 /* AppWidgetsViewModel.swift */; };
+		EFD4ACFE2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACFD2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift */; };
 		EFD4AD062733AD66000B2350 /* AppIconsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD032733AD66000B2350 /* AppIconsController.swift */; };
 		EFD4AD072733AD66000B2350 /* AppIconsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD052733AD66000B2350 /* AppIconsViewModel.swift */; };
 		EFD4AD122733AD9F000B2350 /* AppMoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AD0A2733AD9F000B2350 /* AppMoreViewModel.swift */; };
@@ -240,6 +257,23 @@
 		EF0AAA7C27350706006CEED0 /* AppUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserWidgetView.swift; sourceTree = "<group>"; };
 		EF0AAA7E27350713006CEED0 /* AppUserWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppUserWidgetView.xib; sourceTree = "<group>"; };
 		EF0AAA8427351DAF006CEED0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockView.swift; sourceTree = "<group>"; };
+		EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockLabel.swift; sourceTree = "<group>"; };
+		EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetAttributes.swift; sourceTree = "<group>"; };
+		EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+BackgroundStyle.swift"; sourceTree = "<group>"; };
+		EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+TimeFormat.swift"; sourceTree = "<group>"; };
+		EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+FrameStyle.swift"; sourceTree = "<group>"; };
+		EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+LabelStyle.swift"; sourceTree = "<group>"; };
+		EF2FFD012742076300786A80 /* AppFlipClockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockItem.swift; sourceTree = "<group>"; };
+		EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSupplementaryModel.swift; sourceTree = "<group>"; };
+		EF2FFD0527422E2100786A80 /* SmallWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetSection.swift; sourceTree = "<group>"; };
+		EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHeaderSupplementaryView.swift; sourceTree = "<group>"; };
+		EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetHeaderSupplementaryView.xib; sourceTree = "<group>"; };
+		EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetFlipClockCell.swift; sourceTree = "<group>"; };
+		EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetViewModel.swift; sourceTree = "<group>"; };
+		EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetSection.swift; sourceTree = "<group>"; };
+		EF2FFD152742651700786A80 /* LargeWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetViewModel.swift; sourceTree = "<group>"; };
+		EF2FFD172742653600786A80 /* LargeWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetSection.swift; sourceTree = "<group>"; };
 		EF6A21182735238100691B3A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		EF6A211A2735238100691B3A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EF6A212C273526DD00691B3A /* WidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
@@ -392,7 +426,7 @@
 		EFD4ACAB27338E72000B2350 /* Observable+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
 		EFD4ACAE27338EE6000B2350 /* QYRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRefreshHeader.swift; sourceTree = "<group>"; };
 		EFD4ACAF27338EE6000B2350 /* QYRefreshFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QYRefreshFooter.swift; sourceTree = "<group>"; };
-		EFD4ACB927339043000B2350 /* AppWidgetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetsController.swift; sourceTree = "<group>"; };
+		EFD4ACB927339043000B2350 /* AppHomeWidgetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeWidgetsController.swift; sourceTree = "<group>"; };
 		EFD4ACBC273390DE000B2350 /* MJRefreshComponent+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefreshComponent+Rx.swift"; sourceTree = "<group>"; };
 		EFD4ACBD273390DE000B2350 /* MJRefreshHeader+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefreshHeader+Rx.swift"; sourceTree = "<group>"; };
 		EFD4ACBE273390DE000B2350 /* MJRefreshFooter+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MJRefreshFooter+Rx.swift"; sourceTree = "<group>"; };
@@ -411,7 +445,7 @@
 		EFD4ACF52733AA65000B2350 /* AppNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNotification.swift; sourceTree = "<group>"; };
 		EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+Controller.swift"; sourceTree = "<group>"; };
 		EFD4ACFB2733AB68000B2350 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
-		EFD4ACFD2733ACFA000B2350 /* AppWidgetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetsViewModel.swift; sourceTree = "<group>"; };
+		EFD4ACFD2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeWidgetsViewModel.swift; sourceTree = "<group>"; };
 		EFD4AD032733AD66000B2350 /* AppIconsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconsController.swift; sourceTree = "<group>"; };
 		EFD4AD052733AD66000B2350 /* AppIconsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppIconsViewModel.swift; sourceTree = "<group>"; };
 		EFD4AD0A2733AD9F000B2350 /* AppMoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppMoreViewModel.swift; sourceTree = "<group>"; };
@@ -506,8 +540,104 @@
 				EFD03A7B2738D61900E28F27 /* WidgetHeaderViewCell.swift */,
 				EFD03A7C2738D61900E28F27 /* WidgetHeaderViewCell.xib */,
 				EFD03A692738C2E700E28F27 /* WidgetHeaderView.swift */,
+				EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */,
+				EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */,
 			);
 			path = V;
+			sourceTree = "<group>";
+		};
+		EF2FFCED2741F50C00786A80 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFCEE2741F53400786A80 /* FlipClock */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		EF2FFCEE2741F53400786A80 /* FlipClock */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */,
+				EF2FFD012742076300786A80 /* AppFlipClockItem.swift */,
+				EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */,
+			);
+			path = FlipClock;
+			sourceTree = "<group>";
+		};
+		EF2FFCF32741F83C00786A80 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFCF82741FB5C00786A80 /* Attributes */,
+				EF2FFCED2741F50C00786A80 /* Clock */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		EF2FFCF82741FB5C00786A80 /* Attributes */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
+				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
+				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */,
+				EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */,
+				EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */,
+			);
+			path = Attributes;
+			sourceTree = "<group>";
+		};
+		EF2FFD192742661400786A80 /* SmallWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFD1E2742669700786A80 /* Cell */,
+				EFD03A6B2738C33300E28F27 /* SmallWidgetController.swift */,
+				EFD03A6D2738C34800E28F27 /* SmallWidgetViewModel.swift */,
+				EF2FFD0527422E2100786A80 /* SmallWidgetSection.swift */,
+			);
+			path = SmallWidget;
+			sourceTree = "<group>";
+		};
+		EF2FFD1A2742664E00786A80 /* MediumWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */,
+				EF2FFD1D2742669000786A80 /* Cell */,
+				EFD03A722738D03300E28F27 /* MediumWidgetController.swift */,
+				EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */,
+			);
+			path = MediumWidget;
+			sourceTree = "<group>";
+		};
+		EF2FFD1B2742666800786A80 /* LargeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFD172742653600786A80 /* LargeWidgetSection.swift */,
+				EFD03A742738D05400E28F27 /* LargeWidgetController.swift */,
+				EF2FFD152742651700786A80 /* LargeWidgetViewModel.swift */,
+				EF2FFD1C2742668A00786A80 /* Cell */,
+			);
+			path = LargeWidget;
+			sourceTree = "<group>";
+		};
+		EF2FFD1C2742668A00786A80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF2FFD1D2742669000786A80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF2FFD1E2742669700786A80 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EF6A21352735285A00691B3A /* WidgetExtension */ = {
@@ -580,6 +710,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD03A702738CBD500E28F27 /* WidgetHeaderSection.swift */,
+				EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -737,6 +868,7 @@
 		EFD4ABD827336B9B000B2350 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EF2FFCF32741F83C00786A80 /* Widgets */,
 				EFD11B60273BC4F400C68AF9 /* AppCheckbox */,
 				EFD4ACF42733AA65000B2350 /* AppNotification */,
 				EFD4ACE02733A995000B2350 /* AppRouter */,
@@ -822,6 +954,9 @@
 		EFD4ABDE27336C06000B2350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF2FFD1B2742666800786A80 /* LargeWidget */,
+				EF2FFD1A2742664E00786A80 /* MediumWidget */,
+				EF2FFD192742661400786A80 /* SmallWidget */,
 				EFD80958273E45100065F048 /* MyWidgets */,
 				EFF29638273A005200ACB35E /* Limit */,
 				EFD03A882739164600E28F27 /* Language */,
@@ -1180,8 +1315,7 @@
 		EFD4ACB427338FF5000B2350 /* VM */ = {
 			isa = PBXGroup;
 			children = (
-				EFD4ACFD2733ACFA000B2350 /* AppWidgetsViewModel.swift */,
-				EFD03A6D2738C34800E28F27 /* SmallWidgetViewModel.swift */,
+				EFD4ACFD2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -1189,10 +1323,7 @@
 		EFD4ACB527339001000B2350 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				EFD4ACB927339043000B2350 /* AppWidgetsController.swift */,
-				EFD03A6B2738C33300E28F27 /* SmallWidgetController.swift */,
-				EFD03A722738D03300E28F27 /* MediumWidgetController.swift */,
-				EFD03A742738D05400E28F27 /* LargeWidgetController.swift */,
+				EFD4ACB927339043000B2350 /* AppHomeWidgetsController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1505,6 +1636,7 @@
 				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
+				EF2FFD0A2742326000786A80 /* WidgetHeaderSupplementaryView.xib in Resources */,
 				EFD4ACA627338B32000B2350 /* InfoPlist.strings in Resources */,
 				EF0AAA7F27350713006CEED0 /* AppUserWidgetView.xib in Resources */,
 				EFD4AC8E27338A25000B2350 /* music_home_recommend_resource.json in Resources */,
@@ -1647,6 +1779,7 @@
 				EFD4AC2227338202000B2350 /* QYButton.swift in Sources */,
 				EFD4AC412733824C000B2350 /* QYConfig.swift in Sources */,
 				EFD4AC2E2733821B000B2350 /* QYMapError.swift in Sources */,
+				EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */,
 				EFD4AC6A2733888F000B2350 /* AppBaseEmptyView.swift in Sources */,
 				EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */,
 				EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */,
@@ -1661,6 +1794,7 @@
 				EFD4AC3E27338236000B2350 /* QYAlert.swift in Sources */,
 				EFD4AC6B2733888F000B2350 /* AppRefreshViewModel.swift in Sources */,
 				EFD03A752738D05400E28F27 /* LargeWidgetController.swift in Sources */,
+				EF2FFD162742651700786A80 /* LargeWidgetViewModel.swift in Sources */,
 				EFD4AC9227338A25000B2350 /* MusicResponseHandle.swift in Sources */,
 				EFD4AC392733822E000B2350 /* QYFont.swift in Sources */,
 				EFD4AC1527337F8C000B2350 /* AppIconFontIcons.swift in Sources */,
@@ -1669,13 +1803,16 @@
 				EFD4AC2927338214000B2350 /* QYReachability.swift in Sources */,
 				EFD4AC692733888F000B2350 /* AppBaseWebController.swift in Sources */,
 				EFD80960273E46BA0065F048 /* MySmallWidgetViewModel.swift in Sources */,
+				EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */,
 				EF6A214A27352AC100691B3A /* AppSettingViewModel.swift in Sources */,
+				EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */,
 				EFD4AC302733821B000B2350 /* QYMapSearchManager.swift in Sources */,
 				EFD8095E273E46670065F048 /* MySmallWidgetController.swift in Sources */,
 				EFD4AC9127338A25000B2350 /* MusicResponseCodable.swift in Sources */,
 				EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */,
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
-				EFD4ACFE2733ACFA000B2350 /* AppWidgetsViewModel.swift in Sources */,
+				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift in Sources */,
+				EFD4ACFE2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift in Sources */,
 				EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */,
 				EFD80955273DFA0A0065F048 /* AppThemeSection.swift in Sources */,
 				EFD11B5F273BB27000C68AF9 /* AppTransparentGuideController.swift in Sources */,
@@ -1691,9 +1828,11 @@
 				EFD03A6A2738C2E700E28F27 /* WidgetHeaderView.swift in Sources */,
 				EFD4AC1A27338165000B2350 /* QYKeys.swift in Sources */,
 				EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */,
+				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
+				EF2FFD092742326000786A80 /* WidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
 				EFD4AC9B27338A7E000B2350 /* AppThemeManager.swift in Sources */,
 				EFD80962273E5E210065F048 /* AppWidgetDateProvider.swift in Sources */,
@@ -1713,11 +1852,15 @@
 				EFD4AC652733888F000B2350 /* MusicPlaylist.swift in Sources */,
 				EFD11B48273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
 				EFD03A8A2739165B00E28F27 /* AppLanguageViewModel.swift in Sources */,
+				EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */,
 				EF6A21552735306000691B3A /* AppSettingCell.swift in Sources */,
 				EF0AAA7D27350706006CEED0 /* AppUserWidgetView.swift in Sources */,
+				EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */,
 				EFD4AC662733888F000B2350 /* AppBaseCollectionVMController.swift in Sources */,
+				EF2FFD0427422D9900786A80 /* WidgetSupplementaryModel.swift in Sources */,
 				EFD03A6E2738C34800E28F27 /* SmallWidgetViewModel.swift in Sources */,
 				EFD4AC3327338221000B2350 /* QYLogger.swift in Sources */,
+				EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */,
 				EFD8095A273E45280065F048 /* MyWidgetsController.swift in Sources */,
 				EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */,
 				EFD4ABFA27336DF4000B2350 /* StringExtensions.swift in Sources */,
@@ -1726,6 +1869,7 @@
 				EFD4AD062733AD66000B2350 /* AppIconsController.swift in Sources */,
 				EFD4ABFC27336DF4000B2350 /* UIButtonExtensions.swift in Sources */,
 				EFD4AC632733888F000B2350 /* MusicBaseModel.swift in Sources */,
+				EF2FFD122742616700786A80 /* MediumWidgetViewModel.swift in Sources */,
 				EFD4AC5427338830000B2350 /* AppTabBarController.swift in Sources */,
 				EFD4AC0827337A44000B2350 /* AppUtility.swift in Sources */,
 				EFD4ABFE27336DF4000B2350 /* UIColorExtensions.swift in Sources */,
@@ -1736,10 +1880,14 @@
 				EFD4AC2327338202000B2350 /* QYBorderButton.swift in Sources */,
 				EFD4ACF72733AA65000B2350 /* AppNotification.swift in Sources */,
 				EFD4ACAC27338E72000B2350 /* Observable+Operators.swift in Sources */,
+				EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */,
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
+				EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */,
+				EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
+				EF2FFCF02741F55F00786A80 /* AppFlipClockView.swift in Sources */,
 				EFD4ACF12733A996000B2350 /* AppRouterHelper.swift in Sources */,
 				EFD4ACEB2733A996000B2350 /* AppRouterAccountPlugin.swift in Sources */,
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
@@ -1749,7 +1897,7 @@
 				EFD03A8C2739166A00E28F27 /* AppLanguageController.swift in Sources */,
 				EFD4ABA52733674C000B2350 /* AppDelegate.swift in Sources */,
 				EFD4ACFA2733AACE000B2350 /* AppUtility+Controller.swift in Sources */,
-				EFD4ACBA27339043000B2350 /* AppWidgetsController.swift in Sources */,
+				EFD4ACBA27339043000B2350 /* AppHomeWidgetsController.swift in Sources */,
 				EFD4AC8727338A25000B2350 /* TargetType+Rx.swift in Sources */,
 				EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */,
 				EFD4ABF827336DF4000B2350 /* CGSizeExtensions.swift in Sources */,

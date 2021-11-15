@@ -35,7 +35,7 @@ class MyWidgetsController: AppBaseVMController {
     lazy var listContainerView: JXSegmentedListContainerView! = {
         return JXSegmentedListContainerView(dataSource: self)
     }()
-    var dataSections: [AppWidgetSection]?
+    var dataSections: [AppHomeWidgetSection]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -103,7 +103,7 @@ extension MyWidgetsController: UIGestureRecognizerDelegate {
 }
 
 extension MyWidgetsController {
-    func reloadSegmentedView(_ sections: [AppWidgetSection]) {
+    func reloadSegmentedView(_ sections: [AppHomeWidgetSection]) {
         self.dataSections = sections
         let titles = sections.compactMap { $0.title }
         dataSource.titles = titles
