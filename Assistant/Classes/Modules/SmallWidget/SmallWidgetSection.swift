@@ -6,28 +6,29 @@
 //
 
 import RxDataSources
+import AttributedString
 
 enum SmallWidgetSection {
     /// 推荐
-    case recommendSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case recommendSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 系统工具
-    case generalToolsSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case generalToolsSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// X-面板
-    case xPanelSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case xPanelSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 仪表盘
-    case dashboardSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case dashboardSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 时钟
-    case clockSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case clockSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 捷径
-    case quickLauncherSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case quickLauncherSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 日历
-    case calendarSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case calendarSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 倒数日
-    case daysMatterSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case daysMatterSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 系统信息
-    case systemInfoSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case systemInfoSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     /// 进度
-    case progressSection(supplementary: WidgetSupplementaryModel,items: [SmallWidgetSectionItem])
+    case progressSection(supplementary: AppWidgetSupplementaryModel,items: [SmallWidgetSectionItem])
     
 }
 
@@ -64,7 +65,7 @@ extension SmallWidgetSection: SectionModelType {
         }
     }
     
-    var supplementary: WidgetSupplementaryModel {
+    var supplementary: AppWidgetSupplementaryModel {
         switch self {
         case  .recommendSection(let su, _):
             return su

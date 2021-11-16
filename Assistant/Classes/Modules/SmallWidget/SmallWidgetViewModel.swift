@@ -7,6 +7,7 @@
 
 import RxSwift
 import RxCocoa
+import Foundation
 
 
 class SmallWidgetViewModel: AppViewModel {
@@ -30,6 +31,10 @@ extension SmallWidgetViewModel: AppViewModelable {
             return strongSelf.config()
         }.bind(to: dataSource).disposed(by: rx.disposeBag)
         
+//        input.timerTrigger.map { <#Date#> in
+//            <#code#>
+//        }
+        
         //        input.selection.asObservable().map { $0.viewModel }.bind(to: itemSelected).disposed(by: rx.disposeBag)
         
         
@@ -50,11 +55,7 @@ extension SmallWidgetViewModel {
                                           router: false),
                               items: [
                                 .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes())
+                                
                                 
                               ])
         let generalToolsSection = SmallWidgetSection
@@ -67,12 +68,7 @@ extension SmallWidgetViewModel {
                                               router: true),
                                  items: [
                                     .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes())
+                                    
                                  ])
         
         let xPanelSection = SmallWidgetSection
@@ -85,12 +81,7 @@ extension SmallWidgetViewModel {
                                       router: true),
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            .flipClockItem(attributes: AppWidgetAttributes())
+                            
                            ])
         
         let dashboardSection = SmallWidgetSection

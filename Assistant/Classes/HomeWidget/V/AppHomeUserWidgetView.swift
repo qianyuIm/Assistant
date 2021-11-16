@@ -1,5 +1,5 @@
 //
-//  AppUserWidgetView.swift
+//  AppHomeUserWidgetView.swift
 //  Assistant
 //
 //  Created by cyd on 2021/11/5.
@@ -8,7 +8,7 @@
 import UIKit
 
 
-class AppUserWidgetView: UIView,AppNibLoadableView {
+class AppHomeUserWidgetView: UIView, AppNibLoadableView {
 
     @IBOutlet weak var iconContentView: UIView!
     @IBOutlet weak var icon: UIImageView!

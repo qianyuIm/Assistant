@@ -1,14 +1,13 @@
 //
-//  SmallWidgetFlipClockCell.swift
+//  MediumWidgetFlipClockCell.swift
 //  Assistant
 //
-//  Created by cyd on 2021/11/15.
+//  Created by cyd on 2021/11/16.
 //
 
 import UIKit
 
-class SmallWidgetFlipClockCell: UICollectionViewCell {
-
+class LargeWidgetFlipClockCell: UICollectionViewCell {
     lazy var flipClockView: AppFlipClockView = {
         let view = AppFlipClockView(attributes: AppWidgetAttributes())
         view.backgroundColor = UIColor.orange
@@ -28,19 +27,15 @@ class SmallWidgetFlipClockCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-        QYLogger.debug("刷新")
         flipClockView.attributes = attributes
-        flipClockView.date = Date()
         titleLabel.text = attributes.name
         var cornerRadius: CGFloat = 0
         var corners: UIRectCorner = []
         (corners, cornerRadius) = attributes.roundCorners.cornerValues
         self.flipClockView.app.addRoundCorners(corners, radius: cornerRadius)
     }
-
 }
-
-extension SmallWidgetFlipClockCell {
+extension LargeWidgetFlipClockCell {
     func setupUI() {
         contentView.addSubview(flipClockView)
         contentView.addSubview(titleLabel)
@@ -52,7 +47,7 @@ extension SmallWidgetFlipClockCell {
     func setupConstraints() {
         flipClockView.snp.makeConstraints { make in
             make.left.top.right.equalToSuperview()
-            make.height.equalTo(QYInch.Widget.smallSize)
+            make.height.equalTo(QYInch.Widget.largeAspectRatioSize.height)
         }
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(flipClockView.snp.bottom).offset(6)

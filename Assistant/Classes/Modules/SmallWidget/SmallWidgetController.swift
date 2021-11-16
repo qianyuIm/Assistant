@@ -10,6 +10,9 @@ import JXPagingView
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Schedule
+import SwiftDate
+import AttributedString
 
 private let kSupplementaryHeaderKind = "resource-header-element-kind"
 
@@ -24,19 +27,21 @@ class SmallWidgetController: AppBaseCollectionVMController {
                 let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlipClockCell.self, for: indexPath)
                 cell.config(with: attributes)
                 return cell
-                
             }
         } configureSupplementaryView: { dataSource, collectionView, elementKind, indexPath in
             let section = dataSource[indexPath.section]
-            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: WidgetHeaderSupplementaryView.self, for: indexPath)
+            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
             supplementaryView.config(supplementary: section.supplementary)
             return supplementaryView
         }
     }()
+    var timer: Schedule.Task?
+    let timerTrigger = BehaviorRelay<Void>(value:())
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTimer()
+        
     }
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -67,7 +72,7 @@ class SmallWidgetController: AppBaseCollectionVMController {
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
-        collectionView.app.register(nibWithViewClass: WidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
+        collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
         
         collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
     }
@@ -78,11 +83,21 @@ class SmallWidgetController: AppBaseCollectionVMController {
             return
         }
         let trigger = Observable.of(Observable.just(()),
-                                    languageChanged.asObservable()).merge()
+                                    languageChanged.asObservable(),
+                                    timerTrigger.asObservable()).merge()
         let input = SmallWidgetViewModel.Input(trigger: trigger)
         let output = viewModel.transform(input: input)
         output.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
         
+    }
+    func setupTimer() {
+        let plan = Plan.every(5.seconds)
+        self.timer = plan.do(queue: .main) {
+            self.timerUpdate()
+        }
+    }
+    func timerUpdate() {
+        timerTrigger.accept(())
     }
     
 }

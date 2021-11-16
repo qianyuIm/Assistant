@@ -25,7 +25,7 @@ class AppHomeWidgetsController: AppBaseVMController {
         return item
     }()
     lazy var rightItem: UIBarButtonItem = {
-        let userView = AppUserWidgetView.create()
+        let userView = AppHomeUserWidgetView.create()
         let item = UIBarButtonItem(customView: userView)
         return item
     }()
@@ -36,8 +36,8 @@ class AppHomeWidgetsController: AppBaseVMController {
         pagingView.listContainerView.scrollView.emptyDataSetDelegate = self
         return pagingView
     }()
-    lazy var headerView: WidgetHeaderView = {
-        let headerView = WidgetHeaderView()
+    lazy var headerView: AppHomeWidgetHeaderView = {
+        let headerView = AppHomeWidgetHeaderView()
         return headerView
     }()
     lazy var segmentedView: JXSegmentedView = {
@@ -132,7 +132,7 @@ class AppHomeWidgetsController: AppBaseVMController {
     
 }
 extension AppHomeWidgetsController {
-    func reloadHeaderView(_ headerSource: [WidgetHeaderSection]) {
+    func reloadHeaderView(_ headerSource: [AppHomeWidgetHeaderSection]) {
         headerView.dataSource.accept(headerSource)
     }
     func reloadPageView(_ sections: [AppHomeWidgetSection]) {

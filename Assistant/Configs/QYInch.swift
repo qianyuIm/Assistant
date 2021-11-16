@@ -125,6 +125,11 @@ struct QYInch {
             }
             return size
         }
+        static var aspectRatio: CGFloat = 1.3
+        /// 大组件 纵横比缩放
+        static var largeAspectRatioSize: CGSize {
+            return CGSize(width: largeSize.width / aspectRatio, height: largeSize.height / aspectRatio)
+        }
     }
 }
 

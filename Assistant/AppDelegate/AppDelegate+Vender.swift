@@ -14,11 +14,13 @@ import FLEX
 #endif
 import SDWebImageWebPCoder
 import UserNotifications
+import SwiftDate
 
 extension AppDelegate {
     /// 配置第三方
     func _configurationVenders(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         _setupSwiftyBeaver()
+        _setupSwiftDate()
         _setupAMap()
         _setupJiguang(launchOptions)
         _setupLeaksFinder()
@@ -42,6 +44,9 @@ private extension AppDelegate {
         QYLogger.customLogger.addDestination(cloud)
         let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first ?? ""
         QYLogger.info("filePath => \(filePath)")
+    }
+    func _setupSwiftDate() {
+        SwiftDate.defaultRegion = Region.local
     }
     func _setupAMap() {
         QYMapLocationManager.shared.configureAMap()

@@ -21,14 +21,14 @@ class MediumWidgetController: AppBaseCollectionVMController {
         return RxCollectionViewSectionedReloadDataSource<MediumWidgetSection> { dataSource, collectionView, indexPath, item in
             switch item {
             case .flipClockItem(let attributes):
-                let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlipClockCell.self, for: indexPath)
+                let cell = collectionView.app.dequeueReusableCell(cellClass: MediumWidgetFlipClockCell.self, for: indexPath)
                 cell.config(with: attributes)
                 return cell
                 
             }
         } configureSupplementaryView: { dataSource, collectionView, elementKind, indexPath in
             let section = dataSource[indexPath.section]
-            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: WidgetHeaderSupplementaryView.self, for: indexPath)
+            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
             supplementaryView.config(supplementary: section.supplementary)
             return supplementaryView
         }
@@ -66,8 +66,8 @@ class MediumWidgetController: AppBaseCollectionVMController {
     
     override func setupUI() {
         super.setupUI()
-        collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
-        collectionView.app.register(nibWithViewClass: WidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
+        collectionView.app.register(cellClass: MediumWidgetFlipClockCell.self)
+        collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
         
         collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
     }

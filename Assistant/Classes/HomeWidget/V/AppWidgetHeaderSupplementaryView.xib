@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6b-Vx-4bR" customClass="WidgetHeaderSupplementaryView" customModule="Assistant" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6b-Vx-4bR" customClass="AppWidgetHeaderSupplementaryView" customModule="Assistant" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -52,7 +52,7 @@
                 <outlet property="iconImageView" destination="quP-Ay-w6i" id="0Al-UX-eAm"/>
                 <outlet property="titleLabel" destination="u3B-Rz-qfg" id="lg1-UR-47r"/>
             </connections>
-            <point key="canvasLocation" x="-125" y="50"/>
+            <point key="canvasLocation" x="72" y="38"/>
         </collectionReusableView>
     </objects>
 </document>

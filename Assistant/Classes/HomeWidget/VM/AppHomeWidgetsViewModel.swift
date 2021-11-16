@@ -29,15 +29,15 @@ class AppHomeWidgetsViewModel: AppViewModel {
         let trigger: Observable<Void>
     }
     struct Output {
-        let headerDataSource: BehaviorRelay<[WidgetHeaderSection]>
+        let headerDataSource: BehaviorRelay<[AppHomeWidgetHeaderSection]>
         let dataSource: BehaviorRelay<[AppHomeWidgetSection]>
     }
 }
 extension AppHomeWidgetsViewModel: AppViewModelable {
     func transform(input: Input) -> Output {
-        let headerDataSource = BehaviorRelay<[WidgetHeaderSection]>(value: [])
+        let headerDataSource = BehaviorRelay<[AppHomeWidgetHeaderSection]>(value: [])
         let dataSource = BehaviorRelay<[AppHomeWidgetSection]>(value: [])
-        input.trigger.flatMapLatest { [weak self]() -> Observable<([WidgetHeaderSection],[AppHomeWidgetSection])> in
+        input.trigger.flatMapLatest { [weak self]() -> Observable<([AppHomeWidgetHeaderSection],[AppHomeWidgetSection])> in
             guard let strongSelf = self else {
                 return .empty()
             }
@@ -51,12 +51,12 @@ extension AppHomeWidgetsViewModel: AppViewModelable {
         return Output(headerDataSource:headerDataSource, dataSource: dataSource)
     }
     
-    func configHeaderDataSource() -> Observable<[WidgetHeaderSection]> {
-        let transparentItem = WidgetHeaderItem(imageName: R.string.image.widgetBannerTransparent.key.app.imageLocalized(),
+    func configHeaderDataSource() -> Observable<[AppHomeWidgetHeaderSection]> {
+        let transparentItem = AppHomeWidgetHeaderItem(imageName: R.string.image.widgetBannerTransparent.key.app.imageLocalized(),
                                                   pattern: AppRouterType.transparent.pattern)
-        let questionItem = WidgetHeaderItem(imageName: R.string.image.widgetBannerQuestion.key.app.imageLocalized(),
+        let questionItem = AppHomeWidgetHeaderItem(imageName: R.string.image.widgetBannerQuestion.key.app.imageLocalized(),
                                                pattern: AppRouterType.question.pattern)
-        let section = WidgetHeaderSection(items: [transparentItem,questionItem])
+        let section = AppHomeWidgetHeaderSection(items: [transparentItem,questionItem])
         return Observable.just([section])
 
     }

@@ -10,8 +10,8 @@
 		B23EDCA7DCE5783C9DCC0C12 /* Pods_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E9364E2334F5028DE4C52 /* Pods_Assistant.framework */; };
 		EF0AAA742734D626006CEED0 /* startup.sh in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA732734D626006CEED0 /* startup.sh */; };
 		EF0AAA762734D632006CEED0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA752734D632006CEED0 /* README.md */; };
-		EF0AAA7D27350706006CEED0 /* AppUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppUserWidgetView.swift */; };
-		EF0AAA7F27350713006CEED0 /* AppUserWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA7E27350713006CEED0 /* AppUserWidgetView.xib */; };
+		EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */; };
+		EF0AAA7F27350713006CEED0 /* AppHomeUserWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA7E27350713006CEED0 /* AppHomeUserWidgetView.xib */; };
 		EF0AAA8527351DAF006CEED0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0AAA8427351DAF006CEED0 /* CloudKit.framework */; };
 		EF2FFCF02741F55F00786A80 /* AppFlipClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */; };
 		EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */; };
@@ -21,10 +21,10 @@
 		EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
 		EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
 		EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD012742076300786A80 /* AppFlipClockItem.swift */; };
-		EF2FFD0427422D9900786A80 /* WidgetSupplementaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */; };
+		EF2FFD0427422D9900786A80 /* AppWidgetSupplementaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0327422D9900786A80 /* AppWidgetSupplementaryModel.swift */; };
 		EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0527422E2100786A80 /* SmallWidgetSection.swift */; };
-		EF2FFD092742326000786A80 /* WidgetHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */; };
-		EF2FFD0A2742326000786A80 /* WidgetHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */; };
+		EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD072742326000786A80 /* AppWidgetHeaderSupplementaryView.swift */; };
+		EF2FFD0A2742326000786A80 /* AppWidgetHeaderSupplementaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF2FFD082742326000786A80 /* AppWidgetHeaderSupplementaryView.xib */; };
 		EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */; };
 		EF2FFD122742616700786A80 /* MediumWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */; };
 		EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */; };
@@ -41,6 +41,8 @@
 		EF6A21562735306000691B3A /* AppSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21542735306000691B3A /* AppSettingCell.xib */; };
 		EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21572735318200691B3A /* AppSettingSection.swift */; };
 		EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */; };
+		EF9DE908274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DE907274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift */; };
+		EF9DE90A274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DE909274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift */; };
 		EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */; };
 		EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */; };
 		EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA564E5273D01EA00B4F9DE /* Navigation.strings */; };
@@ -56,16 +58,16 @@
 		EFD03A5B2738BB0C00E28F27 /* widget_create_guide_medium.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A5D2738BB0C00E28F27 /* widget_create_guide_medium.mp4 */; };
 		EFD03A5F2738BB1A00E28F27 /* widget_create_guide_small.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A612738BB1A00E28F27 /* widget_create_guide_small.mp4 */; };
 		EFD03A652738BF2900E28F27 /* Image.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A672738BF2900E28F27 /* Image.strings */; };
-		EFD03A6A2738C2E700E28F27 /* WidgetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A692738C2E700E28F27 /* WidgetHeaderView.swift */; };
+		EFD03A6A2738C2E700E28F27 /* AppHomeWidgetHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A692738C2E700E28F27 /* AppHomeWidgetHeaderView.swift */; };
 		EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A6B2738C33300E28F27 /* SmallWidgetController.swift */; };
 		EFD03A6E2738C34800E28F27 /* SmallWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A6D2738C34800E28F27 /* SmallWidgetViewModel.swift */; };
-		EFD03A712738CBD500E28F27 /* WidgetHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A702738CBD500E28F27 /* WidgetHeaderSection.swift */; };
+		EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A702738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift */; };
 		EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A722738D03300E28F27 /* MediumWidgetController.swift */; };
 		EFD03A752738D05400E28F27 /* LargeWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A742738D05400E28F27 /* LargeWidgetController.swift */; };
 		EFD03A782738D40E00E28F27 /* AppTransparentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A772738D40E00E28F27 /* AppTransparentController.swift */; };
 		EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A792738D43300E28F27 /* AppTransparentViewModel.swift */; };
-		EFD03A7D2738D61900E28F27 /* WidgetHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A7B2738D61900E28F27 /* WidgetHeaderViewCell.swift */; };
-		EFD03A7E2738D61900E28F27 /* WidgetHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A7C2738D61900E28F27 /* WidgetHeaderViewCell.xib */; };
+		EFD03A7D2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A7B2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.swift */; };
+		EFD03A7E2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A7C2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.xib */; };
 		EFD03A8227390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A8127390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift */; };
 		EFD03A85273915A800E28F27 /* AppThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A84273915A800E28F27 /* AppThemeController.swift */; };
 		EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A86273915C400E28F27 /* AppThemeViewModel.swift */; };
@@ -254,8 +256,8 @@
 		E01E9364E2334F5028DE4C52 /* Pods_Assistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0AAA732734D626006CEED0 /* startup.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = startup.sh; path = Script/startup.sh; sourceTree = SOURCE_ROOT; };
 		EF0AAA752734D632006CEED0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		EF0AAA7C27350706006CEED0 /* AppUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserWidgetView.swift; sourceTree = "<group>"; };
-		EF0AAA7E27350713006CEED0 /* AppUserWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppUserWidgetView.xib; sourceTree = "<group>"; };
+		EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeUserWidgetView.swift; sourceTree = "<group>"; };
+		EF0AAA7E27350713006CEED0 /* AppHomeUserWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppHomeUserWidgetView.xib; sourceTree = "<group>"; };
 		EF0AAA8427351DAF006CEED0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockView.swift; sourceTree = "<group>"; };
 		EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockLabel.swift; sourceTree = "<group>"; };
@@ -265,10 +267,10 @@
 		EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+FrameStyle.swift"; sourceTree = "<group>"; };
 		EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+LabelStyle.swift"; sourceTree = "<group>"; };
 		EF2FFD012742076300786A80 /* AppFlipClockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockItem.swift; sourceTree = "<group>"; };
-		EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSupplementaryModel.swift; sourceTree = "<group>"; };
+		EF2FFD0327422D9900786A80 /* AppWidgetSupplementaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetSupplementaryModel.swift; sourceTree = "<group>"; };
 		EF2FFD0527422E2100786A80 /* SmallWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetSection.swift; sourceTree = "<group>"; };
-		EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHeaderSupplementaryView.swift; sourceTree = "<group>"; };
-		EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetHeaderSupplementaryView.xib; sourceTree = "<group>"; };
+		EF2FFD072742326000786A80 /* AppWidgetHeaderSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetHeaderSupplementaryView.swift; sourceTree = "<group>"; };
+		EF2FFD082742326000786A80 /* AppWidgetHeaderSupplementaryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppWidgetHeaderSupplementaryView.xib; sourceTree = "<group>"; };
 		EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetFlipClockCell.swift; sourceTree = "<group>"; };
 		EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetViewModel.swift; sourceTree = "<group>"; };
 		EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetSection.swift; sourceTree = "<group>"; };
@@ -287,6 +289,8 @@
 		EF6A21542735306000691B3A /* AppSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSettingCell.xib; sourceTree = "<group>"; };
 		EF6A21572735318200691B3A /* AppSettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingSection.swift; sourceTree = "<group>"; };
 		EF6A21592735334D00691B3A /* AppSettingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingCellViewModel.swift; sourceTree = "<group>"; };
+		EF9DE907274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetFlipClockCell.swift; sourceTree = "<group>"; };
+		EF9DE909274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetFlipClockCell.swift; sourceTree = "<group>"; };
 		EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageCell.swift; sourceTree = "<group>"; };
 		EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLanguageCell.xib; sourceTree = "<group>"; };
 		EFA564E4273D01EA00B4F9DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Navigation.strings; sourceTree = "<group>"; };
@@ -313,16 +317,16 @@
 		EFD03A622738BB1B00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/widget_create_guide_small.mp4"; sourceTree = "<group>"; };
 		EFD03A662738BF2900E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Image.strings; sourceTree = "<group>"; };
 		EFD03A682738BF2B00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Image.strings"; sourceTree = "<group>"; };
-		EFD03A692738C2E700E28F27 /* WidgetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHeaderView.swift; sourceTree = "<group>"; };
+		EFD03A692738C2E700E28F27 /* AppHomeWidgetHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeWidgetHeaderView.swift; sourceTree = "<group>"; };
 		EFD03A6B2738C33300E28F27 /* SmallWidgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetController.swift; sourceTree = "<group>"; };
 		EFD03A6D2738C34800E28F27 /* SmallWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetViewModel.swift; sourceTree = "<group>"; };
-		EFD03A702738CBD500E28F27 /* WidgetHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHeaderSection.swift; sourceTree = "<group>"; };
+		EFD03A702738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeWidgetHeaderSection.swift; sourceTree = "<group>"; };
 		EFD03A722738D03300E28F27 /* MediumWidgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetController.swift; sourceTree = "<group>"; };
 		EFD03A742738D05400E28F27 /* LargeWidgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetController.swift; sourceTree = "<group>"; };
 		EFD03A772738D40E00E28F27 /* AppTransparentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTransparentController.swift; sourceTree = "<group>"; };
 		EFD03A792738D43300E28F27 /* AppTransparentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTransparentViewModel.swift; sourceTree = "<group>"; };
-		EFD03A7B2738D61900E28F27 /* WidgetHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetHeaderViewCell.swift; sourceTree = "<group>"; };
-		EFD03A7C2738D61900E28F27 /* WidgetHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WidgetHeaderViewCell.xib; sourceTree = "<group>"; };
+		EFD03A7B2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeWidgetHeaderViewCell.swift; sourceTree = "<group>"; };
+		EFD03A7C2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppHomeWidgetHeaderViewCell.xib; sourceTree = "<group>"; };
 		EFD03A8127390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingSectionBackgroundDecorationView.swift; sourceTree = "<group>"; };
 		EFD03A84273915A800E28F27 /* AppThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeController.swift; sourceTree = "<group>"; };
 		EFD03A86273915C400E28F27 /* AppThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeViewModel.swift; sourceTree = "<group>"; };
@@ -535,13 +539,13 @@
 		EF0AAA7B273506CC006CEED0 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				EF0AAA7C27350706006CEED0 /* AppUserWidgetView.swift */,
-				EF0AAA7E27350713006CEED0 /* AppUserWidgetView.xib */,
-				EFD03A7B2738D61900E28F27 /* WidgetHeaderViewCell.swift */,
-				EFD03A7C2738D61900E28F27 /* WidgetHeaderViewCell.xib */,
-				EFD03A692738C2E700E28F27 /* WidgetHeaderView.swift */,
-				EF2FFD072742326000786A80 /* WidgetHeaderSupplementaryView.swift */,
-				EF2FFD082742326000786A80 /* WidgetHeaderSupplementaryView.xib */,
+				EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */,
+				EF0AAA7E27350713006CEED0 /* AppHomeUserWidgetView.xib */,
+				EFD03A7B2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.swift */,
+				EFD03A7C2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.xib */,
+				EFD03A692738C2E700E28F27 /* AppHomeWidgetHeaderView.swift */,
+				EF2FFD072742326000786A80 /* AppWidgetHeaderSupplementaryView.swift */,
+				EF2FFD082742326000786A80 /* AppWidgetHeaderSupplementaryView.xib */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -599,9 +603,9 @@
 		EF2FFD1A2742664E00786A80 /* MediumWidget */ = {
 			isa = PBXGroup;
 			children = (
-				EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */,
 				EF2FFD1D2742669000786A80 /* Cell */,
 				EFD03A722738D03300E28F27 /* MediumWidgetController.swift */,
+				EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */,
 				EF2FFD112742616700786A80 /* MediumWidgetViewModel.swift */,
 			);
 			path = MediumWidget;
@@ -621,6 +625,7 @@
 		EF2FFD1C2742668A00786A80 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EF9DE909274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -628,6 +633,7 @@
 		EF2FFD1D2742669000786A80 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				EF9DE907274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -709,8 +715,8 @@
 		EFD03A6F2738C6EA00E28F27 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				EFD03A702738CBD500E28F27 /* WidgetHeaderSection.swift */,
-				EF2FFD0327422D9900786A80 /* WidgetSupplementaryModel.swift */,
+				EFD03A702738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift */,
+				EF2FFD0327422D9900786A80 /* AppWidgetSupplementaryModel.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -906,7 +912,7 @@
 				EFD4AD082733AD9F000B2350 /* More */,
 				EFD4AD0D2733AD9F000B2350 /* Wallpaper */,
 				EFD4ACFF2733AD32000B2350 /* Icons */,
-				EFD4ACB227338FD4000B2350 /* Widget */,
+				EFD4ACB227338FD4000B2350 /* HomeWidget */,
 				EFD4ABDE27336C06000B2350 /* Modules */,
 				EFD4ABDD27336BD6000B2350 /* Main */,
 				EFD4ABDC27336BCB000B2350 /* Base */,
@@ -1301,7 +1307,7 @@
 			path = QYRefresh;
 			sourceTree = "<group>";
 		};
-		EFD4ACB227338FD4000B2350 /* Widget */ = {
+		EFD4ACB227338FD4000B2350 /* HomeWidget */ = {
 			isa = PBXGroup;
 			children = (
 				EFD03A6F2738C6EA00E28F27 /* M */,
@@ -1309,7 +1315,7 @@
 				EFD4ACB527339001000B2350 /* C */,
 				EFD4ACB427338FF5000B2350 /* VM */,
 			);
-			path = Widget;
+			path = HomeWidget;
 			sourceTree = "<group>";
 		};
 		EFD4ACB427338FF5000B2350 /* VM */ = {
@@ -1636,9 +1642,9 @@
 				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
-				EF2FFD0A2742326000786A80 /* WidgetHeaderSupplementaryView.xib in Resources */,
+				EF2FFD0A2742326000786A80 /* AppWidgetHeaderSupplementaryView.xib in Resources */,
 				EFD4ACA627338B32000B2350 /* InfoPlist.strings in Resources */,
-				EF0AAA7F27350713006CEED0 /* AppUserWidgetView.xib in Resources */,
+				EF0AAA7F27350713006CEED0 /* AppHomeUserWidgetView.xib in Resources */,
 				EFD4AC8E27338A25000B2350 /* music_home_recommend_resource.json in Resources */,
 				EFD4AC1227337EA5000B2350 /* iconfont_translate.py in Resources */,
 				EFD4AC8B27338A25000B2350 /* music_home_private.json in Resources */,
@@ -1657,7 +1663,7 @@
 				EFD03A472738BA7C00E28F27 /* trasparentStep2.mp4 in Resources */,
 				EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */,
 				EFD03A3C2738B7F500E28F27 /* PhoneShell.plist in Resources */,
-				EFD03A7E2738D61900E28F27 /* WidgetHeaderViewCell.xib in Resources */,
+				EFD03A7E2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.xib in Resources */,
 				EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */,
 				EFD03A652738BF2900E28F27 /* Image.strings in Resources */,
 				EF0AAA762734D632006CEED0 /* README.md in Resources */,
@@ -1784,7 +1790,7 @@
 				EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */,
 				EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */,
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
-				EFD03A712738CBD500E28F27 /* WidgetHeaderSection.swift in Sources */,
+				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
 				EFD4AC4727338264000B2350 /* QYImage.swift in Sources */,
 				EFD4AC492733841A000B2350 /* NSObjectExtensions.swift in Sources */,
@@ -1822,17 +1828,18 @@
 				EFD4AC1E273381A5000B2350 /* AppDelegate+Vender.swift in Sources */,
 				EFD4AC3F27338236000B2350 /* QYAlert+PrivacyPolicy.swift in Sources */,
 				EFD4AC9027338A25000B2350 /* AppApi.swift in Sources */,
+				EF9DE908274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift in Sources */,
 				EFD4AC0027336DF4000B2350 /* UITableView+ReusableView.swift in Sources */,
 				EFD4AC06273370D8000B2350 /* R.generated.swift in Sources */,
 				EFD03A8227390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift in Sources */,
-				EFD03A6A2738C2E700E28F27 /* WidgetHeaderView.swift in Sources */,
+				EFD03A6A2738C2E700E28F27 /* AppHomeWidgetHeaderView.swift in Sources */,
 				EFD4AC1A27338165000B2350 /* QYKeys.swift in Sources */,
 				EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */,
 				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
-				EF2FFD092742326000786A80 /* WidgetHeaderSupplementaryView.swift in Sources */,
+				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
 				EFD4AC9B27338A7E000B2350 /* AppThemeManager.swift in Sources */,
 				EFD80962273E5E210065F048 /* AppWidgetDateProvider.swift in Sources */,
@@ -1854,12 +1861,13 @@
 				EFD03A8A2739165B00E28F27 /* AppLanguageViewModel.swift in Sources */,
 				EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */,
 				EF6A21552735306000691B3A /* AppSettingCell.swift in Sources */,
-				EF0AAA7D27350706006CEED0 /* AppUserWidgetView.swift in Sources */,
+				EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */,
 				EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */,
 				EFD4AC662733888F000B2350 /* AppBaseCollectionVMController.swift in Sources */,
-				EF2FFD0427422D9900786A80 /* WidgetSupplementaryModel.swift in Sources */,
+				EF2FFD0427422D9900786A80 /* AppWidgetSupplementaryModel.swift in Sources */,
 				EFD03A6E2738C34800E28F27 /* SmallWidgetViewModel.swift in Sources */,
 				EFD4AC3327338221000B2350 /* QYLogger.swift in Sources */,
+				EF9DE90A274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift in Sources */,
 				EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */,
 				EFD8095A273E45280065F048 /* MyWidgetsController.swift in Sources */,
 				EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */,
@@ -1905,7 +1913,7 @@
 				EFD4AC2F2733821B000B2350 /* QYMapLocationManager.swift in Sources */,
 				EFD4ACEF2733A996000B2350 /* AppRouterProvider.swift in Sources */,
 				EFD4ABFB27336DF4000B2350 /* UIViewExtensions.swift in Sources */,
-				EFD03A7D2738D61900E28F27 /* WidgetHeaderViewCell.swift in Sources */,
+				EFD03A7D2738D61900E28F27 /* AppHomeWidgetHeaderViewCell.swift in Sources */,
 				EF6A214827352A9A00691B3A /* AppSettingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

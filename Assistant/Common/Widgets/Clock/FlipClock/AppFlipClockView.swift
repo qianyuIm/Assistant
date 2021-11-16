@@ -6,7 +6,7 @@
 //  翻页时钟
 
 import UIKit
-
+import Schedule
 
 class AppFlipClockView: UIView {
     
@@ -30,12 +30,23 @@ class AppFlipClockView: UIView {
                                     attributes: attributes)
         return hour
     }()
+    lazy var minuteLabel: UILabel = {
+        let hour = UILabel()
+        return hour
+    }()
+    var date: Date? {
+        didSet {
+            minuteLabel.text = "\(date?.second ?? 0)"
+        }
+    }
     init(attributes: AppWidgetAttributes) {
         self.attributes = attributes
         super.init(frame: .zero)
-        applySubViews()
-//        applyBackground()
-//        applyFrameStyle()
+        backgroundColor = .orange
+        addSubview(minuteLabel)
+        minuteLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -44,28 +55,5 @@ class AppFlipClockView: UIView {
     
 }
 extension AppFlipClockView {
-    func applySubViews() {
-        addSubview(backgroundView)
-        addSubview(hourItem)
-        addSubview(minuteItem)
-        addSubview(secondItem)
-        setupConstraints()
-    }
-    func setupConstraints() {
-        backgroundView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        hourItem.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-//    func applyBackground() {
-//
-//    }
-//
-//    func applyFrameStyle() {
-//
-//    }
-    
     
 }

@@ -1,5 +1,5 @@
 //
-//  WidgetHeaderViewCell.swift
+//  AppHomeWidgetHeaderViewCell.swift
 //  Assistant
 //
 //  Created by cyd on 2021/11/8.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WidgetHeaderViewCell: UICollectionViewCell,AppNibLoadableView {
+class AppHomeWidgetHeaderViewCell: UICollectionViewCell,AppNibLoadableView {
     @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
@@ -16,7 +16,7 @@ class WidgetHeaderViewCell: UICollectionViewCell,AppNibLoadableView {
         imageView.app.addRoundCorners(.allCorners, radius: 6)
     }
     
-    func config(_ item: WidgetHeaderItem) {
+    func config(_ item: AppHomeWidgetHeaderItem) {
         imageView.image = UIImage(named: item.imageName)
     }
 

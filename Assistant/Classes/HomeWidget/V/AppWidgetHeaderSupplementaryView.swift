@@ -1,5 +1,5 @@
 //
-//  WidgetHeaderSupplementaryView.swift
+//  AppWidgetHeaderSupplementaryView.swift
 //  Assistant
 //
 //  Created by cyd on 2021/11/15.
@@ -8,14 +8,14 @@
 import UIKit
 import RxTheme
 
-class WidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadableView{
+class AppWidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadableView{
     @IBOutlet weak var iconImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var actionSender: UIButton!
     
-    var supplementary: WidgetSupplementaryModel?
+    var supplementary: AppWidgetSupplementaryModel?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,7 +30,7 @@ class WidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadableVie
 
     }
     
-    func config(supplementary: WidgetSupplementaryModel) {
+    func config(supplementary: AppWidgetSupplementaryModel) {
         iconImageView.image = supplementary.icon
         titleLabel.text = supplementary.title
         actionSender.isHidden = !supplementary.router
