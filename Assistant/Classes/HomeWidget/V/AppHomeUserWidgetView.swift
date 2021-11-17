@@ -40,5 +40,6 @@ class AppHomeUserWidgetView: UIView, AppNibLoadableView {
     }
     @IBAction func tapAction(_ sender: UIButton) {
         AppRouter.shared.open(AppRouterType.myWidgets.pattern, context: nil)
+        
     }
 }

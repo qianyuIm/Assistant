@@ -8,10 +8,14 @@
 import Foundation
 
 extension AppWidgetAttributes {
-    enum TimeFormat {
+    enum TimeDisplayMode {
         /// 12小时
         case twelve
         /// 24 小时
         case twentyFour
+        /// 12小时 不展示 秒
+        case twelveMissSecond
+        /// 24 小时 不展示 秒
+        case twentyFourMissSecond
     }
 }

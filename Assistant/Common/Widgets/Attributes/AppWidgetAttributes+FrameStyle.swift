@@ -9,7 +9,7 @@ import UIKit
 import AutoInch
 extension AppWidgetAttributes {
     
-    enum WidgetFamily {
+    enum WidgetFamily: Equatable {
         case small
         case medium
         case large
@@ -26,7 +26,7 @@ extension AppWidgetAttributes {
         }
         
     }
-    enum RoundCorners {
+    enum RoundCorners: Equatable {
         case all(radius: CGFloat)
         
         var cornerValues: (value: UIRectCorner, radius: CGFloat) {
@@ -37,7 +37,7 @@ extension AppWidgetAttributes {
         }
         
     }
-    enum Border {
+    enum Border: Equatable {
         case none
         case color(color: UIColor, width: CGFloat)
         case image(image: UIImage, width: CGFloat)

@@ -1,0 +1,52 @@
+//
+//  AppWidgetBackgroundView.swift
+//  Assistant
+//
+//  Created by cyd on 2021/11/17.
+//
+
+import UIKit
+
+class AppWidgetBackgroundView: UIView {
+
+    struct Style {
+        let background: AppWidgetAttributes.BackgroundStyle
+//        let displayMode: EKAttributes.DisplayMode
+    }
+    
+    lazy var imageView: UIImageView = {
+        let imageV = UIImageView()
+        return imageV
+    }()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    var style: Style! {
+        didSet {
+            guard let style = style else {
+                return
+            }
+            var backgroundColor: UIColor = .clear
+            var backgroundImage: UIImage?
+            switch style.background {
+            case .clear:
+                break
+            case .color(let color):
+                backgroundColor = color
+            case .image(let image):
+                backgroundImage = image
+            }
+            layer.backgroundColor = backgroundColor.cgColor
+            imageView.image = backgroundImage
+        }
+    }
+}

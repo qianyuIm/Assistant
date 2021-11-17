@@ -5,46 +5,24 @@
 //  Created by cyd on 2021/11/8.
 //
 
-import RxSwift
-import RxCocoa
 import Foundation
+import SwiftEntryKit
 
 
 class SmallWidgetViewModel: AppViewModel {
-    struct Input {
-        let trigger: Observable<Void>
-    }
-    struct Output {
-        let dataSource: BehaviorRelay<[SmallWidgetSection]>
+    
+    var dataSource: [SmallWidgetSection]?
+    required init() {
+        super.init()
+        self.dataSource = config()
     }
 }
 
-extension SmallWidgetViewModel: AppViewModelable {
-    
-    
-    func transform(input: Input) -> Output {
-        let dataSource = BehaviorRelay<[SmallWidgetSection]>(value: [])
-        input.trigger.flatMapLatest { [weak self] () -> Observable<[SmallWidgetSection]> in
-            guard let strongSelf = self else {
-                return .empty()
-            }
-            return strongSelf.config()
-        }.bind(to: dataSource).disposed(by: rx.disposeBag)
-        
-//        input.timerTrigger.map { <#Date#> in
-//            <#code#>
-//        }
-        
-        //        input.selection.asObservable().map { $0.viewModel }.bind(to: itemSelected).disposed(by: rx.disposeBag)
-        
-        
-        return Output(dataSource: dataSource)
-    }
-}
 
 extension SmallWidgetViewModel {
     
-    func config() -> Observable<[SmallWidgetSection]> {
+    func config() -> [SmallWidgetSection] {
+        
         let recommendSection = SmallWidgetSection
             .recommendSection(supplementary:
                                     .init(icon: R.image.icon_widget_section_recommend(),
@@ -54,9 +32,10 @@ extension SmallWidgetViewModel {
                                           routerPattern: "",
                                           router: false),
                               items: [
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                
-                                
+                                .flipClockItem(attributes: AppWidgetAttributes(with: R.string.widgets.itemFlipClock_1.key.app.widgetsLocalized())),
+                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twelveMissSecond)),
+                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twentyFour)),
+                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twentyFourMissSecond))
                               ])
         let generalToolsSection = SmallWidgetSection
             .generalToolsSection(supplementary:
@@ -153,7 +132,8 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes())
+                            .flipClockItem(attributes: AppWidgetAttributes()),
+                            
                            ])
         
         let progressSection = SmallWidgetSection
@@ -167,10 +147,11 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        return Observable.just([recommendSection,generalToolsSection,
+        return [recommendSection]
+        return [recommendSection,generalToolsSection,
                                 xPanelSection,dashboardSection,
                                 clockSection,quickLauncherSection,
                                 calendarSection,daysMatterSection,
-                                systemInfoSection,progressSection])
+                                systemInfoSection,progressSection]
     }
 }

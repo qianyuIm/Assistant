@@ -10,36 +10,17 @@ import RxCocoa
 
 
 class LargeWidgetViewModel: AppViewModel {
-    struct Input {
-        let trigger: Observable<Void>
-    }
-    struct Output {
-        let dataSource: BehaviorRelay<[LargeWidgetSection]>
+    var dataSource: [LargeWidgetSection]?
+    required init() {
+        super.init()
+        self.dataSource = config()
     }
 }
 
-extension LargeWidgetViewModel: AppViewModelable {
-    
-    
-    func transform(input: Input) -> Output {
-        let dataSource = BehaviorRelay<[LargeWidgetSection]>(value: [])
-        input.trigger.flatMapLatest { [weak self] () -> Observable<[LargeWidgetSection]> in
-            guard let strongSelf = self else {
-                return .empty()
-            }
-            return strongSelf.config()
-        }.bind(to: dataSource).disposed(by: rx.disposeBag)
-        
-        //        input.selection.asObservable().map { $0.viewModel }.bind(to: itemSelected).disposed(by: rx.disposeBag)
-        
-        
-        return Output(dataSource: dataSource)
-    }
-}
 
 extension LargeWidgetViewModel {
     
-    func config() -> Observable<[LargeWidgetSection]> {
+    func config() -> [LargeWidgetSection] {
         let recommendSection = LargeWidgetSection
             .recommendSection(supplementary:
                                     .init(icon: R.image.icon_widget_section_recommend(),
@@ -76,6 +57,6 @@ extension LargeWidgetViewModel {
                                  ])
         
         
-        return Observable.just([recommendSection,generalToolsSection])
+        return [recommendSection,generalToolsSection]
     }
 }

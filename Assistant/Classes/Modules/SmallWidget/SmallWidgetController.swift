@@ -14,32 +14,15 @@ import Schedule
 import SwiftDate
 import AttributedString
 
-private let kSupplementaryHeaderKind = "resource-header-element-kind"
+private let kSupplementaryHeaderKind = "small-header-element-kind"
 
 class SmallWidgetController: AppBaseCollectionVMController {
 
     var listViewDidScrollCallback: ((UIScrollView) -> ())?
     
-    lazy var dataSource: RxCollectionViewSectionedReloadDataSource<SmallWidgetSection> = {
-        return RxCollectionViewSectionedReloadDataSource<SmallWidgetSection> { dataSource, collectionView, indexPath, item in
-            switch item {
-            case .flipClockItem(let attributes):
-                let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlipClockCell.self, for: indexPath)
-                cell.config(with: attributes)
-                return cell
-            }
-        } configureSupplementaryView: { dataSource, collectionView, elementKind, indexPath in
-            let section = dataSource[indexPath.section]
-            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
-            supplementaryView.config(supplementary: section.supplementary)
-            return supplementaryView
-        }
-    }()
     var timer: Schedule.Task?
-    let timerTrigger = BehaviorRelay<Void>(value:())
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupTimer()
         
     }
@@ -73,37 +56,78 @@ class SmallWidgetController: AppBaseCollectionVMController {
         super.setupUI()
         collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
-        
-        collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
-    override func bindViewModel() {
-        super.bindViewModel()
-        guard let viewModel = viewModel as? SmallWidgetViewModel else {
-            return
-        }
-        let trigger = Observable.of(Observable.just(()),
-                                    languageChanged.asObservable(),
-                                    timerTrigger.asObservable()).merge()
-        let input = SmallWidgetViewModel.Input(trigger: trigger)
-        let output = viewModel.transform(input: input)
-        output.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
-        
-    }
     func setupTimer() {
-        let plan = Plan.every(5.seconds)
+        let plan = Plan.every(1.seconds)
         self.timer = plan.do(queue: .main) {
             self.timerUpdate()
         }
     }
+    
     func timerUpdate() {
-        timerTrigger.accept(())
+        guard let viewModel = viewModel as? SmallWidgetViewModel else { return  }
+        guard let dataSource = viewModel.dataSource else { return }
+        for visibleCell in self.collectionView.visibleCells {
+            if let indexPath = self.collectionView.indexPath(for: visibleCell)
+                {
+                let section = dataSource[indexPath.section]
+                let item = section.items[indexPath.item]
+                switch item {
+                case .flipClockItem(let attributes):
+                    (visibleCell as? SmallWidgetFlipClockCell)?.config(with: attributes)
+                }
+            }
+            
+        }
     }
     
 }
-
+extension SmallWidgetController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.listViewDidScrollCallback?(scrollView)
+    }
+}
+extension SmallWidgetController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        guard let viewModel = viewModel as? SmallWidgetViewModel else { return 0 }
+        guard let dataSource = viewModel.dataSource else { return 0 }
+        return dataSource.count
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let viewModel = viewModel as? SmallWidgetViewModel else { return 0 }
+        guard let dataSource = viewModel.dataSource else { return 0 }
+        let section = dataSource[section]
+        return section.items.count
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: kind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
+        if let viewModel = viewModel as? SmallWidgetViewModel, let dataSource = viewModel.dataSource {
+            let section = dataSource[indexPath.section]
+            supplementaryView.config(supplementary: section.supplementary)
+        }
+        return  supplementaryView
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.app.dequeueReusableCell(cellClass: UICollectionViewCell.self, for: indexPath)
+        guard let viewModel = viewModel as? SmallWidgetViewModel else { return cell }
+        guard let dataSource = viewModel.dataSource else { return cell }
+        let section = dataSource[indexPath.section]
+        let item = section.items[indexPath.item]
+        switch item {
+        case .flipClockItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlipClockCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        }
+    }
+    
+    
+}
 //MARK: JXPagingViewListViewDelegate
-extension SmallWidgetController: UIScrollViewDelegate, JXPagingViewListViewDelegate {
+extension SmallWidgetController:  JXPagingViewListViewDelegate {
     func listView() -> UIView {
         return view
     }
@@ -115,9 +139,11 @@ extension SmallWidgetController: UIScrollViewDelegate, JXPagingViewListViewDeleg
     func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> ()) {
         self.listViewDidScrollCallback = callback
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.listViewDidScrollCallback?(scrollView)
+    func listWillAppear() {
+        self.timer?.resume()
+    }
+    func listWillDisappear() {
+        self.timer?.suspend()
     }
     
 }

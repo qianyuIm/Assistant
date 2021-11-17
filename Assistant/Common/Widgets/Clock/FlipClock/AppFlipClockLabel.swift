@@ -18,22 +18,23 @@ class AppFlipClockLabel: UIView {
     
     /// 下一个时间label
     private lazy var timeLabel: UILabel = {
-        let nextLabel = UILabel()
-        nextLabel.text = "1"
-        return nextLabel
+        let label = UILabel()
+        label.layer.masksToBounds = true
+        return label
     }()
     /// 翻转动画label
     private lazy var foldLabel: UILabel = {
-        let foldLabel = UILabel()
-        nextLabel.text = "1"
-        return foldLabel
+        let label = UILabel()
+        label.layer.masksToBounds = true
+        return label
     }()
     
     /// 下一个时间label
     private lazy var nextLabel: UILabel = {
-        let nextLabel = UILabel()
-        nextLabel.text = "1"
-        return nextLabel
+        let label = UILabel()
+        label.layer.masksToBounds = true
+        label.isHidden = true
+        return label
     }()
     
     /// 放置label的容器
@@ -45,35 +46,42 @@ class AppFlipClockLabel: UIView {
     private lazy var link: CADisplayLink = {
         let link = CADisplayLink(target: self, selector: #selector(updateAnimateLabel))
         return link
-        
     }()
-    var attributes: AppWidgetAttributes {
+    var attributes: AppWidgetAttributes = AppWidgetAttributes() {
         didSet {
-            timeLabel.textColor = attributes.labelStyle.color
+            timeLabel.textColor = attributes.labelStyle.textColor
             timeLabel.font = attributes.labelStyle.font
             timeLabel.textAlignment = attributes.labelStyle.alignment
-
-            foldLabel.textColor = attributes.labelStyle.color
+            timeLabel.backgroundColor = attributes.labelStyle.backgroundColor
+            
+            foldLabel.textColor = attributes.labelStyle.textColor
             foldLabel.font = attributes.labelStyle.font
             foldLabel.textAlignment = attributes.labelStyle.alignment
+            foldLabel.backgroundColor = attributes.labelStyle.backgroundColor
             
-            nextLabel.textColor = attributes.labelStyle.color
+            nextLabel.textColor = attributes.labelStyle.textColor
             nextLabel.font = attributes.labelStyle.font
             nextLabel.textAlignment = attributes.labelStyle.alignment
-
+            nextLabel.backgroundColor = attributes.labelStyle.backgroundColor
         }
     }
     
-    init(attributes: AppWidgetAttributes) {
-        self.attributes = attributes
+    init() {
         super.init(frame: .zero)
-        configUI()
+        setupUI()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    /** 布局尺寸必须在 layoutSubViews 中, 否则获取的 size 不正确 **/
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        labelContainer.frame = self.bounds
+        timeLabel.frame = labelContainer.bounds
+        nextLabel.frame = labelContainer.bounds
+        foldLabel.frame = labelContainer.bounds
+    }
 }
 
 extension AppFlipClockLabel {
@@ -88,27 +96,13 @@ extension AppFlipClockLabel {
     }
 }
 private extension AppFlipClockLabel {
-    func configUI() {
+    func setupUI() {
         addSubview(labelContainer)
         labelContainer.addSubview(timeLabel)
         labelContainer.addSubview(nextLabel)
         labelContainer.addSubview(foldLabel)
-        setupConstraints()
     }
-    func setupConstraints() {
-        labelContainer.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        timeLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        nextLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        foldLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
+    
     /// 下一个label开始动画 默认label起始角度
     ///
     /// - Returns: CATransform3D
@@ -147,11 +141,11 @@ private extension AppFlipClockLabel {
     
     /// 开始动画
     private func start() {
-        link.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
+        link.add(to: .main, forMode: .common)
     }
     
     /// 停止动画
     private func stop() {
-        link.remove(from: RunLoop.main, forMode: RunLoop.Mode.common)
+        link.remove(from: .main, forMode: .common)
     }
 }

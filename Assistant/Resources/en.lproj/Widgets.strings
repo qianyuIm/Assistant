@@ -5,6 +5,8 @@
  Created by cyd on 2021/11/6.
  
  */
+"Section.More" = "More >";
+
 //Mark: --  Recommend Section
 "Section.Recommend" = "Recommend";
 //Mark: --  GeneralTools Section
@@ -42,19 +44,20 @@
 
 //Mark: --  Clock Section
 "Section.Clock" = "Clock";
-"Item.AnalogClock_1" = "AnalogClock#1";
-"Item.AnalogClock_2" = "AnalogClock#2";
-"Item.AnalogClock_3" = "AnalogClock#3";
-"Item.AnalogClock_4" = "AnalogClock#4";
-"Item.AnalogClock_5" = "AnalogClock#5";
+"Item.AnalogClock_1" = "Analog Clock#1";
+"Item.AnalogClock_2" = "Analog Clock#2";
+"Item.AnalogClock_3" = "Analog Clock#3";
+"Item.AnalogClock_4" = "Analog Clock#4";
+"Item.AnalogClock_5" = "Analog Clock#5";
 "Item.Clock_1" = "Clock#1";
 "Item.Clock_2" = "Clock#2";
 "Item.Clock_3" = "Clock#3";
 "Item.Clock_4" = "Clock#4";
-"Item.SimpleClock_1" = "SimpleClock#1";
-"Item.ArtClock_1" = "ArtClock#1";
-"Item.ArtClock_2" = "ArtClock#2";
-"Item.TextClock_1" = "TextClock#1";
+"Item.SimpleClock_1" = "Simple Clock#1";
+"Item.ArtClock_1" = "Art Clock#1";
+"Item.ArtClock_2" = "Art Clock#2";
+"Item.TextClock_1" = "Text Clock#1";
+"Item.FlipClock_1" = "Flip Clock#1";
 
 //Mark: --  QuickLauncher Section
 "Section.QuickLauncher" = "Quick Launcher";

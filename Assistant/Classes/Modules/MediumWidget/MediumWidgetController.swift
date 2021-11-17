@@ -10,33 +10,21 @@ import JXPagingView
 import RxSwift
 import RxCocoa
 import RxDataSources
+import Schedule
+import SwiftDate
+import AttributedString
 
-private let kSupplementaryHeaderKind = "resource-header-element-kind"
+private let kSupplementaryHeaderKind = "medium-header-element-kind"
 
 class MediumWidgetController: AppBaseCollectionVMController {
 
     var listViewDidScrollCallback: ((UIScrollView) -> ())?
     
-    lazy var dataSource: RxCollectionViewSectionedReloadDataSource<MediumWidgetSection> = {
-        return RxCollectionViewSectionedReloadDataSource<MediumWidgetSection> { dataSource, collectionView, indexPath, item in
-            switch item {
-            case .flipClockItem(let attributes):
-                let cell = collectionView.app.dequeueReusableCell(cellClass: MediumWidgetFlipClockCell.self, for: indexPath)
-                cell.config(with: attributes)
-                return cell
-                
-            }
-        } configureSupplementaryView: { dataSource, collectionView, elementKind, indexPath in
-            let section = dataSource[indexPath.section]
-            let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: elementKind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
-            supplementaryView.config(supplementary: section.supplementary)
-            return supplementaryView
-        }
-    }()
+    var timer: Schedule.Task?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupTimer()
+        
     }
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
@@ -68,26 +56,78 @@ class MediumWidgetController: AppBaseCollectionVMController {
         super.setupUI()
         collectionView.app.register(cellClass: MediumWidgetFlipClockCell.self)
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
-        
-        collectionView.rx.setDelegate(self).disposed(by: rx.disposeBag)
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
-    override func bindViewModel() {
-        super.bindViewModel()
-        guard let viewModel = viewModel as? MediumWidgetViewModel else {
-            return
+    func setupTimer() {
+        let plan = Plan.every(1.seconds)
+        self.timer = plan.do(queue: .main) {
+            self.timerUpdate()
         }
-        let trigger = Observable.of(Observable.just(()),
-                                    languageChanged.asObservable()).merge()
-        let input = MediumWidgetViewModel.Input(trigger: trigger)
-        let output = viewModel.transform(input: input)
-        output.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
+    }
+    
+    func timerUpdate() {
+        guard let viewModel = viewModel as? MediumWidgetViewModel else { return  }
+        guard let dataSource = viewModel.dataSource else { return }
+        for visibleCell in self.collectionView.visibleCells {
+            if let indexPath = self.collectionView.indexPath(for: visibleCell)
+                {
+                let section = dataSource[indexPath.section]
+                let item = section.items[indexPath.item]
+                switch item {
+                case .flipClockItem(let attributes):
+                    (visibleCell as? MediumWidgetFlipClockCell)?.config(with: attributes)
+                }
+            }
+            
+        }
     }
     
 }
-
+extension MediumWidgetController: UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.listViewDidScrollCallback?(scrollView)
+    }
+}
+extension MediumWidgetController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        guard let viewModel = viewModel as? MediumWidgetViewModel else { return 0 }
+        guard let dataSource = viewModel.dataSource else { return 0 }
+        return dataSource.count
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let viewModel = viewModel as? MediumWidgetViewModel else { return 0 }
+        guard let dataSource = viewModel.dataSource else { return 0 }
+        let section = dataSource[section]
+        return section.items.count
+    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let supplementaryView = collectionView.app.dequeueReusableSupplementaryView(ofKind: kind, withClass: AppWidgetHeaderSupplementaryView.self, for: indexPath)
+        if let viewModel = viewModel as? MediumWidgetViewModel, let dataSource = viewModel.dataSource {
+            let section = dataSource[indexPath.section]
+            supplementaryView.config(supplementary: section.supplementary)
+        }
+        return  supplementaryView
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.app.dequeueReusableCell(cellClass: UICollectionViewCell.self, for: indexPath)
+        guard let viewModel = viewModel as? MediumWidgetViewModel else { return cell }
+        guard let dataSource = viewModel.dataSource else { return cell }
+        let section = dataSource[indexPath.section]
+        let item = section.items[indexPath.item]
+        switch item {
+        case .flipClockItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: MediumWidgetFlipClockCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        }
+    }
+    
+    
+}
 //MARK: JXPagingViewListViewDelegate
-extension MediumWidgetController: UIScrollViewDelegate, JXPagingViewListViewDelegate {
+extension MediumWidgetController:  JXPagingViewListViewDelegate {
     func listView() -> UIView {
         return view
     }
@@ -99,9 +139,12 @@ extension MediumWidgetController: UIScrollViewDelegate, JXPagingViewListViewDele
     func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> ()) {
         self.listViewDidScrollCallback = callback
     }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.listViewDidScrollCallback?(scrollView)
+    func listWillAppear() {
+        self.timer?.resume()
+    }
+    func listWillDisappear() {
+        self.timer?.suspend()
     }
     
 }
+

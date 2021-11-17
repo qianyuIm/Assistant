@@ -20,7 +20,8 @@ class AppWidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadable
         super.awakeFromNib()
         // Initialization code
         actionSender.titleLabel?.font = QYFont.fontRegular(13)
-        actionSender.setTitle("查看更多", for: .normal)
+        actionSender.setTitle(R.string.widgets.sectionMore
+                                .key.app.widgetsLocalized(), for: .normal)
         titleLabel.theme.textColor = appThemeProvider.attribute({
             $0.textTheme.titleColor
         })

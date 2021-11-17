@@ -8,9 +8,10 @@
 import UIKit
 
 extension AppWidgetAttributes {
-    enum BackgroundStyle {
-        case image(image: UIImage)
+    enum BackgroundStyle: Equatable {
         case clear
+        case color(color: UIColor)
+        case image(image: UIImage)
     }
 }
 

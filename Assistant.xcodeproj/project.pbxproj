@@ -46,6 +46,8 @@
 		EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */; };
 		EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */; };
 		EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA564E5273D01EA00B4F9DE /* Navigation.strings */; };
+		EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */; };
+		EFB0C2DD2744F1C8008C83F2 /* AppWidgetEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */; };
 		EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A0B2738B41B00E28F27 /* Widgets.strings */; };
 		EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A112738B47400E28F27 /* Transparent.strings */; };
 		EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A222738B7EC00E28F27 /* simpleTeachVideo.mp4 */; };
@@ -295,6 +297,8 @@
 		EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLanguageCell.xib; sourceTree = "<group>"; };
 		EFA564E4273D01EA00B4F9DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Navigation.strings; sourceTree = "<group>"; };
 		EFA564E6273D01EB00B4F9DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Navigation.strings"; sourceTree = "<group>"; };
+		EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetBackgroundView.swift; sourceTree = "<group>"; };
+		EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetEditController.swift; sourceTree = "<group>"; };
 		EFD03A0A2738B41B00E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Widgets.strings; sourceTree = "<group>"; };
 		EFD03A0C2738B41D00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Widgets.strings"; sourceTree = "<group>"; };
 		EFD03A102738B47400E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Transparent.strings; sourceTree = "<group>"; };
@@ -573,6 +577,7 @@
 			children = (
 				EF2FFCF82741FB5C00786A80 /* Attributes */,
 				EF2FFCED2741F50C00786A80 /* Clock */,
+				EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -671,6 +676,14 @@
 				EF6A21572735318200691B3A /* AppSettingSection.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		EFB0C2DB2744F1AD008C83F2 /* WidgetEdit */ = {
+			isa = PBXGroup;
+			children = (
+				EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */,
+			);
+			path = WidgetEdit;
 			sourceTree = "<group>";
 		};
 		EFD03A192738B7EC00E28F27 /* video */ = {
@@ -960,6 +973,7 @@
 		EFD4ABDE27336C06000B2350 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EFB0C2DB2744F1AD008C83F2 /* WidgetEdit */,
 				EF2FFD1B2742666800786A80 /* LargeWidget */,
 				EF2FFD1A2742664E00786A80 /* MediumWidget */,
 				EF2FFD192742661400786A80 /* SmallWidget */,
@@ -1777,6 +1791,7 @@
 				EFD4ACBF273390DE000B2350 /* MJRefreshComponent+Rx.swift in Sources */,
 				EFD4ABF627336DF4000B2350 /* CALayerExtensions.swift in Sources */,
 				EFE198AC273DF6A500C44943 /* AppThemeSettingCell.swift in Sources */,
+				EFB0C2DD2744F1C8008C83F2 /* AppWidgetEditController.swift in Sources */,
 				EFD03A85273915A800E28F27 /* AppThemeController.swift in Sources */,
 				EFD4AC262733820C000B2350 /* QYToast.swift in Sources */,
 				EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */,
@@ -1792,6 +1807,7 @@
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
 				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
+				EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */,
 				EFD4AC4727338264000B2350 /* QYImage.swift in Sources */,
 				EFD4AC492733841A000B2350 /* NSObjectExtensions.swift in Sources */,
 				EFD4AC0327336F3F000B2350 /* QYInch.swift in Sources */,

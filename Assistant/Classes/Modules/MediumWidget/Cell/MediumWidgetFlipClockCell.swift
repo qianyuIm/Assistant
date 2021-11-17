@@ -8,8 +8,8 @@
 import UIKit
 
 class MediumWidgetFlipClockCell: UICollectionViewCell {
-    lazy var flipClockView: AppFlipClockView = {
-        let view = AppFlipClockView(attributes: AppWidgetAttributes())
+    lazy var flipClockView: UIView = {
+        let view = UIView()
         view.backgroundColor = UIColor.orange
         return view
     }()
@@ -27,8 +27,8 @@ class MediumWidgetFlipClockCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-        flipClockView.attributes = attributes
-        titleLabel.text = attributes.name
+//        flipClockView.attributes = attributes
+//        titleLabel.text = attributes.name
         var cornerRadius: CGFloat = 0
         var corners: UIRectCorner = []
         (corners, cornerRadius) = attributes.roundCorners.cornerValues

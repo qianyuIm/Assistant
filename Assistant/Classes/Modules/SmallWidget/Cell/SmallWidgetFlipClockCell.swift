@@ -10,8 +10,7 @@ import UIKit
 class SmallWidgetFlipClockCell: UICollectionViewCell {
 
     lazy var flipClockView: AppFlipClockView = {
-        let view = AppFlipClockView(attributes: AppWidgetAttributes())
-        view.backgroundColor = UIColor.orange
+        let view = AppFlipClockView()
         return view
     }()
     lazy var titleLabel: UILabel = {
@@ -28,14 +27,9 @@ class SmallWidgetFlipClockCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-        QYLogger.debug("刷新")
         flipClockView.attributes = attributes
-        flipClockView.date = Date()
+        flipClockView.dateSource = Date()
         titleLabel.text = attributes.name
-        var cornerRadius: CGFloat = 0
-        var corners: UIRectCorner = []
-        (corners, cornerRadius) = attributes.roundCorners.cornerValues
-        self.flipClockView.app.addRoundCorners(corners, radius: cornerRadius)
     }
 
 }

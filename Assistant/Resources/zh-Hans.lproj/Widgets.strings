@@ -5,6 +5,7 @@
   Created by cyd on 2021/11/6.
  
 */
+"Section.More" = "查看更多>";
 //Mark: --  推荐 Section
 "Section.Recommend" = "推荐";
 //Mark: --  生活工具 Section
@@ -53,6 +54,7 @@
 "Item.ArtClock_2" = "艺术时钟#2";
 "Item.SimpleClock_1" = "简时钟#1";
 "Item.TextClock_1" = "文字时钟#1";
+"Item.FlipClock_1" = "翻页时钟#1";
 //Mark: --  捷径 Section
 "Section.QuickLauncher" = "捷径";
 "Item.Shortcut2_1" = "快捷启动2.0#1";
