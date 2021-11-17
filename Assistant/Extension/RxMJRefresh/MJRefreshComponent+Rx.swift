@@ -11,7 +11,6 @@ import RxCocoa
 import RxSwift
 
 extension Reactive where Base: MJRefreshComponent {
-    
     var refreshing: ControlEvent<Void> {
         let source = Observable<Void>.create { [weak control = self.base] observer in
             if let control = control {
@@ -23,5 +22,4 @@ extension Reactive where Base: MJRefreshComponent {
         }
         return ControlEvent(events: source)
     }
-    
 }

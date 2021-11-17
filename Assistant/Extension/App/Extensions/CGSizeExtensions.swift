@@ -10,7 +10,6 @@ import UIKit
 extension CGSize: AppExtensionCompatible {}
 
 extension AppExtensionWrapper where Base == CGSize {
-    
     var rect: CGRect {
         return CGRect(origin: .zero, size: base)
     }
@@ -19,5 +18,4 @@ extension AppExtensionWrapper where Base == CGSize {
         return CGSize(width: base.width.app
             .flat, height: base.height.app.flat)
     }
-    
 }

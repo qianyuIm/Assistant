@@ -14,48 +14,41 @@ extension AppExtensionWrapper where Base == CGRect {
     static func rect(size: CGSize) -> CGRect {
         return CGRect(x: 0, y: 0, width: size.width, height: size.height)
     }
-    
     /// 获取rect的center，包括rect本身的x/y偏移
     var center: CGPoint {
         return CGPoint(x: base.midX.app.flat, y: base.midY.app.flat)
     }
-
     /// 对CGRect的x/y、width/height都调用一次flat，以保证像素对齐
     var flatted: CGRect {
         return CGRect(x: base.minX.app.flat, y: base.minY.app.flat, width: base.width.app.flat, height: base.height.app.flat)
     }
-    
     /// 判断一个 CGRect 是否存在NaN
     var isNaN: Bool {
         return base.origin.x.isNaN || base.origin.y.isNaN || base.size.width.isNaN || base.size.height.isNaN
     }
-    
     /// 系统提供的 CGRectIsInfinite 接口只能判断 CGRectInfinite 的情况，而该接口可以用于判断 INFINITY 的值
     var isInf: Bool {
         return base.origin.x.isInfinite || base.origin.y.isInfinite || base.size.width.isInfinite || base.size.height.isInfinite
     }
-    
     /// 判断一个 CGRect 是否合法（例如不带无穷大的值、不带非法数字）
     var isValidated: Bool {
         return !base.isNull && !base.isInfinite && !self.isNaN && !self.isInf
     }
-
     /// 为一个CGRect叠加scale计算
     func apply(scale: CGFloat) -> CGRect {
         return CGRect(x: base.minX * scale, y: base.minY * scale, width: base.width * scale, height: base.height * scale).app.flatted
     }
-
     /// 计算view的水平居中，传入父view和子view的frame，返回子view在水平居中时的x值
     func minXHorizontallyCenter(in parentRect: CGRect) -> CGFloat {
         return ((parentRect.width - base.width) / 2.0).app.flat
     }
-
     /// 计算view的垂直居中，传入父view和子view的frame，返回子view在垂直居中时的y值
     func minYVerticallyCenter(in parentRect: CGRect) -> CGFloat {
         return ((parentRect.height - base.height) / 2.0).app.flat
     }
-
-    /// 返回值：同一个坐标系内，想要layoutingRect和已布局完成的referenceRect(self)保持垂直居中时，layoutingRect的originY
+    /// 返回值：同一个坐标系内，
+    /// 想要layoutingRect和已布局完成的referenceRect(self)保持垂直居中时
+    /// layoutingRect的originY
     func minYVerticallyCenter(_ layoutingRect: CGRect) -> CGFloat {
         return base.minY + layoutingRect.app.minYVerticallyCenter(in: base)
     }
@@ -168,7 +161,6 @@ extension AppExtensionWrapper where Base == CGRect {
         let result = CGRect(x: x, y: y, width: width, height: height)
         return result
     }
-    
     func removeFloatMin() -> CGRect {
         let x = base.origin.x.app.removeFloatMin()
         let y = base.origin.y.app.removeFloatMin()
@@ -178,4 +170,3 @@ extension AppExtensionWrapper where Base == CGRect {
         return result
     }
 }
-

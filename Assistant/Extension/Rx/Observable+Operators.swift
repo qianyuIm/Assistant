@@ -14,20 +14,17 @@ extension ObservableType {
             return Observable.empty()
         }
     }
-    
     func asDriverOnErrorJustComplete() -> Driver<Element> {
         return asDriver { error in
             return Driver.empty()
         }
     }
-    
     func then(_ closure: @escaping @autoclosure () throws -> Void) -> Observable<Element> {
         return map {
             try closure()
             return $0
         }
     }
-    
     func mapToVoid() -> Observable<Void> {
         return map { _ in }
     }

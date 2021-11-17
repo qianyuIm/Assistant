@@ -8,7 +8,6 @@
 import UIKit
 
 extension AppExtensionWrapper where Base == UIColor {
-    
     static func color(red: Int,
                       green: Int,
                       blue: Int,
@@ -23,7 +22,6 @@ extension AppExtensionWrapper where Base == UIColor {
 
         return UIColor.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: trans)
     }
-    
     /// hexString ->  #ff5ad2db ,EDE7F6,
     /// 0xEDE7F6, #EDE7F6, #0ff, 0xF0F, ..)
     /// - Parameters:
@@ -36,7 +34,7 @@ extension AppExtensionWrapper where Base == UIColor {
         var string = ""
         if hexString.count == 9 && hexString.lowercased().hasPrefix("#ff") {
             string = String(hexString[hexString.index(hexString.startIndex, offsetBy: 3)...])
-        }else if hexString.lowercased().hasPrefix("0x") {
+        } else if hexString.lowercased().hasPrefix("0x") {
             string =  hexString.replacingOccurrences(of: "0x", with: "")
         } else if hexString.hasPrefix("#") {
             string = hexString.replacingOccurrences(of: "#", with: "")
@@ -60,5 +58,4 @@ extension AppExtensionWrapper where Base == UIColor {
         let blue = hexValue & 0xff
         return self.color(red: red, green: green, blue: blue, transparency: trans) ?? defaultColor
     }
-    
 }

@@ -10,7 +10,6 @@ import Schedule
 import AttributedString
 
 class AppIconsController: AppBaseVMController {
-    
     lazy var flipClockView: AppFlipClockView = {
         let view = AppFlipClockView()
         view.dateSource = Date()
@@ -26,11 +25,9 @@ class AppIconsController: AppBaseVMController {
 
         // Do any additional setup after loading the view.
     }
-    
     override func setupLanguage() {
         super.setupLanguage()
     }
-   
     override func setupUI() {
         super.setupUI()
         view.addSubview(flipClockView)

@@ -8,12 +8,10 @@
 import UIKit
 import M13Checkbox
 
-class AppLanguageCell: UICollectionViewCell ,AppNibLoadableView{
+class AppLanguageCell: UICollectionViewCell, AppNibLoadableView {
 
     @IBOutlet weak var launguageTitleLabel: UILabel!
-    
     @IBOutlet weak var checkBoxView: M13Checkbox!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +26,7 @@ class AppLanguageCell: UICollectionViewCell ,AppNibLoadableView{
     func config(_ item: AppLanguageItem) {
         launguageTitleLabel.text = item.disPlayName
         checkBoxView.isSelected = item.isSelected
-        if (item.isSelected) {
+        if item.isSelected {
             checkBoxView.setCheckState(.checked, animated: true)
         } else {
             checkBoxView.setCheckState(.unchecked, animated: false)

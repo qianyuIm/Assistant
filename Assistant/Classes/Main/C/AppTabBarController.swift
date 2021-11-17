@@ -16,7 +16,7 @@ enum AppTabBarSelectedType {
     case more
     typealias RawValue = Int
     var rawValue: RawValue {
-        var value : Int
+        var value: Int
         switch self {
         case .widget:
             value = 0
@@ -30,11 +30,11 @@ enum AppTabBarSelectedType {
         return value
     }
     init?(rawValue: RawValue) {
-        if(rawValue == 0){
+        if rawValue == 0 {
             self = .widget
-        } else if(rawValue == 1) {
+        } else if rawValue == 1 {
             self = .icons
-        } else if(rawValue == 2) {
+        } else if rawValue == 2 {
             self = .wallpaper
         } else {
             self = .more
@@ -49,13 +49,12 @@ class AppTabBarController: ESTabBarController {
                 R.string.localizable.tabbarWallpaper.key.app.localized(),
                 R.string.localizable.tabbarMore.key.app.localized()]
     }
-    var selectedType: AppTabBarSelectedType  {
+    var selectedType: AppTabBarSelectedType {
         get { return AppTabBarSelectedType(rawValue: selectedIndex)! }
         set(newValue) { selectedIndex = newValue.rawValue }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
         let widgetsModel = AppHomeWidgetsViewModel()
         let widget = _setController(
@@ -63,29 +62,25 @@ class AppTabBarController: ESTabBarController {
             title: tabBarItemTitles()[0],
             normalImage: appIconFontIcons.icon_tab_widget.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_widget.image(size: 24))
-        
         let iconsViewModel = AppIconsViewModel()
         let icons = _setController(
             controller: AppIconsController(viewModel: iconsViewModel),
             title: tabBarItemTitles()[1],
             normalImage: appIconFontIcons.icon_tab_icons.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_icons.image(size: 24))
-        
         let wallpaperViewModel = AppWallpaperViewModel()
         let wallpaper = _setController(
             controller: AppWallpaperController(viewModel: wallpaperViewModel),
             title: tabBarItemTitles()[2],
             normalImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_wallpaper.image(size: 24))
-        
+
         let moreViewModel = AppMoreViewModel()
         let more = _setController(
             controller: AppMoreController(viewModel: moreViewModel),
             title: tabBarItemTitles()[3],
             normalImage: appIconFontIcons.icon_tab_more.image(size: 24),
             selectImage: appIconFontIcons.icon_tab_more.image(size: 24))
-        
-        
         self.viewControllers = [widget, icons, wallpaper, more]
         bindTheme()
         selectedType = .widget
@@ -94,34 +89,28 @@ class AppTabBarController: ESTabBarController {
     /// 切换语言的时候不想更换根控制器在跳转到设置页面
     @objc func setupLanguage() {
         guard let viewControllers = self.viewControllers else { return  }
-        for (index,child) in viewControllers.enumerated() {
+        for (index, child) in viewControllers.enumerated() {
             child.tabBarItem.title = tabBarItemTitles()[index]
         }
     }
-    
-    
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         guard
             #available(iOS 13.0, *),
             traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection)
         else { return }
-        
         _updateTheme()
     }
 }
 
 private extension AppTabBarController {
     func bindTheme() {
-        
         tabBar.theme.barTintColor = appThemeProvider.attribute {
             $0.tabbarTheme.barTintColor
         }
-        
     }
     func _updateTheme() {
         guard #available(iOS 12.0, *) else { return }
-        
         switch traitCollection.userInterfaceStyle {
         case .light:
             QYLogger.debug("切换到明亮模式")
@@ -138,10 +127,8 @@ private extension AppTabBarController {
                         title: String,
                         normalImage: UIImage?,
                         selectImage: UIImage?) -> AppNavigationController {
-        
         controller.tabBarItem = ESTabBarItem(AppTabBarItemContentView(), title: title, image: normalImage, selectedImage: selectImage)
         let naVc = AppNavigationController(rootViewController: controller)
         return naVc
     }
-    
 }

@@ -8,13 +8,10 @@
 import UIKit
 import RxTheme
 
-class AppWidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadableView{
+class AppWidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadableView {
     @IBOutlet weak var iconImageView: UIImageView!
-    
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var actionSender: UIButton!
-    
     var supplementary: AppWidgetSupplementaryModel?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,20 +25,16 @@ class AppWidgetHeaderSupplementaryView: UICollectionReusableView, AppNibLoadable
         actionSender.theme.titleColor(from: appThemeProvider.attribute({
             $0.textTheme.subtitleColor
         }), for: .normal)
-
     }
-    
     func config(supplementary: AppWidgetSupplementaryModel) {
         iconImageView.image = supplementary.icon
         titleLabel.text = supplementary.title
         actionSender.isHidden = !supplementary.router
     }
-    
     @IBAction func senderAction(_ sender: UIButton) {
         QYLogger.debug("点击查看更多")
         if let routerPattern = self.supplementary?.routerPattern {
             AppRouter.shared.open(routerPattern, context: nil)
         }
     }
-    
 }

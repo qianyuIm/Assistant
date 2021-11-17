@@ -41,11 +41,9 @@ class AppHomeWidgetHeaderView: UIView {
         bind()
         bindTheme()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     func bind() {
         let dataSource = RxCollectionViewSectionedReloadDataSource<AppHomeWidgetHeaderSection> { datasource, collectionView, indexPath, item in
             let cell = collectionView.app.dequeueReusableCell(cellClass: AppHomeWidgetHeaderViewCell.self, for: indexPath)
@@ -53,10 +51,9 @@ class AppHomeWidgetHeaderView: UIView {
             return cell
         }
         self.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
-        
         collectionView.rx
             .modelSelected(AppHomeWidgetHeaderItem.self).asObservable()
-            .subscribe  (onNext: { headerItem in
+            .subscribe(onNext: { headerItem in
                 AppRouter.shared.open(headerItem.pattern, context: nil)
         }).disposed(by: rx.disposeBag)
     }
@@ -69,11 +66,10 @@ extension AppHomeWidgetHeaderView {
     func viewHeight() -> Int {
         let dataSource = self.dataSource.value
         var heigh: Int = 0
-        guard let _ = dataSource.first else {
+        guard dataSource.first != nil else {
             return heigh
         }
         heigh = cellHeight + Int(contentInsetTopBottom) * 2
         return heigh
     }
 }
-

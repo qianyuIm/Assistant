@@ -8,9 +8,7 @@
 import UIKit
 import SDWebImage
 
-
 extension AppExtensionWrapper where Base: UIImageView {
-    
     /// 设置网络图片
     /// - Parameter url:
     func setImage(with url: URL?,
@@ -18,5 +16,4 @@ extension AppExtensionWrapper where Base: UIImageView {
         base.sd_imageTransition = .fade
         base.sd_setImage(with: url, placeholderImage: placeholder)
     }
-    
 }

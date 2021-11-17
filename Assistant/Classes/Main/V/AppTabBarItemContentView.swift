@@ -8,13 +8,11 @@
 import UIKit
 import ESTabBarController_swift
 import RxTheme
-
-
 class AppTabBarItemContentView: ESTabBarItemContentView {
     private let duration = 0.3
     override init(frame: CGRect) {
         super.init(frame: frame)
-        appThemeProvider.typeStream.subscribe (onNext:{[weak self] themeType in
+        appThemeProvider.typeStream.subscribe(onNext:{ [weak self] themeType in
             let tabbarTheme = themeType.associatedObject.tabbarTheme
             self?.textColor = tabbarTheme.textColor
             self?.highlightTextColor = tabbarTheme.highlightIconColor
@@ -23,8 +21,6 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
             self?.updateDisplay()
         }).disposed(by: rx.disposeBag)
     }
-    
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -34,18 +30,17 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
             self.updateLayout()
         }
     }
-    override func selectAnimation(animated: Bool, completion: (() -> ())?) {
+    override func selectAnimation(animated: Bool, completion: (() -> Void)?) {
         self.bounceAnimation()
         completion?()
     }
-    
-    override func reselectAnimation(animated: Bool, completion: (() -> ())?) {
+    override func reselectAnimation(animated: Bool, completion: (() -> Void)?) {
         self.bounceAnimation()
         completion?()
     }
     func bounceAnimation() {
         let impliesAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-        impliesAnimation.values = [1.0 ,1.2, 0.9, 1.15, 0.95, 1.02, 1.0]
+        impliesAnimation.values = [1.0, 1.2, 0.9, 1.15, 0.95, 1.02, 1.0]
         impliesAnimation.duration = duration * 2
         impliesAnimation.calculationMode = CAAnimationCalculationMode.cubic
         imageView.layer.add(impliesAnimation, forKey: nil)

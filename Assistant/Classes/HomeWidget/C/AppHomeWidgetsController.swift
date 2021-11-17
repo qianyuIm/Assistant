@@ -72,7 +72,6 @@ class AppHomeWidgetsController: AppBaseVMController {
         segmentedView.dataSource = dataSource
         segmentedView.indicators = [indicator]
         segmentedView.listContainer = pagingView.listContainerView
-        
     }
     override func setupConstraints() {
         super.setupConstraints()
@@ -81,7 +80,6 @@ class AppHomeWidgetsController: AppBaseVMController {
             make.bottom.equalTo(-QYInch.tabbarHeight)
         }
     }
-    
     override func setupTheme() {
         super.setupTheme()
         leftItemTitleLabel.theme.textColor = appThemeProvider.attribute({ $0.primaryColor
@@ -92,7 +90,7 @@ class AppHomeWidgetsController: AppBaseVMController {
         })
         pagingView.mainTableView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
         })
-        appThemeProvider.typeStream.subscribe (onNext: { [weak self] themeProvider in
+        appThemeProvider.typeStream.subscribe(onNext: { [weak self] themeProvider in
             let segmentedTheme = themeProvider.associatedObject.segmentedTheme
             self?.dataSource.titleNormalColor = segmentedTheme.titleNormalColor
             self?.dataSource.titleSelectedColor = segmentedTheme.titleSelectedColor
@@ -102,13 +100,11 @@ class AppHomeWidgetsController: AppBaseVMController {
             self?.segmentedView.reloadDataWithoutListContainer()
         }).disposed(by: rx.disposeBag)
     }
-    
     override func setupLanguage() {
         super.setupLanguage()
         leftItemTitleLabel.text = R.string.localizable.barWidgetLeftTitle.key.app.localized()
 
     }
-    
     override func bindViewModel() {
         super.bindViewModel()
         guard let viewModel = viewModel as? AppHomeWidgetsViewModel else {
@@ -118,18 +114,13 @@ class AppHomeWidgetsController: AppBaseVMController {
                                     languageChanged.asObservable()).merge()
         let input = AppHomeWidgetsViewModel.Input(trigger: trigger)
         let output = viewModel.transform(input: input)
-        
-        output.headerDataSource.subscribe (onNext: {[weak self] headerSections in
+        output.headerDataSource.subscribe(onNext: {[weak self] headerSections in
             self?.reloadHeaderView(headerSections)
         }).disposed(by: rx.disposeBag)
-        
-        output.dataSource.subscribe (onNext: { [weak self] widgetSection in
+        output.dataSource.subscribe(onNext: { [weak self] widgetSection in
             self?.reloadPageView(widgetSection)
         }).disposed(by: rx.disposeBag)
-        
-        
     }
-    
 }
 extension AppHomeWidgetsController {
     func reloadHeaderView(_ headerSource: [AppHomeWidgetHeaderSection]) {

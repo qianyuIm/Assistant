@@ -35,9 +35,7 @@ extension AppExtensionCompatible {
         get {
             return AppExtensionWrapper(self)
         }
-        set {
-           
-        }
+        set { }
     }
 }
 

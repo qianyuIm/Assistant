@@ -37,26 +37,24 @@ extension AppHomeWidgetsViewModel: AppViewModelable {
     func transform(input: Input) -> Output {
         let headerDataSource = BehaviorRelay<[AppHomeWidgetHeaderSection]>(value: [])
         let dataSource = BehaviorRelay<[AppHomeWidgetSection]>(value: [])
-        input.trigger.flatMapLatest { [weak self]() -> Observable<([AppHomeWidgetHeaderSection],[AppHomeWidgetSection])> in
+        input.trigger.flatMapLatest { [weak self]() -> Observable<([AppHomeWidgetHeaderSection], [AppHomeWidgetSection])> in
             guard let strongSelf = self else {
                 return .empty()
             }
             return Observable.zip(strongSelf.configHeaderDataSource(),
                                   strongSelf.configDataSource())
-        }.subscribe (onNext: { (headers, sections) in
+        }.subscribe(onNext: { (headers, sections) in
             headerDataSource.accept(headers)
             dataSource.accept(sections)
         }).disposed(by: rx.disposeBag)
-        
-        return Output(headerDataSource:headerDataSource, dataSource: dataSource)
+        return Output(headerDataSource: headerDataSource, dataSource: dataSource)
     }
-    
     func configHeaderDataSource() -> Observable<[AppHomeWidgetHeaderSection]> {
         let transparentItem = AppHomeWidgetHeaderItem(imageName: R.string.image.widgetBannerTransparent.key.app.imageLocalized(),
                                                   pattern: AppRouterType.transparent.pattern)
         let questionItem = AppHomeWidgetHeaderItem(imageName: R.string.image.widgetBannerQuestion.key.app.imageLocalized(),
                                                pattern: AppRouterType.question.pattern)
-        let section = AppHomeWidgetHeaderSection(items: [transparentItem,questionItem])
+        let section = AppHomeWidgetHeaderSection(items: [transparentItem, questionItem])
         return Observable.just([section])
 
     }
@@ -67,7 +65,6 @@ extension AppHomeWidgetsViewModel: AppViewModelable {
         let mediumSection = AppHomeWidgetSection.medium(title: medium)
         let large = R.string.localizable.widgetSegmentLarge.key.app.localized()
         let largeSection = AppHomeWidgetSection.large(title: large)
-        return Observable.just([smallSection,mediumSection,largeSection])
+        return Observable.just([smallSection, mediumSection, largeSection])
     }
 }
-

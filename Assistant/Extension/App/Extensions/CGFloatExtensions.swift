@@ -29,7 +29,6 @@ extension AppExtensionWrapper where Base == CGFloat {
         let sca = scale == 0 ? UIScreen.main.scale : scale
         return ceil(self.base * sca) / sca
     }
-    
      ///  某些地方可能会将 CGFLOAT_MIN 作为一个数值参与计算（但其实 CGFLOAT_MIN 更应该被视为一个标志位而不是数值），可能导致一些精度问题，所以提供这个方法快速将 CGFLOAT_MIN 转换为 0
      /// issue: https://github.com/QMUI/QMUI_iOS/issues/203
     func removeFloatMin() -> CGFloat {
@@ -42,7 +41,7 @@ extension AppExtensionWrapper where Base == CGFloat {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = precision
-        var cgFloat:CGFloat = 0
+        var cgFloat: CGFloat = 0
         if let result = formatter.string(from: NSNumber(value: Double(base))),
             let doubleValue = Double(result) {
             cgFloat = CGFloat(doubleValue)

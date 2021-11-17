@@ -9,26 +9,25 @@ import RxDataSources
 
 enum LargeWidgetSection {
     /// 推荐
-    case recommendSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case recommendSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 系统工具
-    case generalToolsSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case generalToolsSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// X-面板
-    case xPanelSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case xPanelSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 仪表盘
-    case dashboardSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case dashboardSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 时钟
-    case clockSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case clockSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 捷径
-    case quickLauncherSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case quickLauncherSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 日历
-    case calendarSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case calendarSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 倒数日
-    case daysMatterSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case daysMatterSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 系统信息
-    case systemInfoSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
+    case systemInfoSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
     /// 进度
-    case progressSection(supplementary: AppWidgetSupplementaryModel,items: [LargeWidgetSectionItem])
-    
+    case progressSection(supplementary: AppWidgetSupplementaryModel, items: [LargeWidgetSectionItem])
 }
 
 enum LargeWidgetSectionItem {

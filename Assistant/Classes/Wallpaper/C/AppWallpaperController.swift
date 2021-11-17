@@ -12,11 +12,9 @@ import RxCocoa
 let countDownSeconds: Int = 60
 
 class AppWallpaperController: AppBaseVMController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     override func setupLanguage() {
         super.setupLanguage()
     }

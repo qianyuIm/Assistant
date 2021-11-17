@@ -13,7 +13,6 @@ enum BarButtonItemPosition {
 }
 
 extension AppExtensionWrapper where Base: UIBarButtonItem {
-    
 //    static func barButtonItem(position: BarButtonItemPosition,
 //                              image: UIImage?,
 //                              target: Any?,

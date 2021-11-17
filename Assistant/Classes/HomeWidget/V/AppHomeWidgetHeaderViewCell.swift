@@ -7,17 +7,14 @@
 
 import UIKit
 
-class AppHomeWidgetHeaderViewCell: UICollectionViewCell,AppNibLoadableView {
+class AppHomeWidgetHeaderViewCell: UICollectionViewCell, AppNibLoadableView {
     @IBOutlet weak var imageView: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         imageView.app.addRoundCorners(.allCorners, radius: 6)
     }
-    
     func config(_ item: AppHomeWidgetHeaderItem) {
         imageView.image = UIImage(named: item.imageName)
     }
-
 }

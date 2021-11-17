@@ -22,4 +22,3 @@ extension AppHomeWidgetHeaderSection: SectionModelType {
         self.items = items
     }
 }
-
