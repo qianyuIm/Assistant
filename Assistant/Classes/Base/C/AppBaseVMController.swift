@@ -13,7 +13,6 @@ import RxSwift
 import RxCocoa
 
 class AppBaseVMController: AppBaseController {
-    
     var viewModel: AppViewModel?
     var context: AppRouterContext?
     init(viewModel: AppViewModel?,
@@ -22,7 +21,6 @@ class AppBaseVMController: AppBaseController {
         self.context = nil
         super.init(nibName: nil, bundle: nil)
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -80,13 +78,11 @@ class AppBaseVMController: AppBaseController {
         super.viewDidLoad()
         bindViewModel()
     }
-    
     override func prepare() {
         super.prepare()
         emptyUnConnectionImage = appIconFontIcons.icon_placeholder_unconnected.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
         emptyUnConnectionTitle = R.string.localizable.emptyUnConnectedTitle.key.app.localized().set(style: emptyTitleStyle)
         emptyUnConnectionDetail = R.string.localizable.emptyUnConnectedDetail.key.app.localized().set(style: emptyDetailStyle)
-        
         emptyImage = appIconFontIcons.icon_placeholder_empty.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
         emptyTitle = R.string.localizable.emptyDataTitle.key.app.localized().set(style: emptyTitleStyle)
         emptyDetail = R.string.localizable.emptyDataDetail.key.app.localized().set(style: emptyDetailStyle)
@@ -106,29 +102,27 @@ class AppBaseVMController: AppBaseController {
             guard let strongSelf = self else { return }
             strongSelf.emptyTitle = errorWrap.title.set(style: strongSelf.emptyTitleStyle)
             strongSelf.emptyDetail = errorWrap.detail.set(style: strongSelf.emptyDetailStyle)
-            if (errorWrap == MoyaErrorWrap.error404) {
+            if errorWrap == MoyaErrorWrap.error404 {
                 strongSelf.emptyImage = appIconFontIcons.icon_placeholder_404.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
-            } else if (errorWrap == MoyaErrorWrap.unauthorized) {
+            } else if errorWrap == MoyaErrorWrap.unauthorized {
                 strongSelf.emptyImage = appIconFontIcons.icon_placeholder_unauthorized.image(size: QYInch.placeholder, foregroundColor: QYColor.placeholder)
             }
         }).disposed(by: rx.disposeBag)
-        
-        emptyDataDidTap.subscribe(onNext: { [weak self]() in
+        emptyDataDidTap.subscribe(onNext: { [weak self] () in
             guard let strongSelf = self else { return }
             strongSelf.handleEmptyTap()
         }).disposed(by: rx.disposeBag)
 
     }
-    
     private func handleEmptyTap() {
-        if (viewModel!.errorWrap.value == MoyaErrorWrap.unauthorized) {
+        if viewModel!.errorWrap.value == MoyaErrorWrap.unauthorized {
             let context = AppRouterContext()
             context.completionHandler = { result in
                 guard let result = result else {
                     return
                 }
                 guard let haveLogin = result[kAppRouterContextLoginResultKey] as? Bool else { return }
-                if (haveLogin) {
+                if haveLogin {
                     self.requestRetry.onNext(())
                 }
             }
@@ -137,8 +131,6 @@ class AppBaseVMController: AppBaseController {
             requestRetry.onNext(())
         }
     }
-    
-    
 }
 
 extension AppBaseVMController: EmptyDataSetDelegate {
@@ -160,7 +152,7 @@ extension AppBaseVMController: EmptyDataSetDelegate {
 extension AppBaseVMController: EmptyDataSetSource {
     func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
         switch QYReachability.shared.connectionValue {
-        case .none ,.unavailable:
+        case .none, .unavailable:
             baseEmptyView.imageView.image = emptyUnConnectionImage
             baseEmptyView.titleLabel.attributedText = emptyUnConnectionTitle
             baseEmptyView.detailLabel.attributedText = emptyUnConnectionDetail

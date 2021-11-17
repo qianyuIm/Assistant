@@ -37,9 +37,7 @@ enum AppThemeSectionItem {
 }
 
 extension AppThemeSection: SectionModelType {
-    
     typealias Item = AppThemeSectionItem
-    
     var items: [AppThemeSectionItem] {
         switch self {
         case  .settingSection(let items):
@@ -48,7 +46,6 @@ extension AppThemeSection: SectionModelType {
             return items
         }
     }
-    
     init(original: AppThemeSection, items: [AppThemeSectionItem]) {
         switch original {
         case .settingSection(let items):
@@ -57,6 +54,4 @@ extension AppThemeSection: SectionModelType {
             self = .themeSection(items: items)
         }
     }
-    
 }
-

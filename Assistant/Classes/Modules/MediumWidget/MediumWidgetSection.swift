@@ -9,26 +9,25 @@ import RxDataSources
 
 enum MediumWidgetSection {
     /// 推荐
-    case recommendSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case recommendSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 系统工具
-    case generalToolsSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case generalToolsSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// X-面板
-    case xPanelSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case xPanelSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 仪表盘
-    case dashboardSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case dashboardSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 时钟
-    case clockSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case clockSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 捷径
-    case quickLauncherSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case quickLauncherSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 日历
-    case calendarSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case calendarSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 倒数日
-    case daysMatterSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case daysMatterSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 系统信息
-    case systemInfoSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
+    case systemInfoSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
     /// 进度
-    case progressSection(supplementary: AppWidgetSupplementaryModel,items: [MediumWidgetSectionItem])
-    
+    case progressSection(supplementary: AppWidgetSupplementaryModel, items: [MediumWidgetSectionItem])
 }
 
 enum MediumWidgetSectionItem {
@@ -38,7 +37,6 @@ enum MediumWidgetSectionItem {
 
 extension MediumWidgetSection: SectionModelType {
     typealias Item = MediumWidgetSectionItem
-    
     var items: [MediumWidgetSectionItem] {
         switch self {
         case  .recommendSection(_, let items):
@@ -63,28 +61,27 @@ extension MediumWidgetSection: SectionModelType {
             return items
         }
     }
-    
     var supplementary: AppWidgetSupplementaryModel {
         switch self {
-        case  .recommendSection(let item, _):
+        case .recommendSection(let item, _):
             return item
-        case  .generalToolsSection(let item, _):
+        case .generalToolsSection(let item, _):
             return item
-        case  .xPanelSection(let item, _):
+        case .xPanelSection(let item, _):
             return item
-        case  .dashboardSection(let item, _):
+        case .dashboardSection(let item, _):
             return item
-        case  .clockSection(let item, _):
+        case .clockSection(let item, _):
             return item
-        case  .quickLauncherSection(let item, _):
+        case .quickLauncherSection(let item, _):
             return item
-        case  .calendarSection(let item, _):
+        case .calendarSection(let item, _):
             return item
-        case  .daysMatterSection(let item, _):
+        case .daysMatterSection(let item, _):
             return item
-        case  .systemInfoSection(let item, _):
+        case .systemInfoSection(let item, _):
             return item
-        case  .progressSection(let item, _):
+        case .progressSection(let item, _):
             return item
         }
     }

@@ -7,10 +7,7 @@
 
 import UIKit
 import WebKit
-
-
-class AppScriptMessageHandler: NSObject,WKScriptMessageHandler {
-    
+class AppScriptMessageHandler: NSObject, WKScriptMessageHandler {
     weak var scriptDelegate: WKScriptMessageHandler?
     init(scriptDelegate: WKScriptMessageHandler) {
         self.scriptDelegate = scriptDelegate
@@ -29,7 +26,6 @@ private let kCookieKey = "Cookie"
 class AppBaseWebController: AppBaseController {
     
     private(set) var webView: WKWebView?
-    
     var webUrl: String?
     /// 进度条颜色
     var progressColor: UIColor = UIColor(white: 1, alpha: 0) {
@@ -45,8 +41,7 @@ class AppBaseWebController: AppBaseController {
             if estimatedProgress >= 1.0 {
                 UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseOut, animations: {
                     self.progressView.alpha = 0
-                }, completion: {
-                    finished in
+                }, completion: { finished in
                     self.progressView.setProgress(0, animated: false)
                 })
             }
@@ -54,29 +49,23 @@ class AppBaseWebController: AppBaseController {
     }
     /// 通用方法 -> 返回首页
     private let kGeneralMethodGoBackHome = "goBackHome"
-    
     lazy fileprivate var progressView: UIProgressView = {
         let progressView = UIProgressView(progressViewStyle: .default)
         progressView.alpha = 1
         progressView.trackTintColor = progressColor
         return progressView
     }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         DispatchQueue.main.async {
             self.load()
         }
-        
     }
-    
     override func prepare() {
         super.prepare()
         setupWebView()
     }
-    
     override func setupConstraints() {
         super.setupConstraints()
         progressView.snp.makeConstraints { make in
@@ -88,10 +77,7 @@ class AppBaseWebController: AppBaseController {
             make.top.equalTo(progressView.snp.bottom)
         })
     }
-    
-     
-    
-    override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         switch keyPath {
         case kEstimatedProgressKeyPath?:
             guard let estimatedProgress = webView?.estimatedProgress else {
@@ -99,7 +85,6 @@ class AppBaseWebController: AppBaseController {
             }
             self.estimatedProgress = estimatedProgress
         case kTitleKeyPath?:
-            
             if let title = webView?.title {
                 navigationItem.title = title
             } else {
@@ -117,14 +102,13 @@ class AppBaseWebController: AppBaseController {
         webView?.load(createRequest(with: url))
     }
     private func createRequest(with url: URL) -> URLRequest {
-        let request = URLRequest(url: url,cachePolicy: .reloadIgnoringLocalCacheData,timeoutInterval: 20.0)
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 20.0)
         /// 设置 Cookies
 //        if let cookies = HTTPCookieStorage.shared.cookies, let value = HTTPCookie.requestHeaderFields(with: cookies)[kCookieKey] {
 ////            request.addValue(value, forHTTPHeaderField: kCookieKey)
 //        }
 //        let string = "MUSIC_A_T=1501461434597; MUSIC_U=409d6946403d823744ab456df03e02bf85f92d03bcf5bbe69090a3a3cee6612a8a08bd5bf851808fd78b6050a17a35e705925a4e6992f61d07c385928f88e8de;__csrf=07a33bded309e5d5525636890f4feb36;MUSIC_R_T=1564817429039;__remember_me=true"
 //        request.addValue(string, forHTTPHeaderField: kCookieKey)
-        
         return request
     }
     deinit {
@@ -133,38 +117,30 @@ class AppBaseWebController: AppBaseController {
     }
 
 }
-//MARK: -- WKNavigationDelegate
+// MARK: - WKNavigationDelegate
 extension AppBaseWebController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
             decisionHandler(.allow)
-        
-        
     }
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        
-    }
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {}
 }
-//MARK: -- WKUIDelegate
-extension AppBaseWebController: WKUIDelegate {
-    
-}
-//MARK: -- WKUIDelegate
+// MARK: - WKUIDelegate
+extension AppBaseWebController: WKUIDelegate {}
+// MARK: - WKUIDelegate
 extension AppBaseWebController: WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         switch message.name {
         case kGeneralMethodGoBackHome:
             AppUtility.toRootController(true, .widget)
-            break
         default:
             break
         }
     }
 }
-//MARK: -- setup
+// MARK: - setup
 extension AppBaseWebController {
     func setupWebView() {
-        webView = WKWebView(frame: .zero,configuration: setupWebConfig())
+        webView = WKWebView(frame: .zero, configuration: setupWebConfig())
         if #available(iOS 11.0, *) {
             webView?.scrollView.contentInsetAdjustmentBehavior = .never
         }
@@ -174,14 +150,11 @@ extension AppBaseWebController {
         webView?.sizeToFit()
         webView?.navigationDelegate = self
         webView?.uiDelegate = self
-        
-        
         webView?.addObserver(self, forKeyPath: kEstimatedProgressKeyPath, options: .new, context: nil)
         webView?.addObserver(self, forKeyPath: kTitleKeyPath, options: .new, context: nil)
         view.addSubview(progressView)
         view.addSubview(webView!)
     }
-    
     func setupWebConfig() -> WKWebViewConfiguration {
         let wkWebConfig = WKWebViewConfiguration.init()
         setupGeneralMethods(user: wkWebConfig.userContentController)

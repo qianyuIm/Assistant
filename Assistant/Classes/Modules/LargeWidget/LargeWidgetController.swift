@@ -18,20 +18,16 @@ private let kSupplementaryHeaderKind = "large-header-element-kind"
 
 class LargeWidgetController: AppBaseCollectionVMController {
 
-    var listViewDidScrollCallback: ((UIScrollView) -> ())?
-    
+    var listViewDidScrollCallback: ((UIScrollView) -> Void)?
     var timer: Schedule.Task?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTimer()
-        
     }
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                              heightDimension: .estimated(QYInch.Widget.largeAspectRatioSize.height))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(QYInch.Widget.largeAspectRatioSize.width),
                                               heightDimension: .estimated(QYInch.Widget.largeAspectRatioSize.height))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -51,7 +47,6 @@ class LargeWidgetController: AppBaseCollectionVMController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-    
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: LargeWidgetFlipClockCell.self)
@@ -66,13 +61,11 @@ class LargeWidgetController: AppBaseCollectionVMController {
             self.timerUpdate()
         }
     }
-    
     func timerUpdate() {
         guard let viewModel = viewModel as? LargeWidgetViewModel else { return  }
         guard let dataSource = viewModel.dataSource else { return }
         for visibleCell in self.collectionView.visibleCells {
-            if let indexPath = self.collectionView.indexPath(for: visibleCell)
-                {
+            if let indexPath = self.collectionView.indexPath(for: visibleCell) {
                 let section = dataSource[indexPath.section]
                 let item = section.items[indexPath.item]
                 switch item {
@@ -80,10 +73,8 @@ class LargeWidgetController: AppBaseCollectionVMController {
                     (visibleCell as? LargeWidgetFlipClockCell)?.config(with: attributes)
                 }
             }
-            
         }
     }
-    
 }
 extension LargeWidgetController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -123,20 +114,16 @@ extension LargeWidgetController: UICollectionViewDataSource {
             return cell
         }
     }
-    
-    
 }
-//MARK: JXPagingViewListViewDelegate
-extension LargeWidgetController:  JXPagingViewListViewDelegate {
+// MARK: - JXPagingViewListViewDelegate
+extension LargeWidgetController: JXPagingViewListViewDelegate {
     func listView() -> UIView {
         return view
     }
-    
     func listScrollView() -> UIScrollView {
         return collectionView
     }
-    
-    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> ()) {
+    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> Void) {
         self.listViewDidScrollCallback = callback
     }
     func listWillAppear() {
@@ -145,6 +132,4 @@ extension LargeWidgetController:  JXPagingViewListViewDelegate {
     func listWillDisappear() {
         self.timer?.suspend()
     }
-    
 }
-

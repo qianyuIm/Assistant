@@ -64,11 +64,9 @@ class MyWidgetsController: AppBaseVMController {
     }
     override func setupTheme() {
         super.setupTheme()
-        
         segmentedView.theme.backgroundColor = appThemeProvider.attribute({ $0.backgroundColor
         })
-        
-        appThemeProvider.typeStream.subscribe (onNext: { [weak self] themeProvider in
+        appThemeProvider.typeStream.subscribe(onNext: { [weak self] themeProvider in
             let segmentedTheme = themeProvider.associatedObject.segmentedTheme
             self?.dataSource.titleNormalColor = segmentedTheme.titleNormalColor
             self?.dataSource.titleSelectedColor = segmentedTheme.titleSelectedColor
@@ -79,7 +77,6 @@ class MyWidgetsController: AppBaseVMController {
             self?.segmentedView.reloadDataWithoutListContainer()
         }).disposed(by: rx.disposeBag)
     }
-    
     override func bindViewModel() {
         super.bindViewModel()
         guard let viewModel = viewModel as? MyWidgetsViewModel else {
@@ -89,10 +86,9 @@ class MyWidgetsController: AppBaseVMController {
                                     languageChanged.asObservable()).merge()
         let input = MyWidgetsViewModel.Input(trigger: trigger)
         let output = viewModel.transform(input: input)
-        output.dataSource.subscribe (onNext: { [weak self] widgetSection in
+        output.dataSource.subscribe(onNext: { [weak self] widgetSection in
             self?.reloadSegmentedView(widgetSection)
         }).disposed(by: rx.disposeBag)
-        
     }
 
 }
@@ -119,7 +115,6 @@ extension MyWidgetsController: JXSegmentedListContainerViewDataSource {
     func numberOfLists(in listContainerView: JXSegmentedListContainerView) -> Int {
         return self.dataSource.dataSource.count
     }
-    
     func listContainerView(_ listContainerView: JXSegmentedListContainerView, initListAt index: Int) -> JXSegmentedListContainerViewListDelegate {
         let section = self.dataSections![index]
         switch section {
@@ -134,6 +129,4 @@ extension MyWidgetsController: JXSegmentedListContainerViewDataSource {
             return MySmallWidgetController(viewModel: smallViewModel)
         }
     }
-    
-    
 }

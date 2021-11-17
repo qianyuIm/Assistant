@@ -44,7 +44,6 @@ class AppBaseEmptyView: UIView {
             make.top.equalTo(imageView.snp.bottom)
                 .offset(QYInch.value(12))
             make.left.right.equalToSuperview()
-            
         }
         detailLabel.snp.makeConstraints { (make) in
             make.top.equalTo(titleLabel.snp.bottom)
@@ -52,10 +51,7 @@ class AppBaseEmptyView: UIView {
             make.left.right.equalToSuperview()
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-
 }

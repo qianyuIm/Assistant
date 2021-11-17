@@ -9,7 +9,7 @@ import Foundation
 import SwiftEntryKit
 
 class SmallWidgetViewModel: AppViewModel {
-    
+
     var dataSource: [SmallWidgetSection]?
     required init() {
         super.init()
@@ -43,10 +43,8 @@ extension SmallWidgetViewModel {
                                               routerPattern: "",
                                               router: true),
                                  items: [
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    
+                                    .flipClockItem(attributes: AppWidgetAttributes())
                                  ])
-        
         let xPanelSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_panel(),
@@ -56,10 +54,7 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            
-                           ])
-        
+                            .flipClockItem(attributes: AppWidgetAttributes())                           ])
         let dashboardSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_dashBoard(),
@@ -71,7 +66,6 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
         let clockSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_clock(),
@@ -83,7 +77,6 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
         let quickLauncherSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_quick(),
@@ -95,7 +88,6 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
         let calendarSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_calendar(),
@@ -107,7 +99,6 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
         let daysMatterSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_matter(),
@@ -119,7 +110,6 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
         let systemInfoSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_system(),
@@ -129,10 +119,9 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes()),
-                            
+                            .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        
+
         let progressSection = SmallWidgetSection
             .xPanelSection(supplementary:
                                 .init(icon: R.image.icon_widget_section_progress(),
@@ -144,11 +133,11 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        return [recommendSection]
-        return [recommendSection,generalToolsSection,
-                                xPanelSection,dashboardSection,
-                                clockSection,quickLauncherSection,
-                                calendarSection,daysMatterSection,
-                                systemInfoSection,progressSection]
+//        return [recommendSection]
+        return [recommendSection, generalToolsSection,
+                                xPanelSection, dashboardSection,
+                                clockSection, quickLauncherSection,
+                                calendarSection, daysMatterSection,
+                                systemInfoSection, progressSection]
     }
 }

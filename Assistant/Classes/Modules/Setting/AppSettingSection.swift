@@ -9,8 +9,8 @@ import UIKit
 import RxDataSources
 
 enum AppSettingSection {
-    case profileSection(title: String,items: [AppSettingSectionItem])
-    case configSection(title: String,items: [AppSettingSectionItem])
+    case profileSection(title: String, items: [AppSettingSectionItem])
+    case configSection(title: String, items: [AppSettingSectionItem])
 }
 enum AppSettingSectionItem {
     case profileItem(viewMode: AppSettingCellViewModel)
@@ -40,9 +40,7 @@ enum AppSettingSectionItem {
     }
 }
 extension AppSettingSection: SectionModelType {
-    
     typealias Item = AppSettingSectionItem
-    
     var title: String {
         switch self {
         case  .profileSection(let title, _):
@@ -53,21 +51,18 @@ extension AppSettingSection: SectionModelType {
     }
     var items: [AppSettingSectionItem] {
         switch self {
-        case  .profileSection(_ ,let items):
+        case  .profileSection(_, let items):
             return items
         case  .configSection(_, let items):
             return items
         }
     }
-    
     init(original: AppSettingSection, items: [AppSettingSectionItem]) {
         switch original {
-        case .profileSection(let title,let items):
+        case .profileSection(let title, let items):
             self = .profileSection(title: title, items: items)
-        case .configSection(let title,let items):
+        case .configSection(let title, let items):
             self = .configSection(title: title, items: items)
         }
     }
-    
 }
-

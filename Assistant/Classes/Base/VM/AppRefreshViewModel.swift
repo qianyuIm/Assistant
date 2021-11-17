@@ -12,7 +12,7 @@ import RxSwift
 class AppRefreshViewModel: AppViewModel {
     let refreshInput: RefreshInput
     let refreshOutput: RefreshOutput
-    
+
     struct RefreshInput {
         /// 开始头部刷新
         let beginHeaderRefresh: AnyObserver<Void>
@@ -22,7 +22,7 @@ class AppRefreshViewModel: AppViewModel {
         let headerRefreshState: AnyObserver<Bool>
         /// 尾部刷新状态
         let footerRefreshState: AnyObserver<RxMJRefreshFooterState>
-        
+
     }
     struct RefreshOutput {
         /// 头部刷新回调
@@ -33,7 +33,6 @@ class AppRefreshViewModel: AppViewModel {
         let headerRefreshState: Driver<Bool>
         /// 尾部刷新状态
         let footerRefreshState: Driver<RxMJRefreshFooterState>
-        
     }
     /// 开始头部刷新
     private let beginHeaderRefresh = PublishSubject<Void>()
@@ -43,8 +42,7 @@ class AppRefreshViewModel: AppViewModel {
     private let headerRefreshState = PublishSubject<Bool>()
     /// 尾部刷新状态
     private let footerRefreshState = PublishSubject<RxMJRefreshFooterState>()
-    
-    
+
     required init() {
         refreshInput = RefreshInput(beginHeaderRefresh: beginHeaderRefresh.asObserver(),
                                     beginFooterRefresh: beginFooterRefresh.asObserver(),

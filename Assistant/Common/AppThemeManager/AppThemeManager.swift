@@ -39,7 +39,6 @@ protocol AppThemeProtocol {
     var segmentedTheme: SegmentedTheme { get }
     /// card 主题
     var cardTheme: CardTheme { get }
-    
     init(colorSwatch: AppColorSwatch)
 }
 
@@ -48,7 +47,7 @@ struct AppLightTheme: AppThemeProtocol {
     var tabbarTheme: TabbarTheme
     var navigationBarTheme: NavigationBarTheme
     let backgroundColor = UIColor.app.color(hexString: "#F2F2F7")
-    let separatorColor = UIColor.app.color(hexString: "#999999",transparency: 0.5)
+    let separatorColor = UIColor.app.color(hexString: "#999999", transparency: 0.5)
     var statusBarStyle: UIStatusBarStyle
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#3D444B"),
                               subtitleColor: UIColor.app.color(hexString: "#626262"))
@@ -88,7 +87,7 @@ struct AppDarkTheme: AppThemeProtocol {
     var tabbarTheme: TabbarTheme
     var navigationBarTheme: NavigationBarTheme
     let backgroundColor = UIColor.app.color(hexString: "#323232")
-    let separatorColor = UIColor.app.color(hexString: "#999999",transparency: 0.5)
+    let separatorColor = UIColor.app.color(hexString: "#999999", transparency: 0.5)
     let statusBarStyle: UIStatusBarStyle = .lightContent
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#FFFFFF"),
                               subtitleColor: UIColor.app.color(hexString: "#E6E6E6"))
@@ -155,7 +154,6 @@ enum AppColorSwatch: Int {
     }
 }
 enum AppThemeProvider: ThemeProvider {
-    
     case light(colorSwatch: AppColorSwatch)
     case dark(colorSwatch: AppColorSwatch)
     var associatedObject: AppThemeProtocol {
@@ -170,7 +168,6 @@ enum AppThemeProvider: ThemeProvider {
         default: return false
         }
     }
-    
     private func switchInferred() {
         QYConfig.Theme.displayMode = .inferred
         /// 当前系统主题
@@ -178,7 +175,7 @@ enum AppThemeProvider: ThemeProvider {
         if let userInterfaceStyle = AppDelegate.shared.window?.traitCollection.userInterfaceStyle {
             systemMode = userInterfaceStyle == .dark
         }
-        if (systemMode != isDark) {
+        if systemMode != isDark {
             var themeProvider: AppThemeProvider
             switch self {
             case .light(let colorSwatch):
@@ -201,7 +198,6 @@ enum AppThemeProvider: ThemeProvider {
             appThemeProvider.switch(themeProvider)
         default: break
         }
-        
     }
     private func switchDark() {
         switch self {
@@ -213,7 +209,6 @@ enum AppThemeProvider: ThemeProvider {
         default: break
         }
     }
-    
     func switchWithColor(_ colorSwatch: AppColorSwatch) {
         var themeProvider: AppThemeProvider
         switch self {
@@ -227,17 +222,12 @@ enum AppThemeProvider: ThemeProvider {
         switch displayMode {
         case .inferred:
             switchInferred()
-            break
         case .light:
             switchLight()
-            break
         case .dark:
             switchDark()
-            break
         }
     }
-    
-    
 }
 extension AppThemeProvider {
     static func currentTheme() -> AppThemeProvider {

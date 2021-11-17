@@ -9,9 +9,10 @@ import ESTabBarController_swift
 import RxSwift
 import RxCocoa
 import RxTheme
-//import FSPagerView
+
+// import FSPagerView
 //
-//extension ThemeProxy where Base: ESTabBarItemContentView {
+// extension ThemeProxy where Base: ESTabBarItemContentView {
 //    var iconColor: ThemeAttribute<UIColor> {
 //        get { fatalError("set only") }
 //        set {
@@ -56,7 +57,7 @@ import RxTheme
 //            hold(disposable, for: "highlightIconColor")
 //        }
 //    }
-//}
+// }
 extension ThemeProxy where Base: UIApplication {
     var statusBarStyle: ThemeAttribute<UIStatusBarStyle> {
         get { fatalError("set only") }
@@ -70,7 +71,7 @@ extension ThemeProxy where Base: UIApplication {
     }
 }
 
-//extension ThemeProxy where Base: FSPageControl {
+// extension ThemeProxy where Base: FSPageControl {
 //    
 //    func fillColor(from newValue: ThemeAttribute<UIColor?>, for state: UIControl.State) {
 //        base.setFillColor(newValue.value, for: state)
@@ -80,4 +81,4 @@ extension ThemeProxy where Base: UIApplication {
 //            .bind(to: base.rx.fillColor(for: state))
 //        hold(disposable, for: "fillColor.forState.\(state.rawValue)")
 //    }
-//}
+// }

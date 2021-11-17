@@ -8,8 +8,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
-//import FSPagerView
-
+// import FSPagerView
 extension Reactive where Base: UIApplication {
     var statusBarStyle: Binder<UIStatusBarStyle> {
         return Binder(self.base) { view, attr in
@@ -17,11 +16,11 @@ extension Reactive where Base: UIApplication {
         }
     }
 }
-//extension Reactive where Base: FSPageControl {
+// extension Reactive where Base: FSPageControl {
 //    
 //    func fillColor(for state: UIControl.State) -> Binder<UIColor?>  {
 //        return Binder(self.base) { view, attr in
 //            view.setFillColor(attr, for: state)
 //        }
 //    }
-//}
+// }

@@ -9,7 +9,7 @@ import Foundation
 import AMapLocationKit
 import AMapFoundationKit
 
-typealias QYMapLocationCompletionBlock = ((_ location: CLLocation?,_ regeocode:AMapLocationReGeocode?, _ error: QYLocationError?) -> Void)
+typealias QYMapLocationCompletionBlock = ((_ location: CLLocation?, _ regeocode:AMapLocationReGeocode?, _ error: QYLocationError?) -> Void)
 
 /// 定位管理者
 class QYMapLocationManager: NSObject {
@@ -18,7 +18,6 @@ class QYMapLocationManager: NSObject {
         didSet {
             locationManager.desiredAccuracy = desiredAccuracy
         }
-        
     }
     /// 指定定位是否会被系统自动暂停。默认为false。
     var pausesLocationUpdatesAutomatically: Bool = false {
@@ -49,8 +48,7 @@ class QYMapLocationManager: NSObject {
         }
         return Static.kbPhotoManager
     }
-    
-    
+
     private override init() {
         super.init()
     }
@@ -93,10 +91,8 @@ extension QYMapLocationManager {
             completionBlock(location, regeocode, nil)
         }
     }
-    
 }
 extension QYMapLocationManager: AMapLocationManagerDelegate {
-    
     /// 需要后台定位才会用到的
     func amapLocationManager(_ manager: AMapLocationManager!, doRequireLocationAuth locationManager: CLLocationManager!) {
         locationManager.requestAlwaysAuthorization()

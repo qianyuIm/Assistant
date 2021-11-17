@@ -11,7 +11,7 @@ import UIKit
 struct AppSettingCellViewModel {
     var title: String
     var iconImage: UIImage?
-    var arrowImage: UIImage? = nil
+    var arrowImage: UIImage?
     var pattern: String
-    var link: String? = nil
+    var link: String?
 }

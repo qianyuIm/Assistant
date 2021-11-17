@@ -18,20 +18,16 @@ private let kSupplementaryHeaderKind = "small-header-element-kind"
 
 class SmallWidgetController: AppBaseCollectionVMController {
 
-    var listViewDidScrollCallback: ((UIScrollView) -> ())?
-    
+    var listViewDidScrollCallback: ((UIScrollView) -> Void)?
     var timer: Schedule.Task?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTimer()
-        
     }
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                              heightDimension: .estimated(QYInch.Widget.smallSize.height))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(QYInch.Widget.smallSize.width),
                                               heightDimension: .estimated(QYInch.Widget.smallSize.height))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -66,13 +62,12 @@ class SmallWidgetController: AppBaseCollectionVMController {
             self.timerUpdate()
         }
     }
-    
+
     func timerUpdate() {
         guard let viewModel = viewModel as? SmallWidgetViewModel else { return  }
         guard let dataSource = viewModel.dataSource else { return }
         for visibleCell in self.collectionView.visibleCells {
-            if let indexPath = self.collectionView.indexPath(for: visibleCell)
-                {
+            if let indexPath = self.collectionView.indexPath(for: visibleCell) {
                 let section = dataSource[indexPath.section]
                 let item = section.items[indexPath.item]
                 switch item {
@@ -80,10 +75,8 @@ class SmallWidgetController: AppBaseCollectionVMController {
                     (visibleCell as? SmallWidgetFlipClockCell)?.config(with: attributes)
                 }
             }
-            
         }
     }
-    
 }
 extension SmallWidgetController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -122,21 +115,19 @@ extension SmallWidgetController: UICollectionViewDataSource {
             cell.config(with: attributes)
             return cell
         }
-    }
-    
-    
+    }   
 }
-//MARK: JXPagingViewListViewDelegate
-extension SmallWidgetController:  JXPagingViewListViewDelegate {
+// MARK: - JXPagingViewListViewDelegate
+extension SmallWidgetController: JXPagingViewListViewDelegate {
     func listView() -> UIView {
         return view
     }
-    
+
     func listScrollView() -> UIScrollView {
         return collectionView
     }
-    
-    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> ()) {
+
+    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> Void) {
         self.listViewDidScrollCallback = callback
     }
     func listWillAppear() {
@@ -145,5 +136,5 @@ extension SmallWidgetController:  JXPagingViewListViewDelegate {
     func listWillDisappear() {
         self.timer?.suspend()
     }
-    
+
 }

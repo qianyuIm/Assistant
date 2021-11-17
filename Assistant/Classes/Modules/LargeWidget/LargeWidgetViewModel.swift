@@ -8,7 +8,6 @@
 import RxSwift
 import RxCocoa
 
-
 class LargeWidgetViewModel: AppViewModel {
     var dataSource: [LargeWidgetSection]?
     required init() {
@@ -17,9 +16,7 @@ class LargeWidgetViewModel: AppViewModel {
     }
 }
 
-
 extension LargeWidgetViewModel {
-    
     func config() -> [LargeWidgetSection] {
         let recommendSection = LargeWidgetSection
             .recommendSection(supplementary:
@@ -36,7 +33,6 @@ extension LargeWidgetViewModel {
                                 .flipClockItem(attributes: AppWidgetAttributes()),
                                 .flipClockItem(attributes: AppWidgetAttributes()),
                                 .flipClockItem(attributes: AppWidgetAttributes())
-                                
                               ])
         let generalToolsSection = LargeWidgetSection
             .generalToolsSection(supplementary:
@@ -55,8 +51,6 @@ extension LargeWidgetViewModel {
                                     .flipClockItem(attributes: AppWidgetAttributes()),
                                     .flipClockItem(attributes: AppWidgetAttributes())
                                  ])
-        
-        
-        return [recommendSection,generalToolsSection]
+        return [recommendSection, generalToolsSection]
     }
 }

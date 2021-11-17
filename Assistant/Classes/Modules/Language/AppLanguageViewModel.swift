@@ -28,7 +28,6 @@ extension AppLanguageSection: SectionModelType {
 }
 
 class AppLanguageViewModel: AppViewModel {
-    
     struct Input {
         let trigger: Observable<Void>
         let saveTrigger: Driver<Void>
@@ -62,14 +61,11 @@ extension AppLanguageViewModel: AppViewModelable {
             }
             return strongSelf.config()
         }.bind(to: dataSource).disposed(by: rx.disposeBag)
-        
         let saved = input.saveTrigger.map { () -> Void in
             let language = self.currentLanguage.value
             QYConfig.Language.autoSystem = (QYConfig.Language.auto == language)
             QYConfig.Language.setCurrentLanguage(language)
         }
-        
-            
         return Output(dataSource: dataSource,
                       saveEnabled: saveEnabled,
                       saved: saved.asDriver(onErrorJustReturn: ()))

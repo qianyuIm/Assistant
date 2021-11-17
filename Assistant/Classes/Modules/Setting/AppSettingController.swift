@@ -9,11 +9,8 @@ import UIKit
 import RxDataSources
 import RxSwift
 import RxCocoa
-
-//private let reuseIdentifier = R.reuseIdentifier.appSettingCell.identifier
-
+// private let reuseIdentifier = R.reuseIdentifier.appSettingCell.identifier
 class AppSettingController: AppBaseCollectionVMController {
-    
     lazy var dataSource: RxCollectionViewSectionedReloadDataSource<AppSettingSection> = {
         return RxCollectionViewSectionedReloadDataSource<AppSettingSection> { dataSource, collectionView, indexPath, item in
             switch item {
@@ -38,10 +35,8 @@ class AppSettingController: AppBaseCollectionVMController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
-    
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -53,7 +48,6 @@ class AppSettingController: AppBaseCollectionVMController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-    
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(nibWithCellClass: AppSettingCell.self)
@@ -71,13 +65,9 @@ class AppSettingController: AppBaseCollectionVMController {
                                               selection: collectionView.rx.modelSelected(AppSettingSectionItem.self).asDriver())
         let output = viewModel.transform(input: input)
         output.dataSource.bind(to: collectionView.rx.items(dataSource: dataSource)).disposed(by: rx.disposeBag)
-        
-        viewModel.itemSelected.subscribe (onNext: { cellViewModel in
+        viewModel.itemSelected.subscribe(onNext: { cellViewModel in
             AppRouter.shared.open(cellViewModel.pattern, context: nil)
         }).disposed(by: rx.disposeBag)
     }
-    
 }
-extension AppSettingController {
-    
-}
+extension AppSettingController {}

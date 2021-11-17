@@ -18,20 +18,16 @@ private let kSupplementaryHeaderKind = "medium-header-element-kind"
 
 class MediumWidgetController: AppBaseCollectionVMController {
 
-    var listViewDidScrollCallback: ((UIScrollView) -> ())?
-    
+    var listViewDidScrollCallback: ((UIScrollView) -> Void)?
     var timer: Schedule.Task?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTimer()
-        
     }
     override func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                              heightDimension: .estimated(QYInch.Widget.mediumSize.height))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-
-        
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(QYInch.Widget.mediumSize.width),
                                               heightDimension: .estimated(QYInch.Widget.mediumSize.height))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
@@ -51,7 +47,6 @@ class MediumWidgetController: AppBaseCollectionVMController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-    
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: MediumWidgetFlipClockCell.self)
@@ -66,13 +61,11 @@ class MediumWidgetController: AppBaseCollectionVMController {
             self.timerUpdate()
         }
     }
-    
     func timerUpdate() {
         guard let viewModel = viewModel as? MediumWidgetViewModel else { return  }
         guard let dataSource = viewModel.dataSource else { return }
         for visibleCell in self.collectionView.visibleCells {
-            if let indexPath = self.collectionView.indexPath(for: visibleCell)
-                {
+            if let indexPath = self.collectionView.indexPath(for: visibleCell) {
                 let section = dataSource[indexPath.section]
                 let item = section.items[indexPath.item]
                 switch item {
@@ -80,10 +73,8 @@ class MediumWidgetController: AppBaseCollectionVMController {
                     (visibleCell as? MediumWidgetFlipClockCell)?.config(with: attributes)
                 }
             }
-            
         }
     }
-    
 }
 extension MediumWidgetController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -123,20 +114,16 @@ extension MediumWidgetController: UICollectionViewDataSource {
             return cell
         }
     }
-    
-    
 }
-//MARK: JXPagingViewListViewDelegate
-extension MediumWidgetController:  JXPagingViewListViewDelegate {
+// MARK: - JXPagingViewListViewDelegate
+extension MediumWidgetController: JXPagingViewListViewDelegate {
     func listView() -> UIView {
         return view
     }
-    
     func listScrollView() -> UIScrollView {
         return collectionView
     }
-    
-    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> ()) {
+    func listViewDidScrollCallback(callback: @escaping (UIScrollView) -> Void) {
         self.listViewDidScrollCallback = callback
     }
     func listWillAppear() {
@@ -145,6 +132,4 @@ extension MediumWidgetController:  JXPagingViewListViewDelegate {
     func listWillDisappear() {
         self.timer?.suspend()
     }
-    
 }
-

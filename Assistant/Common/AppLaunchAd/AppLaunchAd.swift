@@ -28,7 +28,7 @@ class AppLaunchAd: NSObject {
         let enterBackgroundTime = Defaults[\.enterBackgroundTimeKey]
         let time = Date().timeIntervalSince1970
         Defaults[\.enterBackgroundTimeKey] = time
-        if (time - enterBackgroundTime > QYConfig.showEnterForegroundAdTimeInterval) {
+        if time - enterBackgroundTime > QYConfig.showEnterForegroundAdTimeInterval {
             adConfig.showEnterForeground = true
         } else {
             adConfig.showEnterForeground = false
@@ -36,16 +36,13 @@ class AppLaunchAd: NSObject {
     }
     @objc fileprivate func setupLaunchAd() {
         XHLaunchAdButton.fixSwizzleMethord()
-        
         XHLaunchAd.setLaunch(.launchScreen)
         XHLaunchAd.setWaitDataDuration(1)
-        
         self.launchImageAdConfig(url: self.scale3Url,scale: 3)
         
     }
     fileprivate func launchImageAdConfig(url: String?,scale: Int) {
         guard let url = url else { return  }
-        
         adConfig.duration = 2
         /*if scale == 2 {
          adConfig.frame = UIScreen.main.bounds
@@ -62,17 +59,16 @@ class AppLaunchAd: NSObject {
         adConfig.showFinishAnimate = .fadein
         adConfig.skipButtonType = .timeText
         XHLaunchAd.imageAd(with: adConfig, delegate: self)
-        
     }
 }
 
 extension XHLaunchAdButton {
-    public class func fixSwizzleMethord(){
+    public class func fixSwizzleMethord() {
         let originSelector = #selector(XHLaunchAdButton.init(skipType:))
         let swizzleSelector = #selector(XHLaunchAdButton.fixInit(skipType:))
         swizzleMethod(for: XHLaunchAdButton.self, originalSelector: originSelector, swizzledSelector: swizzleSelector)
     }
-    @objc func fixInit(skipType: SkipType) ->  XHLaunchAdButton{
+    @objc func fixInit(skipType: SkipType) -> XHLaunchAdButton {
         let adButton = fixInit(skipType: skipType)
         var frame = adButton.frame
         frame.origin.y = QYInch.statusBarHeight
@@ -80,6 +76,4 @@ extension XHLaunchAdButton {
         return adButton
     }
 }
-
-
 extension AppLaunchAd: XHLaunchAdDelegate {}

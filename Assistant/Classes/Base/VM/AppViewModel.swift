@@ -24,16 +24,14 @@ class AppViewModel {
     /// 全部自定义的error
     let errorWrap = BehaviorRelay<MoyaErrorWrap>(value: MoyaErrorWrap.data)
     required init() {
-        
-        error.asObservable().compactMap { (error)  -> MoyaErrorWrap? in
+        error.asObservable().compactMap { (error) -> MoyaErrorWrap? in
             if let errorResponse = error as? MoyaError {
                 return errorResponse.asMoyaErrorWrap()
             } else {
                 return nil
             }
         }.bind(to: errorWrap).disposed(by: rx.disposeBag)
-        
+
     }
 }
 extension AppViewModel: HasDisposeBag, ReactiveCompatible {}
-

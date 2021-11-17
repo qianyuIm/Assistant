@@ -25,7 +25,6 @@ extension MyWidgetsViewModel: AppViewModelable {
             }
             return strongSelf.configDataSource()
         }.bind(to: dataSource).disposed(by: rx.disposeBag)
-        
         return Output(dataSource: dataSource)
     }
     func configDataSource() -> Observable<[AppHomeWidgetSection]> {
@@ -35,6 +34,6 @@ extension MyWidgetsViewModel: AppViewModelable {
         let mediumSection = AppHomeWidgetSection.small(title: medium)
         let large = R.string.localizable.widgetSegmentLarge.key.app.localized()
         let largeSection = AppHomeWidgetSection.small(title: large)
-        return Observable.just([smallSection,mediumSection,largeSection])
+        return Observable.just([smallSection, mediumSection, largeSection])
     }
 }

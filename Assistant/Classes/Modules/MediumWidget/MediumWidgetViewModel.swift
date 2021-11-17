@@ -8,17 +8,13 @@
 import Foundation
 
 class MediumWidgetViewModel: AppViewModel {
-    
     var dataSource: [MediumWidgetSection]?
     required init() {
         super.init()
         self.dataSource = config()
     }
 }
-
-
 extension MediumWidgetViewModel {
-    
     func config() -> [MediumWidgetSection] {
         let recommendSection = MediumWidgetSection
             .recommendSection(supplementary:
@@ -35,7 +31,6 @@ extension MediumWidgetViewModel {
                                 .flipClockItem(attributes: AppWidgetAttributes()),
                                 .flipClockItem(attributes: AppWidgetAttributes()),
                                 .flipClockItem(attributes: AppWidgetAttributes())
-                                
                               ])
         let generalToolsSection = MediumWidgetSection
             .generalToolsSection(supplementary:
@@ -54,8 +49,6 @@ extension MediumWidgetViewModel {
                                     .flipClockItem(attributes: AppWidgetAttributes()),
                                     .flipClockItem(attributes: AppWidgetAttributes())
                                  ])
-        
-        
-        return [recommendSection,generalToolsSection]
+        return [recommendSection, generalToolsSection]
     }
 }

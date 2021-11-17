@@ -156,7 +156,7 @@ DEPENDENCIES:
   - SPPermissions (~> 6.7.1)
   - SwiftDate (~> 6.3.1)
   - SwiftEntryKit (~> 2.0.0)
-  - SwiftLint
+  - SwiftLint (~> 0.45.0)
   - SwiftRichString (~> 3.7.2)
   - SwiftyBeaver (~> 1.9.5)
   - SwiftyUserDefaults (~> 5.3.0)
@@ -289,6 +289,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: fcaffbbc99d2a3f2d03d5c4e60046d00e06e828e
+PODFILE CHECKSUM: ef64ddafd07b54e68601804acaeee37ec02ad415
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.2

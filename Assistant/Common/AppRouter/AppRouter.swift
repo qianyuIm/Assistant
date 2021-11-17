@@ -8,7 +8,6 @@
 import Foundation
 import URLNavigator
 
-
 /// 可以作为参数回调
 typealias AppRouterContextCompletionHandler = ((_ result: [String: Any]?) -> Void)
 /// 登录结果Key值
@@ -33,19 +32,14 @@ class AppRouter {
             AppRouterLaunchPlugin(),
             AppRouterAccountPlugin()
         ])
-        
     }
     /// 初始化 空实现
     func initRouter() {}
-    
 }
 
 extension AppRouter {
     @discardableResult
     func open(_ url: URLConvertible, context: AppRouterContext? = nil) -> Bool {
-        
         return routerProvider.open(url, context: context)
     }
 }
-
-

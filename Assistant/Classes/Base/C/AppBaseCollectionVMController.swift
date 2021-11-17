@@ -10,9 +10,7 @@ import EmptyDataSet_Swift
 import RxCocoa
 import RxSwift
 
-
 class AppBaseCollectionVMController: AppBaseVMController {
-    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.createLayout())
         if #available(iOS 11.0, *) {
@@ -26,10 +24,8 @@ class AppBaseCollectionVMController: AppBaseVMController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
     }
-    
     func createLayout() -> UICollectionViewLayout {
         return UICollectionViewFlowLayout()
     }
@@ -43,12 +39,10 @@ class AppBaseCollectionVMController: AppBaseVMController {
             make.edges.equalToSuperview()
         }
     }
-    
     override func setupTheme() {
         super.setupTheme()
         collectionView.theme.backgroundColor = appThemeProvider.attribute { $0.backgroundColor }
     }
-    
     override func bindViewModel() {
         super.bindViewModel()
         guard viewModel != nil else {
@@ -57,26 +51,20 @@ class AppBaseCollectionVMController: AppBaseVMController {
         let loading = isLoading
             .distinctUntilChanged()
             .mapToVoid()
-        
         let network = QYReachability.shared.reachabilityConnection
             .skip(1)
             .distinctUntilChanged()
             .mapToVoid()
-        
-        Observable.of(loading,network)
+        Observable.of(loading, network)
             .merge()
             .bind(to: collectionView.rx.reloadEmptyData)
             .disposed(by: rx.disposeBag)
-        
         bindHeader()
         bindFooter()
-        
     }
-    
 }
 
 private extension AppBaseCollectionVMController {
-    
     // MARK: - 绑定头部刷新回调和头部刷新状态
     private func bindHeader() {
         guard let refreshHeader = collectionView.mj_header,
@@ -85,14 +73,12 @@ private extension AppBaseCollectionVMController {
         refreshHeader.rx.refreshing
             .bind(to: viewModel.refreshInput.beginHeaderRefresh)
             .disposed(by: rx.disposeBag)
-        
         // 头部状态
         viewModel
             .refreshOutput
             .headerRefreshState
             .drive(refreshHeader.rx.isRefreshing)
             .disposed(by: rx.disposeBag)
-        
         // 失败时的头部状态
         viewModel
             .error
@@ -108,14 +94,12 @@ private extension AppBaseCollectionVMController {
         refreshFooter.rx.refreshing
             .bind(to: viewModel.refreshInput.beginFooterRefresh)
             .disposed(by: rx.disposeBag)
-        
         // 尾部状态
         viewModel
             .refreshOutput
             .footerRefreshState
             .drive(refreshFooter.rx.refreshFooterState)
             .disposed(by: rx.disposeBag)
-        
         // 失败时的尾部状态
         viewModel
             .error
@@ -125,6 +109,5 @@ private extension AppBaseCollectionVMController {
             }
             .drive(refreshFooter.rx.refreshFooterState)
             .disposed(by: rx.disposeBag)
-        
     }
 }

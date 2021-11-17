@@ -13,7 +13,6 @@ class AppBaseController: UIViewController, AppRouterable {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return globalStatusBarStyle.value
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepare()
@@ -23,7 +22,6 @@ class AppBaseController: UIViewController, AppRouterable {
         setupTheme()
         setupLanguage()
     }
-    
     /// 1. 常量设置
     func prepare() {}
     /// 2. 通知
@@ -39,23 +37,20 @@ class AppBaseController: UIViewController, AppRouterable {
         view.theme.backgroundColor = appThemeProvider.attribute { $0.backgroundColor }
 
         UIApplication.shared.theme.statusBarStyle = appThemeProvider.attribute { $0.statusBarStyle }
-        
         appThemeProvider.typeStream.subscribe(onNext: { [weak self](theme) in
             guard let strongSelf = self else { return }
-            
             /// 需要异步执行
             DispatchQueue.main.async {
                 strongSelf.setNeedsStatusBarAppearanceUpdate()
                 strongSelf.hbd_setNeedsUpdateNavigationBar()
             }
         }).disposed(by: rx.disposeBag)
-       
     }
     /// 6. 语言设置
     @objc func setupLanguage() {
         QYLogger.debug("改变")
     }
-    //MARK: -- AppRouterable
+    // MARK: - AppRouterable
     func routerOpen(with completion: (() -> Void)?) {
         guard let controller = UIViewController.topMost else {
             return
@@ -65,19 +60,16 @@ class AppBaseController: UIViewController, AppRouterable {
             CATransaction.setCompletionBlock(completion)
             navigation.pushViewController(self, animated: true)
             CATransaction.commit()
-            
         } else if let navigation = controller.navigationController {
             CATransaction.begin()
             CATransaction.setCompletionBlock(completion)
             navigation.pushViewController(self, animated: true)
             CATransaction.commit()
-            
         } else {
             let navigation = UINavigationController(rootViewController: self)
             controller.present(navigation, animated: true, completion: completion)
         }
     }
-    
     func routerClose(with completion: (() -> Void)?) {
         guard
             let navigation = navigationController,
@@ -90,14 +82,12 @@ class AppBaseController: UIViewController, AppRouterable {
             dismiss(animated: true) { [weak self] in self?.routerClose(with: completion) }
             return
         }
-        
         func parents(_ controller: UIViewController) -> [UIViewController] {
             guard let parent = controller.parent else {
                 return [controller]
             }
             return [controller] + parents(parent)
         }
-        
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
         if let top = navigation.topViewController, parents(self).contains(top) {
@@ -108,10 +98,7 @@ class AppBaseController: UIViewController, AppRouterable {
         }
         CATransaction.commit()
     }
-    
     deinit {
         QYLogger.debug("\(self) 移除了")
     }
-    
 }
-

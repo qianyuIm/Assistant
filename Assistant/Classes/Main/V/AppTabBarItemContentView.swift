@@ -12,7 +12,7 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
     private let duration = 0.3
     override init(frame: CGRect) {
         super.init(frame: frame)
-        appThemeProvider.typeStream.subscribe(onNext:{ [weak self] themeType in
+        appThemeProvider.typeStream.subscribe(onNext: { [weak self] themeType in
             let tabbarTheme = themeType.associatedObject.tabbarTheme
             self?.textColor = tabbarTheme.textColor
             self?.highlightTextColor = tabbarTheme.highlightIconColor
@@ -49,10 +49,8 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
     override func updateLayout() {
         let w = self.bounds.size.width
         let h = self.bounds.size.height
-        
         imageView.isHidden = (imageView.image == nil)
         titleLabel.isHidden = (titleLabel.text == nil)
-        
         if self.itemContentMode == .alwaysTemplate {
             var s: CGFloat = 0.0 // image size
             let f: CGFloat = 11.0 // font
@@ -68,7 +66,6 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
                 s = 23.0
                 //                f = 10.0
             }
-            
             if !imageView.isHidden && !titleLabel.isHidden {
                 titleLabel.font = QYFont.fontSemibold(f, isAuto: false)
                 titleLabel.sizeToFit()
@@ -104,17 +101,16 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
                                                width: titleLabel.bounds.size.width,
                                                height: titleLabel.bounds.size.height)
             }
-            
-            if let _ = badgeView.superview {
-                let size = badgeView.sizeThatFits(self.frame.size)
-                if #available(iOS 11.0, *), isWide {
-                    badgeView.frame = CGRect.init(origin: CGPoint.init(x: imageView.frame.midX - 3 + badgeOffset.horizontal, y: imageView.frame.midY + 3 + badgeOffset.vertical), size: size)
-                } else {
-                    badgeView.frame = CGRect.init(origin: CGPoint.init(x: w / 2.0 + badgeOffset.horizontal, y: h / 2.0 + badgeOffset.vertical), size: size)
-                }
-                badgeView.setNeedsLayout()
+            guard badgeView.superview != nil else {
+                return
             }
-            
+            let size = badgeView.sizeThatFits(self.frame.size)
+            if #available(iOS 11.0, *), isWide {
+                badgeView.frame = CGRect.init(origin: CGPoint.init(x: imageView.frame.midX - 3 + badgeOffset.horizontal, y: imageView.frame.midY + 3 + badgeOffset.vertical), size: size)
+            } else {
+                badgeView.frame = CGRect.init(origin: CGPoint.init(x: w / 2.0 + badgeOffset.horizontal, y: h / 2.0 + badgeOffset.vertical), size: size)
+            }
+            badgeView.setNeedsLayout()
         } else {
             if !imageView.isHidden && !titleLabel.isHidden {
                 titleLabel.sizeToFit()
@@ -134,13 +130,12 @@ class AppTabBarItemContentView: ESTabBarItemContentView {
                 titleLabel.sizeToFit()
                 titleLabel.center = CGPoint.init(x: w / 2.0, y: h / 2.0)
             }
-            
-            if let _ = badgeView.superview {
-                let size = badgeView.sizeThatFits(self.frame.size)
-                badgeView.frame = CGRect.init(origin: CGPoint.init(x: w / 2.0 + badgeOffset.horizontal, y: h / 2.0 + badgeOffset.vertical), size: size)
-                badgeView.setNeedsLayout()
+            guard badgeView.superview != nil else {
+                return
             }
+            let size = badgeView.sizeThatFits(self.frame.size)
+            badgeView.frame = CGRect.init(origin: CGPoint.init(x: w / 2.0 + badgeOffset.horizontal, y: h / 2.0 + badgeOffset.vertical), size: size)
+            badgeView.setNeedsLayout()
         }
     }
-    
 }

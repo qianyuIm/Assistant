@@ -4,6 +4,7 @@ disabled_rules:
   - unused_closure_parameter
   - cyclomatic_complexity
   - nesting
+  - type_name
   
 included:
   - Assistant
@@ -17,6 +18,7 @@ excluded:
   
 # 单行代码长度
 line_length: 300
+
 
 # 函数长度
 function_body_length:
