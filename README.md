@@ -1,6 +1,9 @@
 # Assistant
 widgets 助手
 
+  忽略代码: > // swiftlint:disable
+    
+    
 ### bug1: QYAlert 使用 SwiftEntryKit2.0.0 状态栏相关等待修复
 ### bug2: Language 和 Theme 点击的时候 整体刷新
 

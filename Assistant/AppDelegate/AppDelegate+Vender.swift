@@ -18,7 +18,7 @@ import SwiftDate
 
 extension AppDelegate {
     /// 配置第三方
-    func _configurationVenders(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    func configurationVenders(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         _setupSwiftyBeaver()
         _setupSwiftDate()
         _setupAMap()

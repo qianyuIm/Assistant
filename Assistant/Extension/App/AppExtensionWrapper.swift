@@ -21,6 +21,7 @@ protocol AppExtensionCompatible {
 }
 
 extension AppExtensionCompatible {
+    // swiftlint:disable unused_setter_value
     public static var app: AppExtensionWrapper<Self>.Type {
         get {
             return AppExtensionWrapper<Self>.self
@@ -29,6 +30,7 @@ extension AppExtensionCompatible {
             // this enables using Reactive to "mutate" base type
         }
     }
+    // swiftlint:disable unused_setter_value
     public var app: AppExtensionWrapper<Self> {
         get {
             return AppExtensionWrapper(self)

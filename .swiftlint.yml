@@ -1,0 +1,39 @@
+# 禁止
+disabled_rules:
+  - missing_docs
+  - unused_closure_parameter
+  - cyclomatic_complexity
+  - nesting
+  
+included:
+  - Assistant
+  
+# 忽略
+excluded:
+  - Pods
+  - Assistant/Resources/R.generated.swift
+  - Assistant/Assistant/Third Party
+  - Assistant/Common/AppIconFont/AppIconFontIcons.swift
+  
+# 单行代码长度
+line_length: 300
+
+# 函数长度
+function_body_length:
+  - 300 # warning
+  - 400 # error
+
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  excluded: # excluded via string array
+    - vc
+    - id
+    - in
+    - kf
+    - x
+    - y
+    - f
+    - s
+    - w
+    - h

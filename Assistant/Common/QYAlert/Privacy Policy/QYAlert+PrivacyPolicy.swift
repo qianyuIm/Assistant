@@ -85,8 +85,8 @@ private extension QYAlert {
     }
     class func showPrivacyPolicy() {
         let privacyPolicyController = QYPrivacyPolicyController()
-        let na = AppNavigationController(rootViewController: privacyPolicyController)
-        SwiftEntryKit.display(entry: na, using: launchPrivacyPolicyAttributes())
+        let naVc = AppNavigationController(rootViewController: privacyPolicyController)
+        SwiftEntryKit.display(entry: naVc, using: launchPrivacyPolicyAttributes())
     }
 }
 private class QYPrivacyPolicyController: UIViewController {

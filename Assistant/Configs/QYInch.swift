@@ -10,7 +10,7 @@ import AutoInch
 
 struct QYInch {
     static private var _isAdapter: Bool = false
-    static func _adapter() {
+    static func adapter() {
         if (!_isAdapter) {
             _isAdapter = true
             Auto.set { origin in

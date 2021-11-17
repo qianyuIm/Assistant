@@ -48,6 +48,7 @@
 		EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA564E5273D01EA00B4F9DE /* Navigation.strings */; };
 		EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */; };
 		EFB0C2DD2744F1C8008C83F2 /* AppWidgetEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */; };
+		EFB0C2E22744F8F7008C83F2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EFB0C2E12744F8F7008C83F2 /* .swiftlint.yml */; };
 		EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A0B2738B41B00E28F27 /* Widgets.strings */; };
 		EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A112738B47400E28F27 /* Transparent.strings */; };
 		EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EFD03A222738B7EC00E28F27 /* simpleTeachVideo.mp4 */; };
@@ -299,6 +300,7 @@
 		EFA564E6273D01EB00B4F9DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Navigation.strings"; sourceTree = "<group>"; };
 		EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetBackgroundView.swift; sourceTree = "<group>"; };
 		EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetEditController.swift; sourceTree = "<group>"; };
+		EFB0C2E12744F8F7008C83F2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		EFD03A0A2738B41B00E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Widgets.strings; sourceTree = "<group>"; };
 		EFD03A0C2738B41D00E28F27 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Widgets.strings"; sourceTree = "<group>"; };
 		EFD03A102738B47400E28F27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Transparent.strings; sourceTree = "<group>"; };
@@ -936,6 +938,7 @@
 		EFD4ABDB27336BBE000B2350 /* Configs */ = {
 			isa = PBXGroup;
 			children = (
+				EFB0C2E12744F8F7008C83F2 /* .swiftlint.yml */,
 				EF0AAA752734D632006CEED0 /* README.md */,
 				EFD4ABDF27336D6D000B2350 /* .gitignore */,
 				EFD4AC0227336F3F000B2350 /* QYInch.swift */,
@@ -1563,6 +1566,7 @@
 				EFD4AB9F2733674C000B2350 /* Resources */,
 				150AC99CC1175145037575B8 /* [CP] Embed Pods Frameworks */,
 				EF6A21282735238300691B3A /* Embed App Extensions */,
+				EFB0C2E02744F8A8008C83F2 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -1669,6 +1673,7 @@
 				EFD03A4F2738BA9100E28F27 /* trasparentStep1.mp4 in Resources */,
 				EFD03A4B2738BA8700E28F27 /* trasparentStep3.mp4 in Resources */,
 				EF6A21562735306000691B3A /* AppSettingCell.xib in Resources */,
+				EFB0C2E22744F8F7008C83F2 /* .swiftlint.yml in Resources */,
 				EFD4ABB12733674E000B2350 /* LaunchScreen.storyboard in Resources */,
 				EFD03A5B2738BB0C00E28F27 /* widget_create_guide_medium.mp4 in Resources */,
 				EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */,
@@ -1739,6 +1744,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		EFB0C2E02744F8A8008C83F2 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n\n";
 		};
 		EFD4AC0427337016000B2350 /* R.Swift */ = {
 			isa = PBXShellScriptBuildPhase;

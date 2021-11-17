@@ -7,29 +7,28 @@
 
 import UIKit
 
-public enum QYButtonImagePosition {
+ enum QYButtonImagePosition {
     case top // imageView在titleLabel上面
     case left // imageView在titleLabel左边
     case bottom // imageView在titleLabel下面
     case right // imageView在titleLabel右边
 }
-
-public class QYButton: UIButton {
+// swiftlint:disable type_body_length
+class QYButton: UIButton {
     /**
      * 让按钮的文字颜色自动跟随tintColor调整（系统默认titleColor是不跟随的）<br/>
      * 默认为 false
      */
-    @IBInspectable public var adjustsTitleTintColorAutomatically: Bool = false {
+    @IBInspectable  var adjustsTitleTintColorAutomatically: Bool = false {
         didSet {
             updateTitleColorIfNeeded()
         }
     }
-    
     /**
      * 让按钮的图片颜色自动跟随tintColor调整（系统默认image是需要更改renderingMode才可以达到这种效果）<br/>
      * 默认为 false
      */
-    @IBInspectable public var adjustsImageTintColorAutomatically: Bool = false {
+    @IBInspectable var adjustsImageTintColorAutomatically: Bool = false {
         didSet {
             let valueDifference = adjustsImageTintColorAutomatically != oldValue
             if valueDifference {
@@ -37,20 +36,19 @@ public class QYButton: UIButton {
             }
         }
     }
-
     /**
      *  等价于 adjustsTitleTintColorAutomatically = YES & adjustsImageTintColorAutomatically = YES & tintColor = xxx
      *  @note 一般只使用这个属性的 setter，而 getter 永远返回 self.tintColor
      *  @warning 不支持传 nil
      */
-    @IBInspectable public var tintColorAdjustsTitleAndImage: UIColor {
+    @IBInspectable  var tintColorAdjustsTitleAndImage: UIColor {
+        get {
+            return tintColor
+        }
         set {
             tintColor = newValue
             adjustsTitleTintColorAutomatically = true
             adjustsImageTintColorAutomatically = true
-        }
-        get {
-            return tintColor
         }
     }
 
@@ -58,20 +56,20 @@ public class QYButton: UIButton {
      * 是否自动调整highlighted时的按钮样式，默认为YES。<br/>
      * 当值为YES时，按钮highlighted时会改变自身的alpha属性为<b>ButtonHighlightedAlpha</b>
      */
-    @IBInspectable public var adjustsButtonWhenHighlighted: Bool = true
+    @IBInspectable  var adjustsButtonWhenHighlighted: Bool = true
 
     /**
      * 是否自动调整disabled时的按钮样式，默认为YES。<br/>
      * 当值为YES时，按钮disabled时会改变自身的alpha属性为<b>ButtonDisabledAlpha</b>
      */
-    @IBInspectable public var adjustsButtonWhenDisabled: Bool = true
+    @IBInspectable  var adjustsButtonWhenDisabled: Bool = true
 
     /**
      * 设置按钮点击时的背景色，默认为nil。
      * @warning 不支持带透明度的背景颜色。当设置<i>highlightedBackgroundColor</i>时，会强制把<i>adjustsButtonWhenHighlighted</i>设为NO，避免两者效果冲突。
      * @see adjustsButtonWhenHighlighted
      */
-    @IBInspectable public var highlightedBackgroundColor: UIColor? {
+    @IBInspectable  var highlightedBackgroundColor: UIColor? {
         didSet {
             if highlightedBackgroundColor != nil {
                 // 只要开启了highlightedBackgroundColor，就默认不需要alpha的高亮
@@ -85,7 +83,7 @@ public class QYButton: UIButton {
      * @warning 当设置<i>highlightedBorderColor</i>时，会强制把<i>adjustsButtonWhenHighlighted</i>设为NO，避免两者效果冲突。
      * @see adjustsButtonWhenHighlighted
      */
-    @IBInspectable public var highlightedBorderColor: UIColor? {
+    @IBInspectable  var highlightedBorderColor: UIColor? {
         didSet {
             if highlightedBorderColor != nil {
                 // 只要开启了highlightedBorderColor，就默认不需要alpha的高亮
@@ -98,7 +96,7 @@ public class QYButton: UIButton {
      * 设置按钮里图标和文字的相对位置，默认为QMUIButtonImagePositionLeft<br/>
      * 可配合imageEdgeInsets、titleEdgeInsets、contentHorizontalAlignment、contentVerticalAlignment使用
      */
-    public var imagePosition: QYButtonImagePosition = .left {
+     var imagePosition: QYButtonImagePosition = .left {
         didSet {
             setNeedsLayout()
         }
@@ -109,19 +107,19 @@ public class QYButton: UIButton {
      * 系统默认实现需要同时设置 titleEdgeInsets 和 imageEdgeInsets，同时还需考虑 contentEdgeInsets 的增加（否则不会影响布局，可能会让图标或文字溢出或挤压），使用该属性可以避免以上情况。<br/>
      * @warning 会与 imageEdgeInsets、 imageEdgeInsets、 contentEdgeInsets 共同作用。
      */
-    @IBInspectable public var spacingBetweenImageAndTitle: CGFloat = 0 {
+    @IBInspectable  var spacingBetweenImageAndTitle: CGFloat = 0 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable public var buttonHighlightedAlpha: CGFloat = 0.5 {
+    @IBInspectable  var buttonHighlightedAlpha: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
         }
     }
     
-    @IBInspectable public var buttonDisabledAlpha: CGFloat = 0.5 {
+    @IBInspectable  var buttonDisabledAlpha: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
         }
@@ -168,7 +166,7 @@ public class QYButton: UIButton {
         imagePosition = .left
     }
 
-    override public func sizeThatFits(_ size: CGSize) -> CGSize {
+    override  func sizeThatFits(_ size: CGSize) -> CGSize {
         var size = size
         // 如果调用 sizeToFit，那么传进来的 size 就是当前按钮的 size，此时的计算不要去限制宽高
         if bounds.size == size {
@@ -231,11 +229,11 @@ public class QYButton: UIButton {
         return resultSize
     }
 
-    override public var intrinsicContentSize: CGSize {
+    override  var intrinsicContentSize: CGSize {
         return sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
     }
     
-    override public func layoutSubviews() {
+    override  func layoutSubviews() {
         super.layoutSubviews()
 
         if bounds.isEmpty {
@@ -471,7 +469,7 @@ public class QYButton: UIButton {
         }
     }
 
-    override public var isHighlighted: Bool {
+    override  var isHighlighted: Bool {
         didSet {
             if isHighlighted && originBorderColor == nil {
                 // 手指按在按钮上会不断触发setHighlighted:，所以这里做了保护，设置过一次就不用再设置了
@@ -498,7 +496,7 @@ public class QYButton: UIButton {
         }
     }
 
-    override public var isEnabled: Bool {
+    override  var isEnabled: Bool {
         didSet {
             if !isEnabled && adjustsButtonWhenDisabled {
                 alpha = buttonDisabledAlpha
@@ -559,7 +557,7 @@ public class QYButton: UIButton {
         }
     }
 
-    override public func setImage(_ image: UIImage?, for state: UIControl.State) {
+    override func setImage(_ image: UIImage?, for state: UIControl.State) {
         var tmpImage = image
         if adjustsImageTintColorAutomatically {
             tmpImage = image?.withRenderingMode(.alwaysTemplate)
@@ -567,7 +565,7 @@ public class QYButton: UIButton {
         super.setImage(tmpImage, for: state)
     }
 
-    override public func tintColorDidChange() {
+    override  func tintColorDidChange() {
         super.tintColorDidChange()
 
         updateTitleColorIfNeeded()
@@ -577,4 +575,3 @@ public class QYButton: UIButton {
         }
     }
 }
-

@@ -108,6 +108,7 @@ PODS:
   - SPPermissions/Core (6.7.1)
   - SwiftDate (6.3.1)
   - SwiftEntryKit (2.0.0)
+  - SwiftLint (0.45.0)
   - SwiftRichString (3.7.2)
   - SwiftyBeaver (1.9.5)
   - SwiftyUserDefaults (5.3.0)
@@ -148,13 +149,14 @@ DEPENDENCIES:
   - RxDataSources (~> 5.0.0)
   - RxReachability (~> 1.2.1)
   - RxTheme (~> 6.0.0)
-  - Schedule
+  - Schedule (~> 2.1.0)
   - SDWebImageFLPlugin (~> 0.5.0)
   - SDWebImageWebPCoder (~> 0.8.4)
   - SnapKit (~> 5.0.1)
   - SPPermissions (~> 6.7.1)
   - SwiftDate (~> 6.3.1)
   - SwiftEntryKit (~> 2.0.0)
+  - SwiftLint
   - SwiftRichString (~> 3.7.2)
   - SwiftyBeaver (~> 1.9.5)
   - SwiftyUserDefaults (~> 5.3.0)
@@ -212,6 +214,7 @@ SPEC REPOS:
     - SPPermissions
     - SwiftDate
     - SwiftEntryKit
+    - SwiftLint
     - SwiftRichString
     - SwiftyBeaver
     - SwiftyUserDefaults
@@ -278,6 +281,7 @@ SPEC CHECKSUMS:
   SPPermissions: c23b7937272b53243707040f092b0fdeacb9ca91
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
@@ -285,6 +289,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: fd00567ac3a335f2038bcaede191d7527fdeaf80
+PODFILE CHECKSUM: fcaffbbc99d2a3f2d03d5c4e60046d00e06e828e
 
 COCOAPODS: 1.10.0

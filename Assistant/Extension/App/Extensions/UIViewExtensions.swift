@@ -7,16 +7,15 @@
 
 import UIKit
 
-
 extension AppExtensionWrapper where Base: UIView {
     var x: CGFloat {
         get {
             return self.base.frame.origin.x
         }
         set {
-            var f = self.base.frame
-            f.origin.x = newValue
-            self.base.frame = f
+            var frame = self.base.frame
+            frame.origin.x = newValue
+            self.base.frame = frame
         }
     }
     var y: CGFloat {
@@ -24,9 +23,9 @@ extension AppExtensionWrapper where Base: UIView {
             return self.base.frame.origin.y
         }
         set {
-            var f = self.base.frame
-            f.origin.y = newValue
-            self.base.frame = f
+            var frame = self.base.frame
+            frame.origin.y = newValue
+            self.base.frame = frame
         }
     }
     var width: CGFloat {
@@ -34,9 +33,9 @@ extension AppExtensionWrapper where Base: UIView {
             return self.base.frame.width
         }
         set {
-            var f = self.base.frame
-            f.size.width = newValue
-            self.base.frame = f
+            var frame = self.base.frame
+            frame.size.width = newValue
+            self.base.frame = frame
         }
     }
     var height: CGFloat {
@@ -44,9 +43,9 @@ extension AppExtensionWrapper where Base: UIView {
             return self.base.frame.height
         }
         set {
-            var f = self.base.frame
-            f.size.height = newValue
-            self.base.frame = f
+            var frame = self.base.frame
+            frame.size.height = newValue
+            self.base.frame = frame
         }
     }
     var bottom: CGFloat {
@@ -54,9 +53,9 @@ extension AppExtensionWrapper where Base: UIView {
             return self.base.frame.origin.y + self.base.frame.size.height
         }
         set {
-            var f = self.base.frame
-            f.origin.y = newValue - f.size.height
-            self.base.frame = f
+            var frame = self.base.frame
+            frame.origin.y = newValue - frame.size.height
+            self.base.frame = frame
         }
     }
     /// 添加圆角
@@ -72,7 +71,6 @@ extension AppExtensionWrapper where Base: UIView {
         base.layer.borderColor = borderColor.cgColor
         base.layer.borderWidth = borderWidth
     }
-    
     /// 获取视图的导航控制器
     var navigationController: UINavigationController? {
         var nextResponder: UIResponder? = base

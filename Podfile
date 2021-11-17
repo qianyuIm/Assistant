@@ -40,6 +40,7 @@ def swift_pods
   # 资源管理
   pod 'R.swift', '~> 5.4.0'
   pod 'Localize-Swift', '~> 3.2.0'
+  pod 'SwiftLint', '~> 0.4.5'
   # debug log
   pod 'SwiftyBeaver', '~> 1.9.5'
   # UserDefaults

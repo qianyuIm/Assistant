@@ -8,7 +8,6 @@
 import Foundation
 import SwiftEntryKit
 
-
 class SmallWidgetViewModel: AppViewModel {
     
     var dataSource: [SmallWidgetSection]?
@@ -18,11 +17,9 @@ class SmallWidgetViewModel: AppViewModel {
     }
 }
 
-
 extension SmallWidgetViewModel {
-    
+
     func config() -> [SmallWidgetSection] {
-        
         let recommendSection = SmallWidgetSection
             .recommendSection(supplementary:
                                     .init(icon: R.image.icon_widget_section_recommend(),

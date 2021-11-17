@@ -140,8 +140,8 @@ private extension AppTabBarController {
                         selectImage: UIImage?) -> AppNavigationController {
         
         controller.tabBarItem = ESTabBarItem(AppTabBarItemContentView(), title: title, image: normalImage, selectedImage: selectImage)
-        let na = AppNavigationController(rootViewController: controller)
-        return na
+        let naVc = AppNavigationController(rootViewController: controller)
+        return naVc
     }
     
 }

@@ -24,7 +24,7 @@ enum AppRouterType {
     /// iosApp://universal?
     case universal
     /// iosApp://universalNeedLogin?
-    case universal_needlogin
+    case universalNeedlogin
     /// iosApp://login?
     case login
     /// wifi 传书
@@ -56,7 +56,7 @@ extension AppRouterType: AppRouterTypeable {
         switch self {
         case .universal:
             return QYConfig.scheme + "universal"
-        case .universal_needlogin:
+        case .universalNeedlogin:
             return QYConfig.scheme + "universalNeedLogin"
         case .login:
             return QYConfig.scheme + "login"

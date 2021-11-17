@@ -9,11 +9,12 @@ import UIKit
 import RxTheme
 
 extension AppDelegate {
+    // swiftlint:disable force_cast
     static var shared: AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
     }
     /// 内部配置
-    func _configurationInterna(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+    func configurationInterna(_ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         _setupShortcutItems()
         _setupRouter()
         _setupReachability()
@@ -58,13 +59,11 @@ private extension AppDelegate {
         let navigationBar = UINavigationBar.appearance()
         navigationBar.shadowImage = UIImage()
 
-        navigationBar.theme.tintColor = appThemeProvider.attribute{ $0.navigationBarTheme.tintColor }
+        navigationBar.theme.tintColor = appThemeProvider.attribute { $0.navigationBarTheme.tintColor }
         navigationBar.theme.barTintColor = appThemeProvider.attribute { $0.navigationBarTheme.barTintColor }
 //        navigationBar.theme.barStyle = appThemeProvider.attribute { $0.navigationBarTheme.barStyle
 //        }
         navigationBar.theme.titleTextAttributes = appThemeProvider.attribute { [NSAttributedString.Key.foregroundColor: $0.navigationBarTheme.foregroundColor,NSAttributedString.Key.font: QYFont.fontSemibold(18)] }
-        
-        
     }
     /// root
     func _initializeRoot() {

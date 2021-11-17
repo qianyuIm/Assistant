@@ -8,34 +8,31 @@
 import Foundation
 
 protocol AppNotificationable {
-    associatedtype defaultKeys: RawRepresentable
+    associatedtype DefaultKeys: RawRepresentable
 }
 
 extension NotificationCenter {
-    
     enum AppDelegate: AppNotificationable {
-        enum defaultKeys: String {
+        enum DefaultKeys: String {
             case launched
         }
     }
     enum Languageau: AppNotificationable {
-        enum defaultKeys: String {
+        enum DefaultKeys: String {
             case LCLLanguageChangeNotification
         }
     }
 }
 
-extension AppNotificationable where defaultKeys.RawValue == String {
-    static func post(_ name: defaultKeys, object: Any? = nil, userInfo: [AnyHashable: Any]? = nil)  {
-        
+extension AppNotificationable where DefaultKeys.RawValue == String {
+    static func post(_ name: DefaultKeys, object: Any? = nil, userInfo: [AnyHashable: Any]? = nil) {
         NotificationCenter.default.post(
             name: conversion(name),
             object: object,
             userInfo: userInfo
         )
     }
-    
-    static func add(_ name: defaultKeys, observer: Any, selector: Selector, object: Any? = nil)  {
+    static func add(_ name: DefaultKeys, observer: Any, selector: Selector, object: Any? = nil) {
         NotificationCenter.default.addObserver(
             observer,
             selector: selector,
@@ -43,11 +40,10 @@ extension AppNotificationable where defaultKeys.RawValue == String {
             object: object
         )
     }
-    
-    static func add(_ name: defaultKeys,
+    static func add(_ name: DefaultKeys,
                     _ object: Any? = nil,
                     queue: OperationQueue = .main,
-                    using block: @escaping (Notification) -> Void)  {
+                    using block: @escaping (Notification) -> Void) {
         NotificationCenter.default.addObserver(
             forName: conversion(name),
             object: object,
@@ -55,17 +51,14 @@ extension AppNotificationable where defaultKeys.RawValue == String {
             using: block
         )
     }
-    
-    static func remove(_ name: defaultKeys, observer: Any, object: Any? = nil)  {
+    static func remove(_ name: DefaultKeys, observer: Any, object: Any? = nil) {
         NotificationCenter.default.removeObserver(
             observer,
             name: conversion(name),
             object: object
         )
     }
-    
-    static private func conversion(_ key: defaultKeys) -> NSNotification.Name {
+    static private func conversion(_ key: DefaultKeys) -> NSNotification.Name {
         return NSNotification.Name(key.rawValue)
     }
 }
-

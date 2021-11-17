@@ -30,8 +30,8 @@ class AppRouterHelper {
     class func registerLinkHandler(_ response: JMLinkResponse?) {
         guard let response = response else { return }
         guard let params = response.params as? [String: String] else { return }
-        if let needlogin = params[QYConfig.Router.loginKey], needlogin == QYConfig.Router.loginValue{
-            guard let schemeUrl = URL(string: AppRouterType.universal_needlogin.pattern) else { return }
+        if let needlogin = params[QYConfig.Router.loginKey], needlogin == QYConfig.Router.loginValue {
+            guard let schemeUrl = URL(string: AppRouterType.universalNeedlogin.pattern) else { return }
             let routerUrl = schemeUrl.app.appendingQueryParameters(params)
             QYLogger.debug("routerUrl => \(routerUrl)")
             AppRouter.shared.open(routerUrl)
@@ -40,7 +40,5 @@ class AppRouterHelper {
             let routerUrl = schemeUrl.app.appendingQueryParameters(params)
             AppRouter.shared.open(routerUrl)
         }
-       
     }
-    
 }

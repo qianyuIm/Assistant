@@ -102,17 +102,15 @@ private extension AppFlipClockLabel {
         labelContainer.addSubview(nextLabel)
         labelContainer.addSubview(foldLabel)
     }
-    
     /// 下一个label开始动画 默认label起始角度
     ///
     /// - Returns: CATransform3D
     private func nextLabelStartTransform() -> CATransform3D {
-        var t: CATransform3D = CATransform3DIdentity
-        t.m34 = CGFloat.leastNormalMagnitude
-        t = CATransform3DRotate(t, CGFloat(.pi * Double(kNextLabelStartValue)), -1, 0, 0)
-        return t
+        var transform = CATransform3DIdentity
+        transform.m34 = CGFloat.leastNormalMagnitude
+        transform = CATransform3DRotate(transform, CGFloat(.pi * Double(kNextLabelStartValue)), -1, 0, 0)
+        return transform
     }
-    
     /// 更新动画label
     @objc private func updateAnimateLabel() {
         animateValue += 2 / 60.0
@@ -120,21 +118,19 @@ private extension AppFlipClockLabel {
             stop()
             return
         }
-        var t: CATransform3D = CATransform3DIdentity
-        t.m34 = CGFloat.leastNormalMagnitude
+        var transform = CATransform3DIdentity
+        transform.m34 = CGFloat.leastNormalMagnitude
         
         // 绕x轴进行翻转
-        t = CATransform3DRotate(t, .pi * animateValue, -1, 0, 0)
+        transform = CATransform3DRotate(transform, .pi * animateValue, -1, 0, 0)
         if animateValue >= 0.5 {
             // 当翻转到和屏幕垂直时，翻转y和z轴
-            t = CATransform3DRotate(t, .pi, 0, 0, 1)
-            t = CATransform3DRotate(t, .pi, 0, 1, 0)
+            transform = CATransform3DRotate(transform, .pi, 0, 0, 1)
+            transform = CATransform3DRotate(transform, .pi, 0, 1, 0)
         }
-        foldLabel.layer.transform = t
-        
+        foldLabel.layer.transform = transform
         // 当翻转到和屏幕垂直时，切换动画label的字
         foldLabel.text = animateValue >= 0.5 ? nextLabel.text : timeLabel.text
-        
         // 当翻转到指定角度时，显示下一秒的时间
         nextLabel.isHidden = animateValue <= kNextLabelStartValue
     }
@@ -143,7 +139,6 @@ private extension AppFlipClockLabel {
     private func start() {
         link.add(to: .main, forMode: .common)
     }
-    
     /// 停止动画
     private func stop() {
         link.remove(from: .main, forMode: .common)

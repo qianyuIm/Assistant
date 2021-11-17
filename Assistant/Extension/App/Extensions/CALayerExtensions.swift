@@ -42,7 +42,7 @@ extension AppExtensionWrapper where Base: CALayer {
             NSStringFromSelector(#selector(getter: base.shadowOpacity)): NSNull(),
             NSStringFromSelector(#selector(getter: base.shadowOffset)): NSNull(),
             NSStringFromSelector(#selector(getter: base.shadowRadius)): NSNull(),
-            NSStringFromSelector(#selector(getter: base.shadowPath)): NSNull(),
+            NSStringFromSelector(#selector(getter: base.shadowPath)): NSNull()
         ]
 
         if base.isKind(of: CAShapeLayer.self) {
@@ -66,4 +66,3 @@ extension AppExtensionWrapper where Base: CALayer {
         base.actions = actions
     }
 }
-

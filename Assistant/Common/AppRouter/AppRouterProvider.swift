@@ -98,7 +98,7 @@ private extension AppRouterProvider {
                 if let controller = strongSelf.viewController(url, context) {
                     controller.routerOpen {}
                 } else {
-                    type.handle(url: url, values: values,context: context)
+                    type.handle(url: url, values: values, context: context)
                 }
             } else {
                 guard strongSelf.plugins.contains(where: { $0.should(open: type) }) else {
@@ -108,13 +108,12 @@ private extension AppRouterProvider {
                 let total = strongSelf.plugins.count
                 var count = 0
                 let group = DispatchGroup()
-                strongSelf.plugins.forEach { p in
+                strongSelf.plugins.forEach { plug in
                     group.enter()
-                    p.prepare(open: type) {
+                    plug.prepare(open: type) {
                         // 防止插件多次回调
                         defer { count += 1 }
                         guard count < total else { return }
-                        
                         result = $0 ? result : false
                         group.leave()
                     }
