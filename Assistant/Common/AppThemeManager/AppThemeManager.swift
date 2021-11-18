@@ -51,7 +51,6 @@ struct AppLightTheme: AppThemeProtocol {
     var statusBarStyle: UIStatusBarStyle
     let textTheme = TextTheme(titleColor: UIColor.app.color(hexString: "#3D444B"),
                               subtitleColor: UIColor.app.color(hexString: "#626262"))
-    
     var segmentedTheme: SegmentedTheme
     let cardTheme = CardTheme(color: UIColor.white, radius: 6)
     init(colorSwatch: AppColorSwatch) {

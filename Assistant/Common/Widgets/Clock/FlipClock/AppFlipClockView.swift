@@ -9,7 +9,6 @@ import UIKit
 import Schedule
 
 class AppFlipClockView: UIView {
-    
     lazy var backgroundView: AppWidgetBackgroundView = {
         let view = AppWidgetBackgroundView()
         return view
@@ -26,7 +25,7 @@ class AppFlipClockView: UIView {
         let hour = AppFlipClockItem(itemType: .second)
         return hour
     }()
-    
+
     var dateSource: Date = Date() {
         didSet {
             var houe = dateSource.hour
@@ -38,13 +37,12 @@ class AppFlipClockView: UIView {
             hourItem.dateSource = houe
             minuteItem.dateSource = minute
             secondItem.dateSource = second
-           
         }
     }
     private var _attributes: AppWidgetAttributes?
     var attributes: AppWidgetAttributes = AppWidgetAttributes() {
         didSet {
-            if (_attributes == attributes) {
+            if _attributes == attributes {
                 return
             }
             _attributes = attributes
@@ -62,7 +60,7 @@ class AppFlipClockView: UIView {
     private var _timeDisplayMode: AppWidgetAttributes.TimeDisplayMode = .twelve
     private var timeDisplayMode: AppWidgetAttributes.TimeDisplayMode = .twelve {
         didSet {
-            if (_timeDisplayMode != timeDisplayMode) {
+            if _timeDisplayMode != timeDisplayMode {
                 setNeedsLayout()
             }
             _timeDisplayMode = timeDisplayMode
@@ -72,24 +70,21 @@ class AppFlipClockView: UIView {
         super.init(frame: frame)
         setupUI()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         var margin: CGFloat = (0.06 * bounds.size.width).app.flat
         var itemW = ((bounds.size.width - 4 * margin) / 3).app.flat
         backgroundView.frame = bounds
         switch _timeDisplayMode {
         case .twelve, .twentyFour:
             break
-        case .twelveMissSecond,.twentyFourMissSecond:
+        case .twelveMissSecond, .twentyFourMissSecond:
             margin = (0.1 * bounds.size.width).app.flat
             itemW = ((bounds.size.width - 3 * margin) / 2).app.flat
-            break
         }
         let itemY: CGFloat = (bounds.size.height - itemW) / 2
         hourItem.frame = CGRect(x: margin, y: itemY, width: itemW, height: itemW)

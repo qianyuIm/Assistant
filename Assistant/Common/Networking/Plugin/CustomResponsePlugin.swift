@@ -32,5 +32,4 @@ struct CustomResponsePlugin: PluginType {
         }
         return target as? CustomTargetType
     }
-    
 }

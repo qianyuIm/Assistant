@@ -12,11 +12,9 @@ import RxTheme
 struct AlertSenderContent {
     var title: String
     var action: (() -> Void)?
-    
 }
 
 class QYAlert {
-    
     /// 通用弹窗
     /// - Parameters:
     ///   - title:
@@ -30,7 +28,6 @@ class QYAlert {
         let contentView = QYAlertView(title: title, message: message, doneContent: doneContent, cancelContent: cancelContent)
         SwiftEntryKit.display(entry: contentView, using: alertAttributes())
     }
-    
     class func dismiss(completion: (() -> Void)? = nil) {
         SwiftEntryKit.dismiss(.displayed, with: completion)
     }
@@ -91,7 +88,6 @@ private extension QYAlert {
                 AppUtility.topMost?.setNeedsStatusBarAppearanceUpdate()
             }
         })
-        
         return attributes
     }
 }
@@ -103,7 +99,6 @@ private class QYAlertView: UIView {
         label.font = QYFont.fontMedium(17)
         return label
     }()
-    
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -145,7 +140,6 @@ private class QYAlertView: UIView {
         messageLabel.text = message
         cancelSender.setTitle(cancelContent?.title, for: .normal)
         doneSender.setTitle(doneContent?.title, for: .normal)
-        
         titleLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(QYInch.value(16))
@@ -161,7 +155,7 @@ private class QYAlertView: UIView {
             make.top.equalTo(messageLabel.snp.bottom).offset(margin)
             make.bottom.equalTo(-margin)
         }
-        if (cancelContent != nil && doneContent != nil) {
+        if cancelContent != nil && doneContent != nil {
             cancelSender.snp.makeConstraints { (make) in
                 make.top.equalTo(margin)
                 make.left.equalTo(margin)
@@ -172,24 +166,21 @@ private class QYAlertView: UIView {
                 make.centerY.height.width.equalTo(cancelSender)
                 make.right.equalToSuperview()
             }
-        } else if (cancelContent == nil && doneContent != nil) {
+        } else if cancelContent == nil && doneContent != nil {
             doneSender.snp.makeConstraints { (make) in
                 make.edges.equalTo(UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin))
             }
-        } else if (cancelContent != nil && doneContent == nil) {
+        } else if cancelContent != nil && doneContent == nil {
             cancelSender.snp.makeConstraints { (make) in
                 make.edges.equalTo(UIEdgeInsets(top: margin, left: margin, bottom: margin, right: margin))
             }
         }
-        
         bindUI()
-        
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     @objc func doneSenderAction() {
         QYAlert.dismiss(completion: nil)
         self.doneContent?.action?()
@@ -205,8 +196,5 @@ private class QYAlertView: UIView {
         messageLabel.theme.textColor = appThemeProvider.attribute { $0.textTheme.subtitleColor }
         cancelSender.theme.titleColor(from: appThemeProvider.attribute { $0.textTheme.subtitleColor }, for: .normal)
         doneSender.theme.titleColor(from: appThemeProvider.attribute { $0.primaryColor }, for: .normal)
-
     }
-    
 }
-

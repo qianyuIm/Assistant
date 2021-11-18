@@ -1,15 +1,15 @@
-////
-////  MusicResponseCodable.swift
-////  ios_app
-////
-////  Created by cyd on 2021/10/22.
-////
 //
-//import Moya
-//import HandyJSON
-//import SwiftyUserDefaults
+//  MusicResponseCodable.swift
+//  ios_app
+///
+// Created by cyd on 2021/10/22.
 //
-//extension Response {
+//
+// import Moya
+// import HandyJSON
+// import SwiftyUserDefaults
+//
+// extension Response {
 //    func mapMusicObject<T: HandyJSON>(_ type: T.Type,
 //                                      atKeyPath keyPath: String? = nil) throws -> T {
 //        guard let json = try mapJSON() as? [String: Any] else {
@@ -27,8 +27,8 @@
 //        }
 //        throw MoyaError.jsonMapping(self)
 //    }
-//}
-//extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
+// }
+// extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
 //
 //    func mapMusicObject<T: HandyJSON>(_ type: T.Type, atKeyPath keyPath: String? = nil) -> Single<T> {
 //        return flatMap { response -> Single<T> in
@@ -42,8 +42,8 @@
 //            return Single.just(try response.mapMusicArray(type, atKeyPath: keyPath))
 //        }
 //    }
-//}
-//extension ObservableType where Element == Response {
+// }
+// extension ObservableType where Element == Response {
 //    
 //   func mapMusicObject<T: HandyJSON>(_ type: T.Type, atKeyPath keyPath: String? = nil) -> Observable<T> {
 //        return flatMap { response -> Observable<T> in
@@ -55,4 +55,4 @@
 //            return Observable.just(try response.mapMusicArray(type, atKeyPath: keyPath))
 //        }
 //    }
-//}
+// }

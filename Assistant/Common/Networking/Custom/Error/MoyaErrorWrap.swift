@@ -7,17 +7,15 @@
 
 import Foundation
 import Moya
-
-
 extension MoyaError {
     func asMoyaErrorWrap() -> MoyaErrorWrap? {
         switch self {
         case .jsonMapping(let response):
             let statusCode = response.statusCode
-            if (statusCode != 200) {
-                if (statusCode == 301) {
+            if statusCode != 200 {
+                if statusCode == 301 {
                     return MoyaErrorWrap.unauthorized
-                } else if (statusCode == 404) {
+                } else if statusCode == 404 {
                     return MoyaErrorWrap.error404
                 }
             }
@@ -34,13 +32,11 @@ struct MoyaErrorWrap: Error {
     let code: Int
     let title: String
     let detail: String
-    
     init(code: Int = 0, title: String, detail: String) {
         self.code = code
         self.title = title
         self.detail = detail
     }
-    
     /// 数据
     static var data = MoyaErrorWrap(code: -10001,
                                     title: R.string.localizable.emptyDataTitle.key.app.localized(),
@@ -61,11 +57,9 @@ struct MoyaErrorWrap: Error {
     static var error404 = MoyaErrorWrap(code: 404,
                                         title: R.string.localizable.empty404Title.key.app.localized(),
                                         detail: R.string.localizable.empty404Detail.key.app.localized())
-    
-    
 }
 extension MoyaErrorWrap: Equatable {
-    public static func ==(lhs: MoyaErrorWrap, rhs: MoyaErrorWrap) -> Bool {
+    public static func == (lhs: MoyaErrorWrap, rhs: MoyaErrorWrap) -> Bool {
         lhs.code == rhs.code
     }
 }

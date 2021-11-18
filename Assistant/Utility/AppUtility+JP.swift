@@ -22,7 +22,6 @@ extension AppUtility {
         return categories
     }
     class func handlerRemoteNotification(_ userInfo: [AnyHashable: Any]) {
-        
         UIApplication.shared.applicationIconBadgeNumber = 0
 //        QYNavigatorHelp.handlerRemoteNotification(userInfo)
     }

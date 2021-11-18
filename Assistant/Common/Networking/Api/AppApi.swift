@@ -10,5 +10,4 @@ struct AppApi {
     struct NeteaseCloud {
         static let baseUrl = "https://music-api-ten.vercel.app"
     }
-    
 }

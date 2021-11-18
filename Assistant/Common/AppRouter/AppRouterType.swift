@@ -11,7 +11,7 @@ import CoreMedia
 
 /// 根据链接参数来指定页面
 /// iosApp://universal?openPage=web&needlogin=1&webUrl=https://www.baidu.com
-fileprivate enum AppRouterOpenPage: String {
+private enum AppRouterOpenPage: String {
     case unknown
     case widget
     case icons
@@ -47,7 +47,6 @@ enum AppRouterType {
     case about
     /// 小组件限制
     case limit
-    
 }
 
 private let kConfigPath = "config/"
@@ -82,7 +81,7 @@ extension AppRouterType: AppRouterTypeable {
             return QYConfig.scheme + kConfigPath + "limit"
         }
     }
-    func controller(url: URLConvertible, values: [String : Any], context: AppRouterContext?) -> AppRouterable? {
+    func controller(url: URLConvertible, values: [String: Any], context: AppRouterContext?) -> AppRouterable? {
         switch self {
         case .myWidgets:
             return MyWidgetsController(viewModel: MyWidgetsViewModel(),
@@ -103,33 +102,26 @@ extension AppRouterType: AppRouterTypeable {
             return nil
         }
     }
-    
-    func handle(url: URLConvertible, values: [String : Any], context: AppRouterContext?) {
+    func handle(url: URLConvertible, values: [String: Any], context: AppRouterContext?) {
         let parameters = url.queryParameters
         guard let openPage = parameters[QYConfig.Router.pageKey] else { return }
         let page = AppRouterOpenPage(rawValue: openPage) ?? .unknown
         _handle(page: page, parameters)
     }
-    
 }
 
 private extension AppRouterType {
     ///
-    func _handle(page: AppRouterOpenPage,_ parameters: [String: String]) {
+    func _handle(page: AppRouterOpenPage, _ parameters: [String: String]) {
         switch page {
         case .widget:
             AppUtility.toRootController(true, .widget)
-            break
         case .icons:
             AppUtility.toRootController(true, .icons)
-            break
         case .wallpaper:
             AppUtility.toRootController(true, .wallpaper)
-            break
         case .more:
             AppUtility.toRootController(true, .more)
-            break
-        
         case .web:
             guard let webUrl = parameters[QYConfig.Router.webUrlKey] else {
                 return
@@ -137,7 +129,6 @@ private extension AppRouterType {
             let webVC = AppBaseWebController()
             webVC.webUrl = webUrl
             webVC.routerOpen(with: nil)
-            break
         default:
             break
         }

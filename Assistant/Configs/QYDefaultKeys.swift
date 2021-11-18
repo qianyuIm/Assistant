@@ -19,8 +19,6 @@ extension DefaultsKeys {
     var themeDisplayModeKey: DefaultsKey<QYConfig.Theme.DisplayMode> { .init("kThemeDisplayModeKey", defaultValue: QYConfig.Theme.DisplayMode.inferred) }
     /// 主题位置
     var themeSwatchIndexKey: DefaultsKey<Int> { .init("kThemeSwatchIndexKey", defaultValue: 0) }
-    
     ///  语言跟随系统
     var languageAutoSystem: DefaultsKey<Bool> { .init("kLanguageAutoSystemey", defaultValue: true) }
-    
 }

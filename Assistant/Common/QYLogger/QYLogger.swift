@@ -10,32 +10,43 @@ import SwiftyBeaver
 
 class QYLogger {
     static let customLogger = SwiftyBeaver.self
-    class func debug(_ message: Any, _ file: String = #file,
-                  _ function: String = #function,
-                  line: Int = #line,
-                  _ context: Any? = nil) {
+    class func debug(_ message: Any,
+                     _ file: String = #file,
+                     _ function: String = #function,
+                     line: Int = #line,
+                     _ context: Any? = nil) {
         customLogger.debug(message, file, function, line: line, context: context)
     }
 
-    class func error(_ message: Any, _ file: String = #file,
-                  _ function: String = #function, line: Int = #line,
-                  context: Any? = nil) {
+    class func error(_ message: Any,
+                     _ file: String = #file,
+                     _ function: String = #function,
+                     line: Int = #line,
+                     context: Any? = nil) {
         customLogger.error(message, file, function, line: line, context: context)
     }
 
-    class func info(_ message: Any, _ file: String = #file,
-                 _ function: String = #function, line: Int = #line,
-                 context: Any? = nil) {
+    class func info(_ message: Any,
+                    _ file: String = #file,
+                    _ function: String = #function,
+                    line: Int = #line,
+                    context: Any? = nil) {
         customLogger.info(message, file, function, line: line, context: context)
     }
 
-    class func verbose(_ message: Any, _ file: String = #file,
-                    _ function: String = #function, line: Int = #line, context: Any? = nil) {
+    class func verbose(_ message: Any,
+                       _ file: String = #file,
+                       _ function: String = #function,
+                       line: Int = #line,
+                       context: Any? = nil) {
         customLogger.verbose(message, file, function, line: line, context: context)
     }
 
-    class func warning(_ message: Any, _ file: String = #file,
-                    _ function: String = #function, line: Int = #line, context: Any? = nil) {
+    class func warning(_ message: Any,
+                       _ file: String = #file,
+                       _ function: String = #function,
+                       line: Int = #line,
+                       context: Any? = nil) {
         customLogger.warning(message, file, function, line: line, context: context)
     }
 

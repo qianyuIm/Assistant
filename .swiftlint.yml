@@ -19,6 +19,10 @@ excluded:
 # 单行代码长度
 line_length: 300
 
+# 文件行数限制
+file_length:
+  warning: 1000
+  error: 2000
 
 # 函数长度
 function_body_length:

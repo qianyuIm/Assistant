@@ -7,8 +7,6 @@
 //
 
 import UIKit
-
-
 class QYBorderButton: QYButton {
     var borderWidth: CGFloat = 0.0 {
         didSet {
@@ -20,7 +18,6 @@ class QYBorderButton: QYButton {
             self.setNeedsLayout()
         }
     }
-    
     var borderColor: UIColor? {
         didSet {
             self.layer.borderColor = borderColor?.cgColor

@@ -19,9 +19,7 @@ struct QYConfig {
     static let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
     static let scheme = "assistant://"
     static let userAgent = "assistant/\(appVersion)"
-    
-    
-    
+
     struct Value {
         /// -1
         static let undefinedValue: CGFloat = -1
@@ -41,30 +39,28 @@ struct QYConfig {
         /// H5目标路径 与 targetPage 互斥
         static let targetUrl = "targetUrl"
     }
-    
     struct Theme {
         enum DisplayMode: String, DefaultsSerializable {
-            case inferred = "inferred"
-            case light = "light"
-            case dark = "dark"
+            case inferred
+            case light
+            case dark
         }
         static let supportSwatchs = AppColorSwatch.allValues
-        
+
         static var themeSwatchIndex: Int {
-            set {
-                Defaults.themeSwatchIndexKey = newValue
-            }
             get {
                 return Defaults.themeSwatchIndexKey
             }
-        }
-        
-        static var displayMode: DisplayMode {
             set {
-                Defaults.themeDisplayModeKey = newValue
+                Defaults.themeSwatchIndexKey = newValue
             }
+        }
+        static var displayMode: DisplayMode {
             get {
                 return Defaults.themeDisplayModeKey
+            }
+            set {
+                Defaults.themeDisplayModeKey = newValue
             }
         }
         /// 是否为暗色 单存
@@ -77,16 +73,15 @@ struct QYConfig {
             isDark = (QYConfig.Theme.displayMode == .inferred) ? isDark : (QYConfig.Theme.displayMode == .dark)
             return isDark
         }
-        
     }
     struct Language {
         static let auto = "auto"
         static var autoSystem: Bool {
-            set {
-                Defaults.languageAutoSystem = newValue
-            }
             get {
                 return Defaults.languageAutoSystem
+            }
+            set {
+                Defaults.languageAutoSystem = newValue
             }
         }
         static func support() -> [String] {

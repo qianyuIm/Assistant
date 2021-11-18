@@ -13,7 +13,6 @@ class AppWidgetBackgroundView: UIView {
         let background: AppWidgetAttributes.BackgroundStyle
 //        let displayMode: EKAttributes.DisplayMode
     }
-    
     lazy var imageView: UIImageView = {
         let imageV = UIImageView()
         return imageV
@@ -24,9 +23,7 @@ class AppWidgetBackgroundView: UIView {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

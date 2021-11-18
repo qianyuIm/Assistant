@@ -10,12 +10,9 @@ import SnapKit
 
 /// 下一个label开始值
 private let kNextLabelStartValue: CGFloat = 0.01
-
-
 class AppFlipClockLabel: UIView {
     /// 动画执行进度
     var animateValue: CGFloat = 0.0
-    
     /// 下一个时间label
     private lazy var timeLabel: UILabel = {
         let label = UILabel()
@@ -28,7 +25,6 @@ class AppFlipClockLabel: UIView {
         label.layer.masksToBounds = true
         return label
     }()
-    
     /// 下一个时间label
     private lazy var nextLabel: UILabel = {
         let label = UILabel()
@@ -36,7 +32,6 @@ class AppFlipClockLabel: UIView {
         label.isHidden = true
         return label
     }()
-    
     /// 放置label的容器
     private lazy var labelContainer: UIView = {
         let labelContainer = UIView()
@@ -53,24 +48,22 @@ class AppFlipClockLabel: UIView {
             timeLabel.font = attributes.labelStyle.font
             timeLabel.textAlignment = attributes.labelStyle.alignment
             timeLabel.backgroundColor = attributes.labelStyle.backgroundColor
-            
+
             foldLabel.textColor = attributes.labelStyle.textColor
             foldLabel.font = attributes.labelStyle.font
             foldLabel.textAlignment = attributes.labelStyle.alignment
             foldLabel.backgroundColor = attributes.labelStyle.backgroundColor
-            
+
             nextLabel.textColor = attributes.labelStyle.textColor
             nextLabel.font = attributes.labelStyle.font
             nextLabel.textAlignment = attributes.labelStyle.alignment
             nextLabel.backgroundColor = attributes.labelStyle.backgroundColor
         }
     }
-    
     init() {
         super.init(frame: .zero)
         setupUI()
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -120,7 +113,6 @@ private extension AppFlipClockLabel {
         }
         var transform = CATransform3DIdentity
         transform.m34 = CGFloat.leastNormalMagnitude
-        
         // 绕x轴进行翻转
         transform = CATransform3DRotate(transform, .pi * animateValue, -1, 0, 0)
         if animateValue >= 0.5 {
@@ -134,7 +126,6 @@ private extension AppFlipClockLabel {
         // 当翻转到指定角度时，显示下一秒的时间
         nextLabel.isHidden = animateValue <= kNextLabelStartValue
     }
-    
     /// 开始动画
     private func start() {
         link.add(to: .main, forMode: .common)

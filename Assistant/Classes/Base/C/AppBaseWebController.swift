@@ -24,7 +24,7 @@ private let kTitleKeyPath = "title"
 private let kCookieKey = "Cookie"
 
 class AppBaseWebController: AppBaseController {
-    
+
     private(set) var webView: WKWebView?
     var webUrl: String?
     /// 进度条颜色
@@ -77,6 +77,7 @@ class AppBaseWebController: AppBaseController {
             make.top.equalTo(progressView.snp.bottom)
         })
     }
+    // swiftlint:disable block_based_kvo
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
         switch keyPath {
         case kEstimatedProgressKeyPath?:

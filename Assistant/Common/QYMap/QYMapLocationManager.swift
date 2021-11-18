@@ -9,7 +9,7 @@ import Foundation
 import AMapLocationKit
 import AMapFoundationKit
 
-typealias QYMapLocationCompletionBlock = ((_ location: CLLocation?, _ regeocode:AMapLocationReGeocode?, _ error: QYLocationError?) -> Void)
+typealias QYMapLocationCompletionBlock = ((_ location: CLLocation?, _ regeocode: AMapLocationReGeocode?, _ error: QYLocationError?) -> Void)
 
 /// 定位管理者
 class QYMapLocationManager: NSObject {

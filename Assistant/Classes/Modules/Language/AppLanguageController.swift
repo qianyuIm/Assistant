@@ -62,7 +62,7 @@ class AppLanguageController: AppBaseCollectionVMController {
             self?.saveItem.isEnabled = isEnabled
         }).disposed(by: rx.disposeBag)
         output.saved.drive(onNext: { [weak self] () in
-            QYHUD.showHUD(message:"正在设置")
+            QYHUD.showHUD(message: "正在设置")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 QYHUD.showHUD(message: "设置成功")
                 QYHUD.hideHUD()

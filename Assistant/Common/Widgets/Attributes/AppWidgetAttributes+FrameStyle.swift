@@ -8,12 +8,10 @@
 import UIKit
 import AutoInch
 extension AppWidgetAttributes {
-    
     enum WidgetFamily: Equatable {
         case small
         case medium
         case large
-        
         var value: CGSize {
             switch self {
             case .small:
@@ -24,18 +22,15 @@ extension AppWidgetAttributes {
                 return QYInch.Widget.largeSize
             }
         }
-        
     }
     enum RoundCorners: Equatable {
         case all(radius: CGFloat)
-        
         var cornerValues: (value: UIRectCorner, radius: CGFloat) {
             switch self {
             case .all(radius: let radius):
                 return (value: .allCorners, radius: radius)
             }
         }
-        
     }
     enum Border: Equatable {
         case none

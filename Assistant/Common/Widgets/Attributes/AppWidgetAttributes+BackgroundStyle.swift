@@ -14,4 +14,3 @@ extension AppWidgetAttributes {
         case image(image: UIImage)
     }
 }
-

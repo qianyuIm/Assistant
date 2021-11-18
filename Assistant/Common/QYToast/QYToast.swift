@@ -23,8 +23,8 @@ class QYToast {
     ///   - delay:
     ///   - duration:
     class func show(_ text: String?,
-              delay: TimeInterval = 0,
-              duration: TimeInterval = Delay.short) {
+                    delay: TimeInterval = 0,
+                    duration: TimeInterval = Delay.short) {
         if !_isAppearance {
             setupAppearance()
         }

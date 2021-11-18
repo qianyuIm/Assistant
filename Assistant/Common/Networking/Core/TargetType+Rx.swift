@@ -17,12 +17,9 @@ extension Moya.TargetType {
 #else
         isLocal = false
 #endif
-        
         if isLocal {
             return apiLocalProvider.rx.request(.target(self))
         }
-        
         return apiProvider.rx.request(.target(self))
     }
-    
 }

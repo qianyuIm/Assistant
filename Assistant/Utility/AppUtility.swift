@@ -17,7 +17,7 @@ class AppUtility {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-    class func copy(with value: String,complete: (() -> Void)? = nil) {
+    class func copy(with value: String, complete: (() -> Void)? = nil) {
         UIPasteboard.general.string = value
         complete?()
     }

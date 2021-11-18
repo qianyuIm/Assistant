@@ -9,11 +9,10 @@ import UIKit
 import MBProgressHUD
 
 class QYHUD {
-    
     class func showHUD(message: String? = nil,
-                    offset: CGFloat? = nil,
-                    isInteraction: Bool = false,
-                    in view: UIView? = UIApplication.shared.app.keyWindow) {
+                       offset: CGFloat? = nil,
+                       isInteraction: Bool = false,
+                       in view: UIView? = UIApplication.shared.app.keyWindow) {
         guard let hud = progressHUD(for: offset, isInteraction: isInteraction, in: view) else { return }
         hud.label.text = message
     }
@@ -24,7 +23,6 @@ class QYHUD {
                                in view: UIView? = UIApplication.shared.app.keyWindow) {
         showIcon(message: message, iconName: "icon_hud_success", offset: offset, isInteraction: isInteraction, delay: delay, in: view)
     }
-    
     class func showErrorIcon(message: String? = nil,
                              offset: CGFloat? = nil,
                              isInteraction: Bool = false,
@@ -32,7 +30,6 @@ class QYHUD {
                              in view: UIView? = UIApplication.shared.app.keyWindow) {
         showIcon(message: message, iconName: "icon_hud_error", offset: offset, isInteraction: isInteraction, delay: delay, in: view)
     }
-    
     class func showWarningIcon(message: String? = nil,
                                offset: CGFloat? = nil,
                                isInteraction: Bool = false,
@@ -55,15 +52,13 @@ class QYHUD {
         hud.label.text = message
         hud.hide(animated: true, afterDelay: delay)
     }
-    
     class func hideHUD(on view: UIView? = UIApplication.shared.app.keyWindow) {
         guard let superView = view else { return }
         MBProgressHUD.hide(for: superView, animated: true)
     }
-    
     private class func progressHUD(for offset: CGFloat? = nil,
-                             isInteraction: Bool,
-                             in view: UIView? = UIApplication.shared.app.keyWindow) -> MBProgressHUD? {
+                                   isInteraction: Bool,
+                                   in view: UIView? = UIApplication.shared.app.keyWindow) -> MBProgressHUD? {
         guard let superView = view else { return nil }
         hideHUD(on: superView)
         let hud = MBProgressHUD.showAdded(to: superView, animated: true)

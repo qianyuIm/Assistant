@@ -11,8 +11,5 @@ class QYRefreshHeader: MJRefreshNormalHeader {
     /// 初始化
     override public func prepare() {
         super.prepare()
-
     }
 }
-
-

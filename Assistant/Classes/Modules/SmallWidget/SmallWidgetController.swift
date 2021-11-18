@@ -47,7 +47,7 @@ class SmallWidgetController: AppBaseCollectionVMController {
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
     }
-    
+
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
@@ -115,7 +115,7 @@ extension SmallWidgetController: UICollectionViewDataSource {
             cell.config(with: attributes)
             return cell
         }
-    }   
+    }
 }
 // MARK: - JXPagingViewListViewDelegate
 extension SmallWidgetController: JXPagingViewListViewDelegate {

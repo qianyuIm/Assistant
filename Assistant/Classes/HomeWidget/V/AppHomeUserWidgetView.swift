@@ -14,7 +14,7 @@ class AppHomeUserWidgetView: UIView, AppNibLoadableView {
     @IBOutlet weak var actionSender: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        actionSender.setTitle(nil, for: .normal)
+        actionSender.setTitle("", for: .normal)
         titleLabel.font = QYFont.fontRegular(13)
         app.addRoundCorners(.allCorners, radius: 14)
         let image = appIconFontIcons.icon_user_fill.image(size: 14)

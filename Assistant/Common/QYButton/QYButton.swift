@@ -101,7 +101,6 @@ class QYButton: UIButton {
             setNeedsLayout()
         }
     }
-    
     /**
      * 设置按钮里图标和文字之间的间隔，会自动响应 imagePosition 的变化而变化，默认为0。<br/>
      * 系统默认实现需要同时设置 titleEdgeInsets 和 imageEdgeInsets，同时还需考虑 contentEdgeInsets 的增加（否则不会影响布局，可能会让图标或文字溢出或挤压），使用该属性可以避免以上情况。<br/>
@@ -112,13 +111,11 @@ class QYButton: UIButton {
             setNeedsLayout()
         }
     }
-    
     @IBInspectable  var buttonHighlightedAlpha: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
         }
     }
-    
     @IBInspectable  var buttonDisabledAlpha: CGFloat = 0.5 {
         didSet {
             setNeedsLayout()
@@ -132,12 +129,10 @@ class QYButton: UIButton {
         if !adjustsTitleTintColorAutomatically {
             setTitleColor(tint, for: .normal)
         }
-        
         // iOS7以后的button，sizeToFit后默认会自带一个上下的contentInsets，为了保证按钮大小即为内容大小，这里直接去掉，改为一个最小的值。
         // 不能设为0，否则无效；也不能设置为小数点，否则无法像素对齐
         contentEdgeInsets = UIEdgeInsets(top: CGFloat.leastNormalMagnitude, left: 0, bottom: CGFloat.leastNormalMagnitude, right: 0)
     }
-    
     convenience init(title: String?, image: UIImage?) {
         self.init()
         setImage(image, for: .normal)
@@ -155,13 +150,11 @@ class QYButton: UIButton {
     func didInitialized() {
         adjustsTitleTintColorAutomatically = false
         adjustsImageTintColorAutomatically = false
-        
         // 默认接管highlighted和disabled的表现，去掉系统默认的表现
         adjustsImageWhenHighlighted = false
         adjustsImageWhenDisabled = false
         adjustsButtonWhenHighlighted = true
         adjustsButtonWhenDisabled = true
-        
         // 图片默认在按钮左边，与系统UIButton保持一致
         imagePosition = .left
     }
@@ -177,12 +170,10 @@ class QYButton: UIButton {
         let isTitleLabelShowing = titleLabel != nil && !titleLabel!.isHidden
         var imageTotalSize = CGSize.zero // 包含 imageEdgeInsets 那些空间
         var titleTotalSize = CGSize.zero // 包含 titleEdgeInsets 那些空间
-        
         let spacingBetweenImageAndTitle = ((isImageViewShowing && isTitleLabelShowing) ? self.spacingBetweenImageAndTitle : 0).app.flat // 如果图片或文字某一者没显示，则这个 spacing 不考虑进布局
         let contentEdgeInsets = self.contentEdgeInsets.app.removeFloatMin()
         var resultSize = CGSize.zero
         let contentLimitSize = CGSize(width: size.width - contentEdgeInsets.app.horizontalValue, height: size.height - contentEdgeInsets.app.verticalValue)
-        
         switch imagePosition {
         case .bottom, .top:
             // 图片和文字上下排版时，宽度以文字或图片的最大宽度为最终宽度
@@ -192,7 +183,6 @@ class QYButton: UIButton {
                 imageSize.width = fmin(imageSize.width, imageLimitWidth)
                 imageTotalSize = CGSize(width: imageSize.width + imageEdgeInsets.app.horizontalValue, height: imageSize.height + imageEdgeInsets.app.verticalValue)
             }
-            
             if isTitleLabelShowing {
                 let titleLimitSize = CGSize(width: contentLimitSize.width - titleEdgeInsets.app.horizontalValue, height: contentLimitSize.height - imageTotalSize.height - spacingBetweenImageAndTitle - titleEdgeInsets.app.verticalValue)
                 var titleSize = titleLabel!.sizeThatFits(titleLimitSize)
@@ -213,18 +203,15 @@ class QYButton: UIButton {
                 imageSize.height = fmin(imageSize.height, imageLimitHeight)
                 imageTotalSize = CGSize(width: imageSize.width + imageEdgeInsets.app.horizontalValue, height: imageSize.height + imageEdgeInsets.app.verticalValue)
             }
-            
             if isTitleLabelShowing {
                 let titleLimitSize = CGSize(width: contentLimitSize.width - titleEdgeInsets.app.horizontalValue - imageTotalSize.width - spacingBetweenImageAndTitle, height: contentLimitSize.height -  titleEdgeInsets.app.verticalValue)
                 var titleSize = titleLabel!.sizeThatFits(titleLimitSize)
                 titleSize.height = fmin(titleSize.height, titleLimitSize.height)
                 titleTotalSize = CGSize(width: titleSize.width + titleEdgeInsets.app.horizontalValue, height: titleSize.height + titleEdgeInsets.app.verticalValue)
             }
-            
             resultSize.width = contentEdgeInsets.app.horizontalValue + imageTotalSize.width + spacingBetweenImageAndTitle + titleTotalSize.width
             resultSize.height = contentEdgeInsets.app.verticalValue
             resultSize.height += fmax(imageTotalSize.height, titleTotalSize.height)
-            
         }
         return resultSize
     }
@@ -232,14 +219,12 @@ class QYButton: UIButton {
     override  var intrinsicContentSize: CGSize {
         return sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude))
     }
-    
     override  func layoutSubviews() {
         super.layoutSubviews()
 
         if bounds.isEmpty {
             return
         }
-        
         let isImageViewShowing = imageView != nil && !imageView!.isHidden
         let isTitleLabelShowing = titleLabel != nil && !titleLabel!.isHidden
         var imageLimitSize = CGSize.zero
@@ -248,11 +233,10 @@ class QYButton: UIButton {
         var titleTotalSize = CGSize.zero // 包含 titleEdgeInsets 那些空间
         // 如果图片或文字某一者没显示，则这个 spacing 不考虑进布局
         let spacingBetweenImageAndTitle = ((isImageViewShowing && isTitleLabelShowing) ? self.spacingBetweenImageAndTitle : 0).app.flat
-        var imageFrame = CGRect.zero;
-        var titleFrame = CGRect.zero;
+        var imageFrame = CGRect.zero
+        var titleFrame = CGRect.zero
         let contentEdgeInsets = self.contentEdgeInsets.app.removeFloatMin()
         let contentSize = CGSize(width: bounds.width - contentEdgeInsets.app.horizontalValue, height: bounds.height - contentEdgeInsets.app.verticalValue)
-        
         // 图片的布局原则都是尽量完整展示，所以不管 imagePosition 的值是什么，这个计算过程都是相同的
         if isImageViewShowing {
             imageLimitSize = CGSize(width: contentSize.width - imageEdgeInsets.app.horizontalValue, height: contentSize.height - imageEdgeInsets.app.verticalValue)
@@ -262,7 +246,6 @@ class QYButton: UIButton {
             imageFrame = imageSize.app.rect
             imageTotalSize = CGSize(width: imageSize.width + imageEdgeInsets.app.horizontalValue, height: imageSize.height + imageEdgeInsets.app.verticalValue)
         }
-        
         if imagePosition == .top || imagePosition == .bottom {
             if isTitleLabelShowing {
                 titleLimitSize = CGSize(width: contentSize.width - titleEdgeInsets.app.horizontalValue, height: contentSize.height - imageTotalSize.height - spacingBetweenImageAndTitle - titleEdgeInsets.app.verticalValue)
@@ -272,7 +255,6 @@ class QYButton: UIButton {
                 titleFrame = titleSize.app.rect
                 titleTotalSize = CGSize(width: titleSize.width + titleEdgeInsets.app.horizontalValue, height: titleSize.height + titleEdgeInsets.app.verticalValue)
             }
-            
             switch contentHorizontalAlignment {
             case .left:
                 imageFrame = isImageViewShowing ? imageFrame.app.setX(contentEdgeInsets.left + imageEdgeInsets.left) : imageFrame
@@ -286,15 +268,14 @@ class QYButton: UIButton {
             case .fill:
                 if isImageViewShowing {
                     imageFrame = imageFrame.app.setX(contentEdgeInsets.left + imageEdgeInsets.left)
-                    imageFrame = imageFrame.app.setWidth(imageLimitSize.width);
+                    imageFrame = imageFrame.app.setWidth(imageLimitSize.width)
                 }
                 if isTitleLabelShowing {
-                    titleFrame = titleFrame.app.setX(contentEdgeInsets.left + titleEdgeInsets.left);
-                    titleFrame = titleFrame.app.setWidth(titleLimitSize.width);
+                    titleFrame = titleFrame.app.setX(contentEdgeInsets.left + titleEdgeInsets.left)
+                    titleFrame = titleFrame.app.setWidth(titleLimitSize.width)
                 }
             default: break
             }
-            
             if imagePosition == .top {
                 switch contentVerticalAlignment {
                 case .top:
@@ -354,11 +335,9 @@ class QYButton: UIButton {
                     fatalError()
                 }
             }
-            
             imageView?.frame = imageFrame.app.flatted
             titleLabel?.frame = titleFrame.app.flatted
         } else if imagePosition == .left || imagePosition == .right {
-            
             if isTitleLabelShowing {
                 titleLimitSize = CGSize(width: contentSize.width - titleEdgeInsets.app.horizontalValue - imageTotalSize.width - spacingBetweenImageAndTitle, height: contentSize.height - titleEdgeInsets.app.verticalValue)
                 var titleSize = titleLabel!.sizeThatFits(titleLimitSize)
@@ -367,7 +346,6 @@ class QYButton: UIButton {
                 titleFrame = titleSize.app.rect
                 titleTotalSize = CGSize(width: titleSize.width + titleEdgeInsets.app.horizontalValue, height: titleSize.height + titleEdgeInsets.app.verticalValue)
             }
-            
             switch contentVerticalAlignment {
             case .top:
                 imageFrame = isImageViewShowing ? imageFrame.app.setY(contentEdgeInsets.top + imageEdgeInsets.top) : imageFrame
@@ -390,7 +368,6 @@ class QYButton: UIButton {
             @unknown default:
                 fatalError()
             }
-            
             if imagePosition == .left {
                 switch contentHorizontalAlignment {
                 case .left:
@@ -438,7 +415,6 @@ class QYButton: UIButton {
                         imageFrame = isImageViewShowing ? imageFrame.app.setX(contentEdgeInsets.left + titleTotalSize.width + spacingBetweenImageAndTitle + imageEdgeInsets.left) : imageFrame
                         titleFrame = isTitleLabelShowing ? titleFrame.app.setX(contentEdgeInsets.left + titleEdgeInsets.left) : titleFrame
                     }
-                    
                 case .center:
                     let contentWidth = imageTotalSize.width + spacingBetweenImageAndTitle + titleTotalSize.width
                     let minX = contentEdgeInsets.left + contentSize.width.app.center(contentWidth)
@@ -463,7 +439,6 @@ class QYButton: UIButton {
                 default: break
                 }
             }
-            
             imageView?.frame = imageFrame.app.flatted
             titleLabel?.frame = titleFrame.app.flatted
         }
@@ -539,7 +514,10 @@ class QYButton: UIButton {
 
     private func updateImageRenderingModeIfNeeded() {
         // 实际上对于 UIButton 而言如果设置了 UIControlStateNormal 的 image，则其他所有 state 下的 image 默认都会返回 normal 这张图，所以这个判断只对 UIControlStateNormal 做就行了
-        guard let _ = currentImage, let _ = image(for: .normal) else { return }
+//        guard let _ = currentImage, let _ = image(for: .normal) else { return }
+        guard currentImage != nil, image(for: .normal) != nil else {
+            return
+        }
         let states: [UIControl.State] = [[.normal], [.highlighted], [.selected], [.selected, .highlighted], [.disabled]]
 
         for state in states {

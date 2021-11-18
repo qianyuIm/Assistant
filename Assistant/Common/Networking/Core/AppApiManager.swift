@@ -8,8 +8,6 @@
 import Foundation
 import Moya
 
-
-
 let timeoutClosure = {(endpoint: Endpoint, closure: MoyaProvider.RequestResultClosure) -> Void in
     do {
         var urlRequest = try endpoint.urlRequest()

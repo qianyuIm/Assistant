@@ -15,10 +15,8 @@ class AppFlipClockItem: UIView {
     }
     /// 最新左边的时间
     private lazy var lastLeftTime: Int = 0
-   
     /// 最新右边的时间
     private lazy var lastRightTime: Int = 0
-    
     private lazy var leftLabel: AppFlipClockLabel = {
         let label = AppFlipClockLabel()
         return label
@@ -27,17 +25,15 @@ class AppFlipClockItem: UIView {
         let label = AppFlipClockLabel()
         return label
     }()
-    
     private lazy var lineView: UIView = {
         let line = UIView()
         return line
     }()
-    
     var itemType: ItemType
     private var _lineViewHeight: CGFloat = 2
     private var lineViewHeight: CGFloat = 2 {
         didSet {
-            if (_lineViewHeight != lineViewHeight) {
+            if _lineViewHeight != lineViewHeight {
                 setNeedsLayout()
             }
             _lineViewHeight = lineViewHeight
@@ -70,7 +66,6 @@ class AppFlipClockItem: UIView {
         super.init(frame: .zero)
         setupUI()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -128,5 +123,4 @@ extension AppFlipClockItem {
         lastLeftTime = -1
         lastRightTime = -1
     }
-    
 }

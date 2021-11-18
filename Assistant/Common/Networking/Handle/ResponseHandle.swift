@@ -15,9 +15,7 @@ protocol CustomMoyaResponseable {
 }
 
 extension CustomMoyaResponseable {
-    
     func isServerSuccess(response: Moya.Response) -> Bool {
         true
     }
- 
 }

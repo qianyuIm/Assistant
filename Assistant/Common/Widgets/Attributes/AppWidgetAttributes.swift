@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 struct AppWidgetAttributes: Equatable {
-    
     var name: String?
     /// 背景
     var background = BackgroundStyle.color(color: UIColor.orange)

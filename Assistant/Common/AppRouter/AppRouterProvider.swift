@@ -8,7 +8,7 @@
 import Foundation
 import URLNavigator
 
-protocol AppRouterTypeable: CaseIterable  {
+protocol AppRouterTypeable: CaseIterable {
     /// 模板 用于注册 例如: xxx://open/<path:_>
     var pattern: String { get }
     /// 需要打开的控制器
@@ -32,12 +32,12 @@ protocol AppRouterTypeable: CaseIterable  {
 }
 
 protocol AppRouterable: UIViewController {
-    
+
     /// 打开 默认是push
     ///
     /// - Parameter completion: 打开完成回调
     func routerOpen(with completion: (() -> Void)?)
-    
+
     /// 关闭
     ///
     /// - Parameters:
@@ -46,22 +46,21 @@ protocol AppRouterable: UIViewController {
 }
 
 class AppRouterProvider<T: AppRouterTypeable> {
-    
+
     typealias ViewControllerFactory = (_ url: URLConvertible, _ values: [String: Any], _ context: AppRouterContext?) -> AppRouterable?
-    
+
     typealias URLOpenHandlerFactory = (_ url: URLConvertible, _ values: [String: Any], _ context: AppRouterContext?) -> Bool
-    
+
     private let navigator: Navigator
     private let plugins: [AppRouterPlugin<T>]
-    
+
     public init(navigator: Navigator = Navigator(), _ plugins: [AppRouterPlugin<T>]) {
         self.navigator = navigator
         self.plugins = plugins
-        
         // 注册处理
         T.allCases.forEach { registers($0) }
     }
-    
+
 }
 extension AppRouterProvider {
     /// 获取视图控制器
@@ -88,7 +87,6 @@ extension AppRouterProvider {
 private extension AppRouterProvider {
     /// 注册
     func registers(_ type: T) {
-        
         self.register(type) { url, values, context in
             return type.controller(url: url, values: values, context: context)
         }

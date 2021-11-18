@@ -31,5 +31,5 @@ class AppRouterAccountPlugin: AppRouterPlugin<AppRouterType> {
         }
         AppRouter.shared.open(AppRouterType.login.pattern, context: context)
     }
-    
+
 }

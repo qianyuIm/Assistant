@@ -13,18 +13,17 @@ import RxCocoa
 
 import NSObject_Rx
 class QYReachability: NSObject {
-    
     static let shared = QYReachability()
     let reachabilityConnection = BehaviorRelay(value: Reachability.Connection.unavailable)
     var connectionValue: Reachability.Connection {
         return reachabilityConnection.value
     }
-    var reachability:Reachability?
+    var reachability: Reachability?
     private override init() {
         super.init()
         reachability = try? Reachability()
         reachability?.rx.reachabilityChanged
-            .map{ $0.connection }
+            .map { $0.connection }
             .bind(to: reachabilityConnection)
             .disposed(by: rx.disposeBag)
     }

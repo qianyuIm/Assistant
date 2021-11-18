@@ -13,13 +13,13 @@ import SwiftyUserDefaults
 class AppLaunchAd: NSObject {
     let scale3Url = "https://fdfs.xmcdn.com/group83/M07/5C/02/wKg5I179wIOTk59EAAOJzPWuqDw575.jpg"
     var adConfig = XHLaunchImageAdConfiguration()
-    
+
     func start() {
         NotificationCenter.default.addObserver(self, selector: #selector(setupLaunchAd), name: UIApplication.didFinishLaunchingNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
     }
-    
+
     @objc fileprivate func didEnterBackground() {
         let time = Date().timeIntervalSince1970
         Defaults[\.enterBackgroundTimeKey] = time
@@ -38,10 +38,9 @@ class AppLaunchAd: NSObject {
         XHLaunchAdButton.fixSwizzleMethord()
         XHLaunchAd.setLaunch(.launchScreen)
         XHLaunchAd.setWaitDataDuration(1)
-        self.launchImageAdConfig(url: self.scale3Url,scale: 3)
-        
+        self.launchImageAdConfig(url: self.scale3Url, scale: 3)
     }
-    fileprivate func launchImageAdConfig(url: String?,scale: Int) {
+    fileprivate func launchImageAdConfig(url: String?, scale: Int) {
         guard let url = url else { return  }
         adConfig.duration = 2
         /*if scale == 2 {
@@ -51,7 +50,6 @@ class AppLaunchAd: NSObject {
          let height: CGFloat = 528
          adConfig.frame = CGRect(x: 0, y: 0, width: QYInch.screenWidth, height: ceil(QYInch.screenWidth * height / width))
          }*/
-        
         adConfig.imageNameOrURLString = url
         adConfig.imageOption = .cacheInBackground
         adConfig.showEnterForeground = true

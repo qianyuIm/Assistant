@@ -21,8 +21,6 @@ extension QYConfig {
         static let webUrlKey = "webUrl"
     }
 }
-
-
 class AppRouterHelper {
     /// 参数的话需要H5端配合，所以就固定跳转几个页面好了
     /// 都为 iosApp://universal? 开头

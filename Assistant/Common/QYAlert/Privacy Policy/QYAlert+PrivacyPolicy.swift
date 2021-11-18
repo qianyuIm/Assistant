@@ -10,14 +10,12 @@ import SwiftEntryKit
 import SwiftyUserDefaults
 import AttributedString
 import SnapKit
-
-
 extension QYAlert {
     /// 启动隐私协议
     class func alertPrivacyPolicy() {
         // 判断
         let launchPrivacyPolicy = Defaults.launchPrivacyPolicyKey
-        if (launchPrivacyPolicy == QYConfig.appVersion) {return}
+        if launchPrivacyPolicy == QYConfig.appVersion { return }
         showPrivacyPolicy()
     }
 }
@@ -115,13 +113,10 @@ private class QYPrivacyPolicyView: UIView {
         let textView = UITextView()
         textView.isSelectable = false
         textView.isEditable = false
-        
         return textView
     }()
-    
     lazy var policyLabel: UILabel = {
         let label = UILabel()
-        
         return label
     }()
     lazy var acceptButton: QYBorderButton = {
@@ -144,7 +139,6 @@ private class QYPrivacyPolicyView: UIView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         /// 高亮状态
 //        Array<ASAttributedString.Action.Highlight>.defalut = [.foreground(QYColor.privacyPolicyLinkHighlightColor)]
         addSubview(titleLabel)
@@ -184,11 +178,9 @@ private class QYPrivacyPolicyView: UIView {
         }
         bindUI()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
     @objc func acceptButtonDidClick() {
         Defaults.launchPrivacyPolicyKey = QYConfig.appVersion
         QYAlert.dismiss()
@@ -217,11 +209,9 @@ private class QYPrivacyPolicyView: UIView {
 }
 
 extension QYPrivacyPolicyView {
-    
     func bindUI() {
         self.app.addRoundCorners(.allCorners, radius: 10)
-        
-        appThemeProvider.typeStream.subscribe (onNext: {[weak self] themeType in
+        appThemeProvider.typeStream.subscribe(onNext: {[weak self] themeType in
             guard let strongSelf = self else { return }
             let theme = themeType.associatedObject
             strongSelf.backgroundColor = theme.backgroundColor
@@ -235,7 +225,8 @@ extension QYPrivacyPolicyView {
             strongSelf.bindPolicyLabel(theme)
         }).disposed(by: rx.disposeBag)
     }
-    func bindTextView(_ theme:  AppThemeProtocol) {
+    // swiftlint:disable comma
+    func bindTextView( _ theme: AppThemeProtocol) {
         let titleFont = QYFont.fontRegular(14)
         let linkFont = QYFont.fontRegular(14)
         let describeFont = QYFont.fontRegular(13)
@@ -252,7 +243,7 @@ extension QYPrivacyPolicyView {
         \("（3）您可以在应用内或您的设备中查询、更正、删除您的信息并对相关授权进行管理。 如您对本公告及相关协议的相关内容有任何意见、建议或疑问，您可以通过",.font(describeFont),.foreground(subtitleColor)) \("1040583846@qq.com",.font(linkFont),.foreground(primaryColor),.action(linkAction)) \("联系我们。如您同意以上内容，您可点击“同意”开始使用。",.font(describeFont),.foreground(subtitleColor))
         """
     }
-    func bindPolicyLabel(_ theme:  AppThemeProtocol) {
+    func bindPolicyLabel( _ theme: AppThemeProtocol) {
         let font = QYFont.fontRegular(14)
         policyLabel.attributed.text = """
         \("点击查看",.foreground(theme.textTheme.titleColor),.font(font))\("《用户协议》",.foreground(theme.primaryColor),.font(font),.action(userPolicyAction)),\("《隐私协议》",.font(font),.foreground(theme.primaryColor),.action(privacyPolicyAction))\("。",.foreground(theme.textTheme.titleColor),.font(font))

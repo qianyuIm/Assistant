@@ -32,8 +32,6 @@ extension AppDelegate {
     func handleShortcutItem(_ shortcutItem: UIApplicationShortcutItem) -> Bool {
         return true
     }
-    
-    
 }
 
 private extension AppDelegate {
@@ -43,7 +41,6 @@ private extension AppDelegate {
 //            myShortcutItems.append(UIApplicationShortcutItem(type: item.type, localizedTitle: item.localizedTitle, localizedSubtitle: item.localizedSubtitle, icon: item.icon))
 //        }
 //        UIApplication.shared.shortcutItems = myShortcutItems
-        
     }
     /// 路由
     func _setupRouter() {
@@ -55,7 +52,6 @@ private extension AppDelegate {
     }
     /// 导航
     func _configNavigationBar() {
-       
         let navigationBar = UINavigationBar.appearance()
         navigationBar.shadowImage = UIImage()
 
@@ -63,7 +59,7 @@ private extension AppDelegate {
         navigationBar.theme.barTintColor = appThemeProvider.attribute { $0.navigationBarTheme.barTintColor }
 //        navigationBar.theme.barStyle = appThemeProvider.attribute { $0.navigationBarTheme.barStyle
 //        }
-        navigationBar.theme.titleTextAttributes = appThemeProvider.attribute { [NSAttributedString.Key.foregroundColor: $0.navigationBarTheme.foregroundColor,NSAttributedString.Key.font: QYFont.fontSemibold(18)] }
+        navigationBar.theme.titleTextAttributes = appThemeProvider.attribute { [NSAttributedString.Key.foregroundColor: $0.navigationBarTheme.foregroundColor, NSAttributedString.Key.font: QYFont.fontSemibold(18)] }
     }
     /// root
     func _initializeRoot() {
@@ -78,7 +74,6 @@ private extension AppDelegate {
         launchAd = AppLaunchAd()
         launchAd?.start()
     }
-    
     /// 启动隐私协议
     func _alertLaunchPrivacy() {
         QYAlert.alertPrivacyPolicy()

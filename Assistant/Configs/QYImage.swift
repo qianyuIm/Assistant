@@ -23,6 +23,4 @@ struct QYImage {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         return image
     }
-    
-
 }
