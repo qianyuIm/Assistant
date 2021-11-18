@@ -30,9 +30,9 @@ extension SmallWidgetViewModel {
                                           router: false),
                               items: [
                                 .flipClockItem(attributes: AppWidgetAttributes(with: R.string.widgets.itemFlipClock_1.key.app.widgetsLocalized())),
-                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twelveMissSecond)),
-                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twentyFour)),
-                                .flipClockItem(attributes: AppWidgetAttributes(timeDisplayMode: .twentyFourMissSecond))
+                                .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twelveMissSecond)),
+                                .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twentyFour)),
+                                .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twentyFourMissSecond))
                               ])
         let generalToolsSection = SmallWidgetSection
             .generalToolsSection(supplementary:
@@ -43,7 +43,7 @@ extension SmallWidgetViewModel {
                                               routerPattern: "",
                                               router: true),
                                  items: [
-                                    .flipClockItem(attributes: AppWidgetAttributes())
+                                    .analogClockItem(attributes: AppWidgetAttributes())
                                  ])
         let xPanelSection = SmallWidgetSection
             .xPanelSection(supplementary:
@@ -119,7 +119,7 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes())
+                            .flowItem(attributes: AppWidgetAttributes(name: R.string.widgets.itemFlow_1.key.app.widgetsLocalized()))
                            ])
 
         let progressSection = SmallWidgetSection
@@ -133,11 +133,11 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-//        return [recommendSection]
-        return [recommendSection, generalToolsSection,
-                                xPanelSection, dashboardSection,
-                                clockSection, quickLauncherSection,
-                                calendarSection, daysMatterSection,
-                                systemInfoSection, progressSection]
+        return [recommendSection, systemInfoSection]
+//        return [recommendSection, generalToolsSection,
+//                                xPanelSection, dashboardSection,
+//                                clockSection, quickLauncherSection,
+//                                calendarSection, daysMatterSection,
+//                                systemInfoSection, progressSection]
     }
 }

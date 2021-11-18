@@ -51,7 +51,11 @@ class SmallWidgetController: AppBaseCollectionVMController {
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
+        collectionView.app.register(cellClass: SmallWidgetAnalogClockCell.self)
+        collectionView.app.register(cellClass: SmallWidgetFlowCell.self)
+
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
+
         collectionView.delegate = self
         collectionView.dataSource = self
     }
@@ -73,6 +77,9 @@ class SmallWidgetController: AppBaseCollectionVMController {
                 switch item {
                 case .flipClockItem(let attributes):
                     (visibleCell as? SmallWidgetFlipClockCell)?.config(with: attributes)
+                case .analogClockItem(let attributes):
+                    (visibleCell as? SmallWidgetAnalogClockCell)?.config(with: attributes)
+                default: break
                 }
             }
         }
@@ -112,6 +119,14 @@ extension SmallWidgetController: UICollectionViewDataSource {
         switch item {
         case .flipClockItem(let attributes):
             let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlipClockCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        case .analogClockItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetAnalogClockCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        case .flowItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlowCell.self, for: indexPath)
             cell.config(with: attributes)
             return cell
         }

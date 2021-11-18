@@ -51,14 +51,14 @@ class AppFlipClockView: UIView {
             (corners, cornerRadius) = attributes.roundCorners.cornerValues
             self.app.addRoundCorners(corners, radius: cornerRadius)
             backgroundView.style = .init(background: attributes.background)
-            timeDisplayMode = attributes.timeDisplayMode
+            timeDisplayMode = attributes.clockDisplayMode
             hourItem.attributes = attributes
             minuteItem.attributes = attributes
             secondItem.attributes = attributes
         }
     }
-    private var _timeDisplayMode: AppWidgetAttributes.TimeDisplayMode = .twelve
-    private var timeDisplayMode: AppWidgetAttributes.TimeDisplayMode = .twelve {
+    private var _timeDisplayMode: AppWidgetAttributes.ClockDisplayMode = .twelve
+    private var timeDisplayMode: AppWidgetAttributes.ClockDisplayMode = .twelve {
         didSet {
             if _timeDisplayMode != timeDisplayMode {
                 setNeedsLayout()

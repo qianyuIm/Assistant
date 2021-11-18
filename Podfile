@@ -66,6 +66,8 @@ def swift_pods
   pod 'M13Checkbox', '~> 3.4.0'
   # 定时器
   pod 'Schedule', '~> 2.1.0'
+  # 流量监控
+  pod 'TrafficPolice', '~> 1.1'
 end
 
 

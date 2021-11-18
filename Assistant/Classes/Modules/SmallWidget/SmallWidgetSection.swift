@@ -34,6 +34,10 @@ enum SmallWidgetSection {
 enum SmallWidgetSectionItem {
     /// 翻页时钟
     case flipClockItem(attributes: AppWidgetAttributes)
+    /// 圆形时钟
+    case analogClockItem(attributes: AppWidgetAttributes)
+    /// 数据流量
+    case flowItem(attributes: AppWidgetAttributes)
 }
 
 extension SmallWidgetSection: SectionModelType {

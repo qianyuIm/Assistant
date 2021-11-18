@@ -17,7 +17,7 @@
 		EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */; };
 		EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */; };
 		EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */; };
-		EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */; };
+		EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */; };
 		EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
 		EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
 		EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD012742076300786A80 /* AppFlipClockItem.swift */; };
@@ -30,6 +30,10 @@
 		EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */; };
 		EF2FFD162742651700786A80 /* LargeWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD152742651700786A80 /* LargeWidgetViewModel.swift */; };
 		EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD172742653600786A80 /* LargeWidgetSection.swift */; };
+		EF44B9C5274633A800640E21 /* SmallWidgetFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */; };
+		EF44B9C92746347700640E21 /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44B9C82746347700640E21 /* AppFlowView.swift */; };
+		EF46A26B2745F77D00186357 /* AppAnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46A26A2745F77D00186357 /* AppAnalogClockView.swift */; };
+		EF46A26D2745FCB600186357 /* SmallWidgetAnalogClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */; };
 		EF6A21332735285A00691B3A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A21182735238100691B3A /* WidgetKit.framework */; };
 		EF6A21342735285A00691B3A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A211A2735238100691B3A /* SwiftUI.framework */; };
 		EF6A213A2735285B00691B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21392735285B00691B3A /* Assets.xcassets */; };
@@ -266,7 +270,7 @@
 		EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockLabel.swift; sourceTree = "<group>"; };
 		EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetAttributes.swift; sourceTree = "<group>"; };
 		EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+BackgroundStyle.swift"; sourceTree = "<group>"; };
-		EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+TimeFormat.swift"; sourceTree = "<group>"; };
+		EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+Clock.swift"; sourceTree = "<group>"; };
 		EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+FrameStyle.swift"; sourceTree = "<group>"; };
 		EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+LabelStyle.swift"; sourceTree = "<group>"; };
 		EF2FFD012742076300786A80 /* AppFlipClockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockItem.swift; sourceTree = "<group>"; };
@@ -279,6 +283,10 @@
 		EF2FFD132742644A00786A80 /* MediumWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetSection.swift; sourceTree = "<group>"; };
 		EF2FFD152742651700786A80 /* LargeWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetViewModel.swift; sourceTree = "<group>"; };
 		EF2FFD172742653600786A80 /* LargeWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetSection.swift; sourceTree = "<group>"; };
+		EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetFlowCell.swift; sourceTree = "<group>"; };
+		EF44B9C82746347700640E21 /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
+		EF46A26A2745F77D00186357 /* AppAnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalogClockView.swift; sourceTree = "<group>"; };
+		EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetAnalogClockCell.swift; sourceTree = "<group>"; };
 		EF6A21182735238100691B3A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		EF6A211A2735238100691B3A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		EF6A212C273526DD00691B3A /* WidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
@@ -559,6 +567,7 @@
 		EF2FFCED2741F50C00786A80 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				EF46A2692745F74C00186357 /* AnalogClock */,
 				EF2FFCEE2741F53400786A80 /* FlipClock */,
 			);
 			path = Clock;
@@ -577,6 +586,7 @@
 		EF2FFCF32741F83C00786A80 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				EF44B9C62746342800640E21 /* SystemInfo */,
 				EF2FFCF82741FB5C00786A80 /* Attributes */,
 				EF2FFCED2741F50C00786A80 /* Clock */,
 				EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */,
@@ -589,7 +599,7 @@
 			children = (
 				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
-				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift */,
+				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */,
 				EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */,
 				EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */,
 			);
@@ -649,8 +659,34 @@
 			isa = PBXGroup;
 			children = (
 				EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */,
+				EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */,
+				EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF44B9C62746342800640E21 /* SystemInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF44B9C72746346300640E21 /* Flow */,
+			);
+			path = SystemInfo;
+			sourceTree = "<group>";
+		};
+		EF44B9C72746346300640E21 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EF44B9C82746347700640E21 /* AppFlowView.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		EF46A2692745F74C00186357 /* AnalogClock */ = {
+			isa = PBXGroup;
+			children = (
+				EF46A26A2745F77D00186357 /* AppAnalogClockView.swift */,
+			);
+			path = AnalogClock;
 			sourceTree = "<group>";
 		};
 		EF6A21352735285A00691B3A /* WidgetExtension */ = {
@@ -1818,6 +1854,7 @@
 				EFD03A85273915A800E28F27 /* AppThemeController.swift in Sources */,
 				EFD4AC262733820C000B2350 /* QYToast.swift in Sources */,
 				EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */,
+				EF44B9C92746347700640E21 /* AppFlowView.swift in Sources */,
 				EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */,
 				EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */,
 				EFD4AC2227338202000B2350 /* QYButton.swift in Sources */,
@@ -1830,6 +1867,7 @@
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
 				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
+				EF44B9C5274633A800640E21 /* SmallWidgetFlowCell.swift in Sources */,
 				EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */,
 				EFD4AC4727338264000B2350 /* QYImage.swift in Sources */,
 				EFD4AC492733841A000B2350 /* NSObjectExtensions.swift in Sources */,
@@ -1856,7 +1894,7 @@
 				EFD4AC9127338A25000B2350 /* MusicResponseCodable.swift in Sources */,
 				EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */,
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
-				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+TimeFormat.swift in Sources */,
+				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift in Sources */,
 				EFD4ACFE2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift in Sources */,
 				EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */,
 				EFD80955273DFA0A0065F048 /* AppThemeSection.swift in Sources */,
@@ -1868,6 +1906,7 @@
 				EFD4AC3F27338236000B2350 /* QYAlert+PrivacyPolicy.swift in Sources */,
 				EFD4AC9027338A25000B2350 /* AppApi.swift in Sources */,
 				EF9DE908274342E300DBDAE5 /* MediumWidgetFlipClockCell.swift in Sources */,
+				EF46A26B2745F77D00186357 /* AppAnalogClockView.swift in Sources */,
 				EFD4AC0027336DF4000B2350 /* UITableView+ReusableView.swift in Sources */,
 				EFD4AC06273370D8000B2350 /* R.generated.swift in Sources */,
 				EFD03A8227390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift in Sources */,
@@ -1926,6 +1965,7 @@
 				EFD11B37273B5AC700C68AF9 /* FileManager+Shared.swift in Sources */,
 				EFD4AC2327338202000B2350 /* QYBorderButton.swift in Sources */,
 				EFD4ACF72733AA65000B2350 /* AppNotification.swift in Sources */,
+				EF46A26D2745FCB600186357 /* SmallWidgetAnalogClockCell.swift in Sources */,
 				EFD4ACAC27338E72000B2350 /* Observable+Operators.swift in Sources */,
 				EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */,
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,

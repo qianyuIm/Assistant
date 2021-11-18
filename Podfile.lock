@@ -110,9 +110,12 @@ PODS:
   - SwiftEntryKit (2.0.0)
   - SwiftLint (0.45.0)
   - SwiftRichString (3.7.2)
+  - SwiftTimer (2.0)
   - SwiftyBeaver (1.9.5)
   - SwiftyUserDefaults (5.3.0)
   - Toaster (2.3.0)
+  - TrafficPolice (1.1):
+    - SwiftTimer (~> 2.0)
   - URLNavigator (2.3.0)
   - XHLaunchAd (3.9.12):
     - FLAnimatedImage (~> 1.0.12)
@@ -161,6 +164,7 @@ DEPENDENCIES:
   - SwiftyBeaver (~> 1.9.5)
   - SwiftyUserDefaults (~> 5.3.0)
   - Toaster (~> 2.3.0)
+  - TrafficPolice
   - URLNavigator (~> 2.3.0)
   - XHLaunchAd (~> 3.9.12)
 
@@ -216,9 +220,11 @@ SPEC REPOS:
     - SwiftEntryKit
     - SwiftLint
     - SwiftRichString
+    - SwiftTimer
     - SwiftyBeaver
     - SwiftyUserDefaults
     - Toaster
+    - TrafficPolice
     - URLNavigator
     - XHLaunchAd
 
@@ -283,12 +289,14 @@ SPEC CHECKSUMS:
   SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   SwiftRichString: d61b807db1f8834c26fee92b6dd3e1be2dc5af03
+  SwiftTimer: 4d25ff045d81c3132e1161a3ba2353d06ff63c30
   SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+  TrafficPolice: 6f3acdad83776e8bb8171eb2b331232eb1b6419e
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: ef64ddafd07b54e68601804acaeee37ec02ad415
+PODFILE CHECKSUM: eb04ef7018d24ecdbaaf5ab73b6f074d75cb39f0
 
 COCOAPODS: 1.10.0

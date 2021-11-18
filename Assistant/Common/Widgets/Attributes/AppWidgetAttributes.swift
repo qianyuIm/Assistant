@@ -18,13 +18,15 @@ struct AppWidgetAttributes: Equatable {
     var border = Border.none
     /// 小组件风格
     var widgetFamily = WidgetFamily.small
-    /// 时间显示格式
-    var timeDisplayMode = TimeDisplayMode.twelve
+    /// 时钟显示样式
+    var clockDisplayMode = ClockDisplayMode.twelve
+    /// 时钟
+    var clockStyle = ClockStyle()
     /// 字体和颜色
     var labelStyle = AppWidgetAttributes.LabelStyle()
 
     static func == (lhs: AppWidgetAttributes, rhs: AppWidgetAttributes) -> Bool {
-        return lhs.name == rhs.name && lhs.background == rhs.background && lhs.roundCorners == rhs.roundCorners && lhs.border == rhs.border && lhs.widgetFamily == rhs.widgetFamily && lhs.timeDisplayMode == rhs.timeDisplayMode && lhs.labelStyle == rhs.labelStyle
+        return lhs.name == rhs.name && lhs.background == rhs.background && lhs.roundCorners == rhs.roundCorners && lhs.border == rhs.border && lhs.widgetFamily == rhs.widgetFamily && lhs.clockDisplayMode == rhs.clockDisplayMode && lhs.labelStyle == rhs.labelStyle
     }
 }
 
