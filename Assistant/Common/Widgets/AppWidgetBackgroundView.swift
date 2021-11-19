@@ -37,10 +37,10 @@ class AppWidgetBackgroundView: UIView {
             switch style.background {
             case .clear:
                 break
-            case .color(let color):
-                backgroundColor = color
-            case .image(let image):
-                backgroundImage = image
+            case .color(let hexString):
+                backgroundColor = UIColor.app.color(hexString: hexString)
+            case .image(let imageName):
+                backgroundImage = UIImage(named: imageName)
             }
             layer.backgroundColor = backgroundColor.cgColor
             imageView.image = backgroundImage

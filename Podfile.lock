@@ -33,6 +33,9 @@ PODS:
   - ESTabBarController-swift (2.8.0)
   - FLAnimatedImage (1.0.16)
   - FLEX (4.2.2)
+  - GRDB.swift (5.12.0):
+    - GRDB.swift/standard (= 5.12.0)
+  - GRDB.swift/standard (5.12.0)
   - HandyJSON (5.0.2)
   - HBDNavigationBar (1.8.3)
   - Hero (1.6.1)
@@ -131,6 +134,7 @@ DEPENDENCIES:
   - EmptyDataSet-Swift (~> 5.0.0)
   - ESTabBarController-swift (~> 2.8.0)
   - FLEX (~> 4.2.2)
+  - GRDB.swift (~> 5.12.0)
   - HandyJSON (~> 5.0.2)
   - HBDNavigationBar (~> 1.8.1)
   - Hero (~> 1.6.1)
@@ -164,7 +168,7 @@ DEPENDENCIES:
   - SwiftyBeaver (~> 1.9.5)
   - SwiftyUserDefaults (~> 5.3.0)
   - Toaster (~> 2.3.0)
-  - TrafficPolice
+  - TrafficPolice (~> 1.1)
   - URLNavigator (~> 2.3.0)
   - XHLaunchAd (~> 3.9.12)
 
@@ -184,6 +188,7 @@ SPEC REPOS:
     - ESTabBarController-swift
     - FLAnimatedImage
     - FLEX
+    - GRDB.swift
     - HandyJSON
     - HBDNavigationBar
     - Hero
@@ -252,6 +257,7 @@ SPEC CHECKSUMS:
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
   FLEX: dbd68ae9c67fcc872c79c9e5a728f38243dfaa78
+  GRDB.swift: f94b00ac11ab22597771b6a47211d1c44284395a
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HBDNavigationBar: c0fe3627a8f618961caed3dc1ce145d59b404e6e
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
@@ -297,6 +303,6 @@ SPEC CHECKSUMS:
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
   XHLaunchAd: 6320f9c68732667323072fc3a5f104e40fbe9cfe
 
-PODFILE CHECKSUM: eb04ef7018d24ecdbaaf5ab73b6f074d75cb39f0
+PODFILE CHECKSUM: f4a7abffa8e9c1c85324175a1196d4ad7083f999
 
 COCOAPODS: 1.10.0

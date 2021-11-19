@@ -68,6 +68,8 @@ def swift_pods
   pod 'Schedule', '~> 2.1.0'
   # 流量监控
   pod 'TrafficPolice', '~> 1.1'
+  # db
+  pod 'GRDB.swift', '~> 5.12.0'
 end
 
 

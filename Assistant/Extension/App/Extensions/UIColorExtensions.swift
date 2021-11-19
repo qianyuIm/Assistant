@@ -8,6 +8,14 @@
 import UIKit
 
 extension AppExtensionWrapper where Base == UIColor {
+    var hexString: String {
+        var red: CGFloat = 0
+        var green: CGFloat = 0
+        var blue: CGFloat = 0
+        var alpha: CGFloat = 0
+        base.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        return String(format: "#%02X%02X%02X", Int(round(red * 255)), Int(round(green * 255)), Int(round(blue * 255)))
+    }
     static func color(red: Int,
                       green: Int,
                       blue: Int,
@@ -22,7 +30,7 @@ extension AppExtensionWrapper where Base == UIColor {
 
         return UIColor.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: trans)
     }
-    /// hexString ->  #ff5ad2db ,EDE7F6,
+    /// rgb : hexString ->  #ff5ad2db ,EDE7F6,
     /// 0xEDE7F6, #EDE7F6, #0ff, 0xF0F, ..)
     /// - Parameters:
     ///   - hexString: hexadecimal string (examples: #ff5ad2db

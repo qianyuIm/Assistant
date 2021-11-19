@@ -8,12 +8,19 @@
 import UIKit
 
 class SmallWidgetAnalogClockCell: UICollectionViewCell {
-    lazy var clockContentView: UIView = {
-        let view = UIView()
+    var attributes = AppWidgetAttributes()
+    lazy var clockContentView: AppWidgetBackgroundView = {
+        let view = AppWidgetBackgroundView()
+        var cornerRadius: CGFloat = 0
+        var corners: UIRectCorner = []
+        (corners, cornerRadius) = attributes.roundCorners.cornerValues
+        view.app.addRoundCorners(corners, radius: cornerRadius)
+        view.style = .init(background: attributes.background)
         return view
     }()
     lazy var analogClockView: AppAnalogClockView = {
         let view = AppAnalogClockView()
+        view.attributes = attributes
         return view
     }()
     lazy var titleLabel: UILabel = {
@@ -30,15 +37,27 @@ class SmallWidgetAnalogClockCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-//        flipClockView.attributes = attributes
+//        analogClockView.attributes = attributes
 //        flipClockView.dateSource = Date()
         titleLabel.text = attributes.name
+        if self.attributes.clockStyle.size != attributes.clockStyle.size {
+            analogClockView.snp.updateConstraints { make in
+                make.size.equalTo(attributes.clockStyle.size)
+            }
+        }
+        if self.attributes.background != attributes.background {
+            var cornerRadius: CGFloat = 0
+            var corners: UIRectCorner = []
+            (corners, cornerRadius) = attributes.roundCorners.cornerValues
+            clockContentView.app.addRoundCorners(corners, radius: cornerRadius)
+            clockContentView.style = .init(background: attributes.background)
+        }
+        self.attributes = attributes
     }
 }
 
 extension SmallWidgetAnalogClockCell {
     func setupUI() {
-        contentView.backgroundColor = .systemPink
         contentView.addSubview(clockContentView)
         clockContentView.addSubview(analogClockView)
         contentView.addSubview(titleLabel)
@@ -54,6 +73,7 @@ extension SmallWidgetAnalogClockCell {
         }
         analogClockView.snp.makeConstraints { make in
             make.center.equalToSuperview()
+            make.size.equalTo(attributes.clockStyle.size)
         }
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(analogClockView.snp.bottom).offset(6)

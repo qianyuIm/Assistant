@@ -87,6 +87,9 @@ struct QYConfig {
         static func support() -> [String] {
             return Localize.availableLanguages(true)
         }
+        static var isEnglish: Bool {
+            return Localize.currentLanguage() == "en"
+        }
         static func current() -> String {
             return autoSystem ? auto : Localize.currentLanguage()
         }
@@ -96,5 +99,38 @@ struct QYConfig {
         static func setCurrentLanguage(_ language: String) {
             Localize.setCurrentLanguage(language)
         }
+    }
+    struct Widget {
+        static let widgetsPath = (NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last! + "/AppWidgets")
+        /// smallWidgets 存储位置
+        static let smallWidgetsPath: String = {
+            let path = widgetsPath + "/SmallWidgets"
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: path) { return path }
+            do {
+                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+            } catch { }
+            return path
+        }()
+        /// mediumlWidgets 存储位置
+        static let mediumWidgetsPath: String = {
+            let path = widgetsPath + "/MediumWidgets"
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: path) { return path }
+            do {
+                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+            } catch { }
+            return path
+        }()
+        /// largeWidgets 存储位置
+        static let largeWidgetsPath: String = {
+            let path = widgetsPath + "/LargeWidgets"
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: path) { return path }
+            do {
+                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
+            } catch { }
+            return path
+        }()
     }
 }

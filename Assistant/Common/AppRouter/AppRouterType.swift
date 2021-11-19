@@ -47,9 +47,13 @@ enum AppRouterType {
     case about
     /// 小组件限制
     case limit
+    /// 编辑页面
+    case widgetEdit
 }
 
 private let kConfigPath = "config/"
+private let kEditPath = "edit/"
+
 extension AppRouterType: AppRouterTypeable {
     var pattern: String {
         switch self {
@@ -79,6 +83,8 @@ extension AppRouterType: AppRouterTypeable {
             return QYConfig.scheme + kConfigPath + "about"
         case .limit:
             return QYConfig.scheme + kConfigPath + "limit"
+        case .widgetEdit:
+            return QYConfig.scheme + kEditPath + "widget"
         }
     }
     func controller(url: URLConvertible, values: [String: Any], context: AppRouterContext?) -> AppRouterable? {
@@ -98,6 +104,11 @@ extension AppRouterType: AppRouterTypeable {
             return AppLanguageController(viewModel: AppLanguageViewModel(), context: context)
         case .limit:
             return AppLimitController()
+        case .widgetEdit:
+            let parameter = context?.parameter
+            guard let parameter = context?.parameter as? AppWidgetAttributes else { return nil }
+            let viewModel = AppWidgetEditViewModel(with: parameter)
+            return AppWidgetEditController(viewModel: viewModel, context: context)
         default:
             return nil
         }

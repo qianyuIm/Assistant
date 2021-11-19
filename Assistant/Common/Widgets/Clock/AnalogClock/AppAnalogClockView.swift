@@ -8,9 +8,14 @@
 import UIKit
 
 class AppAnalogClockView: UIView {
-    lazy var backgroundView: AppWidgetBackgroundView = {
-        let view = AppWidgetBackgroundView()
-        return view
+    lazy var bgCircleLayer: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        return layer
+    }()
+    lazy var hourHandLayer: CAShapeLayer = {
+        let layer = CAShapeLayer()
+        layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        return layer
     }()
     private var _attributes: AppWidgetAttributes?
     var attributes: AppWidgetAttributes = AppWidgetAttributes() {
@@ -19,11 +24,16 @@ class AppAnalogClockView: UIView {
                 return
             }
             _attributes = attributes
-            var cornerRadius: CGFloat = 0
-            var corners: UIRectCorner = []
-            (corners, cornerRadius) = attributes.roundCorners.cornerValues
-            self.app.addRoundCorners(corners, radius: cornerRadius)
-            backgroundView.style = .init(background: attributes.background)
+            configLayer()
+        }
+    }
+    var dateSource: Date = Date() {
+        didSet {
+            var houe = dateSource.hour
+            let minute = dateSource.minute
+            let second = dateSource.second
+            
+            
         }
     }
     override init(frame: CGRect) {
@@ -33,11 +43,29 @@ class AppAnalogClockView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        bgCircleLayer.frame = bounds
+        hourHandLayer.frame = CGRect(origin: .zero, size: attributes.clockStyle.hourHandSize)
+        hourHandLayer.position = center
+    }
 }
 
 extension AppAnalogClockView {
     func setupUI() {
-        addSubview(backgroundView)
-        
+        layer.addSublayer(bgCircleLayer)
+        layer.addSublayer(hourHandLayer)
+    }
+    func configLayer() {
+        if let bgImageName = attributes.clockStyle.backgroundImageName {
+            bgCircleLayer.contents = UIImage(named: bgImageName)?.cgImage
+        } else {
+            bgCircleLayer.backgroundColor = UIColor.app.color(hexString: attributes.clockStyle.backgroundHexColorString).cgColor
+        }
+        if let hourImageName = attributes.clockStyle.hourHandImageName {
+            hourHandLayer.contents = UIImage(named: hourImageName)?.cgImage
+        } else {
+            hourHandLayer.backgroundColor = UIColor.app.color(hexString: attributes.clockStyle.hourHandHexColorString).cgColor
+        }
     }
 }

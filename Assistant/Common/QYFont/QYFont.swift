@@ -8,11 +8,11 @@
 import Foundation
 import AutoInch
 /// 中粗体
-private let kRDPingFangBoldFoneName = "PingFangSC-Semibold"
+let kRDPingFangBoldFoneName = "PingFangSC-Semibold"
 /// Medium
-private let kRDPingFangMediumFoneName = "PingFangSC-Medium"
+let kRDPingFangMediumFoneName = "PingFangSC-Medium"
 /// Regular
-private let kRDPingFangRegularFoneName = "PingFangSC-Regular"
+let kRDPingFangRegularFoneName = "PingFangSC-Regular"
 
 struct QYFont {
     /// 常规字体
@@ -38,9 +38,9 @@ struct QYFont {
     ///   - fontName:
     ///   - fontSize:
     /// - Returns:
-    private static func font(_ fontName: String,
-                             fontSize: CGFloat,
-                             isAuto: Bool = true) -> UIFont? {
+    static func font(_ fontName: String,
+                     fontSize: CGFloat,
+                     isAuto: Bool = true) -> UIFont? {
         let size = isAuto ? fontSize.auto() : fontSize
         return UIFont(name: fontName, size: size)
     }

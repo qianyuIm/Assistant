@@ -13,7 +13,7 @@ included:
 excluded:
   - Pods
   - Assistant/Resources/R.generated.swift
-  - Assistant/Assistant/Third Party
+  - Assistant/ThirdParty
   - Assistant/Common/AppIconFont/AppIconFontIcons.swift
   
 # 单行代码长度

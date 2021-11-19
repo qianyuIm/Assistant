@@ -44,6 +44,7 @@ class AppFlipClockLabel: UIView {
     }()
     var attributes: AppWidgetAttributes = AppWidgetAttributes() {
         didSet {
+            /// fix
             timeLabel.textColor = attributes.labelStyle.textColor
             timeLabel.font = attributes.labelStyle.font
             timeLabel.textAlignment = attributes.labelStyle.alignment

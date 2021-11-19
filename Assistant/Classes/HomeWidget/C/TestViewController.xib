@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestViewController" customModule="Assistant" customModuleProvider="target">
+            <connections>
+                <outlet property="clockView" destination="htJ-84-gce" id="Pe8-fc-5n2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWZ-Cy-NbV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDm-mH-shm" userLabel="contentView">
+                            <rect key="frame" x="0.0" y="0.0" width="435" height="485"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htJ-84-gce" customClass="SmileClockContainerView" customModule="Assistant" customModuleProvider="target">
+                                    <rect key="frame" x="140" y="30" width="155" height="155"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="155" id="dhF-TG-bhA"/>
+                                        <constraint firstAttribute="height" constant="155" id="sEn-V7-aLS"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="clockStyleNum">
+                                            <integer key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="hour">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="minute">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="second">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                            <color key="value" red="0.78823529410000004" green="0.64705882349999999" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="graduationColor">
+                                            <color key="value" red="0.23921568630000001" green="0.86128079160000004" blue="0.7652451911" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                            <color key="value" name="titleColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="handColor">
+                                            <color key="value" name="WidgetBackground"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="secHandColor">
+                                            <color key="value" systemColor="systemBrownColor"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <constraints>
+                                <constraint firstItem="htJ-84-gce" firstAttribute="top" secondItem="IDm-mH-shm" secondAttribute="top" constant="30" id="OQI-R1-ojm"/>
+                                <constraint firstAttribute="bottom" secondItem="htJ-84-gce" secondAttribute="bottom" constant="300" id="ZFm-q6-9Cj"/>
+                                <constraint firstItem="htJ-84-gce" firstAttribute="centerX" secondItem="IDm-mH-shm" secondAttribute="centerX" id="sW1-uN-aHe"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="IDm-mH-shm" firstAttribute="top" secondItem="SWZ-Cy-NbV" secondAttribute="top" id="KqQ-2a-x68"/>
+                        <constraint firstItem="IDm-mH-shm" firstAttribute="width" secondItem="SWZ-Cy-NbV" secondAttribute="width" multiplier="1.05076" id="awz-WU-IXv"/>
+                        <constraint firstAttribute="trailing" secondItem="IDm-mH-shm" secondAttribute="trailing" id="hxp-Ve-a57"/>
+                        <constraint firstItem="IDm-mH-shm" firstAttribute="leading" secondItem="SWZ-Cy-NbV" secondAttribute="leading" id="kgT-7G-4YC"/>
+                        <constraint firstAttribute="bottom" secondItem="IDm-mH-shm" secondAttribute="bottom" id="wLt-Ee-h7E"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="SWZ-Cy-NbV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1w8-4o-DPO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="SWZ-Cy-NbV" secondAttribute="bottom" id="FsB-zp-VHk"/>
+                <constraint firstItem="SWZ-Cy-NbV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GHW-qh-lZM"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SWZ-Cy-NbV" secondAttribute="trailing" id="bWN-LG-vV8"/>
+            </constraints>
+            <point key="canvasLocation" x="13" y="39"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="WidgetBackground">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="titleColor">
+            <color red="0.23921568627450981" green="0.26666666666666666" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

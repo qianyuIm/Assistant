@@ -14,6 +14,7 @@ typealias AppRouterContextCompletionHandler = ((_ result: [String: Any]?) -> Voi
 let kAppRouterContextLoginResultKey = "login_result"
 class AppRouterContext {
     var completionHandler: AppRouterContextCompletionHandler?
+    var parameter: Any?
 }
 
 class AppRouter {

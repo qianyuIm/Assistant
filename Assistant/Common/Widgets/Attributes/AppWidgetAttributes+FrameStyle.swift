@@ -8,22 +8,7 @@
 import UIKit
 import AutoInch
 extension AppWidgetAttributes {
-    enum WidgetFamily: Equatable {
-        case small
-        case medium
-        case large
-        var value: CGSize {
-            switch self {
-            case .small:
-                return QYInch.Widget.smallSize
-            case .medium:
-                return QYInch.Widget.mediumSize
-            case .large:
-                return QYInch.Widget.largeSize
-            }
-        }
-    }
-    enum RoundCorners: Equatable {
+    enum RoundCorners: Codable, Equatable {
         case all(radius: CGFloat)
         var cornerValues: (value: UIRectCorner, radius: CGFloat) {
             switch self {
@@ -32,9 +17,28 @@ extension AppWidgetAttributes {
             }
         }
     }
-    enum Border: Equatable {
+    enum Border: Codable, Equatable {
         case none
-        case color(color: UIColor, width: CGFloat)
-        case image(image: UIImage, width: CGFloat)
+        case color(hexString: String, width: CGFloat)
+        /// 当前只有本地图片
+        case image(named: String, width: CGFloat)
+        var color: UIColor? {
+            switch self {
+            case .none,
+                    .image:
+                return nil
+            case .color(let hexString, _):
+                return UIColor.app.color(hexString: hexString)
+            }
+        }
+        var image: UIImage? {
+            switch self {
+            case .none,
+                    .color:
+                return nil
+            case .image(let named, _):
+                return UIImage(named: named)
+            }
+        }
     }
 }

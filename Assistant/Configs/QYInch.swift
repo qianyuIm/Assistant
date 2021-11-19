@@ -59,6 +59,7 @@ struct QYInch {
     }
     /// 占位图大小
     static let placeholder = value(150)
+
     struct Widget {
         static var smallSize: CGSize {
             var size: CGSize = CGSize.zero

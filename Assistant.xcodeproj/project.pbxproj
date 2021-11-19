@@ -80,6 +80,18 @@
 		EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A86273915C400E28F27 /* AppThemeViewModel.swift */; };
 		EFD03A8A2739165B00E28F27 /* AppLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A892739165B00E28F27 /* AppLanguageViewModel.swift */; };
 		EFD03A8C2739166A00E28F27 /* AppLanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD03A8B2739166A00E28F27 /* AppLanguageController.swift */; };
+		EFD0ACD327472F5B00230373 /* AppWidgetEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD227472F5B00230373 /* AppWidgetEditViewModel.swift */; };
+		EFD0ACD627473C8D00230373 /* CodableColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD527473C8D00230373 /* CodableColor.swift */; };
+		EFD0ACD827473E8200230373 /* CodableFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD727473E8200230373 /* CodableFont.swift */; };
+		EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */; };
+		EFD0ACDC2747580000230373 /* AppWidgetAttributes+WidgetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */; };
+		EFD0ACDE2747708C00230373 /* AppUtility+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDD2747708C00230373 /* AppUtility+File.swift */; };
+		EFD0ACE627479CC300230373 /* SmileWorldClockModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */; };
+		EFD0ACE727479CC300230373 /* SmileClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE327479CC300230373 /* SmileClockView.swift */; };
+		EFD0ACE827479CC300230373 /* SmileClockContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */; };
+		EFD0ACE927479CC300230373 /* SmileTimeZoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */; };
+		EFD0ACEC27479E0F00230373 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACEA27479E0F00230373 /* TestViewController.swift */; };
+		EFD0ACED27479E0F00230373 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD0ACEB27479E0F00230373 /* TestViewController.xib */; };
 		EFD11B2B273B569600C68AF9 /* MediumWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */; };
 		EFD11B2D273B56D100C68AF9 /* SmallWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */; };
 		EFD11B2F273B56E500C68AF9 /* LargeWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */; };
@@ -346,6 +358,18 @@
 		EFD03A86273915C400E28F27 /* AppThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeViewModel.swift; sourceTree = "<group>"; };
 		EFD03A892739165B00E28F27 /* AppLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageViewModel.swift; sourceTree = "<group>"; };
 		EFD03A8B2739166A00E28F27 /* AppLanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLanguageController.swift; sourceTree = "<group>"; };
+		EFD0ACD227472F5B00230373 /* AppWidgetEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetEditViewModel.swift; sourceTree = "<group>"; };
+		EFD0ACD527473C8D00230373 /* CodableColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableColor.swift; sourceTree = "<group>"; };
+		EFD0ACD727473E8200230373 /* CodableFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFont.swift; sourceTree = "<group>"; };
+		EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Codable.swift"; sourceTree = "<group>"; };
+		EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+WidgetType.swift"; sourceTree = "<group>"; };
+		EFD0ACDD2747708C00230373 /* AppUtility+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+File.swift"; sourceTree = "<group>"; };
+		EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileWorldClockModal.swift; sourceTree = "<group>"; };
+		EFD0ACE327479CC300230373 /* SmileClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileClockView.swift; sourceTree = "<group>"; };
+		EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileClockContainerView.swift; sourceTree = "<group>"; };
+		EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileTimeZoneData.swift; sourceTree = "<group>"; };
+		EFD0ACEA27479E0F00230373 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		EFD0ACEB27479E0F00230373 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetIntentHandler.swift; sourceTree = "<group>"; };
@@ -599,6 +623,7 @@
 			children = (
 				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
+				EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */,
 				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */,
 				EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */,
 				EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */,
@@ -720,6 +745,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */,
+				EFD0ACD227472F5B00230373 /* AppWidgetEditViewModel.swift */,
 			);
 			path = WidgetEdit;
 			sourceTree = "<group>";
@@ -807,6 +833,35 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
+		EFD0ACD427473C7700230373 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				EFD0ACD527473C8D00230373 /* CodableColor.swift */,
+				EFD0ACD727473E8200230373 /* CodableFont.swift */,
+				EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		EFD0ACE027479CC300230373 /* SmileClock */ = {
+			isa = PBXGroup;
+			children = (
+				EFD0ACE127479CC300230373 /* Classes */,
+			);
+			path = SmileClock;
+			sourceTree = "<group>";
+		};
+		EFD0ACE127479CC300230373 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */,
+				EFD0ACE327479CC300230373 /* SmileClockView.swift */,
+				EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */,
+				EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		EFD11B31273B59EC00C68AF9 /* WidgetShared */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,7 +922,7 @@
 				EFD4ABD927336BA5000B2350 /* Utility */,
 				EFD4ABD827336B9B000B2350 /* Common */,
 				EFD4ABD727336B8B000B2350 /* Extension */,
-				EFD4ABD627336B7F000B2350 /* Third Party */,
+				EFD4ABD627336B7F000B2350 /* ThirdParty */,
 				EFD4ABD527336B56000B2350 /* Resources */,
 			);
 			path = Assistant;
@@ -904,12 +959,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EFD4ABD627336B7F000B2350 /* Third Party */ = {
+		EFD4ABD627336B7F000B2350 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				EFD0ACE027479CC300230373 /* SmileClock */,
 				EFD4ACDD2733A96D000B2350 /* RxErrorTracker */,
 			);
-			path = "Third Party";
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
 		EFD4ABD727336B8B000B2350 /* Extension */ = {
@@ -953,6 +1009,8 @@
 				EFD4AC4E2733869A000B2350 /* AppUtility+JP.swift */,
 				EFD4ACF22733A9D0000B2350 /* AppUtility+Json.swift */,
 				EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */,
+				EFD0ACDD2747708C00230373 /* AppUtility+File.swift */,
+				EFD0ACD427473C7700230373 /* PropertyWrapper */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1383,6 +1441,8 @@
 			isa = PBXGroup;
 			children = (
 				EFD4ACB927339043000B2350 /* AppHomeWidgetsController.swift */,
+				EFD0ACEA27479E0F00230373 /* TestViewController.swift */,
+				EFD0ACEB27479E0F00230373 /* TestViewController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1693,6 +1753,7 @@
 				EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */,
 				EFD4ACEE2733A996000B2350 /* AppRouter.plist in Resources */,
 				EFE198AD273DF6A500C44943 /* AppThemeSettingCell.xib in Resources */,
+				EFD0ACED27479E0F00230373 /* TestViewController.xib in Resources */,
 				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
@@ -1845,7 +1906,9 @@
 				EFD4ACC0273390DE000B2350 /* MJRefreshHeader+Rx.swift in Sources */,
 				EFD4AC9C27338A7E000B2350 /* AppTheme+Theme.swift in Sources */,
 				EFD4AC8A27338A25000B2350 /* CustomResponsePlugin.swift in Sources */,
+				EFD0ACE827479CC300230373 /* SmileClockContainerView.swift in Sources */,
 				EFD4AC1D273381A5000B2350 /* AppDelegate+Internal.swift in Sources */,
+				EFD0ACD827473E8200230373 /* CodableFont.swift in Sources */,
 				EFD4ABF727336DF4000B2350 /* UIEdgeInsetsExtensions.swift in Sources */,
 				EFD4ACBF273390DE000B2350 /* MJRefreshComponent+Rx.swift in Sources */,
 				EFD4ABF627336DF4000B2350 /* CALayerExtensions.swift in Sources */,
@@ -1915,8 +1978,10 @@
 				EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */,
 				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
+				EFD0ACE727479CC300230373 /* SmileClockView.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
+				EFD0ACE927479CC300230373 /* SmileTimeZoneData.swift in Sources */,
 				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
 				EFD4AC9B27338A7E000B2350 /* AppThemeManager.swift in Sources */,
@@ -1929,6 +1994,7 @@
 				EFD4AC9327338A25000B2350 /* MoyaErrorWrap.swift in Sources */,
 				EFD4ACF02733A996000B2350 /* AppRouterType.swift in Sources */,
 				EFD4ABFF27336DF4000B2350 /* QYReusableView.swift in Sources */,
+				EFD0ACD327472F5B00230373 /* AppWidgetEditViewModel.swift in Sources */,
 				EFD4AD122733AD9F000B2350 /* AppMoreViewModel.swift in Sources */,
 				EFD4AC182733804E000B2350 /* AppLaunchAd.swift in Sources */,
 				EFD4AC8927338A25000B2350 /* ResponseHandle.swift in Sources */,
@@ -1945,16 +2011,19 @@
 				EF2FFD0427422D9900786A80 /* AppWidgetSupplementaryModel.swift in Sources */,
 				EFD03A6E2738C34800E28F27 /* SmallWidgetViewModel.swift in Sources */,
 				EFD4AC3327338221000B2350 /* QYLogger.swift in Sources */,
+				EFD0ACDC2747580000230373 /* AppWidgetAttributes+WidgetType.swift in Sources */,
 				EF9DE90A274342F700DBDAE5 /* LargeWidgetFlipClockCell.swift in Sources */,
 				EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */,
 				EFD8095A273E45280065F048 /* MyWidgetsController.swift in Sources */,
 				EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */,
 				EFD4ABFA27336DF4000B2350 /* StringExtensions.swift in Sources */,
+				EFD0ACDE2747708C00230373 /* AppUtility+File.swift in Sources */,
 				EFD4ACED2733A996000B2350 /* AppRouterPlugin.swift in Sources */,
 				EFD4AC6C2733888F000B2350 /* AppViewModel.swift in Sources */,
 				EFD4AD062733AD66000B2350 /* AppIconsController.swift in Sources */,
 				EFD4ABFC27336DF4000B2350 /* UIButtonExtensions.swift in Sources */,
 				EFD4AC632733888F000B2350 /* MusicBaseModel.swift in Sources */,
+				EFD0ACD627473C8D00230373 /* CodableColor.swift in Sources */,
 				EF2FFD122742616700786A80 /* MediumWidgetViewModel.swift in Sources */,
 				EFD4AC5427338830000B2350 /* AppTabBarController.swift in Sources */,
 				EFD4AC0827337A44000B2350 /* AppUtility.swift in Sources */,
@@ -1971,6 +2040,7 @@
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
+				EFD0ACEC27479E0F00230373 /* TestViewController.swift in Sources */,
 				EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */,
 				EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
@@ -1980,6 +2050,7 @@
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
 				EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */,
 				EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */,
+				EFD0ACE627479CC300230373 /* SmileWorldClockModal.swift in Sources */,
 				EFD4AC642733888F000B2350 /* MusicCreator.swift in Sources */,
 				EFD03A8C2739166A00E28F27 /* AppLanguageController.swift in Sources */,
 				EFD4ABA52733674C000B2350 /* AppDelegate.swift in Sources */,
@@ -1987,6 +2058,7 @@
 				EFD4ACBA27339043000B2350 /* AppHomeWidgetsController.swift in Sources */,
 				EFD4AC8727338A25000B2350 /* TargetType+Rx.swift in Sources */,
 				EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */,
+				EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */,
 				EFD4ABF827336DF4000B2350 /* CGSizeExtensions.swift in Sources */,
 				EFD4AC9927338A7E000B2350 /* AppTheme+Rx.swift in Sources */,
 				EFD4AC2F2733821B000B2350 /* QYMapLocationManager.swift in Sources */,

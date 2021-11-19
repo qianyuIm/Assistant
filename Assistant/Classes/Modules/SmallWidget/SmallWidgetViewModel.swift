@@ -29,7 +29,7 @@ extension SmallWidgetViewModel {
                                           routerPattern: "",
                                           router: false),
                               items: [
-                                .flipClockItem(attributes: AppWidgetAttributes(with: R.string.widgets.itemFlipClock_1.key.app.widgetsLocalized())),
+                                .flipClockItem(attributes: AppWidgetAttributes()),
                                 .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twelveMissSecond)),
                                 .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twentyFour)),
                                 .flipClockItem(attributes: AppWidgetAttributes(clockDisplayMode: .twentyFourMissSecond))
@@ -75,7 +75,8 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes())
+                            .flipClockItem(attributes: AppWidgetAttributes()),
+                            .analogClockItem(attributes: AppWidgetAttributes())
                            ])
         let quickLauncherSection = SmallWidgetSection
             .xPanelSection(supplementary:
@@ -119,7 +120,7 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flowItem(attributes: AppWidgetAttributes(name: R.string.widgets.itemFlow_1.key.app.widgetsLocalized()))
+                            .flowItem(attributes: AppWidgetAttributes())
                            ])
 
         let progressSection = SmallWidgetSection
@@ -133,7 +134,7 @@ extension SmallWidgetViewModel {
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes())
                            ])
-        return [recommendSection, systemInfoSection]
+        return [clockSection, systemInfoSection]
 //        return [recommendSection, generalToolsSection,
 //                                xPanelSection, dashboardSection,
 //                                clockSection, quickLauncherSection,

@@ -89,6 +89,21 @@ extension SmallWidgetController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.listViewDidScrollCallback?(scrollView)
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewModel = viewModel as? SmallWidgetViewModel else { return }
+        guard let dataSource = viewModel.dataSource else { return }
+        let section = dataSource[indexPath.section]
+        let item = section.items[indexPath.item]
+        switch item {
+        case .flipClockItem(let attributes),
+                .analogClockItem(let attributes),
+                .flowItem(let attributes):
+            let context = AppRouterContext()
+            context.parameter = attributes
+            AppRouter.shared.open(AppRouterType.widgetEdit.pattern, context: context)
+        }
+    }
 }
 extension SmallWidgetController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
