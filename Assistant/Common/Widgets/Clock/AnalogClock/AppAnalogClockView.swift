@@ -14,7 +14,7 @@ class AppAnalogClockView: UIView {
     }()
     lazy var hourHandLayer: CAShapeLayer = {
         let layer = CAShapeLayer()
-        layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+//        layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
         return layer
     }()
     private var _attributes: AppWidgetAttributes?
@@ -46,8 +46,11 @@ class AppAnalogClockView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         bgCircleLayer.frame = bounds
-        hourHandLayer.frame = CGRect(origin: .zero, size: attributes.clockStyle.hourHandSize)
-        hourHandLayer.position = center
+        let hourHandWidth = attributes.clockStyle.hourHandSize.width
+        let hourHandHeight = attributes.clockStyle.hourHandSize.height
+        hourHandLayer.frame = CGRect(x: 0, y: 0, width: hourHandWidth, height: hourHandHeight)
+        hourHandLayer.position = CGPoint(x: bounds.width / 2, y: bounds.height / 2)
+        hourHandLayer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
     }
 }
 

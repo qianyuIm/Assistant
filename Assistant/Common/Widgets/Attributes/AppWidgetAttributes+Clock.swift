@@ -22,7 +22,7 @@ extension AppWidgetAttributes {
     /// 优先图片
     struct ClockStyle: Codable, Equatable {
         /// 背景
-        var backgroundImageName: String? = "icon_analog_clock_bg_1_dark"
+        var backgroundImageName: String? = "icon_analog_clock_bg_4_dark"
         var backgroundHexColorString: String = "#000000"
         /// 根据屏幕写死他
         var size: CGSize {
@@ -37,7 +37,7 @@ extension AppWidgetAttributes {
         /// 时针
         var hourHandImageName: String? = "icon_analog_clock_hour_0"
         var hourHandHexColorString: String = "#000000"
-        var hourHandSize: CGSize = CGSize(width: 6, height: 35)
+        var hourHandSize: CGSize = CGSize(width: 6, height: 36)
         /// 分针
         var minutesHandImageName: String? = "icon_analog_clock_minute_0"
         var minutesHandHexColorString: String = "#000000"

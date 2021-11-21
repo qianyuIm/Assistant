@@ -174,8 +174,8 @@ public class SmileClockView: UIView {
             
             let hourCornerRadius = hourHandRect.width / 2
             let hourPath =  UIBezierPath(roundedRect: hourHandRect, cornerRadius: hourCornerRadius)
-            let hourTransform = CGAffineTransform(rotationAngle: degreeFromHours(hours: hour, minutes: minute))
-            hourPath.apply(hourTransform)
+//            let hourTransform = CGAffineTransform(rotationAngle: degreeFromHours(hours: hour, minutes: minute))
+//            hourPath.apply(hourTransform)
             hourHandLayer.path = hourPath.cgPath
             hourHandLayer.fillColor = handColor.cgColor
             hourHandLayer.position = center

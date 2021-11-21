@@ -14,6 +14,12 @@ let countDownSeconds: Int = 60
 class AppWallpaperController: AppBaseVMController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .orange
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.backgroundColor = UIColor.red.cgColor
+        shapeLayer.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        shapeLayer.position = view.center
+        view.layer.addSublayer(shapeLayer)
     }
     override func setupLanguage() {
         super.setupLanguage()

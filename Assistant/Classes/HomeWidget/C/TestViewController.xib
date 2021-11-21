@@ -36,16 +36,16 @@
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="clockStyleNum">
-                                            <integer key="value" value="2"/>
+                                            <integer key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="hour">
                                             <integer key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="minute">
-                                            <integer key="value" value="1"/>
+                                            <integer key="value" value="0"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="second">
-                                            <integer key="value" value="1"/>
+                                            <integer key="value" value="0"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                             <color key="value" red="0.78823529410000004" green="0.64705882349999999" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,7 +90,7 @@
                 <constraint firstItem="SWZ-Cy-NbV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GHW-qh-lZM"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SWZ-Cy-NbV" secondAttribute="trailing" id="bWN-LG-vV8"/>
             </constraints>
-            <point key="canvasLocation" x="13" y="39"/>
+            <point key="canvasLocation" x="-91" y="-90"/>
         </view>
     </objects>
     <resources>
