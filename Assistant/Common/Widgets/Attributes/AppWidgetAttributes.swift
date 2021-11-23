@@ -29,8 +29,8 @@ struct AppWidgetAttributes: Codable, Equatable {
     var widgetFamily = WidgetFamily.small
     /// 时钟显示样式
     var clockDisplayMode = ClockDisplayMode.twelve
-    /// 时钟
-    var clockStyle = ClockStyle()
+    /// 圆形时钟
+    var analogClockStyle = AnalogClockStyle()
     /// 字体和颜色
     var labelStyle = AppWidgetAttributes.LabelStyle()
     /// 保存到本地的时间

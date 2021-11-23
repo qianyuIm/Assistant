@@ -34,7 +34,6 @@ class AppHomeUserWidgetView: UIView, AppNibLoadableView {
         }
     }
     @IBAction func tapAction(_ sender: UIButton) {
-        AppUtility.topMost?.navigationController?.pushViewController(TestViewController(), animated: true)
-//        AppRouter.shared.open(AppRouterType.myWidgets.pattern, context: nil)
+        AppRouter.shared.open(AppRouterType.myWidgets.pattern, context: nil)
     }
 }

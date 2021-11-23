@@ -37,12 +37,12 @@ class SmallWidgetAnalogClockCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-//        analogClockView.attributes = attributes
-//        flipClockView.dateSource = Date()
+        analogClockView.attributes = attributes
+        analogClockView.dateSource = Date()
         titleLabel.text = attributes.name
-        if self.attributes.clockStyle.size != attributes.clockStyle.size {
+        if self.attributes.analogClockStyle.size != attributes.analogClockStyle.size {
             analogClockView.snp.updateConstraints { make in
-                make.size.equalTo(attributes.clockStyle.size)
+                make.size.equalTo(attributes.analogClockStyle.size.backgroundSize)
             }
         }
         if self.attributes.background != attributes.background {
@@ -73,7 +73,7 @@ extension SmallWidgetAnalogClockCell {
         }
         analogClockView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.size.equalTo(attributes.clockStyle.size)
+            make.size.equalTo(attributes.analogClockStyle.size.backgroundSize)
         }
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(analogClockView.snp.bottom).offset(6)

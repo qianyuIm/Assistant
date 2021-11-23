@@ -64,29 +64,15 @@ class AppHomeWidgetsController: AppBaseVMController {
     let userModelFilePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! + "/userModelData"
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let style = AppWidgetAttributes()
-//        let encoder = JSONEncoder()
-//        do {
-//            let data = try encoder.encode(style)
-//            try data.write(to: URL(fileURLWithPath: userModelFilePath))
-//            QYLogger.error("存储成功")
-//        } catch {
-//            QYLogger.error("存储失败")
-//        }
-                let decoder = JSONDecoder()
-                let fileManager = FileManager.default
-                guard let data = fileManager.contents(atPath: userModelFilePath) else {
-                    QYLogger.error("取出失败")
-                    return
-                }
-                do {
-                    let user = try decoder.decode(AppWidgetAttributes.self, from: data)
-                    QYLogger.debug("font => \(user.border)")
-                    QYLogger.debug("textColor => \(user.clockDisplayMode)")
-        
-                } catch {
-                    QYLogger.error("取出失败")
-                }
+        //        let style = AppWidgetAttributes()
+        //        let encoder = JSONEncoder()
+        //        do {
+        //            let data = try encoder.encode(style)
+        //            try data.write(to: URL(fileURLWithPath: userModelFilePath))
+        //            QYLogger.error("存储成功")
+        //        } catch {
+        //            QYLogger.error("存储失败")
+        //        }
     }
     override func setupUI() {
         super.setupUI()
@@ -96,6 +82,8 @@ class AppHomeWidgetsController: AppBaseVMController {
         segmentedView.dataSource = dataSource
         segmentedView.indicators = [indicator]
         segmentedView.listContainer = pagingView.listContainerView
+        
+        
     }
     override func setupConstraints() {
         super.setupConstraints()

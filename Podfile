@@ -67,9 +67,11 @@ def swift_pods
   # 定时器
   pod 'Schedule', '~> 2.1.0'
   # 流量监控
-  pod 'TrafficPolice', '~> 1.1'
+#  pod 'TrafficPolice', '~> 1.1'
   # db
   pod 'GRDB.swift', '~> 5.12.0'
+  #
+  pod 'MultiProgressView', '~> 1.3.0'
 end
 
 

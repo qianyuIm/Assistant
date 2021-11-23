@@ -8,11 +8,12 @@
 import UIKit
 
 class SmallWidgetFlowCell: UICollectionViewCell {
+    var attributes = AppWidgetAttributes.flow
     lazy var flowView: AppFlowView = {
         let view = AppFlowView()
+        view.attributes = attributes
         return view
     }()
-    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = QYFont.fontMedium(13)
@@ -27,8 +28,6 @@ class SmallWidgetFlowCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-//        flipClockView.attributes = attributes
-//        flipClockView.dateSource = Date()
         titleLabel.text = attributes.name
     }
 }

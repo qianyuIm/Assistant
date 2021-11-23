@@ -32,6 +32,16 @@
 		EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD172742653600786A80 /* LargeWidgetSection.swift */; };
 		EF44B9C5274633A800640E21 /* SmallWidgetFlowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */; };
 		EF44B9C92746347700640E21 /* AppFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44B9C82746347700640E21 /* AppFlowView.swift */; };
+		EF458563274CD1EF00B4203A /* AppUtility+Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458562274CD1EF00B4203A /* AppUtility+Time.swift */; };
+		EF458581274CDF6300B4203A /* TrafficCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458578274CDF6300B4203A /* TrafficCounter.swift */; };
+		EF458582274CDF6300B4203A /* TrafficPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458579274CDF6300B4203A /* TrafficPackage.swift */; };
+		EF458583274CDF6300B4203A /* TrafficStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857A274CDF6300B4203A /* TrafficStatus.swift */; };
+		EF458584274CDF6300B4203A /* TrafficSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857B274CDF6300B4203A /* TrafficSummary.swift */; };
+		EF458585274CDF6300B4203A /* TrafficSpeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857C274CDF6300B4203A /* TrafficSpeed.swift */; };
+		EF458586274CDF6300B4203A /* Ex+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857D274CDF6300B4203A /* Ex+Double.swift */; };
+		EF458587274CDF6300B4203A /* TrafficData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857E274CDF6300B4203A /* TrafficData.swift */; };
+		EF458588274CDF6300B4203A /* TrafficManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF45857F274CDF6300B4203A /* TrafficManager.swift */; };
+		EF458589274CDF6300B4203A /* Ex+UInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF458580274CDF6300B4203A /* Ex+UInt64.swift */; };
 		EF46A26B2745F77D00186357 /* AppAnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46A26A2745F77D00186357 /* AppAnalogClockView.swift */; };
 		EF46A26D2745FCB600186357 /* SmallWidgetAnalogClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */; };
 		EF6A21332735285A00691B3A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF6A21182735238100691B3A /* WidgetKit.framework */; };
@@ -50,6 +60,13 @@
 		EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA564DD273CB5D900B4F9DE /* AppLanguageCell.swift */; };
 		EFA564E0273CB5D900B4F9DE /* AppLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */; };
 		EFA564E3273D01EA00B4F9DE /* Navigation.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFA564E5273D01EA00B4F9DE /* Navigation.strings */; };
+		EFAA4291274B61C600C63C31 /* AppWidgetAttributes+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */; };
+		EFAA4293274B9EA800C63C31 /* AppSmallFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA4292274B9EA800C63C31 /* AppSmallFlowView.swift */; };
+		EFAA4295274B9EBB00C63C31 /* AppSmallFlowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFAA4294274B9EBB00C63C31 /* AppSmallFlowView.xib */; };
+		EFAA4297274B9EF000C63C31 /* AppMediumFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA4296274B9EF000C63C31 /* AppMediumFlowView.swift */; };
+		EFAA4299274B9EFE00C63C31 /* AppMediumFlowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFAA4298274B9EFE00C63C31 /* AppMediumFlowView.xib */; };
+		EFAA429B274B9F1C00C63C31 /* AppLargeFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA429A274B9F1C00C63C31 /* AppLargeFlowView.swift */; };
+		EFAA429D274B9F2800C63C31 /* AppLargeFlowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFAA429C274B9F2800C63C31 /* AppLargeFlowView.xib */; };
 		EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */; };
 		EFB0C2DD2744F1C8008C83F2 /* AppWidgetEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */; };
 		EFB0C2E22744F8F7008C83F2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = EFB0C2E12744F8F7008C83F2 /* .swiftlint.yml */; };
@@ -86,12 +103,6 @@
 		EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */; };
 		EFD0ACDC2747580000230373 /* AppWidgetAttributes+WidgetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */; };
 		EFD0ACDE2747708C00230373 /* AppUtility+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDD2747708C00230373 /* AppUtility+File.swift */; };
-		EFD0ACE627479CC300230373 /* SmileWorldClockModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */; };
-		EFD0ACE727479CC300230373 /* SmileClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE327479CC300230373 /* SmileClockView.swift */; };
-		EFD0ACE827479CC300230373 /* SmileClockContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */; };
-		EFD0ACE927479CC300230373 /* SmileTimeZoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */; };
-		EFD0ACEC27479E0F00230373 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACEA27479E0F00230373 /* TestViewController.swift */; };
-		EFD0ACED27479E0F00230373 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFD0ACEB27479E0F00230373 /* TestViewController.xib */; };
 		EFD11B2B273B569600C68AF9 /* MediumWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */; };
 		EFD11B2D273B56D100C68AF9 /* SmallWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */; };
 		EFD11B2F273B56E500C68AF9 /* LargeWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */; };
@@ -297,6 +308,16 @@
 		EF2FFD172742653600786A80 /* LargeWidgetSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetSection.swift; sourceTree = "<group>"; };
 		EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetFlowCell.swift; sourceTree = "<group>"; };
 		EF44B9C82746347700640E21 /* AppFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowView.swift; sourceTree = "<group>"; };
+		EF458562274CD1EF00B4203A /* AppUtility+Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+Time.swift"; sourceTree = "<group>"; };
+		EF458578274CDF6300B4203A /* TrafficCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficCounter.swift; sourceTree = "<group>"; };
+		EF458579274CDF6300B4203A /* TrafficPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficPackage.swift; sourceTree = "<group>"; };
+		EF45857A274CDF6300B4203A /* TrafficStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficStatus.swift; sourceTree = "<group>"; };
+		EF45857B274CDF6300B4203A /* TrafficSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficSummary.swift; sourceTree = "<group>"; };
+		EF45857C274CDF6300B4203A /* TrafficSpeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficSpeed.swift; sourceTree = "<group>"; };
+		EF45857D274CDF6300B4203A /* Ex+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+Double.swift"; sourceTree = "<group>"; };
+		EF45857E274CDF6300B4203A /* TrafficData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficData.swift; sourceTree = "<group>"; };
+		EF45857F274CDF6300B4203A /* TrafficManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficManager.swift; sourceTree = "<group>"; };
+		EF458580274CDF6300B4203A /* Ex+UInt64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ex+UInt64.swift"; sourceTree = "<group>"; };
 		EF46A26A2745F77D00186357 /* AppAnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAnalogClockView.swift; sourceTree = "<group>"; };
 		EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetAnalogClockCell.swift; sourceTree = "<group>"; };
 		EF6A21182735238100691B3A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -318,6 +339,13 @@
 		EFA564DE273CB5D900B4F9DE /* AppLanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLanguageCell.xib; sourceTree = "<group>"; };
 		EFA564E4273D01EA00B4F9DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Navigation.strings; sourceTree = "<group>"; };
 		EFA564E6273D01EB00B4F9DE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Navigation.strings"; sourceTree = "<group>"; };
+		EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+Presets.swift"; sourceTree = "<group>"; };
+		EFAA4292274B9EA800C63C31 /* AppSmallFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSmallFlowView.swift; sourceTree = "<group>"; };
+		EFAA4294274B9EBB00C63C31 /* AppSmallFlowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppSmallFlowView.xib; sourceTree = "<group>"; };
+		EFAA4296274B9EF000C63C31 /* AppMediumFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMediumFlowView.swift; sourceTree = "<group>"; };
+		EFAA4298274B9EFE00C63C31 /* AppMediumFlowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppMediumFlowView.xib; sourceTree = "<group>"; };
+		EFAA429A274B9F1C00C63C31 /* AppLargeFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLargeFlowView.swift; sourceTree = "<group>"; };
+		EFAA429C274B9F2800C63C31 /* AppLargeFlowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppLargeFlowView.xib; sourceTree = "<group>"; };
 		EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetBackgroundView.swift; sourceTree = "<group>"; };
 		EFB0C2DC2744F1C8008C83F2 /* AppWidgetEditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetEditController.swift; sourceTree = "<group>"; };
 		EFB0C2E12744F8F7008C83F2 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
@@ -364,12 +392,6 @@
 		EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Codable.swift"; sourceTree = "<group>"; };
 		EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+WidgetType.swift"; sourceTree = "<group>"; };
 		EFD0ACDD2747708C00230373 /* AppUtility+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+File.swift"; sourceTree = "<group>"; };
-		EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileWorldClockModal.swift; sourceTree = "<group>"; };
-		EFD0ACE327479CC300230373 /* SmileClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileClockView.swift; sourceTree = "<group>"; };
-		EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileClockContainerView.swift; sourceTree = "<group>"; };
-		EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileTimeZoneData.swift; sourceTree = "<group>"; };
-		EFD0ACEA27479E0F00230373 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		EFD0ACEB27479E0F00230373 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetIntentHandler.swift; sourceTree = "<group>"; };
@@ -622,6 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
+				EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */,
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
 				EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */,
 				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */,
@@ -702,8 +725,30 @@
 			isa = PBXGroup;
 			children = (
 				EF44B9C82746347700640E21 /* AppFlowView.swift */,
+				EFAA4292274B9EA800C63C31 /* AppSmallFlowView.swift */,
+				EFAA4294274B9EBB00C63C31 /* AppSmallFlowView.xib */,
+				EFAA4296274B9EF000C63C31 /* AppMediumFlowView.swift */,
+				EFAA4298274B9EFE00C63C31 /* AppMediumFlowView.xib */,
+				EFAA429A274B9F1C00C63C31 /* AppLargeFlowView.swift */,
+				EFAA429C274B9F2800C63C31 /* AppLargeFlowView.xib */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		EF458577274CDF6300B4203A /* TrafficPolice */ = {
+			isa = PBXGroup;
+			children = (
+				EF458578274CDF6300B4203A /* TrafficCounter.swift */,
+				EF458579274CDF6300B4203A /* TrafficPackage.swift */,
+				EF45857A274CDF6300B4203A /* TrafficStatus.swift */,
+				EF45857B274CDF6300B4203A /* TrafficSummary.swift */,
+				EF45857C274CDF6300B4203A /* TrafficSpeed.swift */,
+				EF45857D274CDF6300B4203A /* Ex+Double.swift */,
+				EF45857E274CDF6300B4203A /* TrafficData.swift */,
+				EF45857F274CDF6300B4203A /* TrafficManager.swift */,
+				EF458580274CDF6300B4203A /* Ex+UInt64.swift */,
+			);
+			path = TrafficPolice;
 			sourceTree = "<group>";
 		};
 		EF46A2692745F74C00186357 /* AnalogClock */ = {
@@ -843,25 +888,6 @@
 			path = PropertyWrapper;
 			sourceTree = "<group>";
 		};
-		EFD0ACE027479CC300230373 /* SmileClock */ = {
-			isa = PBXGroup;
-			children = (
-				EFD0ACE127479CC300230373 /* Classes */,
-			);
-			path = SmileClock;
-			sourceTree = "<group>";
-		};
-		EFD0ACE127479CC300230373 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				EFD0ACE227479CC300230373 /* SmileWorldClockModal.swift */,
-				EFD0ACE327479CC300230373 /* SmileClockView.swift */,
-				EFD0ACE427479CC300230373 /* SmileClockContainerView.swift */,
-				EFD0ACE527479CC300230373 /* SmileTimeZoneData.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		EFD11B31273B59EC00C68AF9 /* WidgetShared */ = {
 			isa = PBXGroup;
 			children = (
@@ -955,7 +981,7 @@
 		EFD4ABD627336B7F000B2350 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				EFD0ACE027479CC300230373 /* SmileClock */,
+				EF458577274CDF6300B4203A /* TrafficPolice */,
 				EFD4ACDD2733A96D000B2350 /* RxErrorTracker */,
 			);
 			path = ThirdParty;
@@ -1002,6 +1028,7 @@
 				EFD4ACF22733A9D0000B2350 /* AppUtility+Json.swift */,
 				EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */,
 				EFD0ACDD2747708C00230373 /* AppUtility+File.swift */,
+				EF458562274CD1EF00B4203A /* AppUtility+Time.swift */,
 				EFD0ACD427473C7700230373 /* PropertyWrapper */,
 			);
 			path = Utility;
@@ -1433,8 +1460,6 @@
 			isa = PBXGroup;
 			children = (
 				EFD4ACB927339043000B2350 /* AppHomeWidgetsController.swift */,
-				EFD0ACEA27479E0F00230373 /* TestViewController.swift */,
-				EFD0ACEB27479E0F00230373 /* TestViewController.xib */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -1741,11 +1766,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAA429D274B9F2800C63C31 /* AppLargeFlowView.xib in Resources */,
 				EFD4AC8D27338A25000B2350 /* music_home_banner.json in Resources */,
 				EFD03A322738B7EC00E28F27 /* simpleTeachVideo.mp4 in Resources */,
 				EFD4ACEE2733A996000B2350 /* AppRouter.plist in Resources */,
 				EFE198AD273DF6A500C44943 /* AppThemeSettingCell.xib in Resources */,
-				EFD0ACED27479E0F00230373 /* TestViewController.xib in Resources */,
 				EFF2963F273A00BD00ACB35E /* Limit.strings in Resources */,
 				EFD4ACA027338B0A000B2350 /* Localizable.strings in Resources */,
 				EFD4ABE027336D6D000B2350 /* .gitignore in Resources */,
@@ -1757,6 +1782,7 @@
 				EFD4AC8B27338A25000B2350 /* music_home_private.json in Resources */,
 				EFF296AA273A0C4C00ACB35E /* AppLimitController.xib in Resources */,
 				EFE198B1273DF6B600C44943 /* AppThemeCell.xib in Resources */,
+				EFAA4299274B9EFE00C63C31 /* AppMediumFlowView.xib in Resources */,
 				EF0AAA742734D626006CEED0 /* startup.sh in Resources */,
 				EFD03A5F2738BB1A00E28F27 /* widget_create_guide_small.mp4 in Resources */,
 				EFD03A4F2738BA9100E28F27 /* trasparentStep1.mp4 in Resources */,
@@ -1767,6 +1793,7 @@
 				EFD03A5B2738BB0C00E28F27 /* widget_create_guide_medium.mp4 in Resources */,
 				EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */,
 				EFD4AC8C27338A25000B2350 /* music_home_recommend_songs.json in Resources */,
+				EFAA4295274B9EBB00C63C31 /* AppSmallFlowView.xib in Resources */,
 				EFD03A572738BB0000E28F27 /* widget_create_guide_extra_large.mp4 in Resources */,
 				EFD03A472738BA7C00E28F27 /* trasparentStep2.mp4 in Resources */,
 				EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */,
@@ -1897,8 +1924,8 @@
 				EFD4ABFD27336DF4000B2350 /* UIImageViewExtensions.swift in Sources */,
 				EFD4ACC0273390DE000B2350 /* MJRefreshHeader+Rx.swift in Sources */,
 				EFD4AC9C27338A7E000B2350 /* AppTheme+Theme.swift in Sources */,
+				EF458563274CD1EF00B4203A /* AppUtility+Time.swift in Sources */,
 				EFD4AC8A27338A25000B2350 /* CustomResponsePlugin.swift in Sources */,
-				EFD0ACE827479CC300230373 /* SmileClockContainerView.swift in Sources */,
 				EFD4AC1D273381A5000B2350 /* AppDelegate+Internal.swift in Sources */,
 				EFD0ACD827473E8200230373 /* CodableFont.swift in Sources */,
 				EFD4ABF727336DF4000B2350 /* UIEdgeInsetsExtensions.swift in Sources */,
@@ -1914,6 +1941,7 @@
 				EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */,
 				EFD4AC2227338202000B2350 /* QYButton.swift in Sources */,
 				EFD4AC412733824C000B2350 /* QYConfig.swift in Sources */,
+				EF458582274CDF6300B4203A /* TrafficPackage.swift in Sources */,
 				EFD4AC2E2733821B000B2350 /* QYMapError.swift in Sources */,
 				EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */,
 				EFD4AC6A2733888F000B2350 /* AppBaseEmptyView.swift in Sources */,
@@ -1926,10 +1954,12 @@
 				EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */,
 				EFD4AC4727338264000B2350 /* QYImage.swift in Sources */,
 				EFD4AC492733841A000B2350 /* NSObjectExtensions.swift in Sources */,
+				EF458583274CDF6300B4203A /* TrafficStatus.swift in Sources */,
 				EFD4AC0327336F3F000B2350 /* QYInch.swift in Sources */,
 				EFD4AC4327338252000B2350 /* QYDefaultKeys.swift in Sources */,
 				EFD4AC8827338A25000B2350 /* AppApiManager.swift in Sources */,
 				EFD4AC3E27338236000B2350 /* QYAlert.swift in Sources */,
+				EFAA4291274B61C600C63C31 /* AppWidgetAttributes+Presets.swift in Sources */,
 				EFD4AC6B2733888F000B2350 /* AppRefreshViewModel.swift in Sources */,
 				EFD03A752738D05400E28F27 /* LargeWidgetController.swift in Sources */,
 				EF2FFD162742651700786A80 /* LargeWidgetViewModel.swift in Sources */,
@@ -1944,6 +1974,7 @@
 				EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */,
 				EF6A214A27352AC100691B3A /* AppSettingViewModel.swift in Sources */,
 				EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */,
+				EFAA4297274B9EF000C63C31 /* AppMediumFlowView.swift in Sources */,
 				EFD4AC302733821B000B2350 /* QYMapSearchManager.swift in Sources */,
 				EFD8095E273E46670065F048 /* MySmallWidgetController.swift in Sources */,
 				EFD4AC9127338A25000B2350 /* MusicResponseCodable.swift in Sources */,
@@ -1970,10 +2001,8 @@
 				EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */,
 				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
-				EFD0ACE727479CC300230373 /* SmileClockView.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
-				EFD0ACE927479CC300230373 /* SmileTimeZoneData.swift in Sources */,
 				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
 				EFD4AC9B27338A7E000B2350 /* AppThemeManager.swift in Sources */,
@@ -1981,16 +2010,20 @@
 				EFD4ABE327336DB0000B2350 /* AppExtensionWrapper.swift in Sources */,
 				EFD4ABF927336DF4000B2350 /* UIBarButtonItemExtensions.swift in Sources */,
 				EFD03A782738D40E00E28F27 /* AppTransparentController.swift in Sources */,
+				EF458588274CDF6300B4203A /* TrafficManager.swift in Sources */,
 				EFD4ACC627339195000B2350 /* AppTabBarItemContentView.swift in Sources */,
 				EFD4ABF527336DF4000B2350 /* CGFloatExtensions.swift in Sources */,
 				EFD4AC9327338A25000B2350 /* MoyaErrorWrap.swift in Sources */,
 				EFD4ACF02733A996000B2350 /* AppRouterType.swift in Sources */,
 				EFD4ABFF27336DF4000B2350 /* QYReusableView.swift in Sources */,
 				EFD0ACD327472F5B00230373 /* AppWidgetEditViewModel.swift in Sources */,
+				EF458585274CDF6300B4203A /* TrafficSpeed.swift in Sources */,
 				EFD4AD122733AD9F000B2350 /* AppMoreViewModel.swift in Sources */,
+				EFAA429B274B9F1C00C63C31 /* AppLargeFlowView.swift in Sources */,
 				EFD4AC182733804E000B2350 /* AppLaunchAd.swift in Sources */,
 				EFD4AC8927338A25000B2350 /* ResponseHandle.swift in Sources */,
 				EFD4AC682733888F000B2350 /* AppBaseController.swift in Sources */,
+				EFAA4293274B9EA800C63C31 /* AppSmallFlowView.swift in Sources */,
 				EFD4AC9A27338A7E000B2350 /* AppTheme.swift in Sources */,
 				EFD4AC652733888F000B2350 /* MusicPlaylist.swift in Sources */,
 				EFD11B48273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
@@ -1998,6 +2031,7 @@
 				EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */,
 				EF6A21552735306000691B3A /* AppSettingCell.swift in Sources */,
 				EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */,
+				EF458586274CDF6300B4203A /* Ex+Double.swift in Sources */,
 				EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */,
 				EFD4AC662733888F000B2350 /* AppBaseCollectionVMController.swift in Sources */,
 				EF2FFD0427422D9900786A80 /* AppWidgetSupplementaryModel.swift in Sources */,
@@ -2032,17 +2066,18 @@
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
-				EFD0ACEC27479E0F00230373 /* TestViewController.swift in Sources */,
 				EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */,
 				EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
 				EF2FFCF02741F55F00786A80 /* AppFlipClockView.swift in Sources */,
 				EFD4ACF12733A996000B2350 /* AppRouterHelper.swift in Sources */,
+				EF458581274CDF6300B4203A /* TrafficCounter.swift in Sources */,
+				EF458584274CDF6300B4203A /* TrafficSummary.swift in Sources */,
+				EF458587274CDF6300B4203A /* TrafficData.swift in Sources */,
 				EFD4ACEB2733A996000B2350 /* AppRouterAccountPlugin.swift in Sources */,
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
 				EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */,
 				EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */,
-				EFD0ACE627479CC300230373 /* SmileWorldClockModal.swift in Sources */,
 				EFD4AC642733888F000B2350 /* MusicCreator.swift in Sources */,
 				EFD03A8C2739166A00E28F27 /* AppLanguageController.swift in Sources */,
 				EFD4ABA52733674C000B2350 /* AppDelegate.swift in Sources */,
@@ -2053,6 +2088,7 @@
 				EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */,
 				EFD4ABF827336DF4000B2350 /* CGSizeExtensions.swift in Sources */,
 				EFD4AC9927338A7E000B2350 /* AppTheme+Rx.swift in Sources */,
+				EF458589274CDF6300B4203A /* Ex+UInt64.swift in Sources */,
 				EFD4AC2F2733821B000B2350 /* QYMapLocationManager.swift in Sources */,
 				EFD4ACEF2733A996000B2350 /* AppRouterProvider.swift in Sources */,
 				EFD4ABFB27336DF4000B2350 /* UIViewExtensions.swift in Sources */,
