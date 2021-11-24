@@ -18,39 +18,29 @@ class LargeWidgetViewModel: AppViewModel {
 
 extension LargeWidgetViewModel {
     func config() -> [LargeWidgetSection] {
-        let recommendSection = LargeWidgetSection
-            .recommendSection(supplementary:
-                                    .init(icon: R.image.icon_widget_section_recommend(),
-                                          title: R.string.widgets
-                                            .sectionRecommend.key
-                                            .app.widgetsLocalized(),
-                                          routerPattern: "",
-                                          router: false),
-                              items: [
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes()),
-                                .flipClockItem(attributes: AppWidgetAttributes())
-                              ])
-        let generalToolsSection = LargeWidgetSection
-            .generalToolsSection(supplementary:
-                                        .init(icon: R.image.icon_widget_section_tools(),
-                                              title: R.string.widgets
-                                                .sectionGeneralTools.key
-                                                .app.widgetsLocalized(),
-                                              routerPattern: "",
-                                              router: true),
-                                 items: [
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes()),
-                                    .flipClockItem(attributes: AppWidgetAttributes())
-                                 ])
-        return [recommendSection, generalToolsSection]
+        let clockSection = LargeWidgetSection
+            .xPanelSection(supplementary:
+                                .init(icon: R.image.icon_widget_section_clock(),
+                                      title: R.string.widgets
+                                        .sectionClock.key
+                                        .app.widgetsLocalized(),
+                                      routerPattern: "",
+                                      router: true),
+                           items: [
+                            .flipClockItem(attributes: AppWidgetAttributes.flipClock(.large)),
+                            .analogClockItem(attributes: AppWidgetAttributes.analogClock(.large))
+                           ])
+        let systemInfoSection = LargeWidgetSection
+            .xPanelSection(supplementary:
+                                .init(icon: R.image.icon_widget_section_system(),
+                                      title: R.string.widgets
+                                        .sectionSystemInfo.key
+                                        .app.widgetsLocalized(),
+                                      routerPattern: "",
+                                      router: true),
+                           items: [
+                            .flowItem(attributes: AppWidgetAttributes.flow(.large))
+                           ])
+        return [clockSection, systemInfoSection]
     }
 }

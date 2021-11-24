@@ -6,7 +6,7 @@
 // https://blog.csdn.net/hzhnzmyz/article/details/119872090
 
 import UIKit
-import AutoInch
+
 extension AppWidgetAttributes {
     enum RoundCorners: Codable, Equatable {
         case all(radius: CGFloat)

@@ -80,6 +80,11 @@ target 'Assistant' do
   swift_pods
 end
 
+target 'WidgetExtensionExtension' do
+  pod 'Localize-Swift', '~> 3.2.0'
+  pod 'AutoInch', '~> 2.4.0'
+end
+
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|

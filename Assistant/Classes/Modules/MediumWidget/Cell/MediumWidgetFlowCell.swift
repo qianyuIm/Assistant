@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SmallWidgetFlowCell: UICollectionViewCell {
-    var attributes = AppWidgetAttributes.flow(.small)
+class MediumWidgetFlowCell: UICollectionViewCell {
+    var attributes = AppWidgetAttributes.flow(.medium)
     lazy var flowView: AppFlowView = {
         let view = AppFlowView()
         view.attributes = attributes
@@ -32,7 +32,7 @@ class SmallWidgetFlowCell: UICollectionViewCell {
     }
 }
 
-extension SmallWidgetFlowCell {
+extension MediumWidgetFlowCell {
     func setupUI() {
         contentView.addSubview(flowView)
         contentView.addSubview(titleLabel)
@@ -44,7 +44,7 @@ extension SmallWidgetFlowCell {
     func setupConstraints() {
         flowView.snp.makeConstraints { make in
             make.left.top.right.equalToSuperview()
-            make.height.equalTo(QYInch.Widget.smallSize)
+            make.height.equalTo(QYInch.Widget.mediumSize)
         }
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(flowView.snp.bottom).offset(6)

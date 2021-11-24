@@ -11,6 +11,7 @@ import SwiftUI
 /// 入口函数
 @main
 struct AppWidgets: WidgetBundle {
+    @WidgetBundleBuilder
     var body: some Widget {
         SmallWidget()
         MediumWidget()

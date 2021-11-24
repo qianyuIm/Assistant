@@ -50,6 +50,7 @@ class LargeWidgetController: AppBaseCollectionVMController {
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: LargeWidgetFlipClockCell.self)
+        collectionView.app.register(cellClass: LargeWidgetFlowCell.self)
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -57,8 +58,8 @@ class LargeWidgetController: AppBaseCollectionVMController {
 
     func setupTimer() {
         let plan = Plan.every(1.seconds)
-        self.timer = plan.do(queue: .main) {
-            self.timerUpdate()
+        self.timer = plan.do(queue: .main) { [weak self] in
+            self?.timerUpdate()
         }
     }
     func timerUpdate() {
@@ -71,6 +72,7 @@ class LargeWidgetController: AppBaseCollectionVMController {
                 switch item {
                 case .flipClockItem(let attributes):
                     (visibleCell as? LargeWidgetFlipClockCell)?.config(with: attributes)
+                default: break
                 }
             }
         }
@@ -112,6 +114,12 @@ extension LargeWidgetController: UICollectionViewDataSource {
             let cell = collectionView.app.dequeueReusableCell(cellClass: LargeWidgetFlipClockCell.self, for: indexPath)
             cell.config(with: attributes)
             return cell
+        case .flowItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: LargeWidgetFlowCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        default:
+            return collectionView.app.dequeueReusableCell(cellClass: UICollectionViewCell.self, for: indexPath)
         }
     }
 }

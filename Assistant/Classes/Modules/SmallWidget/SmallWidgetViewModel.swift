@@ -76,7 +76,7 @@ extension SmallWidgetViewModel {
                                       router: true),
                            items: [
                             .flipClockItem(attributes: AppWidgetAttributes()),
-                            .analogClockItem(attributes: AppWidgetAttributes.analogClock)
+                            .analogClockItem(attributes: AppWidgetAttributes.analogClock(.small))
                            ])
         let quickLauncherSection = SmallWidgetSection
             .xPanelSection(supplementary:

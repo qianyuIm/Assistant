@@ -50,15 +50,17 @@ class MediumWidgetController: AppBaseCollectionVMController {
     override func setupUI() {
         super.setupUI()
         collectionView.app.register(cellClass: MediumWidgetFlipClockCell.self)
+        collectionView.app.register(cellClass: MediumWidgetFlowCell.self)
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
+
         collectionView.delegate = self
         collectionView.dataSource = self
     }
 
     func setupTimer() {
         let plan = Plan.every(1.seconds)
-        self.timer = plan.do(queue: .main) {
-            self.timerUpdate()
+        self.timer = plan.do(queue: .main) { [weak self] in
+            self?.timerUpdate()
         }
     }
     func timerUpdate() {
@@ -71,6 +73,7 @@ class MediumWidgetController: AppBaseCollectionVMController {
                 switch item {
                 case .flipClockItem(let attributes):
                     (visibleCell as? MediumWidgetFlipClockCell)?.config(with: attributes)
+                default: break
                 }
             }
         }
@@ -112,6 +115,12 @@ extension MediumWidgetController: UICollectionViewDataSource {
             let cell = collectionView.app.dequeueReusableCell(cellClass: MediumWidgetFlipClockCell.self, for: indexPath)
             cell.config(with: attributes)
             return cell
+        case .flowItem(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: MediumWidgetFlowCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        default:
+            return collectionView.app.dequeueReusableCell(cellClass: UICollectionViewCell.self, for: indexPath)
         }
     }
 }

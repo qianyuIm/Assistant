@@ -11,15 +11,16 @@ import Intents
 
 struct LargeEntry: TimelineEntry {
     let date: Date
+    let attributes: AppWidgetAttributes?
 }
 
 struct LargeWidgetProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> LargeEntry {
-        LargeEntry(date: Date())
+        LargeEntry(date: Date(), attributes: nil)
     }
 
     func getSnapshot(for configuration: LargeWidgetIntent, in context: Context, completion: @escaping (LargeEntry) -> ()) {
-        let entry = LargeEntry(date: Date())
+        let entry = LargeEntry(date: Date(), attributes: nil)
         completion(entry)
     }
 
@@ -30,7 +31,7 @@ struct LargeWidgetProvider: IntentTimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = LargeEntry(date: entryDate)
+            let entry = LargeEntry(date: entryDate, attributes: nil)
             entries.append(entry)
         }
 
@@ -44,7 +45,11 @@ struct LargeWidgetProvider: IntentTimelineProvider {
 struct LargeWidgetEntryView : View {
     var entry: LargeWidgetProvider.Entry
     var body: some View {
-        Text("说带你什么")
+        if entry.attributes == nil {
+            WidgetPlaceholderView()
+        } else {
+            Text("说带你什么")
+        }
     }
 }
 

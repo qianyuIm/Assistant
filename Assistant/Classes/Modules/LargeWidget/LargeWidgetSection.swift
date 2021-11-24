@@ -33,6 +33,10 @@ enum LargeWidgetSection {
 enum LargeWidgetSectionItem {
     /// 翻页时钟
     case flipClockItem(attributes: AppWidgetAttributes)
+    /// 圆形时钟
+    case analogClockItem(attributes: AppWidgetAttributes)
+    /// 数据流量
+    case flowItem(attributes: AppWidgetAttributes)
 }
 
 extension LargeWidgetSection: SectionModelType {

@@ -11,29 +11,30 @@ import Intents
 
 struct MediumEntry: TimelineEntry {
     let date: Date
+    let attributes: AppWidgetAttributes?
 }
 
 struct MediumWidgetProvider: IntentTimelineProvider {
     func placeholder(in context: Context) -> MediumEntry {
-        MediumEntry(date: Date())
+        MediumEntry(date: Date(), attributes: nil)
     }
-
+    
     func getSnapshot(for configuration: MediumWidgetIntent, in context: Context, completion: @escaping (MediumEntry) -> ()) {
-        let entry = MediumEntry(date: Date())
+        let entry = MediumEntry(date: Date(), attributes: nil)
         completion(entry)
     }
-
+    
     func getTimeline(for configuration: MediumWidgetIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [MediumEntry] = []
-
+        
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = MediumEntry(date: entryDate)
+            let entry = MediumEntry(date: entryDate, attributes: nil)
             entries.append(entry)
         }
-
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
@@ -44,7 +45,11 @@ struct MediumWidgetProvider: IntentTimelineProvider {
 struct MediumWidgetEntryView : View {
     var entry: MediumWidgetProvider.Entry
     var body: some View {
-        Text("说带你什么")
+        if entry.attributes == nil {
+            WidgetPlaceholderView()
+        } else {
+            Text("说带你什么")
+        }
     }
 }
 

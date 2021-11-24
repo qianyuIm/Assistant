@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zoh-IL-LfJ">
-                    <rect key="frame" x="8" y="13.5" width="124" height="120"/>
+                    <rect key="frame" x="8" y="16" width="124" height="115"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_system_info_flow" translatesAutoresizingMaskIntoConstraints="NO" id="OEz-YV-OzT">
                             <rect key="frame" x="4" y="4" width="12" height="12"/>
@@ -39,7 +39,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-zo-hT7" userLabel="contentView1">
-                            <rect key="frame" x="18" y="36" width="106" height="40"/>
+                            <rect key="frame" x="18" y="40" width="106" height="35.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蜂窝数据" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-C2-wA1">
                                     <rect key="frame" x="4" y="4" width="45" height="14"/>
@@ -53,42 +53,26 @@
                                     <color key="textColor" red="0.81568627450980391" green="0.094117647058823528" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-eV-eaS" customClass="MultiProgressView" customModule="MultiProgressView">
-                                    <rect key="frame" x="0.0" y="20" width="106" height="20"/>
+                                <view tag="101" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVi-eV-eaS" customClass="MultiProgressView" customModule="MultiProgressView">
+                                    <rect key="frame" x="0.0" y="21.5" width="106" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="Kk6-pS-7J7"/>
+                                        <constraint firstAttribute="height" constant="14" id="Kk6-pS-7J7"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                            <real key="value" value="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" systemColor="linkColor"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="trackBackgroundColor">
-                                            <color key="value" red="0.81568627449999997" green="0.094117647060000004" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="trackBorderColor">
-                                            <color key="value" red="0.81568627449999997" green="0.72549019609999998" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="trackBorderWidth">
-                                            <real key="value" value="2"/>
+                                            <real key="value" value="5"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
                                         <outlet property="dataSource" destination="iN0-l3-epB" id="UuR-67-wqb"/>
-                                        <outlet property="delegate" destination="iN0-l3-epB" id="BwT-Au-Tyd"/>
                                     </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="CVi-eV-eaS" firstAttribute="top" secondItem="HB5-zo-hT7" secondAttribute="top" constant="20" id="1Y5-QV-afE"/>
                                 <constraint firstAttribute="bottom" secondItem="CVi-eV-eaS" secondAttribute="bottom" id="663-0P-d9D"/>
+                                <constraint firstItem="CVi-eV-eaS" firstAttribute="top" secondItem="7ZZ-zO-FBt" secondAttribute="bottom" constant="2" id="8SE-7Z-QZx"/>
                                 <constraint firstItem="yEe-C2-wA1" firstAttribute="leading" secondItem="HB5-zo-hT7" secondAttribute="leading" constant="4" id="AAf-FQ-fO5"/>
                                 <constraint firstItem="7ZZ-zO-FBt" firstAttribute="centerY" secondItem="yEe-C2-wA1" secondAttribute="centerY" id="ACT-Bj-cki"/>
                                 <constraint firstItem="yEe-C2-wA1" firstAttribute="top" secondItem="HB5-zo-hT7" secondAttribute="top" constant="4" id="Kl8-YI-np6"/>
@@ -98,7 +82,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfQ-f2-Hzh" userLabel="contentView2">
-                            <rect key="frame" x="18" y="78" width="106" height="40"/>
+                            <rect key="frame" x="18" y="77.5" width="106" height="35.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIFI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-Ko-xQf">
                                     <rect key="frame" x="4" y="4" width="23.5" height="14"/>
@@ -112,35 +96,39 @@
                                     <color key="textColor" red="0.36862745098039218" green="0.8784313725490196" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-G0-Abs" customClass="MultiProgressView" customModule="MultiProgressView">
-                                    <rect key="frame" x="0.0" y="20" width="106" height="20"/>
+                                <view tag="102" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Wc-G0-Abs" customClass="MultiProgressView" customModule="MultiProgressView">
+                                    <rect key="frame" x="0.0" y="21.5" width="106" height="14"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="20" id="h2z-c7-PcM"/>
+                                        <constraint firstAttribute="height" constant="14" id="h2z-c7-PcM"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                     <connections>
                                         <outlet property="dataSource" destination="iN0-l3-epB" id="3C1-9i-eas"/>
-                                        <outlet property="delegate" destination="iN0-l3-epB" id="Eb7-bV-XkK"/>
                                     </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="8Wc-G0-Abs" firstAttribute="leading" secondItem="rfQ-f2-Hzh" secondAttribute="leading" id="FhB-l4-795"/>
-                                <constraint firstItem="8Wc-G0-Abs" firstAttribute="top" secondItem="rfQ-f2-Hzh" secondAttribute="top" constant="20" id="Kv2-bB-84f"/>
                                 <constraint firstAttribute="bottom" secondItem="8Wc-G0-Abs" secondAttribute="bottom" id="P9K-N2-K3o"/>
                                 <constraint firstItem="fQo-Ko-xQf" firstAttribute="top" secondItem="rfQ-f2-Hzh" secondAttribute="top" constant="4" id="Rzq-5l-ujw"/>
                                 <constraint firstAttribute="trailing" secondItem="8Wc-G0-Abs" secondAttribute="trailing" id="U75-fO-ecZ"/>
                                 <constraint firstAttribute="trailing" secondItem="YJB-pP-xfP" secondAttribute="trailing" id="bRc-25-LFc"/>
                                 <constraint firstItem="fQo-Ko-xQf" firstAttribute="leading" secondItem="rfQ-f2-Hzh" secondAttribute="leading" constant="4" id="hfZ-My-MLB"/>
                                 <constraint firstItem="YJB-pP-xfP" firstAttribute="centerY" secondItem="fQo-Ko-xQf" secondAttribute="centerY" id="o2a-Sd-QmW"/>
+                                <constraint firstItem="8Wc-G0-Abs" firstAttribute="top" secondItem="YJB-pP-xfP" secondAttribute="bottom" constant="2" id="pzR-wM-Bci"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="yD7-kB-lYu" firstAttribute="centerY" secondItem="OEz-YV-OzT" secondAttribute="centerY" id="40X-yM-6jD"/>
-                        <constraint firstItem="HB5-zo-hT7" firstAttribute="top" secondItem="dDw-iJ-bhJ" secondAttribute="bottom" id="8X1-is-PWb"/>
+                        <constraint firstItem="HB5-zo-hT7" firstAttribute="top" secondItem="dDw-iJ-bhJ" secondAttribute="bottom" constant="4" id="8X1-is-PWb"/>
                         <constraint firstAttribute="trailing" secondItem="AVl-dP-fyS" secondAttribute="trailing" constant="4" id="BzV-XL-3pq"/>
                         <constraint firstItem="yD7-kB-lYu" firstAttribute="leading" secondItem="OEz-YV-OzT" secondAttribute="trailing" constant="2" id="Kvc-Nl-8fY"/>
                         <constraint firstItem="HB5-zo-hT7" firstAttribute="leading" secondItem="dDw-iJ-bhJ" secondAttribute="leading" id="QBB-y6-sTc"/>
@@ -172,14 +160,11 @@
                 <outlet property="wwanProgress" destination="CVi-eV-eaS" id="xD8-CG-zmk"/>
                 <outlet property="wwanTotalLabel" destination="7ZZ-zO-FBt" id="CiT-vU-PnD"/>
             </connections>
-            <point key="canvasLocation" x="-352" y="368"/>
+            <point key="canvasLocation" x="-352.17391304347831" y="367.96875"/>
         </view>
     </objects>
     <resources>
         <image name="icon_system_info_flow" width="12" height="12"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
