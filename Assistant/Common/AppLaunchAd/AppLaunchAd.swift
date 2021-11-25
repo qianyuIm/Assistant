@@ -22,12 +22,12 @@ class AppLaunchAd: NSObject {
 
     @objc fileprivate func didEnterBackground() {
         let time = Date().timeIntervalSince1970
-        Defaults[\.enterBackgroundTimeKey] = time
+        AppGroupDefaults[\.enterBackgroundTimeKey] = time
     }
     @objc fileprivate func willEnterForeground() {
-        let enterBackgroundTime = Defaults[\.enterBackgroundTimeKey]
+        let enterBackgroundTime = AppGroupDefaults[\.enterBackgroundTimeKey]
         let time = Date().timeIntervalSince1970
-        Defaults[\.enterBackgroundTimeKey] = time
+        AppGroupDefaults[\.enterBackgroundTimeKey] = time
         if time - enterBackgroundTime > QYConfig.showEnterForegroundAdTimeInterval {
             adConfig.showEnterForeground = true
         } else {

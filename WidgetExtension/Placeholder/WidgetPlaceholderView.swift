@@ -10,6 +10,8 @@ import WidgetKit
 
 struct WidgetPlaceholderView: View {
     var body: some View {
+        let aa = AppGroupDefaults.themeDisplayModeKey
+        let title = aa == .dark ? "123" : "456"
         ZStack {
             Color.black
             VStack {
@@ -17,7 +19,7 @@ struct WidgetPlaceholderView: View {
                     Image("icon_placeholder")
                         .frame(width: 24, height: 24, alignment: .center)
                         .cornerRadius(5)
-                    Text("Placeholder.Title")
+                    Text(title)
                 }
                 VStack {
                     Text("Placeholder.Line1").font(.subheadline)

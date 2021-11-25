@@ -16,7 +16,7 @@ class AppThemeViewModel: AppViewModel {
     struct Output {
         let dataSource: BehaviorRelay<[AppThemeSection]>
     }
-    var currentThemeModel: BehaviorRelay<QYConfig.Theme.DisplayMode>
+    var currentThemeModel: BehaviorRelay<AppDisplayMode>
     var currentThemeSwatch: BehaviorRelay<AppColorSwatch?>
 
     required init() {
@@ -37,6 +37,7 @@ extension AppThemeViewModel: AppViewModelable {
                 self?.currentThemeSwatch.accept(item.colorSwatch)
                 appThemeProvider.type.switchWithColor(item.colorSwatch)
             }
+            AppWidgetShared.reloadTheme()
         }).disposed(by: rx.disposeBag)
         let refresh = Observable.of(input.trigger,
                                     input.selection.asObservable().mapToVoid()).merge()

@@ -39,27 +39,22 @@ struct QYConfig {
         static let targetUrl = "targetUrl"
     }
     struct Theme {
-        enum DisplayMode: String, DefaultsSerializable {
-            case inferred
-            case light
-            case dark
-        }
         static let supportSwatchs = AppColorSwatch.allValues
 
         static var themeSwatchIndex: Int {
             get {
-                return Defaults.themeSwatchIndexKey
+                return AppGroupDefaults.themeSwatchIndexKey
             }
             set {
-                Defaults.themeSwatchIndexKey = newValue
+                AppGroupDefaults.themeSwatchIndexKey = newValue
             }
         }
-        static var displayMode: DisplayMode {
+        static var displayMode: AppDisplayMode {
             get {
-                return Defaults.themeDisplayModeKey
+                return AppGroupDefaults.themeDisplayModeKey
             }
             set {
-                Defaults.themeDisplayModeKey = newValue
+                AppGroupDefaults.themeDisplayModeKey = newValue
             }
         }
         /// 是否为暗色 单存
@@ -77,18 +72,16 @@ struct QYConfig {
         static let auto = "auto"
         static var autoSystem: Bool {
             get {
-                return Defaults.languageAutoSystem
+                return AppGroupDefaults.languageAutoSystem
             }
             set {
-                Defaults.languageAutoSystem = newValue
+                AppGroupDefaults.languageAutoSystem = newValue
             }
         }
         static func support() -> [String] {
             return Localize.availableLanguages(true)
         }
-        static var isEnglish: Bool {
-            return Localize.currentLanguage() == "en"
-        }
+        
         static func current() -> String {
             return autoSystem ? auto : Localize.currentLanguage()
         }
@@ -98,38 +91,5 @@ struct QYConfig {
         static func setCurrentLanguage(_ language: String) {
             Localize.setCurrentLanguage(language)
         }
-    }
-    struct Widget {
-        static let widgetsPath = (NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last! + "/AppWidgets")
-        /// smallWidgets 存储位置
-        static let smallWidgetsPath: String = {
-            let path = widgetsPath + "/SmallWidgets"
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: path) { return path }
-            do {
-                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            } catch { }
-            return path
-        }()
-        /// mediumlWidgets 存储位置
-        static let mediumWidgetsPath: String = {
-            let path = widgetsPath + "/MediumWidgets"
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: path) { return path }
-            do {
-                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            } catch { }
-            return path
-        }()
-        /// largeWidgets 存储位置
-        static let largeWidgetsPath: String = {
-            let path = widgetsPath + "/LargeWidgets"
-            let fileManager = FileManager.default
-            if fileManager.fileExists(atPath: path) { return path }
-            do {
-                try fileManager.createDirectory(atPath: path, withIntermediateDirectories: true, attributes: nil)
-            } catch { }
-            return path
-        }()
     }
 }

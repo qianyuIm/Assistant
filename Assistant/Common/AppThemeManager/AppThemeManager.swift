@@ -182,7 +182,7 @@ enum AppThemeProvider: ThemeProvider {
         themeProvider.save()
         appThemeProvider.switch(themeProvider)
     }
-    func switchWithDisplayMode(_ displayMode: QYConfig.Theme.DisplayMode) {
+    func switchWithDisplayMode(_ displayMode: AppDisplayMode) {
         switch displayMode {
         case .inferred:
             switchInferred()

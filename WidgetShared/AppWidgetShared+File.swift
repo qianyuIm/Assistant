@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AppUtility {
+extension AppWidgetShared {
     /// 生成不重复的文件路径
     /// - Parameters:
     ///   - directory: 目录
@@ -19,8 +19,8 @@ extension AppUtility {
         var generate = directory + "/" + fileName
         var retries = retries
         if FileManager.default.fileExists(atPath: generate) {
-            let pathExtension = fileName.app.pathExtension
-            let base = fileName.app.deletingPathExtension
+            let pathExtension = (fileName as NSString).pathExtension
+            let base = (fileName as NSString).deletingPathExtension
             repeat {
                 retries += 1
                 if pathExtension.isEmpty {

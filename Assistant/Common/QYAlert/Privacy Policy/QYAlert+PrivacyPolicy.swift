@@ -14,7 +14,7 @@ extension QYAlert {
     /// 启动隐私协议
     class func alertPrivacyPolicy() {
         // 判断
-        let launchPrivacyPolicy = Defaults.launchPrivacyPolicyKey
+        let launchPrivacyPolicy = AppGroupDefaults.launchPrivacyPolicyKey
         if launchPrivacyPolicy == QYConfig.appVersion { return }
         showPrivacyPolicy()
     }
@@ -182,7 +182,7 @@ private class QYPrivacyPolicyView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     @objc func acceptButtonDidClick() {
-        Defaults.launchPrivacyPolicyKey = QYConfig.appVersion
+        AppGroupDefaults.launchPrivacyPolicyKey = QYConfig.appVersion
         QYAlert.dismiss()
     }
     @objc func noAcceptButtonDidClick() {

@@ -68,13 +68,13 @@ extension AppWidgetAttributes {
         var directory = ""
         switch widgetFamily {
         case .small:
-            directory = QYConfig.Widget.smallWidgetsPath
+            directory = AppWidgetPath.smallWidgetsPath
         case .medium:
-            directory = QYConfig.Widget.mediumWidgetsPath
+            directory = AppWidgetPath.mediumWidgetsPath
         case .large:
-            directory = QYConfig.Widget.largeWidgetsPath
+            directory = AppWidgetPath.largeWidgetsPath
         }
-        let (path, retries) = AppUtility.generate(directory: directory,
+        let (path, retries) = AppWidgetShared.generate(directory: directory,
                                        fileName: identifier,
                                        retries: widgetIndex)
         localTime = Date().timeIntervalSince1970
@@ -95,11 +95,11 @@ extension AppWidgetAttributes {
         var directory = ""
         switch widgetFamily {
         case .small:
-            directory = QYConfig.Widget.smallWidgetsPath
+            directory = AppWidgetPath.smallWidgetsPath
         case .medium:
-            directory = QYConfig.Widget.mediumWidgetsPath
+            directory = AppWidgetPath.mediumWidgetsPath
         case .large:
-            directory = QYConfig.Widget.largeWidgetsPath
+            directory = AppWidgetPath.largeWidgetsPath
         }
         let generate = directory + "/" + identifier
         if FileManager.default.fileExists(atPath: generate) {
@@ -115,7 +115,7 @@ extension AppWidgetAttributes {
     }
     static func smallWidgets() -> ([AppWidgetAttributes], [AppWidgetAttributes]) {
         var attributes: [AppWidgetAttributes] = []
-        if let subpaths = AppUtility.subpaths(atPath: QYConfig.Widget.smallWidgetsPath) {
+        if let subpaths = AppWidgetShared.subpaths(atPath: AppWidgetPath.smallWidgetsPath) {
             let fileManager = FileManager.default
             for subpath in subpaths {
                 let decoder = JSONDecoder()

@@ -25,7 +25,8 @@ struct AppWidgetColor: Codable, Equatable {
 
     func color(for traits: UITraitCollection,
                mode: AppWidgetAttributes.DisplayMode) -> UIColor {
-        switch mode {
+        let appModel = AppGroupDefaults.themeDisplayModeKey
+        switch appModel {
         case .inferred:
             switch traits.userInterfaceStyle {
             case .light, .unspecified:

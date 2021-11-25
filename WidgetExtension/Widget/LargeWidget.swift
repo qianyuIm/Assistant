@@ -54,7 +54,7 @@ struct LargeWidgetEntryView : View {
 }
 
 struct LargeWidget: Widget {
-    let kind: String = WidgetSharedKind.large
+    let kind: String = AppWidgetSharedKind.large
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: LargeWidgetIntent.self, provider: LargeWidgetProvider()) { entry in
             LargeWidgetEntryView(entry: entry)

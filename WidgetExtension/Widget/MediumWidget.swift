@@ -54,7 +54,7 @@ struct MediumWidgetEntryView : View {
 }
 
 struct MediumWidget: Widget {
-    let kind: String = WidgetSharedKind.medium
+    let kind: String = AppWidgetSharedKind.medium
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: MediumWidgetIntent.self, provider: MediumWidgetProvider()) { entry in
             MediumWidgetEntryView(entry: entry)

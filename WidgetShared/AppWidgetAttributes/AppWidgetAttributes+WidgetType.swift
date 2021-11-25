@@ -34,7 +34,7 @@ extension AppWidgetAttributes {
         case flow
 
         var displayName: String {
-            let isEnglish = QYConfig.Language.isEnglish
+            let isEnglish = AppWidgetShared.isEnglish
             switch self {
             case .unknown:
                 return ""

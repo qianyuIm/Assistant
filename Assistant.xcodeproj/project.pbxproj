@@ -16,6 +16,28 @@
 		EF04642B274F5948001F1F3F /* AppColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04642A274F5947001F1F3F /* AppColorSwatch.swift */; };
 		EF046430274F59F2001F1F3F /* QYInch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AC0227336F3F000B2350 /* QYInch.swift */; };
 		EF046434274F5AB9001F1F3F /* AppUtility+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046433274F5AB9001F1F3F /* AppUtility+Application.swift */; };
+		EF04643A274F6973001F1F3F /* QYDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AC4227338252000B2350 /* QYDefaultKeys.swift */; };
+		EF04643C274F6A20001F1F3F /* AppDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04643B274F6A20001F1F3F /* AppDisplayMode.swift */; };
+		EF04643D274F6A20001F1F3F /* AppDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04643B274F6A20001F1F3F /* AppDisplayMode.swift */; };
+		EF04643F274F70F9001F1F3F /* AppWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */; };
+		EF046440274F70FC001F1F3F /* AppWidgetAttributes+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */; };
+		EF046441274F70FF001F1F3F /* AppWidgetAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */; };
+		EF046442274F7102001F1F3F /* AppWidgetAttributes+DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */; };
+		EF046443274F7108001F1F3F /* AppWidgetAttributes+WidgetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */; };
+		EF046444274F710B001F1F3F /* AppWidgetAttributes+Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */; };
+		EF046445274F710E001F1F3F /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
+		EF046446274F7111001F1F3F /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
+		EF046447274F7114001F1F3F /* AppWidgetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046414274F3040001F1F3F /* AppWidgetColor.swift */; };
+		EF046448274F7117001F1F3F /* AppWidgetFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */; };
+		EF046449274F7145001F1F3F /* AppExtensionWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ABE227336DB0000B2350 /* AppExtensionWrapper.swift */; };
+		EF04644A274F714B001F1F3F /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ABEF27336DF4000B2350 /* UIColorExtensions.swift */; };
+		EF04644B274F736C001F1F3F /* AppWidgetShared+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDD2747708C00230373 /* AppWidgetShared+File.swift */; };
+		EF04644D274F7BB4001F1F3F /* AppWidgetShared+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04644C274F7BB4001F1F3F /* AppWidgetShared+Reload.swift */; };
+		EF04644E274F7BB4001F1F3F /* AppWidgetShared+Reload.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04644C274F7BB4001F1F3F /* AppWidgetShared+Reload.swift */; };
+		EF04644F274F7E28001F1F3F /* AppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4ACF52733AA65000B2350 /* AppNotification.swift */; };
+		EF046451274F7F26001F1F3F /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF046450274F7F26001F1F3F /* View.xib */; };
+		EF046453274F8075001F1F3F /* AppColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046452274F8075001F1F3F /* AppColorString.swift */; };
+		EF046454274F8075001F1F3F /* AppColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046452274F8075001F1F3F /* AppColorString.swift */; };
 		EF0AAA742734D626006CEED0 /* startup.sh in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA732734D626006CEED0 /* startup.sh */; };
 		EF0AAA762734D632006CEED0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA752734D632006CEED0 /* README.md */; };
 		EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */; };
@@ -110,17 +132,13 @@
 		EFD0ACD827473E8200230373 /* CodableFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD727473E8200230373 /* CodableFont.swift */; };
 		EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */; };
 		EFD0ACDC2747580000230373 /* AppWidgetAttributes+WidgetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */; };
-		EFD0ACDE2747708C00230373 /* AppUtility+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDD2747708C00230373 /* AppUtility+File.swift */; };
+		EFD0ACDE2747708C00230373 /* AppWidgetShared+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDD2747708C00230373 /* AppWidgetShared+File.swift */; };
 		EFD11B2B273B569600C68AF9 /* MediumWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */; };
 		EFD11B2D273B56D100C68AF9 /* SmallWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */; };
 		EFD11B2F273B56E500C68AF9 /* LargeWidgetIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */; };
-		EFD11B36273B5AC600C68AF9 /* FileManager+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */; };
-		EFD11B37273B5AC700C68AF9 /* FileManager+Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */; };
-		EFD11B38273B5ACB00C68AF9 /* Widget+Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */; };
-		EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */; };
 		EFD11B46273B79F200C68AF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6A21392735285B00691B3A /* Assets.xcassets */; };
-		EFD11B48273BA1FB00C68AF9 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */; };
-		EFD11B49273BA1FB00C68AF9 /* WidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */; };
+		EFD11B48273BA1FB00C68AF9 /* AppWidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* AppWidgetShared.swift */; };
+		EFD11B49273BA1FB00C68AF9 /* AppWidgetShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B47273BA1FB00C68AF9 /* AppWidgetShared.swift */; };
 		EFD11B4C273BA4E100C68AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD11B4E273BA4E100C68AF9 /* Localizable.strings */; };
 		EFD11B52273BAA9700C68AF9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EFD11B54273BAA9700C68AF9 /* Localizable.strings */; };
 		EFD11B56273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = EFD11B59273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition */; };
@@ -237,7 +255,6 @@
 		EFD8095C273E45770065F048 /* MyWidgetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8095B273E45770065F048 /* MyWidgetsViewModel.swift */; };
 		EFD8095E273E46670065F048 /* MySmallWidgetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8095D273E46670065F048 /* MySmallWidgetController.swift */; };
 		EFD80960273E46BA0065F048 /* MySmallWidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8095F273E46BA0065F048 /* MySmallWidgetViewModel.swift */; };
-		EFD80962273E5E210065F048 /* AppWidgetDateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD80961273E5E210065F048 /* AppWidgetDateProvider.swift */; };
 		EFE198AC273DF6A500C44943 /* AppThemeSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE198AA273DF6A500C44943 /* AppThemeSettingCell.swift */; };
 		EFE198AD273DF6A500C44943 /* AppThemeSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFE198AB273DF6A500C44943 /* AppThemeSettingCell.xib */; };
 		EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE198AE273DF6B600C44943 /* AppThemeCell.swift */; };
@@ -303,6 +320,10 @@
 		EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetFontName.swift; sourceTree = "<group>"; };
 		EF04642A274F5947001F1F3F /* AppColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorSwatch.swift; sourceTree = "<group>"; };
 		EF046433274F5AB9001F1F3F /* AppUtility+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+Application.swift"; sourceTree = "<group>"; };
+		EF04643B274F6A20001F1F3F /* AppDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDisplayMode.swift; sourceTree = "<group>"; };
+		EF04644C274F7BB4001F1F3F /* AppWidgetShared+Reload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetShared+Reload.swift"; sourceTree = "<group>"; };
+		EF046450274F7F26001F1F3F /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		EF046452274F8075001F1F3F /* AppColorString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorString.swift; sourceTree = "<group>"; };
 		EF0AAA732734D626006CEED0 /* startup.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = startup.sh; path = Script/startup.sh; sourceTree = SOURCE_ROOT; };
 		EF0AAA752734D632006CEED0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeUserWidgetView.swift; sourceTree = "<group>"; };
@@ -410,13 +431,11 @@
 		EFD0ACD727473E8200230373 /* CodableFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFont.swift; sourceTree = "<group>"; };
 		EFD0ACD92747429300230373 /* NSTextAlignment+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSTextAlignment+Codable.swift"; sourceTree = "<group>"; };
 		EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+WidgetType.swift"; sourceTree = "<group>"; };
-		EFD0ACDD2747708C00230373 /* AppUtility+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+File.swift"; sourceTree = "<group>"; };
+		EFD0ACDD2747708C00230373 /* AppWidgetShared+File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetShared+File.swift"; sourceTree = "<group>"; };
 		EFD11B2A273B569600C68AF9 /* MediumWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2C273B56D100C68AF9 /* SmallWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetIntentHandler.swift; sourceTree = "<group>"; };
 		EFD11B2E273B56E500C68AF9 /* LargeWidgetIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeWidgetIntentHandler.swift; sourceTree = "<group>"; };
-		EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Shared.swift"; sourceTree = "<group>"; };
-		EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Widget+Kind.swift"; sourceTree = "<group>"; };
-		EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetShared.swift; sourceTree = "<group>"; };
+		EFD11B47273BA1FB00C68AF9 /* AppWidgetShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetShared.swift; sourceTree = "<group>"; };
 		EFD11B4D273BA4E100C68AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EFD11B4F273BA4E300C68AF9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EFD11B53273BAA9700C68AF9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -542,7 +561,6 @@
 		EFD8095B273E45770065F048 /* MyWidgetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWidgetsViewModel.swift; sourceTree = "<group>"; };
 		EFD8095D273E46670065F048 /* MySmallWidgetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySmallWidgetController.swift; sourceTree = "<group>"; };
 		EFD8095F273E46BA0065F048 /* MySmallWidgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySmallWidgetViewModel.swift; sourceTree = "<group>"; };
-		EFD80961273E5E210065F048 /* AppWidgetDateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetDateProvider.swift; sourceTree = "<group>"; };
 		EFE198AA273DF6A500C44943 /* AppThemeSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSettingCell.swift; sourceTree = "<group>"; };
 		EFE198AB273DF6A500C44943 /* AppThemeSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppThemeSettingCell.xib; sourceTree = "<group>"; };
 		EFE198AE273DF6B600C44943 /* AppThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeCell.swift; sourceTree = "<group>"; };
@@ -622,6 +640,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EF04643E274F6ABD001F1F3F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EF04643B274F6A20001F1F3F /* AppDisplayMode.swift */,
+				EF046452274F8075001F1F3F /* AppColorString.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		EF0AAA7B273506CC006CEED0 /* V */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,17 +686,17 @@
 			isa = PBXGroup;
 			children = (
 				EF44B9C62746342800640E21 /* SystemInfo */,
-				EF2FFCF82741FB5C00786A80 /* Attributes */,
 				EF2FFCED2741F50C00786A80 /* Clock */,
 				EFB0C2D92744E81D008C83F2 /* AppWidgetBackgroundView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
 		};
-		EF2FFCF82741FB5C00786A80 /* Attributes */ = {
+		EF2FFCF82741FB5C00786A80 /* AppWidgetAttributes */ = {
 			isa = PBXGroup;
 			children = (
 				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
+				EF046450274F7F26001F1F3F /* View.xib */,
 				EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */,
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
 				EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */,
@@ -680,7 +707,7 @@
 				EF046414274F3040001F1F3F /* AppWidgetColor.swift */,
 				EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */,
 			);
-			path = Attributes;
+			path = AppWidgetAttributes;
 			sourceTree = "<group>";
 		};
 		EF2FFD192742661400786A80 /* SmallWidget */ = {
@@ -923,20 +950,13 @@
 		EFD11B31273B59EC00C68AF9 /* WidgetShared */ = {
 			isa = PBXGroup;
 			children = (
-				EFD11B32273B5A2000C68AF9 /* FileManager+Shared.swift */,
-				EFD11B34273B5A4800C68AF9 /* Widget+Kind.swift */,
-				EFD11B47273BA1FB00C68AF9 /* WidgetShared.swift */,
-				EFD80961273E5E210065F048 /* AppWidgetDateProvider.swift */,
-				EFD11B3A273B5B3300C68AF9 /* Models */,
+				EFD11B47273BA1FB00C68AF9 /* AppWidgetShared.swift */,
+				EFD0ACDD2747708C00230373 /* AppWidgetShared+File.swift */,
+				EF04644C274F7BB4001F1F3F /* AppWidgetShared+Reload.swift */,
+				EF2FFCF82741FB5C00786A80 /* AppWidgetAttributes */,
+				EF04643E274F6ABD001F1F3F /* App */,
 			);
 			path = WidgetShared;
-			sourceTree = "<group>";
-		};
-		EFD11B3A273B5B3300C68AF9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EFD4AB982733674C000B2350 = {
@@ -1060,7 +1080,6 @@
 				EFD4AC4E2733869A000B2350 /* AppUtility+JP.swift */,
 				EFD4ACF22733A9D0000B2350 /* AppUtility+Json.swift */,
 				EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */,
-				EFD0ACDD2747708C00230373 /* AppUtility+File.swift */,
 				EF458562274CD1EF00B4203A /* AppUtility+Time.swift */,
 				EFD0ACD427473C7700230373 /* PropertyWrapper */,
 			);
@@ -1837,6 +1856,7 @@
 				EFD03A092738B41B00E28F27 /* Widgets.strings in Resources */,
 				EFD4AC8C27338A25000B2350 /* music_home_recommend_songs.json in Resources */,
 				EFAA4295274B9EBB00C63C31 /* AppSmallFlowView.xib in Resources */,
+				EF046451274F7F26001F1F3F /* View.xib in Resources */,
 				EFD03A572738BB0000E28F27 /* widget_create_guide_extra_large.mp4 in Resources */,
 				EFD03A472738BA7C00E28F27 /* trasparentStep2.mp4 in Resources */,
 				EFD03A0F2738B47400E28F27 /* Transparent.strings in Resources */,
@@ -1972,16 +1992,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF046424274F5821001F1F3F /* QYFont.swift in Sources */,
-				EFD11B49273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
+				EF04643D274F6A20001F1F3F /* AppDisplayMode.swift in Sources */,
+				EFD11B49273BA1FB00C68AF9 /* AppWidgetShared.swift in Sources */,
+				EF046442274F7102001F1F3F /* AppWidgetAttributes+DisplayMode.swift in Sources */,
 				EFECD936274E07370006560F /* WidgetPlaceholderView.swift in Sources */,
-				EFD11B36273B5AC600C68AF9 /* FileManager+Shared.swift in Sources */,
+				EF046449274F7145001F1F3F /* AppExtensionWrapper.swift in Sources */,
+				EF04643F274F70F9001F1F3F /* AppWidgetAttributes.swift in Sources */,
 				EFF296B9273A539F00ACB35E /* MediumWidget.swift in Sources */,
+				EF046454274F8075001F1F3F /* AppColorString.swift in Sources */,
 				EFD11B56273BAAA200C68AF9 /* AppWidgetsConfiguration.intentdefinition in Sources */,
 				EFF296BD273A553B00ACB35E /* LargeWidget.swift in Sources */,
 				EFF296B7273A4DC800ACB35E /* SmallWidget.swift in Sources */,
-				EFD11B38273B5ACB00C68AF9 /* Widget+Kind.swift in Sources */,
+				EF046445274F710E001F1F3F /* AppWidgetAttributes+FrameStyle.swift in Sources */,
+				EF046440274F70FC001F1F3F /* AppWidgetAttributes+Presets.swift in Sources */,
+				EF046441274F70FF001F1F3F /* AppWidgetAttributes+BackgroundStyle.swift in Sources */,
+				EF04644E274F7BB4001F1F3F /* AppWidgetShared+Reload.swift in Sources */,
+				EF046443274F7108001F1F3F /* AppWidgetAttributes+WidgetType.swift in Sources */,
+				EF04644A274F714B001F1F3F /* UIColorExtensions.swift in Sources */,
+				EF04644B274F736C001F1F3F /* AppWidgetShared+File.swift in Sources */,
+				EF046444274F710B001F1F3F /* AppWidgetAttributes+Clock.swift in Sources */,
 				EF6A21452735290C00691B3A /* AppWidgets.swift in Sources */,
+				EF04643A274F6973001F1F3F /* QYDefaultKeys.swift in Sources */,
+				EF046446274F7111001F1F3F /* AppWidgetAttributes+LabelStyle.swift in Sources */,
+				EF046448274F7117001F1F3F /* AppWidgetFontName.swift in Sources */,
 				EF046430274F59F2001F1F3F /* QYInch.swift in Sources */,
+				EF04644F274F7E28001F1F3F /* AppNotification.swift in Sources */,
+				EF046447274F7114001F1F3F /* AppWidgetColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2015,9 +2051,9 @@
 				EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */,
 				EFD4AC6A2733888F000B2350 /* AppBaseEmptyView.swift in Sources */,
 				EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */,
-				EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */,
 				EF04642B274F5948001F1F3F /* AppColorSwatch.swift in Sources */,
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
+				EF04644D274F7BB4001F1F3F /* AppWidgetShared+Reload.swift in Sources */,
 				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
 				EF44B9C5274633A800640E21 /* SmallWidgetFlowCell.swift in Sources */,
@@ -2081,7 +2117,6 @@
 				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
 				EFD4AC9B27338A7E000B2350 /* AppThemeManager.swift in Sources */,
-				EFD80962273E5E210065F048 /* AppWidgetDateProvider.swift in Sources */,
 				EFD4ABE327336DB0000B2350 /* AppExtensionWrapper.swift in Sources */,
 				EFD4ABF927336DF4000B2350 /* UIBarButtonItemExtensions.swift in Sources */,
 				EFD03A782738D40E00E28F27 /* AppTransparentController.swift in Sources */,
@@ -2091,6 +2126,7 @@
 				EFD4AC9327338A25000B2350 /* MoyaErrorWrap.swift in Sources */,
 				EFD4ACF02733A996000B2350 /* AppRouterType.swift in Sources */,
 				EFD4ABFF27336DF4000B2350 /* QYReusableView.swift in Sources */,
+				EF04643C274F6A20001F1F3F /* AppDisplayMode.swift in Sources */,
 				EFD0ACD327472F5B00230373 /* AppWidgetEditViewModel.swift in Sources */,
 				EF458585274CDF6300B4203A /* TrafficSpeed.swift in Sources */,
 				EFD4AD122733AD9F000B2350 /* AppMoreViewModel.swift in Sources */,
@@ -2101,7 +2137,7 @@
 				EFAA4293274B9EA800C63C31 /* AppSmallFlowView.swift in Sources */,
 				EFD4AC9A27338A7E000B2350 /* AppTheme.swift in Sources */,
 				EFD4AC652733888F000B2350 /* MusicPlaylist.swift in Sources */,
-				EFD11B48273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
+				EFD11B48273BA1FB00C68AF9 /* AppWidgetShared.swift in Sources */,
 				EFD03A8A2739165B00E28F27 /* AppLanguageViewModel.swift in Sources */,
 				EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */,
 				EF6A21552735306000691B3A /* AppSettingCell.swift in Sources */,
@@ -2118,7 +2154,7 @@
 				EFD8095A273E45280065F048 /* MyWidgetsController.swift in Sources */,
 				EFE198B0273DF6B600C44943 /* AppThemeCell.swift in Sources */,
 				EFD4ABFA27336DF4000B2350 /* StringExtensions.swift in Sources */,
-				EFD0ACDE2747708C00230373 /* AppUtility+File.swift in Sources */,
+				EFD0ACDE2747708C00230373 /* AppWidgetShared+File.swift in Sources */,
 				EFD4ACED2733A996000B2350 /* AppRouterPlugin.swift in Sources */,
 				EFD4AC6C2733888F000B2350 /* AppViewModel.swift in Sources */,
 				EFD4AD062733AD66000B2350 /* AppIconsController.swift in Sources */,
@@ -2132,7 +2168,6 @@
 				EFD4ACB127338EE6000B2350 /* QYRefreshFooter.swift in Sources */,
 				EFD4AD132733AD9F000B2350 /* AppMoreController.swift in Sources */,
 				EFD8095C273E45770065F048 /* MyWidgetsViewModel.swift in Sources */,
-				EFD11B37273B5AC700C68AF9 /* FileManager+Shared.swift in Sources */,
 				EFD4AC2327338202000B2350 /* QYBorderButton.swift in Sources */,
 				EFD4ACF72733AA65000B2350 /* AppNotification.swift in Sources */,
 				EF46A26D2745FCB600186357 /* SmallWidgetAnalogClockCell.swift in Sources */,
@@ -2151,6 +2186,7 @@
 				EF458587274CDF6300B4203A /* TrafficData.swift in Sources */,
 				EFD4ACEB2733A996000B2350 /* AppRouterAccountPlugin.swift in Sources */,
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
+				EF046453274F8075001F1F3F /* AppColorString.swift in Sources */,
 				EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */,
 				EFF2963B273A007C00ACB35E /* AppLimitController.swift in Sources */,
 				EFD4AC642733888F000B2350 /* MusicCreator.swift in Sources */,

@@ -36,15 +36,11 @@ def swift_pods
   pod 'EFIconFont', '~> 1.2.0'
   # layout
   pod 'SnapKit', '~> 5.0.1'
-  pod 'AutoInch', '~> 2.4.0'
   # 资源管理
   pod 'R.swift', '~> 5.4.0'
-  pod 'Localize-Swift', '~> 3.2.0'
   pod 'SwiftLint', '~> 0.45.0'
   # debug log
   pod 'SwiftyBeaver', '~> 1.9.5'
-  # UserDefaults
-  pod 'SwiftyUserDefaults', '~> 5.3.0'
   # alert
   pod 'SwiftEntryKit', '~> 2.0.0'
   pod 'Toaster', '~> 2.3.0'
@@ -74,16 +70,21 @@ def swift_pods
   pod 'MultiProgressView', '~> 1.3.0'
 end
 
+def Shared
+  pod 'Localize-Swift', '~> 3.2.0'
+  pod 'AutoInch', '~> 2.4.0'
+  # UserDefaults
+  pod 'SwiftyUserDefaults', '~> 5.3.0'
+end
 
 target 'Assistant' do
   oc_pods
   swift_pods
+  Shared
 end
 
 target 'WidgetExtensionExtension' do
-  pod 'Localize-Swift', '~> 3.2.0'
-  pod 'AutoInch', '~> 2.4.0'
-  pod 'SwiftyUserDefaults', '~> 5.3.0'
+  Shared
 end
 
 post_install do |installer|

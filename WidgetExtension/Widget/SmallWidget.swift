@@ -9,9 +9,9 @@ import WidgetKit
 import SwiftUI
 import Intents
 
-struct AppWidgetAttributes {
-    var name: String?
-}
+//struct AppWidgetAttributes {
+//    var name: String?
+//}
 
 struct SmallEntry: TimelineEntry {
     let date: Date
@@ -58,7 +58,7 @@ struct SmallWidgetEntryView : View {
 }
 
 struct SmallWidget: Widget {
-    let kind: String = WidgetSharedKind.small
+    let kind: String = AppWidgetSharedKind.small
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: SmallWidgetIntent.self, provider: SmallWidgetProvider()) { entry in
             SmallWidgetEntryView(entry: entry)

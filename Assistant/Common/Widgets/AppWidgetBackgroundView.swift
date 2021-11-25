@@ -23,6 +23,7 @@ class AppWidgetBackgroundView: UIView {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        NotificationCenter.Theme.add(.WidgetThemeChangeNotification, observer: self, selector: #selector(updateTheme), object: nil)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -46,5 +47,17 @@ class AppWidgetBackgroundView: UIView {
             layer.backgroundColor = backgroundColor.cgColor
             imageView.image = backgroundImage
         }
+    }
+    @objc func updateTheme() {
+        switch style.background {
+        case .color(color: let color):
+            layer.backgroundColor = color.color(for: traitCollection,
+                                                   mode: style.displayMode).cgColor
+        default:
+            break
+        }
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        updateTheme()
     }
 }

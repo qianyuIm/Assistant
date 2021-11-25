@@ -14,7 +14,7 @@ struct AppThemeItem {
 }
 
 struct AppThemeModeItem {
-    var displayMode: QYConfig.Theme.DisplayMode
+    var displayMode: AppDisplayMode
     var disPlayName: String
     var isSelected: Bool
 }

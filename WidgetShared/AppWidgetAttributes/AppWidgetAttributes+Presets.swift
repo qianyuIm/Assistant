@@ -27,7 +27,7 @@ extension AppWidgetAttributes {
         var attributes = AppWidgetAttributes()
         attributes.widgetType = .flow
         attributes.widgetFamily = widgetFamily
-        attributes.background = .color(color: .init(light: "#2E2E2E", dark: "#ffffff"))
+        attributes.background = .color(color: .init(light: "#2E2E2E", dark: AppColorString.cardDark))
         return attributes
     }
 }
