@@ -24,7 +24,7 @@
 		EF046441274F70FF001F1F3F /* AppWidgetAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */; };
 		EF046442274F7102001F1F3F /* AppWidgetAttributes+DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */; };
 		EF046443274F7108001F1F3F /* AppWidgetAttributes+WidgetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */; };
-		EF046444274F710B001F1F3F /* AppWidgetAttributes+Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */; };
+		EF046444274F710B001F1F3F /* AppWidgetAttributes+ClockAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift */; };
 		EF046445274F710E001F1F3F /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
 		EF046446274F7111001F1F3F /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
 		EF046447274F7114001F1F3F /* AppWidgetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046414274F3040001F1F3F /* AppWidgetColor.swift */; };
@@ -47,7 +47,7 @@
 		EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */; };
 		EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */; };
 		EF2FFCFA2741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */; };
-		EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */; };
+		EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift */; };
 		EF2FFCFE2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */; };
 		EF2FFD002741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */; };
 		EF2FFD022742076300786A80 /* AppFlipClockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFD012742076300786A80 /* AppFlipClockItem.swift */; };
@@ -333,7 +333,7 @@
 		EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockLabel.swift; sourceTree = "<group>"; };
 		EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetAttributes.swift; sourceTree = "<group>"; };
 		EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+BackgroundStyle.swift"; sourceTree = "<group>"; };
-		EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+Clock.swift"; sourceTree = "<group>"; };
+		EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+ClockAttributes.swift"; sourceTree = "<group>"; };
 		EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+FrameStyle.swift"; sourceTree = "<group>"; };
 		EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+LabelStyle.swift"; sourceTree = "<group>"; };
 		EF2FFD012742076300786A80 /* AppFlipClockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockItem.swift; sourceTree = "<group>"; };
@@ -701,7 +701,7 @@
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
 				EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */,
 				EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */,
-				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */,
+				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift */,
 				EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */,
 				EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */,
 				EF046414274F3040001F1F3F /* AppWidgetColor.swift */,
@@ -2010,7 +2010,7 @@
 				EF046443274F7108001F1F3F /* AppWidgetAttributes+WidgetType.swift in Sources */,
 				EF04644A274F714B001F1F3F /* UIColorExtensions.swift in Sources */,
 				EF04644B274F736C001F1F3F /* AppWidgetShared+File.swift in Sources */,
-				EF046444274F710B001F1F3F /* AppWidgetAttributes+Clock.swift in Sources */,
+				EF046444274F710B001F1F3F /* AppWidgetAttributes+ClockAttributes.swift in Sources */,
 				EF6A21452735290C00691B3A /* AppWidgets.swift in Sources */,
 				EF04643A274F6973001F1F3F /* QYDefaultKeys.swift in Sources */,
 				EF046446274F7111001F1F3F /* AppWidgetAttributes+LabelStyle.swift in Sources */,
@@ -2089,7 +2089,7 @@
 				EFD4AC9127338A25000B2350 /* MusicResponseCodable.swift in Sources */,
 				EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */,
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
-				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift in Sources */,
+				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift in Sources */,
 				EFD4ACFE2733ACFA000B2350 /* AppHomeWidgetsViewModel.swift in Sources */,
 				EF6A21582735318200691B3A /* AppSettingSection.swift in Sources */,
 				EFD80955273DFA0A0065F048 /* AppThemeSection.swift in Sources */,

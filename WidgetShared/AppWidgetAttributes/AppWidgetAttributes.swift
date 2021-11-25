@@ -34,6 +34,8 @@ struct AppWidgetAttributes: Codable, Equatable {
     var clockDisplayMode = ClockDisplayMode.twelve
     /// 圆形时钟
     var analogClockStyle = AnalogClockStyle()
+    /// 时钟相关属性
+    var clockAttributes = ClockAttributes()
     /// 字体和颜色
     var labelStyle = AppWidgetAttributes.LabelStyle()
     /// 保存到本地的时间

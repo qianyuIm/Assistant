@@ -9,6 +9,26 @@ import AutoInch
 import UIKit
 
 extension AppWidgetAttributes {
+    struct ClockAttributes {
+        enum DisplayMode: Int, Codable {
+            /// 12小时
+            case twelve
+            /// 24 小时
+            case twentyFour
+            /// 12小时 不展示 秒
+            case twelveMissSecond
+            /// 24 小时 不展示 秒
+            case twentyFourMissSecond
+        }
+        enum Style: Int, Codable {
+            case classic
+            case artNouveau
+            case drawing
+            case steampunk
+        }
+        var displayMode = DisplayMode.twelve
+        var style = Style.classic
+    }
     enum ClockDisplayMode: Int, Codable {
         /// 12小时
         case twelve
@@ -19,6 +39,7 @@ extension AppWidgetAttributes {
         /// 24 小时 不展示 秒
         case twentyFourMissSecond
     }
+    
     /// 优先图片
     struct AnalogClockStyle: Codable, Equatable {
         enum BackgroundStyle: Int, Codable, Equatable {
