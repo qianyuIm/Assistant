@@ -83,6 +83,7 @@ end
 target 'WidgetExtensionExtension' do
   pod 'Localize-Swift', '~> 3.2.0'
   pod 'AutoInch', '~> 2.4.0'
+  pod 'SwiftyUserDefaults', '~> 5.3.0'
 end
 
 post_install do |installer|

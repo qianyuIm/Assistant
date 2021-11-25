@@ -39,7 +39,7 @@ class AppWidgetEditController: AppBaseVMController {
     override func bindViewModel() {
         super.bindViewModel()
         guard let viewModel = viewModel as? AppWidgetEditViewModel else { return }
-        navigationItem.title = viewModel.attributes.name
+        navigationItem.title = viewModel.attributes.displayName
 
         saveSender.rx.tap.subscribe(onNext: { () in
             viewModel.attributes.save()

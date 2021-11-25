@@ -15,7 +15,8 @@ class SmallWidgetAnalogClockCell: UICollectionViewCell {
         var corners: UIRectCorner = []
         (corners, cornerRadius) = attributes.roundCorners.cornerValues
         view.app.addRoundCorners(corners, radius: cornerRadius)
-        view.style = .init(background: attributes.background)
+        view.style = .init(background: attributes.background,
+                           displayMode: attributes.displayMode)
         return view
     }()
     lazy var analogClockView: AppAnalogClockView = {
@@ -39,7 +40,7 @@ class SmallWidgetAnalogClockCell: UICollectionViewCell {
     func config(with attributes: AppWidgetAttributes) {
         analogClockView.attributes = attributes
         analogClockView.dateSource = Date()
-        titleLabel.text = attributes.name
+        titleLabel.text = attributes.displayName
         if self.attributes.analogClockStyle.size != attributes.analogClockStyle.size {
             analogClockView.snp.updateConstraints { make in
                 make.size.equalTo(attributes.analogClockStyle.size.backgroundSize)
@@ -50,7 +51,7 @@ class SmallWidgetAnalogClockCell: UICollectionViewCell {
             var corners: UIRectCorner = []
             (corners, cornerRadius) = attributes.roundCorners.cornerValues
             clockContentView.app.addRoundCorners(corners, radius: cornerRadius)
-            clockContentView.style = .init(background: attributes.background)
+            clockContentView.style = .init(background: attributes.background, displayMode: attributes.displayMode)
         }
         self.attributes = attributes
     }

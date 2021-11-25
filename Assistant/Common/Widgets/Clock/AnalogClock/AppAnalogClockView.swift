@@ -242,7 +242,7 @@ private extension AppAnalogClockView {
         let y: CGFloat = radius - radio1 * radius + textMargen + offsetY
         let label = UILabel()
         label.font = attributes.labelStyle.font
-        label.textColor = attributes.labelStyle.textColor
+        label.textColor = attributes.labelStyle.textColor.color(for: traitCollection, mode: attributes.displayMode)
         label.text = "\(index)"
         if index == 0 {
             label.text = specialText

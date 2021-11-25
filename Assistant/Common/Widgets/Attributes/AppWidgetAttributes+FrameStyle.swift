@@ -19,26 +19,6 @@ extension AppWidgetAttributes {
     }
     enum Border: Codable, Equatable {
         case none
-        case color(hexString: String, width: CGFloat)
-        /// 当前只有本地图片
-        case image(named: String, width: CGFloat)
-        var color: UIColor? {
-            switch self {
-            case .none,
-                    .image:
-                return nil
-            case .color(let hexString, _):
-                return UIColor.app.color(hexString: hexString)
-            }
-        }
-        var image: UIImage? {
-            switch self {
-            case .none,
-                    .color:
-                return nil
-            case .image(let named, _):
-                return UIImage(named: named)
-            }
-        }
+        case value(color: AppWidgetColor, width: CGFloat)
     }
 }

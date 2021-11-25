@@ -11,7 +11,7 @@ class AppWidgetBackgroundView: UIView {
 
     struct Style {
         let background: AppWidgetAttributes.BackgroundStyle
-//        let displayMode: EKAttributes.DisplayMode
+        let displayMode: AppWidgetAttributes.DisplayMode
     }
     lazy var imageView: UIImageView = {
         let imageV = UIImageView()
@@ -37,8 +37,9 @@ class AppWidgetBackgroundView: UIView {
             switch style.background {
             case .clear:
                 break
-            case .color(let hexString):
-                backgroundColor = UIColor.app.color(hexString: hexString)
+            case .color(let color):
+                backgroundColor = color.color(for: traitCollection,
+                                                 mode: style.displayMode)
             case .image(let imageName):
                 backgroundImage = UIImage(named: imageName)
             }

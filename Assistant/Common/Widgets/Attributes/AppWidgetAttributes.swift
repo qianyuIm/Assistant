@@ -8,13 +8,16 @@
 import UIKit
 
 struct AppWidgetAttributes: Codable, Equatable {
-    var name: String {
-        return "\(widgetType.name)\(widgetIndex)"
+    /// 展示名称
+    var displayName: String {
+        return "\(widgetType.displayName)\(widgetIndex)"
     }
     /// 唯一标识
     var identifier: String {
         return "\(widgetType.identifier)\(widgetIndex)"
     }
+    /// 模式
+    var displayMode = DisplayMode.inferred
     /// widget 类型
     var widgetType: WidgetType = .unknown
     /// 同类型widget
@@ -37,16 +40,16 @@ struct AppWidgetAttributes: Codable, Equatable {
     var localTime: TimeInterval?
     /// 是否被使用
     var used: Bool = false
-    static func == (lhs: AppWidgetAttributes, rhs: AppWidgetAttributes) -> Bool {
-        return lhs.widgetType == rhs.widgetType &&
-        lhs.widgetIndex == rhs.widgetIndex &&
-        lhs.background == rhs.background &&
-        lhs.roundCorners == rhs.roundCorners &&
-        lhs.border == rhs.border &&
-        lhs.widgetFamily == rhs.widgetFamily &&
-        lhs.clockDisplayMode == rhs.clockDisplayMode &&
-        lhs.labelStyle == rhs.labelStyle
-    }
+//    static func == (lhs: AppWidgetAttributes, rhs: AppWidgetAttributes) -> Bool {
+//        return lhs.widgetType == rhs.widgetType &&
+//        lhs.widgetIndex == rhs.widgetIndex &&
+//        lhs.background == rhs.background &&
+//        lhs.roundCorners == rhs.roundCorners &&
+//        lhs.border == rhs.border &&
+//        lhs.widgetFamily == rhs.widgetFamily &&
+//        lhs.clockDisplayMode == rhs.clockDisplayMode &&
+//        lhs.labelStyle == rhs.labelStyle
+//    }
 }
 
 extension AppWidgetAttributes {
@@ -99,7 +102,7 @@ extension AppWidgetAttributes {
             directory = QYConfig.Widget.largeWidgetsPath
         }
         let generate = directory + "/" + identifier
-        if (FileManager.default.fileExists(atPath: generate)) {
+        if FileManager.default.fileExists(atPath: generate) {
             try? FileManager.default.removeItem(atPath: generate)
         }
         let encoder = JSONEncoder()

@@ -10,22 +10,12 @@ import UIKit
 extension AppWidgetAttributes {
     enum BackgroundStyle: Codable, Equatable {
         case clear
-        case color(hexString: String)
+        case color(color: AppWidgetColor)
         /// 当前只有本地图片
         case image(named: String)
-        var color: UIColor? {
-            switch self {
-            case .clear,
-                    .image:
-                return nil
-            case .color(let hexString):
-                return UIColor.app.color(hexString: hexString)
-            }
-        }
         var image: UIImage? {
             switch self {
-            case .clear,
-                    .color:
+            case .clear, .color:
                 return nil
             case .image(let named):
                 return UIImage(named: named)

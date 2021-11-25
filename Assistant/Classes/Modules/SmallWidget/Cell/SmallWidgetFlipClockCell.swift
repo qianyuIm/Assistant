@@ -29,7 +29,7 @@ class SmallWidgetFlipClockCell: UICollectionViewCell {
     func config(with attributes: AppWidgetAttributes) {
         flipClockView.attributes = attributes
         flipClockView.dateSource = Date()
-        titleLabel.text = attributes.name
+        titleLabel.text = attributes.displayName
     }
 
 }

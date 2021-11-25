@@ -28,7 +28,7 @@ class MediumWidgetFlowCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func config(with attributes: AppWidgetAttributes) {
-        titleLabel.text = attributes.name
+        titleLabel.text = attributes.displayName
     }
 }
 

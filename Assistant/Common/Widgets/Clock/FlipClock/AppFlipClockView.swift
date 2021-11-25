@@ -50,7 +50,7 @@ class AppFlipClockView: UIView {
             var corners: UIRectCorner = []
             (corners, cornerRadius) = attributes.roundCorners.cornerValues
             self.app.addRoundCorners(corners, radius: cornerRadius)
-            backgroundView.style = .init(background: attributes.background)
+            backgroundView.style = .init(background: attributes.background, displayMode: attributes.displayMode)
             timeDisplayMode = attributes.clockDisplayMode
             hourItem.attributes = attributes
             minuteItem.attributes = attributes

@@ -8,7 +8,6 @@
 import Foundation
 
 extension AppUtility {
-    
     /// 返回上次关机的时间
     /// - Returns:
     class func systemUptime() -> Date {

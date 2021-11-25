@@ -45,20 +45,20 @@ class AppFlipClockLabel: UIView {
     var attributes: AppWidgetAttributes = AppWidgetAttributes() {
         didSet {
             /// fix
-            timeLabel.textColor = attributes.labelStyle.textColor
+            timeLabel.textColor = attributes.labelStyle.textColor.color(for: traitCollection, mode: attributes.displayMode)
             timeLabel.font = attributes.labelStyle.font
-            timeLabel.textAlignment = attributes.labelStyle.alignment
-            timeLabel.backgroundColor = attributes.labelStyle.backgroundColor
+            timeLabel.textAlignment = .center
+            timeLabel.backgroundColor = attributes.labelStyle.backgroundColor.color(for: traitCollection, mode: attributes.displayMode)
 
-            foldLabel.textColor = attributes.labelStyle.textColor
+            foldLabel.textColor = attributes.labelStyle.textColor.color(for: traitCollection, mode: attributes.displayMode)
             foldLabel.font = attributes.labelStyle.font
-            foldLabel.textAlignment = attributes.labelStyle.alignment
-            foldLabel.backgroundColor = attributes.labelStyle.backgroundColor
+            foldLabel.textAlignment = .center
+            foldLabel.backgroundColor = attributes.labelStyle.backgroundColor.color(for: traitCollection, mode: attributes.displayMode)
 
-            nextLabel.textColor = attributes.labelStyle.textColor
+            nextLabel.textColor = attributes.labelStyle.textColor.color(for: traitCollection, mode: attributes.displayMode)
             nextLabel.font = attributes.labelStyle.font
-            nextLabel.textAlignment = attributes.labelStyle.alignment
-            nextLabel.backgroundColor = attributes.labelStyle.backgroundColor
+            nextLabel.textAlignment = .center
+            nextLabel.backgroundColor = attributes.labelStyle.backgroundColor.color(for: traitCollection, mode: attributes.displayMode)
         }
     }
     init() {

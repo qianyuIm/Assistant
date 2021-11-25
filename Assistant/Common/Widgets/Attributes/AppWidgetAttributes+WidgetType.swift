@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Localize_Swift
 
 extension AppWidgetAttributes {
     enum WidgetFamily: Int, Codable, Equatable {
@@ -29,18 +28,22 @@ extension AppWidgetAttributes {
         case unknown
         /// 翻页时钟
         case flipClock
+        /// 模拟时钟 -> 圆形时钟
+        case analogClock
         /// 系统信息 -> 数据流量
         case flow
 
-        var name: String {
+        var displayName: String {
             let isEnglish = QYConfig.Language.isEnglish
             switch self {
             case .unknown:
                 return ""
             case .flipClock:
                 return isEnglish ? "翻页时钟#" : "Flip Clock#"
+            case .analogClock:
+                return isEnglish ? "圆形时钟#" : "Analog Clock#"
             case .flow:
-                return isEnglish ? "数据流量" : "Flow"
+                return isEnglish ? "数据流量#" : "Flow#"
             }
         }
         /// 唯一标识
@@ -49,6 +52,8 @@ extension AppWidgetAttributes {
             case .unknown:
                 return ""
             case .flipClock:
+                return "FlipClock#"
+            case .analogClock:
                 return "FlipClock#"
             case .flow:
                 return "Flow"

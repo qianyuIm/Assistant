@@ -41,10 +41,10 @@ class AppFlipClockItem: UIView {
     }
     var attributes: AppWidgetAttributes = AppWidgetAttributes() {
         didSet {
-            backgroundColor = attributes.labelStyle.backgroundColor
+            backgroundColor = attributes.labelStyle.backgroundColor.color(for: traitCollection, mode: attributes.displayMode)
             leftLabel.attributes = attributes
             rightLabel.attributes = attributes
-            lineView.backgroundColor = attributes.labelStyle.backgroundColor
+            lineView.backgroundColor = attributes.labelStyle.backgroundColor.color(for: traitCollection, mode: attributes.displayMode)
             switch attributes.widgetFamily {
             case .small:
                 lineViewHeight = 2

@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		5DE1FC96277AF27001AAF3CA /* Pods_WidgetExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D3C908274DAF51FAE03A8 /* Pods_WidgetExtensionExtension.framework */; };
 		B23EDCA7DCE5783C9DCC0C12 /* Pods_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E9364E2334F5028DE4C52 /* Pods_Assistant.framework */; };
+		EF046415274F3040001F1F3F /* AppWidgetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046414274F3040001F1F3F /* AppWidgetColor.swift */; };
+		EF046417274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */; };
+		EF046419274F3B1C001F1F3F /* AppWidgetFontName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */; };
+		EF046424274F5821001F1F3F /* QYFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AC382733822E000B2350 /* QYFont.swift */; };
+		EF04642B274F5948001F1F3F /* AppColorSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04642A274F5947001F1F3F /* AppColorSwatch.swift */; };
+		EF046430274F59F2001F1F3F /* QYInch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD4AC0227336F3F000B2350 /* QYInch.swift */; };
+		EF046434274F5AB9001F1F3F /* AppUtility+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046433274F5AB9001F1F3F /* AppUtility+Application.swift */; };
 		EF0AAA742734D626006CEED0 /* startup.sh in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA732734D626006CEED0 /* startup.sh */; };
 		EF0AAA762734D632006CEED0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA752734D632006CEED0 /* README.md */; };
 		EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */; };
@@ -291,6 +298,11 @@
 		8B7844069B9937E9063F875E /* Pods-WidgetExtensionExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetExtensionExtension.release.xcconfig"; path = "Target Support Files/Pods-WidgetExtensionExtension/Pods-WidgetExtensionExtension.release.xcconfig"; sourceTree = "<group>"; };
 		98812FB96BE55FCE7653A264 /* Pods-WidgetExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-WidgetExtensionExtension/Pods-WidgetExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		E01E9364E2334F5028DE4C52 /* Pods_Assistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Assistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF046414274F3040001F1F3F /* AppWidgetColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetColor.swift; sourceTree = "<group>"; };
+		EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppWidgetAttributes+DisplayMode.swift"; sourceTree = "<group>"; };
+		EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetFontName.swift; sourceTree = "<group>"; };
+		EF04642A274F5947001F1F3F /* AppColorSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorSwatch.swift; sourceTree = "<group>"; };
+		EF046433274F5AB9001F1F3F /* AppUtility+Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppUtility+Application.swift"; sourceTree = "<group>"; };
 		EF0AAA732734D626006CEED0 /* startup.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = startup.sh; path = Script/startup.sh; sourceTree = SOURCE_ROOT; };
 		EF0AAA752734D632006CEED0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeUserWidgetView.swift; sourceTree = "<group>"; };
@@ -660,10 +672,13 @@
 				EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */,
 				EFAA4290274B61C600C63C31 /* AppWidgetAttributes+Presets.swift */,
 				EF2FFCF92741FBC900786A80 /* AppWidgetAttributes+BackgroundStyle.swift */,
+				EF046416274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift */,
 				EFD0ACDB2747580000230373 /* AppWidgetAttributes+WidgetType.swift */,
 				EF2FFCFB2741FCFF00786A80 /* AppWidgetAttributes+Clock.swift */,
 				EF2FFCFD2741FE8600786A80 /* AppWidgetAttributes+FrameStyle.swift */,
 				EF2FFCFF2741FFB100786A80 /* AppWidgetAttributes+LabelStyle.swift */,
+				EF046414274F3040001F1F3F /* AppWidgetColor.swift */,
+				EF046418274F3B1C001F1F3F /* AppWidgetFontName.swift */,
 			);
 			path = Attributes;
 			sourceTree = "<group>";
@@ -1041,6 +1056,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD4AC0727337A44000B2350 /* AppUtility.swift */,
+				EF046433274F5AB9001F1F3F /* AppUtility+Application.swift */,
 				EFD4AC4E2733869A000B2350 /* AppUtility+JP.swift */,
 				EFD4ACF22733A9D0000B2350 /* AppUtility+Json.swift */,
 				EFD4ACF92733AACE000B2350 /* AppUtility+Controller.swift */,
@@ -1432,6 +1448,7 @@
 				EFD4AC9527338A7E000B2350 /* AppTheme+Rx.swift */,
 				EFD4AC9827338A7E000B2350 /* AppTheme+Theme.swift */,
 				EFD4AC9727338A7E000B2350 /* AppThemeManager.swift */,
+				EF04642A274F5947001F1F3F /* AppColorSwatch.swift */,
 			);
 			path = AppThemeManager;
 			sourceTree = "<group>";
@@ -1954,6 +1971,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF046424274F5821001F1F3F /* QYFont.swift in Sources */,
 				EFD11B49273BA1FB00C68AF9 /* WidgetShared.swift in Sources */,
 				EFECD936274E07370006560F /* WidgetPlaceholderView.swift in Sources */,
 				EFD11B36273B5AC600C68AF9 /* FileManager+Shared.swift in Sources */,
@@ -1963,6 +1981,7 @@
 				EFF296B7273A4DC800ACB35E /* SmallWidget.swift in Sources */,
 				EFD11B38273B5ACB00C68AF9 /* Widget+Kind.swift in Sources */,
 				EF6A21452735290C00691B3A /* AppWidgets.swift in Sources */,
+				EF046430274F59F2001F1F3F /* QYInch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1988,6 +2007,7 @@
 				EF44B9C92746347700640E21 /* AppFlowView.swift in Sources */,
 				EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */,
 				EFA564DF273CB5D900B4F9DE /* AppLanguageCell.swift in Sources */,
+				EF046419274F3B1C001F1F3F /* AppWidgetFontName.swift in Sources */,
 				EFD4AC2227338202000B2350 /* QYButton.swift in Sources */,
 				EFD4AC412733824C000B2350 /* QYConfig.swift in Sources */,
 				EF458582274CDF6300B4203A /* TrafficPackage.swift in Sources */,
@@ -1996,6 +2016,7 @@
 				EFD4AC6A2733888F000B2350 /* AppBaseEmptyView.swift in Sources */,
 				EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */,
 				EFD11B39273B5ACC00C68AF9 /* Widget+Kind.swift in Sources */,
+				EF04642B274F5948001F1F3F /* AppColorSwatch.swift in Sources */,
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
 				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
@@ -2019,8 +2040,10 @@
 				EFD4ACF32733A9D0000B2350 /* AppUtility+Json.swift in Sources */,
 				EFD4AC5227338769000B2350 /* AppNavigationController.swift in Sources */,
 				EFD4AC2927338214000B2350 /* QYReachability.swift in Sources */,
+				EF046434274F5AB9001F1F3F /* AppUtility+Application.swift in Sources */,
 				EFD4AC692733888F000B2350 /* AppBaseWebController.swift in Sources */,
 				EFD80960273E46BA0065F048 /* MySmallWidgetViewModel.swift in Sources */,
+				EF046417274F30F8001F1F3F /* AppWidgetAttributes+DisplayMode.swift in Sources */,
 				EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */,
 				EF6A214A27352AC100691B3A /* AppSettingViewModel.swift in Sources */,
 				EF2FFD142742644A00786A80 /* MediumWidgetSection.swift in Sources */,
@@ -2053,6 +2076,7 @@
 				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
+				EF046415274F3040001F1F3F /* AppWidgetColor.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
 				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
 				EFD4ACB027338EE6000B2350 /* QYRefreshHeader.swift in Sources */,
