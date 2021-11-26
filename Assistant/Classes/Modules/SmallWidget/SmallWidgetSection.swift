@@ -38,6 +38,8 @@ enum SmallWidgetSectionItem {
     case analogClockItem(attributes: AppWidgetAttributes)
     /// 数据流量
     case flowItem(attributes: AppWidgetAttributes)
+    /// 时钟
+    case clock(attributes: AppWidgetAttributes)
 }
 
 extension SmallWidgetSection: SectionModelType {

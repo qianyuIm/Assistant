@@ -9,7 +9,7 @@ import AutoInch
 import UIKit
 
 extension AppWidgetAttributes {
-    struct ClockAttributes {
+    struct ClockAttributes: Codable, Equatable {
         enum DisplayMode: Int, Codable {
             /// 12小时
             case twelve
@@ -20,14 +20,19 @@ extension AppWidgetAttributes {
             /// 24 小时 不展示 秒
             case twentyFourMissSecond
         }
-        enum Style: Int, Codable {
+        enum DisplayStyle: Int, Codable {
             case classic
             case artNouveau
-            case drawing
             case steampunk
         }
         var displayMode = DisplayMode.twelve
-        var style = Style.classic
+        var displayStyle = DisplayStyle.classic
+        var borderColor: AppWidgetColor = .init(light: "#000", dark: "#fff")
+        var indicatorColor: AppWidgetColor = .init(light: "#000", dark: "#fff")
+        var fontName: AppWidgetFontName = .normal
+        var isLimitedHoursShown: Bool = true
+        var isHourIndicatorsShown: Bool = true
+        var isMinuteIndicatorsShown: Bool = true
     }
     enum ClockDisplayMode: Int, Codable {
         /// 12小时

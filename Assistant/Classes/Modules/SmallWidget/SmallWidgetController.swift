@@ -53,7 +53,8 @@ class SmallWidgetController: AppBaseCollectionVMController {
         collectionView.app.register(cellClass: SmallWidgetFlipClockCell.self)
         collectionView.app.register(cellClass: SmallWidgetAnalogClockCell.self)
         collectionView.app.register(cellClass: SmallWidgetFlowCell.self)
-
+        collectionView.app.register(cellClass: SmallWidgetClockCell.self)
+        
         collectionView.app.register(nibWithViewClass: AppWidgetHeaderSupplementaryView.self, forSupplementaryViewElementOfKind: kSupplementaryHeaderKind)
 
         collectionView.delegate = self
@@ -102,6 +103,7 @@ extension SmallWidgetController: UICollectionViewDelegate {
             let context = AppRouterContext()
             context.parameter = attributes
             AppRouter.shared.open(AppRouterType.widgetEdit.pattern, context: context)
+        default: break
         }
     }
 }
@@ -142,6 +144,10 @@ extension SmallWidgetController: UICollectionViewDataSource {
             return cell
         case .flowItem(let attributes):
             let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetFlowCell.self, for: indexPath)
+            cell.config(with: attributes)
+            return cell
+        case .clock(let attributes):
+            let cell = collectionView.app.dequeueReusableCell(cellClass: SmallWidgetClockCell.self, for: indexPath)
             cell.config(with: attributes)
             return cell
         }

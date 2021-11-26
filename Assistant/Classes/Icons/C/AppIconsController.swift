@@ -7,19 +7,22 @@
 
 import UIKit
 import Schedule
-import AttributedString
+import RxSwift
+import RxCocoa
+import SnapKit
 
 class AppIconsController: AppBaseVMController {
-    lazy var flipClockView: AppFlipClockView = {
-        let view = AppFlipClockView()
-        view.dateSource = Date()
-        view.frame = CGRect(x: 40, y: 40, width: 600, height: 400)
-        view.backgroundColor = UIColor.orange
-        return view
+    lazy var clockView: AppClockView = {
+        let clockView = AppClockView()
+        return clockView
     }()
-//    var timer: Schedule.Task?
-    /// 定时器
-    var timer: Timer?
+    var attributes = AppWidgetAttributes.clock(.small)
+    lazy var sender: UIButton = {
+        let sender = UIButton(type: .custom)
+        sender.setTitle("点击", for: .normal)
+        sender.setTitleColor(.red, for: .normal)
+        return sender
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +33,30 @@ class AppIconsController: AppBaseVMController {
     }
     override func setupUI() {
         super.setupUI()
-        view.addSubview(flipClockView)
+        view.addSubview(clockView)
+        view.addSubview(sender)
+        clockView.attributes = attributes
     }
-    
+    override func setupConstraints() {
+        super.setupConstraints()
+        clockView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.size.equalTo(CGSize(width: 300, height: 200))
+        }
+        sender.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(clockView.snp.bottom).offset(30)
+        }
+    }
+    override func bindViewModel() {
+        super.bindViewModel()
+        sender.rx.tap.subscribe(onNext: { [weak self] () in
+            if self?.attributes.clockAttributes.isLimitedHoursShown == true {
+                self?.attributes.clockAttributes.isLimitedHoursShown = false
+            } else {
+                self?.attributes.clockAttributes.isLimitedHoursShown = true
+            }
+            self?.clockView.attributes = self?.attributes
+        }).disposed(by: rx.disposeBag)
+    }
 }

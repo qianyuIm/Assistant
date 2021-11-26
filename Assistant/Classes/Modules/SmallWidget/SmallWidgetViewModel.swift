@@ -28,8 +28,7 @@ extension SmallWidgetViewModel {
                                       routerPattern: "",
                                       router: true),
                            items: [
-                            .flipClockItem(attributes: AppWidgetAttributes.flipClock(.small)),
-                            .analogClockItem(attributes: AppWidgetAttributes.analogClock(.small))
+                            .clock(attributes: AppWidgetAttributes.clock(.small)),
                            ])
         let systemInfoSection = SmallWidgetSection
             .xPanelSection(supplementary:

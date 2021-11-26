@@ -83,7 +83,7 @@ class AppTabBarController: ESTabBarController {
             selectImage: appIconFontIcons.icon_tab_more.image(size: 24))
         self.viewControllers = [widget, icons, wallpaper, more]
         bindTheme()
-        selectedType = .widget
+        selectedType = .icons
         NotificationCenter.Languageau.add(.LCLLanguageChangeNotification, observer: self, selector: #selector(setupLanguage), object: nil)
     }
     /// 切换语言的时候不想更换根控制器在跳转到设置页面

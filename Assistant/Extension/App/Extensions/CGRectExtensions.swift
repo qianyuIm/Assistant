@@ -14,10 +14,6 @@ extension AppExtensionWrapper where Base == CGRect {
     static func rect(size: CGSize) -> CGRect {
         return CGRect(x: 0, y: 0, width: size.width, height: size.height)
     }
-    /// 获取rect的center，包括rect本身的x/y偏移
-    var center: CGPoint {
-        return CGPoint(x: base.midX.app.flat, y: base.midY.app.flat)
-    }
     /// 对CGRect的x/y、width/height都调用一次flat，以保证像素对齐
     var flatted: CGRect {
         return CGRect(x: base.minX.app.flat, y: base.minY.app.flat, width: base.width.app.flat, height: base.height.app.flat)
@@ -169,4 +165,9 @@ extension AppExtensionWrapper where Base == CGRect {
         let result = CGRect(x: x, y: y, width: width, height: height)
         return result
     }
+    static func circle(center: CGPoint, radius: CGFloat) -> CGRect {
+        return CGRect(x: center.x - radius, y: center.y - radius, width: radius * 2, height: radius * 2)
+    }
+    var center: CGPoint { CGPoint(x: base.midX, y: base.midY) }
+    var radius: CGFloat { min(base.width, base.height)/2 }
 }

@@ -39,8 +39,7 @@ class AppWidgetBackgroundView: UIView {
             case .clear:
                 break
             case .color(let color):
-                backgroundColor = color.color(for: traitCollection,
-                                                 mode: style.displayMode)
+                backgroundColor = color.color(for: traitCollection)
             case .image(let imageName):
                 backgroundImage = UIImage(named: imageName)
             }
@@ -51,8 +50,7 @@ class AppWidgetBackgroundView: UIView {
     @objc func updateTheme() {
         switch style.background {
         case .color(color: let color):
-            layer.backgroundColor = color.color(for: traitCollection,
-                                                   mode: style.displayMode).cgColor
+            layer.backgroundColor = color.color(for: traitCollection).cgColor
         default:
             break
         }

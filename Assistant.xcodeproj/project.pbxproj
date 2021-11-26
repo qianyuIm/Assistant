@@ -43,6 +43,12 @@
 		EF0AAA7D27350706006CEED0 /* AppHomeUserWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */; };
 		EF0AAA7F27350713006CEED0 /* AppHomeUserWidgetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF0AAA7E27350713006CEED0 /* AppHomeUserWidgetView.xib */; };
 		EF0AAA8527351DAF006CEED0 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0AAA8427351DAF006CEED0 /* CloudKit.framework */; };
+		EF25E61627506A83004A1890 /* AppClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E61527506A83004A1890 /* AppClockView.swift */; };
+		EF25E61827506B2E004A1890 /* AppClockBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E61727506B2E004A1890 /* AppClockBorderView.swift */; };
+		EF25E61B27506CDC004A1890 /* SmallWidgetClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E61A27506CDC004A1890 /* SmallWidgetClockCell.swift */; };
+		EF25E61D275071CE004A1890 /* AppClockClassicBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E61C275071CE004A1890 /* AppClockClassicBorderView.swift */; };
+		EF25E61F275081AB004A1890 /* AppClockArtNouveauBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E61E275081AB004A1890 /* AppClockArtNouveauBorderView.swift */; };
+		EF25E6212750AA84004A1890 /* AppClockSteampunkBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25E6202750AA84004A1890 /* AppClockSteampunkBorderView.swift */; };
 		EF2FFCF02741F55F00786A80 /* AppFlipClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */; };
 		EF2FFCF22741F71200786A80 /* AppFlipClockLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */; };
 		EF2FFCF72741FA4400786A80 /* AppWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */; };
@@ -274,6 +280,12 @@
 		EFF296EE273A72D900ACB35E /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF296ED273A72D900ACB35E /* IntentHandler.swift */; };
 		EFF296F2273A72D900ACB35E /* IntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EFF296E9273A72D900ACB35E /* IntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EFF296F7273A749900ACB35E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0AAA8427351DAF006CEED0 /* CloudKit.framework */; };
+		EFF5EA2E2750B2B800513103 /* AppSteampunkWindUpLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA2D2750B2B800513103 /* AppSteampunkWindUpLayer.swift */; };
+		EFF5EA302750C31300513103 /* UIBezierPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA2F2750C31300513103 /* UIBezierPathExtensions.swift */; };
+		EFF5EA322750C72200513103 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA312750C72200513103 /* CGPointExtensions.swift */; };
+		EFF5EA352750C9CC00513103 /* AppClockIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */; };
+		EFF5EA372750CA8E00513103 /* AppClockClassicIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */; };
+		EFF5EA3A2750E42A00513103 /* AppClockClassicIndicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -329,6 +341,12 @@
 		EF0AAA7C27350706006CEED0 /* AppHomeUserWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHomeUserWidgetView.swift; sourceTree = "<group>"; };
 		EF0AAA7E27350713006CEED0 /* AppHomeUserWidgetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppHomeUserWidgetView.xib; sourceTree = "<group>"; };
 		EF0AAA8427351DAF006CEED0 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EF25E61527506A83004A1890 /* AppClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockView.swift; sourceTree = "<group>"; };
+		EF25E61727506B2E004A1890 /* AppClockBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockBorderView.swift; sourceTree = "<group>"; };
+		EF25E61A27506CDC004A1890 /* SmallWidgetClockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWidgetClockCell.swift; sourceTree = "<group>"; };
+		EF25E61C275071CE004A1890 /* AppClockClassicBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockClassicBorderView.swift; sourceTree = "<group>"; };
+		EF25E61E275081AB004A1890 /* AppClockArtNouveauBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockArtNouveauBorderView.swift; sourceTree = "<group>"; };
+		EF25E6202750AA84004A1890 /* AppClockSteampunkBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockSteampunkBorderView.swift; sourceTree = "<group>"; };
 		EF2FFCEF2741F55F00786A80 /* AppFlipClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockView.swift; sourceTree = "<group>"; };
 		EF2FFCF12741F71200786A80 /* AppFlipClockLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlipClockLabel.swift; sourceTree = "<group>"; };
 		EF2FFCF62741FA4400786A80 /* AppWidgetAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWidgetAttributes.swift; sourceTree = "<group>"; };
@@ -582,6 +600,12 @@
 		EFF296ED273A72D900ACB35E /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		EFF296EF273A72D900ACB35E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFF296F6273A749100ACB35E /* IntentHandler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntentHandler.entitlements; sourceTree = "<group>"; };
+		EFF5EA2D2750B2B800513103 /* AppSteampunkWindUpLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSteampunkWindUpLayer.swift; sourceTree = "<group>"; };
+		EFF5EA2F2750C31300513103 /* UIBezierPathExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBezierPathExtensions.swift; sourceTree = "<group>"; };
+		EFF5EA312750C72200513103 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
+		EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockIndicatorView.swift; sourceTree = "<group>"; };
+		EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockClassicIndicatorView.swift; sourceTree = "<group>"; };
+		EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockClassicIndicatorLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -663,9 +687,41 @@
 			path = V;
 			sourceTree = "<group>";
 		};
+		EF25E61427506A65004A1890 /* Clock */ = {
+			isa = PBXGroup;
+			children = (
+				EF25E61527506A83004A1890 /* AppClockView.swift */,
+				EFF5EA382750E40900513103 /* Classic */,
+				EFF5EA332750C9A300513103 /* Indicator */,
+				EF25E6222750B252004A1890 /* Steampunk */,
+				EF25E61927506B3B004A1890 /* Borders */,
+			);
+			path = Clock;
+			sourceTree = "<group>";
+		};
+		EF25E61927506B3B004A1890 /* Borders */ = {
+			isa = PBXGroup;
+			children = (
+				EF25E61727506B2E004A1890 /* AppClockBorderView.swift */,
+				EF25E61C275071CE004A1890 /* AppClockClassicBorderView.swift */,
+				EF25E61E275081AB004A1890 /* AppClockArtNouveauBorderView.swift */,
+				EF25E6202750AA84004A1890 /* AppClockSteampunkBorderView.swift */,
+			);
+			path = Borders;
+			sourceTree = "<group>";
+		};
+		EF25E6222750B252004A1890 /* Steampunk */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5EA2D2750B2B800513103 /* AppSteampunkWindUpLayer.swift */,
+			);
+			path = Steampunk;
+			sourceTree = "<group>";
+		};
 		EF2FFCED2741F50C00786A80 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				EF25E61427506A65004A1890 /* Clock */,
 				EF46A2692745F74C00186357 /* AnalogClock */,
 				EF2FFCEE2741F53400786A80 /* FlipClock */,
 			);
@@ -767,6 +823,7 @@
 				EF2FFD0B2742351F00786A80 /* SmallWidgetFlipClockCell.swift */,
 				EF46A26C2745FCB600186357 /* SmallWidgetAnalogClockCell.swift */,
 				EF44B9C4274633A800640E21 /* SmallWidgetFlowCell.swift */,
+				EF25E61A27506CDC004A1890 /* SmallWidgetClockCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1172,6 +1229,7 @@
 				EFD4ABE627336DF4000B2350 /* CGFloatExtensions.swift */,
 				EFD4ACFB2733AB68000B2350 /* URLExtensions.swift */,
 				EFD4ABE727336DF4000B2350 /* CALayerExtensions.swift */,
+				EFF5EA312750C72200513103 /* CGPointExtensions.swift */,
 				EFD4ABE827336DF4000B2350 /* UIEdgeInsetsExtensions.swift */,
 				EFD4ABE927336DF4000B2350 /* CGSizeExtensions.swift */,
 				EFD4ABEA27336DF4000B2350 /* UIBarButtonItemExtensions.swift */,
@@ -1181,6 +1239,7 @@
 				EFD4ABEE27336DF4000B2350 /* UIImageViewExtensions.swift */,
 				EFD4ABEF27336DF4000B2350 /* UIColorExtensions.swift */,
 				EFD4AC482733841A000B2350 /* NSObjectExtensions.swift */,
+				EFF5EA2F2750C31300513103 /* UIBezierPathExtensions.swift */,
 				EFD4AD162733B455000B2350 /* UIApplicationExtensions.swift */,
 			);
 			path = Extensions;
@@ -1709,6 +1768,23 @@
 			path = IntentHandler;
 			sourceTree = "<group>";
 		};
+		EFF5EA332750C9A300513103 /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */,
+				EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
+		EFF5EA382750E40900513103 /* Classic */ = {
+			isa = PBXGroup;
+			children = (
+				EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */,
+			);
+			path = Classic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2039,6 +2115,7 @@
 				EFB0C2DD2744F1C8008C83F2 /* AppWidgetEditController.swift in Sources */,
 				EFD03A85273915A800E28F27 /* AppThemeController.swift in Sources */,
 				EFD4AC262733820C000B2350 /* QYToast.swift in Sources */,
+				EF25E6212750AA84004A1890 /* AppClockSteampunkBorderView.swift in Sources */,
 				EFD03A7A2738D43300E28F27 /* AppTransparentViewModel.swift in Sources */,
 				EF44B9C92746347700640E21 /* AppFlowView.swift in Sources */,
 				EFD4AD152733AD9F000B2350 /* AppWallpaperController.swift in Sources */,
@@ -2052,12 +2129,14 @@
 				EFD4AC6A2733888F000B2350 /* AppBaseEmptyView.swift in Sources */,
 				EFD4AD142733AD9F000B2350 /* AppWallpaperViewModel.swift in Sources */,
 				EF04642B274F5948001F1F3F /* AppColorSwatch.swift in Sources */,
+				EF25E61D275071CE004A1890 /* AppClockClassicBorderView.swift in Sources */,
 				EFD4AC0127336DF4000B2350 /* UICollectionView+ReusableView.swift in Sources */,
 				EF04644D274F7BB4001F1F3F /* AppWidgetShared+Reload.swift in Sources */,
 				EFD03A712738CBD500E28F27 /* AppHomeWidgetHeaderSection.swift in Sources */,
 				EFD4ACEC2733A996000B2350 /* AppRouterLaunchPlugin.swift in Sources */,
 				EF44B9C5274633A800640E21 /* SmallWidgetFlowCell.swift in Sources */,
 				EFB0C2DA2744E81D008C83F2 /* AppWidgetBackgroundView.swift in Sources */,
+				EFF5EA302750C31300513103 /* UIBezierPathExtensions.swift in Sources */,
 				EFD4AC4727338264000B2350 /* QYImage.swift in Sources */,
 				EFD4AC492733841A000B2350 /* NSObjectExtensions.swift in Sources */,
 				EF458583274CDF6300B4203A /* TrafficStatus.swift in Sources */,
@@ -2087,6 +2166,7 @@
 				EFD4AC302733821B000B2350 /* QYMapSearchManager.swift in Sources */,
 				EFD8095E273E46670065F048 /* MySmallWidgetController.swift in Sources */,
 				EFD4AC9127338A25000B2350 /* MusicResponseCodable.swift in Sources */,
+				EFF5EA2E2750B2B800513103 /* AppSteampunkWindUpLayer.swift in Sources */,
 				EF6A215A2735334D00691B3A /* AppSettingCellViewModel.swift in Sources */,
 				EFD4AC452733825D000B2350 /* QYColor.swift in Sources */,
 				EF2FFCFC2741FCFF00786A80 /* AppWidgetAttributes+ClockAttributes.swift in Sources */,
@@ -2106,12 +2186,15 @@
 				EFD4AC0027336DF4000B2350 /* UITableView+ReusableView.swift in Sources */,
 				EFD4AC06273370D8000B2350 /* R.generated.swift in Sources */,
 				EFD03A8227390E1500E28F27 /* AppSettingSectionBackgroundDecorationView.swift in Sources */,
+				EF25E61827506B2E004A1890 /* AppClockBorderView.swift in Sources */,
 				EFD03A6A2738C2E700E28F27 /* AppHomeWidgetHeaderView.swift in Sources */,
+				EFF5EA352750C9CC00513103 /* AppClockIndicatorView.swift in Sources */,
 				EFD4AC1A27338165000B2350 /* QYKeys.swift in Sources */,
 				EFD4ACFC2733AB68000B2350 /* URLExtensions.swift in Sources */,
 				EF2FFD0D2742351F00786A80 /* SmallWidgetFlipClockCell.swift in Sources */,
 				EFD4ACC3273390EF000B2350 /* EmptyDataSet+Rx.swift in Sources */,
 				EFD4AC672733888F000B2350 /* AppBaseVMController.swift in Sources */,
+				EF25E61F275081AB004A1890 /* AppClockArtNouveauBorderView.swift in Sources */,
 				EF046415274F3040001F1F3F /* AppWidgetColor.swift in Sources */,
 				EFD4AC4F2733869A000B2350 /* AppUtility+JP.swift in Sources */,
 				EF2FFD092742326000786A80 /* AppWidgetHeaderSupplementaryView.swift in Sources */,
@@ -2158,6 +2241,7 @@
 				EFD4ACED2733A996000B2350 /* AppRouterPlugin.swift in Sources */,
 				EFD4AC6C2733888F000B2350 /* AppViewModel.swift in Sources */,
 				EFD4AD062733AD66000B2350 /* AppIconsController.swift in Sources */,
+				EF25E61B27506CDC004A1890 /* SmallWidgetClockCell.swift in Sources */,
 				EFD4ABFC27336DF4000B2350 /* UIButtonExtensions.swift in Sources */,
 				EFD4AC632733888F000B2350 /* MusicBaseModel.swift in Sources */,
 				EFD0ACD627473C8D00230373 /* CodableColor.swift in Sources */,
@@ -2176,6 +2260,7 @@
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
+				EFF5EA3A2750E42A00513103 /* AppClockClassicIndicatorLayer.swift in Sources */,
 				EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */,
 				EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
@@ -2185,6 +2270,7 @@
 				EF458584274CDF6300B4203A /* TrafficSummary.swift in Sources */,
 				EF458587274CDF6300B4203A /* TrafficData.swift in Sources */,
 				EFD4ACEB2733A996000B2350 /* AppRouterAccountPlugin.swift in Sources */,
+				EFF5EA372750CA8E00513103 /* AppClockClassicIndicatorView.swift in Sources */,
 				EFD4ABF427336DF4000B2350 /* CGRectExtensions.swift in Sources */,
 				EF046453274F8075001F1F3F /* AppColorString.swift in Sources */,
 				EFD03A732738D03300E28F27 /* MediumWidgetController.swift in Sources */,
@@ -2196,8 +2282,10 @@
 				EFD4ACBA27339043000B2350 /* AppHomeWidgetsController.swift in Sources */,
 				EFD4AC8727338A25000B2350 /* TargetType+Rx.swift in Sources */,
 				EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */,
+				EFF5EA322750C72200513103 /* CGPointExtensions.swift in Sources */,
 				EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */,
 				EFD4ABF827336DF4000B2350 /* CGSizeExtensions.swift in Sources */,
+				EF25E61627506A83004A1890 /* AppClockView.swift in Sources */,
 				EFD4AC9927338A7E000B2350 /* AppTheme+Rx.swift in Sources */,
 				EF458589274CDF6300B4203A /* Ex+UInt64.swift in Sources */,
 				EFD4AC2F2733821B000B2350 /* QYMapLocationManager.swift in Sources */,

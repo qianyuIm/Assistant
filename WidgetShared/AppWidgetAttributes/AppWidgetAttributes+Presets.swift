@@ -9,6 +9,13 @@ import UIKit
 
 extension AppWidgetAttributes {
     /// 翻页时钟
+    static func clock(_ widgetFamily: AppWidgetAttributes.WidgetFamily) -> AppWidgetAttributes {
+        var attributes = AppWidgetAttributes()
+        attributes.widgetType = .flipClock
+        attributes.widgetFamily = widgetFamily
+        return attributes
+    }
+    /// 翻页时钟
     static func flipClock(_ widgetFamily: AppWidgetAttributes.WidgetFamily) -> AppWidgetAttributes {
         var attributes = AppWidgetAttributes()
         attributes.widgetType = .flipClock

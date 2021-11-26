@@ -8,6 +8,5 @@
 import UIKit
 
 enum AppWidgetFontName: String, Codable {
-    case none
     case normal
 }
