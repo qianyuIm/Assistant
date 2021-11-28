@@ -70,7 +70,7 @@ def swift_pods
   pod 'MultiProgressView', '~> 1.3.0'
 end
 
-def Shared
+def pod_shared
   pod 'Localize-Swift', '~> 3.2.0'
   pod 'AutoInch', '~> 2.4.0'
   # UserDefaults
@@ -80,11 +80,11 @@ end
 target 'Assistant' do
   oc_pods
   swift_pods
-  Shared
+  pod_shared
 end
 
 target 'WidgetExtensionExtension' do
-  Shared
+  pod_shared
 end
 
 post_install do |installer|

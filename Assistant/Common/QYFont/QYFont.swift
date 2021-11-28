@@ -7,6 +7,7 @@
 
 import Foundation
 import AutoInch
+import UIKit
 /// 中粗体
 let kRDPingFangBoldFoneName = "PingFangSC-Semibold"
 /// Medium
@@ -42,7 +43,7 @@ struct QYFont {
                      fontSize: CGFloat,
                      isAuto: Bool = true) -> UIFont? {
         let size = isAuto ? fontSize.auto() : fontSize
-        return UIFont(name: fontName, size: size)
+        return UIFont(name: fontName, size: size) ?? UIFont.systemFont(ofSize: size)
     }
     /// 返回字体
     /// - Parameters:

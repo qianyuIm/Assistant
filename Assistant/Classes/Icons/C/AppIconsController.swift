@@ -41,7 +41,7 @@ class AppIconsController: AppBaseVMController {
         super.setupConstraints()
         clockView.snp.makeConstraints { make in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: 300, height: 200))
+            make.size.equalTo(CGSize(width: 300, height: 148))
         }
         sender.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

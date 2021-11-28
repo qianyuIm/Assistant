@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1782256B275123AE000FFBF5 /* AppClockArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782256A275123AE000FFBF5 /* AppClockArmView.swift */; };
+		1782256D27527968000FFBF5 /* AppClockArtNouveauIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1782256C27527968000FFBF5 /* AppClockArtNouveauIndicatorView.swift */; };
 		5DE1FC96277AF27001AAF3CA /* Pods_WidgetExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D3C908274DAF51FAE03A8 /* Pods_WidgetExtensionExtension.framework */; };
 		B23EDCA7DCE5783C9DCC0C12 /* Pods_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E01E9364E2334F5028DE4C52 /* Pods_Assistant.framework */; };
 		EF046415274F3040001F1F3F /* AppWidgetColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF046414274F3040001F1F3F /* AppWidgetColor.swift */; };
@@ -285,7 +287,7 @@
 		EFF5EA322750C72200513103 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA312750C72200513103 /* CGPointExtensions.swift */; };
 		EFF5EA352750C9CC00513103 /* AppClockIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */; };
 		EFF5EA372750CA8E00513103 /* AppClockClassicIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */; };
-		EFF5EA3A2750E42A00513103 /* AppClockClassicIndicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */; };
+		EFF5EA3A2750E42A00513103 /* AppClockIndicatorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF5EA392750E42A00513103 /* AppClockIndicatorLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -321,6 +323,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1782256A275123AE000FFBF5 /* AppClockArmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppClockArmView.swift; path = Assistant/Classes/Modules/AddShell/AppClockArmView.swift; sourceTree = SOURCE_ROOT; };
+		1782256C27527968000FFBF5 /* AppClockArtNouveauIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockArtNouveauIndicatorView.swift; sourceTree = "<group>"; };
 		1EB255D44250DD64734FD2C0 /* Pods-Assistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assistant.debug.xcconfig"; path = "Target Support Files/Pods-Assistant/Pods-Assistant.debug.xcconfig"; sourceTree = "<group>"; };
 		4DAD80D1E1A0D6CA4C6B56C3 /* Pods-Assistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assistant.release.xcconfig"; path = "Target Support Files/Pods-Assistant/Pods-Assistant.release.xcconfig"; sourceTree = "<group>"; };
 		535D3C908274DAF51FAE03A8 /* Pods_WidgetExtensionExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WidgetExtensionExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -605,7 +609,7 @@
 		EFF5EA312750C72200513103 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
 		EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockIndicatorView.swift; sourceTree = "<group>"; };
 		EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockClassicIndicatorView.swift; sourceTree = "<group>"; };
-		EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockClassicIndicatorLayer.swift; sourceTree = "<group>"; };
+		EFF5EA392750E42A00513103 /* AppClockIndicatorLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClockIndicatorLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -653,6 +657,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1782256927512393000FFBF5 /* Arm */ = {
+			isa = PBXGroup;
+			children = (
+				1782256A275123AE000FFBF5 /* AppClockArmView.swift */,
+			);
+			path = Arm;
+			sourceTree = "<group>";
+		};
 		21B6227C303F33895295D61F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +703,8 @@
 			isa = PBXGroup;
 			children = (
 				EF25E61527506A83004A1890 /* AppClockView.swift */,
+				EFF5EA392750E42A00513103 /* AppClockIndicatorLayer.swift */,
+				1782256927512393000FFBF5 /* Arm */,
 				EFF5EA382750E40900513103 /* Classic */,
 				EFF5EA332750C9A300513103 /* Indicator */,
 				EF25E6222750B252004A1890 /* Steampunk */,
@@ -1773,6 +1787,7 @@
 			children = (
 				EFF5EA342750C9CC00513103 /* AppClockIndicatorView.swift */,
 				EFF5EA362750CA8E00513103 /* AppClockClassicIndicatorView.swift */,
+				1782256C27527968000FFBF5 /* AppClockArtNouveauIndicatorView.swift */,
 			);
 			path = Indicator;
 			sourceTree = "<group>";
@@ -1780,7 +1795,6 @@
 		EFF5EA382750E40900513103 /* Classic */ = {
 			isa = PBXGroup;
 			children = (
-				EFF5EA392750E42A00513103 /* AppClockClassicIndicatorLayer.swift */,
 			);
 			path = Classic;
 			sourceTree = "<group>";
@@ -2217,6 +2231,7 @@
 				EFD4AC182733804E000B2350 /* AppLaunchAd.swift in Sources */,
 				EFD4AC8927338A25000B2350 /* ResponseHandle.swift in Sources */,
 				EFD4AC682733888F000B2350 /* AppBaseController.swift in Sources */,
+				1782256D27527968000FFBF5 /* AppClockArtNouveauIndicatorView.swift in Sources */,
 				EFAA4293274B9EA800C63C31 /* AppSmallFlowView.swift in Sources */,
 				EFD4AC9A27338A7E000B2350 /* AppTheme.swift in Sources */,
 				EFD4AC652733888F000B2350 /* MusicPlaylist.swift in Sources */,
@@ -2260,7 +2275,7 @@
 				EFD4ACC1273390DE000B2350 /* MJRefreshFooter+Rx.swift in Sources */,
 				EFD03A6C2738C33300E28F27 /* SmallWidgetController.swift in Sources */,
 				EFD4ACEA2733A996000B2350 /* AppRouter.swift in Sources */,
-				EFF5EA3A2750E42A00513103 /* AppClockClassicIndicatorLayer.swift in Sources */,
+				EFF5EA3A2750E42A00513103 /* AppClockIndicatorLayer.swift in Sources */,
 				EF2FFD182742653600786A80 /* LargeWidgetSection.swift in Sources */,
 				EF2FFD0627422E2100786A80 /* SmallWidgetSection.swift in Sources */,
 				EFD03A87273915C400E28F27 /* AppThemeViewModel.swift in Sources */,
@@ -2282,6 +2297,7 @@
 				EFD4ACBA27339043000B2350 /* AppHomeWidgetsController.swift in Sources */,
 				EFD4AC8727338A25000B2350 /* TargetType+Rx.swift in Sources */,
 				EFD4AD172733B455000B2350 /* UIApplicationExtensions.swift in Sources */,
+				1782256B275123AE000FFBF5 /* AppClockArmView.swift in Sources */,
 				EFF5EA322750C72200513103 /* CGPointExtensions.swift in Sources */,
 				EFD0ACDA2747429300230373 /* NSTextAlignment+Codable.swift in Sources */,
 				EFD4ABF827336DF4000B2350 /* CGSizeExtensions.swift in Sources */,

@@ -24,8 +24,8 @@ class AppClockIndicatorView: UIView {
         let indicatorView = AppClockClassicIndicatorView()
         return indicatorView
     }()
-    lazy var artNouveauIndicatorView: AppClockClassicIndicatorView = {
-        let indicatorView = AppClockClassicIndicatorView()
+    lazy var artNouveauIndicatorView: AppClockArtNouveauIndicatorView = {
+        let indicatorView = AppClockArtNouveauIndicatorView()
         return indicatorView
     }()
     lazy var steampunkIndicatorView: AppClockClassicIndicatorView = {

@@ -10,6 +10,7 @@ import SnapKit
 
 private let marginRatio: CGFloat = 2/7
 private let hourDotRatio: CGFloat = 2/35
+private let minuteDotRatio: CGFloat = 1/35
 
 class AppClockClassicIndicatorView: UIView {
     var oldBounds = CGRect.zero
@@ -28,8 +29,8 @@ class AppClockClassicIndicatorView: UIView {
         let textsView = AppClockClassicIndicatorTextsView(with: marginRatio)
         return textsView
     }()
-    lazy var hourIndicatorLayer: AppClockClassicIndicatorLayer = {
-        let layer = AppClockClassicIndicatorLayer()
+    lazy var hourIndicatorLayer: AppClockIndicatorLayer = {
+        let layer = AppClockIndicatorLayer()
         return layer
     }()
     override init(frame: CGRect) {
@@ -49,20 +50,34 @@ class AppClockClassicIndicatorView: UIView {
         let radius = bounds.app.radius
         if let layers = layer.sublayers {
             for sublayer in layers {
-                if let indicatorLayer = sublayer as? AppClockClassicIndicatorLayer {
+                if let indicatorLayer = sublayer as? AppClockIndicatorLayer {
                     indicatorLayer.removeFromSuperlayer()
                 }
             }
         }
-        for index in 0..<13 {
-            let angle = -.pi * 1/2 + CGFloat(index) / 6 * .pi
-            let arcCenter = CGPoint.app.inCircle(bounds, for: angle, margin: radius * marginRatio / 3)
-            let indicatorLayer = AppClockClassicIndicatorLayer()
-            indicatorLayer.frame = CGRect(origin: .zero, size: CGSize(width: radius * hourDotRatio, height: radius * hourDotRatio))
-            indicatorLayer.cornerRadius = radius * hourDotRatio / 2
-            indicatorLayer.position = arcCenter
-            indicatorLayer.backgroundColor = UIColor.red.cgColor
-            layer.addSublayer(indicatorLayer)
+        if clockAttributes.isHourIndicatorsShown {
+            for index in 0..<13 {
+                let angle = -.pi * 1/2 + CGFloat(index) / 6 * .pi
+                let arcCenter = CGPoint.app.inCircle(bounds, for: angle, margin: radius * marginRatio / 3)
+                let indicatorLayer = AppClockIndicatorLayer()
+                indicatorLayer.frame = CGRect(origin: .zero, size: CGSize(width: radius * hourDotRatio, height: radius * hourDotRatio))
+                indicatorLayer.cornerRadius = radius * hourDotRatio / 2
+                indicatorLayer.position = arcCenter
+                indicatorLayer.backgroundColor = clockAttributes.indicatorColor.color(for: traitCollection).cgColor
+                layer.addSublayer(indicatorLayer)
+            }
+        }
+        if clockAttributes.isMinuteIndicatorsShown {
+            for index in 0..<61 {
+                let angle = -.pi * 1/2 + CGFloat(index) / 30 * .pi
+                let arcCenter = CGPoint.app.inCircle(bounds, for: angle, margin: radius * marginRatio / 3)
+                let indicatorLayer = AppClockIndicatorLayer()
+                indicatorLayer.frame = CGRect(origin: .zero, size: CGSize(width: radius * minuteDotRatio, height: radius * minuteDotRatio))
+                indicatorLayer.cornerRadius = radius * minuteDotRatio / 2
+                indicatorLayer.position = arcCenter
+                indicatorLayer.backgroundColor = clockAttributes.indicatorColor.color(for: traitCollection).cgColor
+                layer.addSublayer(indicatorLayer)
+            }
         }
     }
     func setupUI() {
@@ -117,7 +132,7 @@ private class AppClockClassicIndicatorTextsView: UIView {
         guard clockAttributes != nil else {
             return
         }
-        let fontSize = bounds.app.radius * textFontRatio
+        let fontSize = (bounds.app.radius * textFontRatio).rounded()
         let margin = bounds.app.radius * marginRatio
         for (index, textLabel) in hourLabels.enumerated() {
             textLabel.font = QYFont.font(clockAttributes!.fontName.rawValue, fontSize: fontSize)

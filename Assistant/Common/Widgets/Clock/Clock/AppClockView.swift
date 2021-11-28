@@ -17,6 +17,10 @@ class AppClockView: UIView {
         let view = AppClockIndicatorView()
         return view
     }()
+    lazy var armView: AppClockArmView = {
+        let armView = AppClockArmView()
+        return armView
+    }()
     private var _attributes: AppWidgetAttributes?
     var attributes: AppWidgetAttributes? {
         didSet {
@@ -41,6 +45,7 @@ extension AppClockView {
     func setupUI() {
         addSubview(borderView)
         addSubview(indicatorView)
+        addSubview(armView)
         setupConstraints()
     }
     func setupConstraints() {
@@ -48,6 +53,9 @@ extension AppClockView {
             make.edges.equalToSuperview()
         }
         indicatorView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        armView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

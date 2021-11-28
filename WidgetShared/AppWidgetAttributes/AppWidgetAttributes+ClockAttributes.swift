@@ -26,7 +26,7 @@ extension AppWidgetAttributes {
             case steampunk
         }
         var displayMode = DisplayMode.twelve
-        var displayStyle = DisplayStyle.classic
+        var displayStyle = DisplayStyle.artNouveau
         var borderColor: AppWidgetColor = .init(light: "#000", dark: "#fff")
         var indicatorColor: AppWidgetColor = .init(light: "#000", dark: "#fff")
         var fontName: AppWidgetFontName = .normal
